@@ -3,8 +3,9 @@ import { Link } from "wouter";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Shield, Menu, User, LogOut } from "lucide-react";
+import { Menu, User, LogOut } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import purpleGuardLogo from "@assets/Asset_30_1765969755163.png";
 
 export default function Navigation() {
   const { isAuthenticated, user } = useAuth();
@@ -39,14 +40,13 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/">
-            <div className="flex items-center space-x-3 cursor-pointer">
-              <div className="w-10 h-10 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-lg flex items-center justify-center">
-                <Shield className="h-6 w-6 text-white" />
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-primary">PurpleGuard</h1>
-                <p className="text-xs text-muted-foreground">Smarter Security. Stronger Defense.</p>
-              </div>
+            <div className="flex items-center cursor-pointer">
+              <img 
+                src={purpleGuardLogo} 
+                alt="PurpleGuard - Smarter Security. Stronger Defense." 
+                className="h-12 w-auto"
+                data-testid="logo-purpleguard"
+              />
             </div>
           </Link>
 

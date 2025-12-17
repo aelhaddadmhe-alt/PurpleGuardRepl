@@ -1,6 +1,7 @@
 import { Link } from "wouter";
-import { Shield, Linkedin, Twitter, Youtube, Phone } from "lucide-react";
+import { Linkedin, Twitter, Youtube, Phone, Shield } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import purpleGuardLogo from "@assets/Asset_30_1765969755163.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,14 +12,14 @@ export default function Footer() {
         <div className="grid lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-3 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-lg flex items-center justify-center">
-                <Shield className="h-6 w-6 text-white" />
-              </div>
-              <div>
-                <h3 className="text-xl font-bold">CyberShield Pro</h3>
-                <p className="text-xs text-slate-400">Managed Security Services</p>
-              </div>
+            <div className="mb-6">
+              <img 
+                src={purpleGuardLogo} 
+                alt="PurpleGuard" 
+                className="h-10 w-auto brightness-0 invert"
+                data-testid="footer-logo-purpleguard"
+              />
+              <p className="text-sm text-slate-400 mt-2">Smarter Security. Stronger Defense.</p>
             </div>
             <p className="text-slate-400 mb-6 leading-relaxed">
               Protecting SMBs with enterprise-grade security solutions. 24/7 monitoring, expert support, and complete peace of mind.
@@ -53,38 +54,38 @@ export default function Footer() {
             <h4 className="font-bold text-lg mb-6">Services</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/services/managed-firewall">
-                  <a className="text-slate-400 hover:text-white transition-colors">ManagedFirewall</a>
+                <Link href="/services/managed-firewall" className="text-slate-400 hover:text-white transition-colors">
+                  ManagedFirewall
                 </Link>
               </li>
               <li>
-                <Link href="/services/managed-endpoint">
-                  <a className="text-slate-400 hover:text-white transition-colors">ManagedEndpoint</a>
+                <Link href="/services/managed-endpoint" className="text-slate-400 hover:text-white transition-colors">
+                  ManagedEndpoint
                 </Link>
               </li>
               <li>
-                <Link href="/services/managed-siem">
-                  <a className="text-slate-400 hover:text-white transition-colors">ManagedSIEM</a>
+                <Link href="/services/managed-siem" className="text-slate-400 hover:text-white transition-colors">
+                  ManagedSIEM
                 </Link>
               </li>
               <li>
-                <Link href="/services/managed-backup">
-                  <a className="text-slate-400 hover:text-white transition-colors">ManagedBackup</a>
+                <Link href="/services/managed-backup" className="text-slate-400 hover:text-white transition-colors">
+                  ManagedBackup
                 </Link>
               </li>
               <li>
-                <Link href="/services/managed-compliance">
-                  <a className="text-slate-400 hover:text-white transition-colors">ManagedCompliance</a>
+                <Link href="/services/managed-compliance" className="text-slate-400 hover:text-white transition-colors">
+                  ManagedCompliance
                 </Link>
               </li>
               <li>
-                <Link href="/services/managed-identity">
-                  <a className="text-slate-400 hover:text-white transition-colors">ManagedIdentity</a>
+                <Link href="/services/managed-identity" className="text-slate-400 hover:text-white transition-colors">
+                  ManagedIdentity
                 </Link>
               </li>
               <li>
-                <Link href="/services">
-                  <a className="text-slate-400 hover:text-white transition-colors">Purple[X] Suite</a>
+                <Link href="/services" className="text-slate-400 hover:text-white transition-colors">
+                  Purple[X] Suite
                 </Link>
               </li>
             </ul>
@@ -95,8 +96,8 @@ export default function Footer() {
             <h4 className="font-bold text-lg mb-6">Resources</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/blog">
-                  <a className="text-slate-400 hover:text-white transition-colors">Blog</a>
+                <Link href="/blog" className="text-slate-400 hover:text-white transition-colors">
+                  Blog
                 </Link>
               </li>
               <li>
@@ -168,7 +169,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-slate-800 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between">
           <p className="text-slate-400 text-sm">
-            © {currentYear} CyberShield Pro. All rights reserved.
+            © {currentYear} PurpleGuard. All rights reserved.
           </p>
           <div className="flex items-center space-x-6 text-sm text-slate-400 mt-4 md:mt-0">
             <span className="flex items-center">
