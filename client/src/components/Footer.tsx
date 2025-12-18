@@ -13,34 +13,37 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <img 
-                src={purpleGuardLogo} 
-                alt="PurpleGuard" 
+              <img
+                src={purpleGuardLogo}
+                alt="PurpleGuard"
                 className="h-10 w-auto brightness-0 invert"
                 data-testid="footer-logo-purpleguard"
               />
-              <p className="text-sm text-slate-400 mt-2">Smarter Security. Stronger Defense.</p>
+              <p className="text-sm text-slate-400 mt-2">
+                Smarter Security. Stronger Defense.
+              </p>
             </div>
             <p className="text-slate-400 mb-6 leading-relaxed">
-              Protecting SMBs with enterprise-grade security solutions. 24/7 monitoring, expert support, and complete peace of mind.
+              Protecting SMBs with enterprise-grade security solutions. 24/7
+              monitoring, expert support, and complete peace of mind.
             </p>
             <div className="flex space-x-4">
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-4 w-4 text-white" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="https://www.linkedin.com/company/purpleguard"
                 className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors"
                 aria-label="Twitter"
               >
                 <Twitter className="h-4 w-4 text-white" />
               </a>
-              <a 
-                href="#" 
+              <a
+                href="#"
                 className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors"
                 aria-label="YouTube"
               >
@@ -54,37 +57,58 @@ export default function Footer() {
             <h4 className="font-bold text-lg mb-6">Services</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/services/managed-firewall" className="text-slate-400 hover:text-white transition-colors">
+                <Link
+                  href="/services/managed-firewall"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
                   ManagedFirewall
                 </Link>
               </li>
               <li>
-                <Link href="/services/managed-endpoint" className="text-slate-400 hover:text-white transition-colors">
+                <Link
+                  href="/services/managed-endpoint"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
                   ManagedEndpoint
                 </Link>
               </li>
               <li>
-                <Link href="/services/managed-siem" className="text-slate-400 hover:text-white transition-colors">
+                <Link
+                  href="/services/managed-siem"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
                   ManagedSIEM
                 </Link>
               </li>
               <li>
-                <Link href="/services/managed-backup" className="text-slate-400 hover:text-white transition-colors">
+                <Link
+                  href="/services/managed-backup"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
                   ManagedBackup
                 </Link>
               </li>
               <li>
-                <Link href="/services/managed-compliance" className="text-slate-400 hover:text-white transition-colors">
+                <Link
+                  href="/services/managed-compliance"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
                   ManagedCompliance
                 </Link>
               </li>
               <li>
-                <Link href="/services/managed-identity" className="text-slate-400 hover:text-white transition-colors">
+                <Link
+                  href="/services/managed-identity"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
                   ManagedIdentity
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-slate-400 hover:text-white transition-colors">
+                <Link
+                  href="/services"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
                   Purple[X] Suite
                 </Link>
               </li>
@@ -96,27 +120,60 @@ export default function Footer() {
             <h4 className="font-bold text-lg mb-6">Resources</h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/blog" className="text-slate-400 hover:text-white transition-colors">
+                <Link
+                  href="/blog"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
                   Blog
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-slate-400 hover:text-white transition-colors">Whitepapers</a>
+                <a
+                  href="#"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Whitepapers
+                </a>
               </li>
               <li>
-                <a href="#" className="text-slate-400 hover:text-white transition-colors">Webinars</a>
+                <a
+                  href="#"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Webinars
+                </a>
               </li>
               <li>
-                <a href="#" className="text-slate-400 hover:text-white transition-colors">Case Studies</a>
+                <a
+                  href="#"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Case Studies
+                </a>
               </li>
               <li>
-                <a href="#" className="text-slate-400 hover:text-white transition-colors">Security Tools</a>
+                <a
+                  href="#"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Security Tools
+                </a>
               </li>
               <li>
-                <a href="#" className="text-slate-400 hover:text-white transition-colors">Documentation</a>
+                <a
+                  href="#"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Documentation
+                </a>
               </li>
               <li>
-                <a href="#" className="text-slate-400 hover:text-white transition-colors">Support Center</a>
+                <a
+                  href="#"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Support Center
+                </a>
               </li>
             </ul>
           </div>
@@ -126,22 +183,52 @@ export default function Footer() {
             <h4 className="font-bold text-lg mb-6">Company</h4>
             <ul className="space-y-3 mb-8">
               <li>
-                <a href="#" className="text-slate-400 hover:text-white transition-colors">About Us</a>
+                <a
+                  href="#"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  About Us
+                </a>
               </li>
               <li>
-                <a href="#" className="text-slate-400 hover:text-white transition-colors">Careers</a>
+                <a
+                  href="#"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Careers
+                </a>
               </li>
               <li>
-                <a href="#" className="text-slate-400 hover:text-white transition-colors">Partners</a>
+                <a
+                  href="#"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Partners
+                </a>
               </li>
               <li>
-                <a href="#" className="text-slate-400 hover:text-white transition-colors">Contact</a>
+                <a
+                  href="#"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Contact
+                </a>
               </li>
               <li>
-                <a href="#" className="text-slate-400 hover:text-white transition-colors">Privacy Policy</a>
+                <a
+                  href="#"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Privacy Policy
+                </a>
               </li>
               <li>
-                <a href="#" className="text-slate-400 hover:text-white transition-colors">Terms of Service</a>
+                <a
+                  href="#"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Terms of Service
+                </a>
               </li>
             </ul>
           </div>

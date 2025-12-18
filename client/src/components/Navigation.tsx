@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, User, LogOut } from "lucide-react";
+import { Menu, User, LogOut, ChevronDown } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import purpleGuardLogo from "@assets/Asset_30_1765969755163.png";
 
@@ -12,14 +12,61 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navigationItems = [
-    { label: "Services", href: "/services" },
-    { label: "Purple X", href: "/services/purple-x" },
     { label: "Pricing", href: "/pricing" },
     { label: "Resources", href: "/blog" },
   ];
 
   const NavItems = ({ mobile = false }) => (
     <>
+      {mobile ? (
+        <>
+          <div className="font-semibold text-slate-900 px-3 py-2 text-sm">Services</div>
+          <Link href="/services">
+            <Button 
+              variant="ghost" 
+              className="w-full justify-start pl-8 text-slate-700 hover:text-primary-600 font-medium"
+              onClick={() => setIsOpen(false)}
+            >
+              All Services
+            </Button>
+          </Link>
+          <Link href="/services/purple-x">
+            <Button 
+              variant="ghost" 
+              className="w-full justify-start pl-8 text-slate-700 hover:text-primary-600 font-medium"
+              onClick={() => setIsOpen(false)}
+            >
+              Purple X
+            </Button>
+          </Link>
+          <div className="border-b border-slate-200 my-2" />
+        </>
+      ) : (
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button 
+              variant="ghost" 
+              className="text-slate-700 hover:text-primary-600 font-medium flex items-center gap-1"
+            >
+              Services
+              <ChevronDown className="h-4 w-4" />
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="start" className="w-48">
+            <DropdownMenuItem asChild>
+              <Link href="/services" className="cursor-pointer">
+                All Services
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem asChild>
+              <Link href="/services/purple-x" className="cursor-pointer">
+                Purple X Services
+              </Link>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      )}
       {navigationItems.map((item) => (
         <Link key={item.label} href={item.href}>
           <Button 
