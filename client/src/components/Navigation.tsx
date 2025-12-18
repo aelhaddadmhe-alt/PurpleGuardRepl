@@ -13,9 +13,9 @@ export default function Navigation() {
 
   const navigationItems = [
     { label: "Services", href: "/services" },
+    { label: "Purple X", href: "/services/purple-x" },
     { label: "Pricing", href: "/pricing" },
     { label: "Resources", href: "/blog" },
-    { label: "About", href: "#about" },
   ];
 
   const NavItems = ({ mobile = false }) => (
