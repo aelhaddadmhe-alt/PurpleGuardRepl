@@ -146,7 +146,7 @@ export default function PurpleSentry() {
                   </Button>
                 </Link>
                 <Link href="/pricing">
-                  <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10" data-testid="button-view-pricing">
+                  <Button size="lg" variant="outline" className="border-white/30 hover:bg-white/10 text-[#000433]" data-testid="button-view-pricing">
                     View Full Pricing
                     <ChevronRight className="h-5 w-5 ml-2" />
                   </Button>
