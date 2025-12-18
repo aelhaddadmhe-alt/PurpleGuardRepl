@@ -219,7 +219,7 @@ export default function PurpleX() {
                 </Button>
               </Link>
               <Link href="#services">
-                <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10" data-testid="button-explore-services">
+                <Button size="lg" variant="outline" className="border-white/30 hover:bg-white/10 text-[#0a0a0a]" data-testid="button-explore-services">
                   Explore Services
                   <ChevronRight className="h-5 w-5 ml-2" />
                 </Button>
