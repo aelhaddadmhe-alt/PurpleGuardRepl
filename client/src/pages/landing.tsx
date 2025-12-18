@@ -72,7 +72,7 @@ export default function Landing() {
                 <Button size="lg" className="bg-gradient-to-r from-secondary to-accent hover:from-secondary/90 hover:to-accent/90">
                   Book Free Security Assessment
                 </Button>
-                <Button variant="outline" size="lg" className="border-slate-400 text-slate-300 hover:bg-slate-800">
+                <Button variant="outline" size="lg" className="border-slate-400 text-slate-300 hover:bg-slate-800 bg-[#6633cc]">
                   <Play className="h-4 w-4 mr-2" />
                   Watch Demo
                 </Button>
@@ -80,10 +80,6 @@ export default function Landing() {
               
               {/* Trust Indicators */}
               <div className="flex items-center space-x-6 text-slate-400">
-                <div className="flex items-center space-x-2">
-                  <Shield className="h-4 w-4 text-secondary-400" />
-                  <span className="text-sm">SOC 2 Certified</span>
-                </div>
                 <div className="flex items-center space-x-2">
                   <Award className="h-4 w-4 text-secondary-400" />
                   <span className="text-sm">ISO 27001</span>
