@@ -77,18 +77,6 @@ export default function Landing() {
                   Watch Demo
                 </Button>
               </div>
-              
-              {/* Trust Indicators */}
-              <div className="flex items-center space-x-6 text-slate-400">
-                <div className="flex items-center space-x-2">
-                  <Award className="h-4 w-4 text-secondary-400" />
-                  <span className="text-sm">ISO 27001</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Clock className="h-4 w-4 text-secondary-400" />
-                  <span className="text-sm">24/7 SOC</span>
-                </div>
-              </div>
             </div>
             
             {/* Hero Stats */}
