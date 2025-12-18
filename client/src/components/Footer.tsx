@@ -144,25 +144,6 @@ export default function Footer() {
                 <a href="#" className="text-slate-400 hover:text-white transition-colors">Terms of Service</a>
               </li>
             </ul>
-
-            {/* Compliance Badges */}
-            <div>
-              <h5 className="font-semibold text-sm mb-3">Certifications</h5>
-              <div className="flex flex-wrap gap-3">
-                <Badge variant="secondary" className="bg-slate-800 text-slate-300 hover:bg-slate-700">
-                  SOC 2 Type II
-                </Badge>
-                <Badge variant="secondary" className="bg-slate-800 text-slate-300 hover:bg-slate-700">
-                  ISO 27001
-                </Badge>
-                <Badge variant="secondary" className="bg-slate-800 text-slate-300 hover:bg-slate-700">
-                  GDPR
-                </Badge>
-                <Badge variant="secondary" className="bg-slate-800 text-slate-300 hover:bg-slate-700">
-                  HIPAA
-                </Badge>
-              </div>
-            </div>
           </div>
         </div>
 
