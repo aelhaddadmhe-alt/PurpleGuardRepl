@@ -159,7 +159,7 @@ export default function Footer() {
             </span>
             <span className="flex items-center">
               <Phone className="h-4 w-4 text-secondary-500 mr-2" />
-              +1 (555) 123-CYBER
+              +971585159666
             </span>
           </div>
         </div>

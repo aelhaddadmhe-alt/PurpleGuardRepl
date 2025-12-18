@@ -128,7 +128,7 @@ export default function Booking() {
                   <CardContent className="p-4">
                     <Phone className="h-6 w-6 text-primary-500 mx-auto mb-2" />
                     <div className="text-sm font-medium text-slate-900">Phone</div>
-                    <div className="text-xs text-slate-600">+1 (555) 123-CYBER</div>
+                    <div className="text-xs text-slate-600">+971585159666</div>
                   </CardContent>
                 </Card>
                 <Card className="text-center">
