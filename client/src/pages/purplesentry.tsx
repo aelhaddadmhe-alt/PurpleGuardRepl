@@ -134,8 +134,8 @@ export default function PurpleSentry() {
 
               <div className="p-4 bg-white/10 rounded-lg border border-white/20 mb-8">
                 <div className="text-sm mb-1 text-[#000433]">Starting Price</div>
-                <div className="text-3xl font-bold text-white">$750<span className="text-lg text-slate-400">/month</span></div>
-                <div className="text-sm text-orange-300 mt-2">Per Organization</div>
+                <div className="text-3xl font-bold text-[#000433]">$750<span className="text-lg text-[#000433]">/month</span></div>
+                <div className="text-sm mt-2 text-[#f97316]">Per Organization</div>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
