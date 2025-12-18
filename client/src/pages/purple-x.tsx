@@ -103,6 +103,7 @@ const purpleXServices = [
     description: "PurpleSentry focuses on identifying and managing risks outside the traditional perimeter by continuously monitoring your external attack surface and digital presence.",
     pricing: "$750/month",
     bestFor: "External attack surface & digital risk protection",
+    detailLink: "/services/purple-x/purplesentry",
     capabilities: [
       "External Attack Surface Management (EASM)",
       "Internet-facing asset discovery",
@@ -286,9 +287,17 @@ export default function PurpleX() {
                       </div>
                       <div>
                         <Badge variant="outline" className="mb-1">{service.category}</Badge>
-                        <h3 className="text-2xl md:text-3xl font-bold text-slate-900" data-testid={`heading-${service.id}`}>
-                          {service.name}
-                        </h3>
+                        {service.detailLink ? (
+                          <Link href={service.detailLink}>
+                            <h3 className="text-2xl md:text-3xl font-bold text-slate-900 hover:text-[#6633cc] transition-colors cursor-pointer" data-testid={`heading-${service.id}`}>
+                              {service.name}
+                            </h3>
+                          </Link>
+                        ) : (
+                          <h3 className="text-2xl md:text-3xl font-bold text-slate-900" data-testid={`heading-${service.id}`}>
+                            {service.name}
+                          </h3>
+                        )}
                       </div>
                     </div>
                     
@@ -306,7 +315,7 @@ export default function PurpleX() {
                       </div>
                     </div>
 
-                    <div className="flex flex-col sm:flex-row gap-3">
+                    <div className="flex flex-col sm:flex-row gap-3 flex-wrap">
                       <Link href="/booking">
                         <Button className="bg-[#6633cc] hover:bg-[#6633cc]/90" data-testid={`button-discovery-${service.id}`}>
                           <Phone className="h-4 w-4 mr-2" />
@@ -319,6 +328,14 @@ export default function PurpleX() {
                           <ChevronRight className="h-4 w-4 ml-2" />
                         </Button>
                       </Link>
+                      {service.detailLink && (
+                        <Link href={service.detailLink}>
+                          <Button variant="outline" className="border-[#6633cc] text-[#6633cc] hover:bg-[#6633cc]/10" data-testid={`button-learn-more-${service.id}`}>
+                            Learn More
+                            <ChevronRight className="h-4 w-4 ml-2" />
+                          </Button>
+                        </Link>
+                      )}
                     </div>
                   </div>
 
