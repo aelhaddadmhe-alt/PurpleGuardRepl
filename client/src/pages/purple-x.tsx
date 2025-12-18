@@ -26,6 +26,8 @@ const purpleXServices = [
     category: "Exposure Identification & Validation",
     icon: Search,
     description: "PurpleVAPT delivers continuous and on-demand vulnerability assessments and penetration testing to identify, validate, and prioritize security weaknesses across your environment.",
+    pricing: "$500/month (VAaaS) or $3,000/test (PTaaS)",
+    bestFor: "Organizations needing vulnerability visibility & compliance testing",
     capabilities: [
       "Network vulnerability scanning (internal & external)",
       "Continuous Vulnerability Assessment (VAaaS)",
@@ -49,6 +51,8 @@ const purpleXServices = [
     category: "Security Operations & Response",
     icon: Eye,
     description: "PurpleSOC provides a fully managed, 24/7 Security Operations Center that monitors, detects, investigates, and responds to security incidents across your environment.",
+    pricing: "$1,500/month",
+    bestFor: "24/7 monitoring without internal SOC overhead",
     capabilities: [
       "Continuous security monitoring",
       "Alert triage and incident investigation",
@@ -72,6 +76,8 @@ const purpleXServices = [
     category: "Advanced Threat Detection & Containment",
     icon: Shield,
     description: "PurpleSentinel is PurpleGuard's Managed Detection and Response service, delivering deep visibility and rapid response across endpoints, networks, and cloud environments.",
+    pricing: "$25/endpoint/month",
+    bestFor: "Endpoint, network & cloud threat detection",
     capabilities: [
       "Endpoint telemetry monitoring",
       "Threat detection and behavioral analysis",
@@ -95,6 +101,8 @@ const purpleXServices = [
     category: "External Risk & Threat Intelligence",
     icon: AlertTriangle,
     description: "PurpleSentry focuses on identifying and managing risks outside the traditional perimeter by continuously monitoring your external attack surface and digital presence.",
+    pricing: "$750/month",
+    bestFor: "External attack surface & digital risk protection",
     capabilities: [
       "External Attack Surface Management (EASM)",
       "Internet-facing asset discovery",
@@ -118,6 +126,8 @@ const purpleXServices = [
     category: "Adversary Simulation & Control Validation",
     icon: Target,
     description: "PurpleStrike simulates real-world attacks to test the effectiveness of your security controls, people, and processes.",
+    pricing: "$1,500/month (BAS) or $8,000/engagement",
+    bestFor: "Security control validation & readiness testing",
     capabilities: [
       "Red Team exercises",
       "Breach & Attack Simulation (BAS)",
@@ -141,6 +151,8 @@ const purpleXServices = [
     category: "Configuration Security & Hardening",
     icon: Settings,
     description: "PurpleConfig continuously assesses systems and endpoints against industry-recognized security benchmarks and best practices.",
+    pricing: "$5/endpoint/month",
+    bestFor: "Secure configuration & compliance baselining",
     capabilities: [
       "CIS benchmark assessments",
       "NIST-aligned configuration checks",
@@ -164,6 +176,8 @@ const purpleXServices = [
     category: "Network Visibility & Threat Detection",
     icon: Network,
     description: "PurpleReveal provides deep, real-time insight into network traffic to detect advanced threats that bypass traditional security controls.",
+    pricing: "$1,500/month",
+    bestFor: "Deep network visibility & advanced threat detection",
     capabilities: [
       "Deep network traffic inspection",
       "East-west traffic visibility",
@@ -280,6 +294,17 @@ export default function PurpleX() {
                     
                     <p className="text-lg text-[#6633cc] font-medium mb-4">{service.tagline}</p>
                     <p className="text-slate-600 mb-6 leading-relaxed">{service.description}</p>
+                    
+                    <div className="mb-6 p-4 bg-slate-50 rounded-lg border border-slate-200">
+                      <div className="mb-3">
+                        <div className="text-sm font-semibold text-slate-700 mb-1">Starting Price</div>
+                        <div className="text-2xl font-bold text-[#6633cc]">{service.pricing}</div>
+                      </div>
+                      <div>
+                        <div className="text-sm font-semibold text-slate-700 mb-1">Best For</div>
+                        <div className="text-slate-600 text-sm">{service.bestFor}</div>
+                      </div>
+                    </div>
 
                     <div className="flex flex-col sm:flex-row gap-3">
                       <Link href="/booking">
@@ -400,6 +425,12 @@ export default function PurpleX() {
                 <ChevronRight className="h-5 w-5 ml-2" />
               </Button>
             </Link>
+          </div>
+
+          <div className="mt-12 pt-12 border-t border-slate-200">
+            <p className="text-sm text-slate-600 italic">
+              All pricing shown is indicative. Final pricing depends on environment size, complexity, and compliance requirements.
+            </p>
           </div>
         </div>
       </section>

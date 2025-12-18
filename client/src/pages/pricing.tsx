@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import { Check, Shield, Star, ArrowRight } from "lucide-react";
+import { Check, Shield, Star, ArrowRight, ChevronRight } from "lucide-react";
 import type { Service } from "@shared/schema";
 
 export default function Pricing() {
@@ -187,6 +187,67 @@ export default function Pricing() {
                 </CardFooter>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Purple X Bundles */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <Badge className="mb-4 bg-gradient-to-r from-secondary to-accent">Value Bundles</Badge>
+            <h2 className="text-3xl font-bold text-primary mb-4">Recommended Purple X Bundles</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Maximize value with curated service combinations designed for your security maturity level
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto overflow-x-auto">
+            <table className="w-full">
+              <thead>
+                <tr className="border-b-2 border-primary/20">
+                  <th className="text-left py-4 px-6 font-bold text-primary">Bundle</th>
+                  <th className="text-left py-4 px-6 font-bold text-primary">Included Services</th>
+                  <th className="text-right py-4 px-6 font-bold text-primary">Starting Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-slate-200 hover:bg-slate-50">
+                  <td className="py-4 px-6 font-semibold text-slate-900">Purple X Core</td>
+                  <td className="py-4 px-6 text-slate-600">PurpleVAPT (VAaaS), PurpleSOC, PurpleConfig</td>
+                  <td className="text-right py-4 px-6 font-bold text-secondary">$2,500/month</td>
+                </tr>
+                <tr className="border-b border-slate-200 hover:bg-slate-50">
+                  <td className="py-4 px-6 font-semibold text-slate-900">Purple X Advanced</td>
+                  <td className="py-4 px-6 text-slate-600">PurpleSentinel (MDR), PurpleSOC, PurpleSentry</td>
+                  <td className="text-right py-4 px-6 font-bold text-secondary">$4,500/month</td>
+                </tr>
+                <tr className="hover:bg-slate-50 bg-gradient-to-r from-secondary/5 to-accent/5">
+                  <td className="py-4 px-6 font-semibold text-slate-900">Purple X Complete</td>
+                  <td className="py-4 px-6 text-slate-600">All Purple X Services</td>
+                  <td className="text-right py-4 px-6 font-bold text-secondary">$7,000+/month</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" className="bg-gradient-to-r from-secondary to-accent hover:from-secondary/90 hover:to-accent/90" data-testid="button-custom-quote">
+              <ArrowRight className="h-5 w-5 mr-2" />
+              Request Custom Quote
+            </Button>
+            <Button size="lg" variant="outline" asChild data-testid="button-individual-pricing">
+              <Link href="/services/purple-x">
+                View Individual Service Prices
+                <ChevronRight className="h-5 w-5 ml-2" />
+              </Link>
+            </Button>
+          </div>
+
+          <div className="mt-8 text-center">
+            <p className="text-sm text-muted-foreground italic">
+              All pricing shown is indicative. Final pricing depends on environment size, complexity, and compliance requirements.
+            </p>
           </div>
         </div>
       </section>
