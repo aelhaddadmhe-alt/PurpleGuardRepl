@@ -101,9 +101,7 @@ export default function PurpleSentry() {
       <meta property="og:title" content="PurpleSentry - Threat Intelligence, EASM & Digital Risk Protection | PurpleGuard" />
       <meta property="og:description" content="Continuous monitoring of your external attack surface and digital presence. Starting at $750/month." />
       <meta property="og:type" content="website" />
-      
       <Navigation />
-      
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-[#000033] via-orange-900/30 to-[#000033] overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djItSDI0di0yaDEyek0zNiAyNHYySDI0di0yaDEyeiIvPjwvZz48L2c+PC9zdmc+')] opacity-20" />
@@ -135,7 +133,7 @@ export default function PurpleSentry() {
               </p>
 
               <div className="p-4 bg-white/10 rounded-lg border border-white/20 mb-8">
-                <div className="text-sm text-slate-400 mb-1">Starting Price</div>
+                <div className="text-sm mb-1 text-[#000433]">Starting Price</div>
                 <div className="text-3xl font-bold text-white">$750<span className="text-lg text-slate-400">/month</span></div>
                 <div className="text-sm text-orange-300 mt-2">Per Organization</div>
               </div>
@@ -183,7 +181,6 @@ export default function PurpleSentry() {
           </div>
         </div>
       </section>
-
       {/* Service Modules */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -247,7 +244,6 @@ export default function PurpleSentry() {
           </div>
         </div>
       </section>
-
       {/* Key Benefits */}
       <section className="py-20 bg-gradient-to-br from-[#000033] to-orange-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -272,7 +268,6 @@ export default function PurpleSentry() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -305,7 +300,6 @@ export default function PurpleSentry() {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
