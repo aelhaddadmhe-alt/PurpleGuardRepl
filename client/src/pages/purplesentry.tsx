@@ -420,6 +420,67 @@ const faqItems = [
   }
 ];
 
+const darkWebFaqItems = [
+  {
+    question: "What is the Dark Web?",
+    answer: "The Dark Web refers to a part of the internet deliberately hidden and inaccessible through standard web browsers. Due to its encrypted nature, it is often associated with anonymous and illicit activities. While the Dark Web serves legitimate purposes, such as protecting users' privacy, it can also host illegal marketplaces, forums, and communication channels for cybercriminals. For businesses, the dark web is where stolen credentials, leaked data, malware, and hacking services are traded or shared, often months before breaches become public."
+  },
+  {
+    question: "How does the Advanced Dark Web Monitoring process work?",
+    answer: "Advanced Dark Web monitoring works by continuously scanning hidden corners of the internet that aren't indexed by traditional search engines. The monitoring service gathers information from various sources. The collected data is then analyzed to identify mentions of your organization, ultimately alerting you of any concerning findings."
+  },
+  {
+    question: "Why is Dark Web Monitoring important?",
+    answer: "Dark Web Monitoring helps organizations proactively detect cyber threats. To minimize risks such as identity theft, financial fraud, and data breaches, continuous monitoring of dark web activity is essential. Without dark web monitoring, businesses are blind to early warning signs that they are exposed or targeted."
+  },
+  {
+    question: "Who needs Dark Web Monitoring?",
+    answer: "Dark Web Monitoring is crucial for businesses of all sizes, from enterprises to small businesses, as well as individuals, government agencies, and financial institutions. If your business has users, customers, employees, or sensitive data online, Dark Web Monitoring is no longer optional — it's a critical part of modern cybersecurity defense."
+  },
+  {
+    question: "Can Dark Web Monitoring detect ransomware threats?",
+    answer: "Dark Web Monitoring can help detect early warning signs associated with ransomware attacks, but it doesn't directly detect ransomware infections on your network. Ransomware groups often operate on dark web forums, where they share stolen data or discuss upcoming attacks. Advanced Dark Web Monitoring helps identify these threats early, providing organizations with crucial insights to mitigate ransomware risks before they escalate."
+  }
+];
+
+const brandProtectionFaqItems = [
+  {
+    question: "What is Brand Protection (BP)?",
+    answer: "Brand Protection is a cybersecurity strategy that focuses on identifying, monitoring, and mitigating digital risks that can impact an organization's information security and business operations. These risks can include data breaches, phishing threats, brand impersonation, data leakage, exposed credentials, cyber fraud, and many more. BP involves the use of various tools and technologies to constantly scan the digital landscape — the web, social media platforms, deep and dark web, mobile apps, and other digital channels — for potential risks to an organization's digital assets."
+  },
+  {
+    question: "Why is Brand Protection (BP) important for businesses?",
+    answer: "As businesses continue to expand their digital footprint, they expose themselves to increased risk. BP helps businesses proactively identify and manage these risks, protect their reputation, maintain customer trust, and avoid potential regulatory fines. In today's digital world, your brand isn't just a logo — it's your identity, reputation, and trust in the eyes of customers, partners, and investors. Without Brand Protection, businesses are blind to external risks that can harm customers, damage reputation, and drain revenue. Brand Protection (BP) helps businesses safeguard that trust from online threats, abuse, and misuse."
+  },
+  {
+    question: "What types of threats does Brand Protection cover?",
+    answer: "Brand Protection covers multiple threat types including: Typosquatted and fake domains, Phishing sites and email scams, Rogue mobile apps, Brand impersonation on social media, Counterfeit products in online marketplaces, and Dark web mentions and data leaks."
+  },
+  {
+    question: "How does Brand Protection (BP) contribute to Threat Intelligence?",
+    answer: "Brand Protection (BP) platforms gather and analyze information about potential threats that could harm the organization's digital assets. This intelligence is then used to strengthen the organization's cybersecurity defenses. Brand Protection doesn't just protect your name — it equips you with real-world, outside-in intelligence to strengthen your entire cybersecurity posture."
+  }
+];
+
+const easmFaqItems = [
+  {
+    question: "What is External Attack Surface Management (EASM)?",
+    answer: "The attack surface is the point or vector through which an attacker enters the environment and is merely a list of all possible ways in which the attacker can enter a device or network and extract data. Attack surface refers to any asset such as domain infrastructure, website services, cloud technologies, etc. that is open to the Internet and can be exploited by the attacker. External Attack Surface Management (EASM) is the continuous process of discovering, monitoring, and managing all internet-facing assets an organization has — to identify exposures before attackers do. In simple terms, it's like putting a spotlight on everything outsiders can see about your organization online — and making sure it's secured."
+  },
+  {
+    question: "Why is External Attack Surface Management (EASM) so important?",
+    answer: "Today's organizations are constantly expanding their digital presence — across cloud services, web apps, APIs, remote access, and third-party integrations. But every external asset you own is a potential doorway for attackers. EASM gives you the outside-in visibility you need to stay ahead of cyber threats. Without EASM, you're blind to external risks attackers can see. With it, you gain a proactive, always-on early warning system that helps you reduce exposures, strengthen defenses, and stay ahead of cyber threats."
+  },
+  {
+    question: "What constitutes an organization's external attack surface?",
+    answer: "An organization's external attack surface is everything connected to the internet that an attacker can see, probe, and potentially exploit. This can include websites, email servers, cloud storage and services, web applications, APIs, Internet of Things (IoT) devices, and all public-facing assets, services, and exposures — whether known or unknown — that could become entry points into your organization. Attackers only need one weak spot to break in."
+  },
+  {
+    question: "What is Digital Footprint?",
+    answer: "A digital footprint is the complete record of all the online assets, activities, and traces an organization leaves across the internet — both intentionally and unintentionally. To manage the attack surface, it is necessary to first identify all assets open to the Internet. The digital footprint is important because companies have many assets that they do not know or forget, as well as assets they know and manage. Your digital footprint defines how you appear to the outside world — including customers, partners, and attackers. Managing it is essential to reducing risk and improving your security posture."
+  }
+];
+
 export default function PurpleSentry() {
   return (
     <div className="min-h-screen bg-slate-50">
@@ -891,7 +952,8 @@ export default function PurpleSentry() {
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* FAQ Sections */}
+      {/* CTI FAQ */}
       <section className="py-20 bg-gradient-to-br from-slate-200 to-slate-400">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-3 gap-12">
@@ -902,15 +964,114 @@ export default function PurpleSentry() {
             </div>
             
             <div className="lg:col-span-2">
-              <Accordion type="single" collapsible className="space-y-4" data-testid="accordion-faq">
+              <Accordion type="single" collapsible className="space-y-4" data-testid="accordion-faq-cti">
                 {faqItems.map((item, idx) => (
                   <AccordionItem 
                     key={idx} 
-                    value={`faq-${idx}`}
+                    value={`faq-cti-${idx}`}
                     className="bg-white border border-slate-200 rounded-lg overflow-hidden"
-                    data-testid={`accordion-item-faq-${idx}`}
+                    data-testid={`accordion-item-faq-cti-${idx}`}
                   >
-                    <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-slate-50 text-left" data-testid={`accordion-trigger-faq-${idx}`}>
+                    <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-slate-50 text-left" data-testid={`accordion-trigger-faq-cti-${idx}`}>
+                      <span className="font-semibold text-slate-900">{item.question}</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-6">
+                      <p className="text-slate-600 leading-relaxed">{item.answer}</p>
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Dark Web FAQ */}
+      <section className="py-20 bg-gradient-to-br from-slate-200 to-slate-400">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-3 gap-12">
+            <div>
+              <h2 className="text-3xl font-bold text-[#6633cc] mb-4">Frequently Asked Questions</h2>
+              <p className="text-lg text-slate-700">Here are some common questions about</p>
+              <p className="text-xl font-bold text-[#6633cc]">Dark Web.</p>
+            </div>
+            
+            <div className="lg:col-span-2">
+              <Accordion type="single" collapsible className="space-y-4" data-testid="accordion-faq-darkweb">
+                {darkWebFaqItems.map((item, idx) => (
+                  <AccordionItem 
+                    key={idx} 
+                    value={`faq-dw-${idx}`}
+                    className="bg-white border border-slate-200 rounded-lg overflow-hidden"
+                    data-testid={`accordion-item-faq-dw-${idx}`}
+                  >
+                    <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-slate-50 text-left" data-testid={`accordion-trigger-faq-dw-${idx}`}>
+                      <span className="font-semibold text-slate-900">{item.question}</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-6">
+                      <p className="text-slate-600 leading-relaxed">{item.answer}</p>
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Brand Protection FAQ */}
+      <section className="py-20 bg-gradient-to-br from-slate-200 to-slate-400">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-3 gap-12">
+            <div>
+              <h2 className="text-3xl font-bold text-[#6633cc] mb-4">Frequently Asked Questions</h2>
+              <p className="text-lg text-slate-700">Here are some common questions about</p>
+              <p className="text-xl font-bold text-[#6633cc]">Brand Protection.</p>
+            </div>
+            
+            <div className="lg:col-span-2">
+              <Accordion type="single" collapsible className="space-y-4" data-testid="accordion-faq-brand">
+                {brandProtectionFaqItems.map((item, idx) => (
+                  <AccordionItem 
+                    key={idx} 
+                    value={`faq-bp-${idx}`}
+                    className="bg-white border border-slate-200 rounded-lg overflow-hidden"
+                    data-testid={`accordion-item-faq-bp-${idx}`}
+                  >
+                    <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-slate-50 text-left" data-testid={`accordion-trigger-faq-bp-${idx}`}>
+                      <span className="font-semibold text-slate-900">{item.question}</span>
+                    </AccordionTrigger>
+                    <AccordionContent className="px-6 pb-6">
+                      <p className="text-slate-600 leading-relaxed">{item.answer}</p>
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* EASM FAQ */}
+      <section className="py-20 bg-gradient-to-br from-slate-200 to-slate-400">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-3 gap-12">
+            <div>
+              <h2 className="text-3xl font-bold text-[#6633cc] mb-4">Frequently Asked Questions</h2>
+              <p className="text-lg text-slate-700">Here are some common questions about</p>
+              <p className="text-xl font-bold text-[#6633cc]">External Attack Surface Management.</p>
+            </div>
+            
+            <div className="lg:col-span-2">
+              <Accordion type="single" collapsible className="space-y-4" data-testid="accordion-faq-easm">
+                {easmFaqItems.map((item, idx) => (
+                  <AccordionItem 
+                    key={idx} 
+                    value={`faq-easm-${idx}`}
+                    className="bg-white border border-slate-200 rounded-lg overflow-hidden"
+                    data-testid={`accordion-item-faq-easm-${idx}`}
+                  >
+                    <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-slate-50 text-left" data-testid={`accordion-trigger-faq-easm-${idx}`}>
                       <span className="font-semibold text-slate-900">{item.question}</span>
                     </AccordionTrigger>
                     <AccordionContent className="px-6 pb-6">
