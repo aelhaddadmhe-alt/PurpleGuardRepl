@@ -527,12 +527,12 @@ export default function PurpleSentry() {
                   Book Consultation
                 </Button>
               </Link>
-              <Link href="#pricing-section">
-                <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10" data-testid="button-view-pricing">
+              <a href="#pricing-section">
+                <Button size="lg" variant="outline" className="border-white/30 text-[#000033] hover:bg-white/10" data-testid="button-view-pricing">
                   View Pricing
                   <ChevronRight className="h-5 w-5 ml-2" />
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
