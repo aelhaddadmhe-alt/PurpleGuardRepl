@@ -10,6 +10,12 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/tabs";
 import { 
   Eye, 
   Radar,
@@ -529,39 +535,47 @@ export default function PurpleSentry() {
         
         <div className="bg-slate-900 py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Accordion type="single" collapsible className="space-y-4" data-testid="accordion-dark-web">
+            <Tabs defaultValue={darkWebContent[0].id} className="w-full" data-testid="tabs-dark-web">
+              <TabsList className="grid grid-cols-2 md:grid-cols-4 w-full bg-slate-800 border border-slate-700 mb-6">
+                {darkWebContent.map((item) => (
+                  <TabsTrigger 
+                    key={item.id} 
+                    value={item.id}
+                    className="text-xs md:text-sm"
+                    data-testid={`tab-trigger-${item.id}`}
+                  >
+                    {item.title}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
               {darkWebContent.map((item) => (
-                <AccordionItem 
+                <TabsContent 
                   key={item.id} 
                   value={item.id}
-                  className="bg-slate-800 border border-slate-700 rounded-lg overflow-hidden"
-                  data-testid={`accordion-item-${item.id}`}
+                  className="bg-slate-800 border border-slate-700 rounded-lg p-6"
+                  data-testid={`tab-content-${item.id}`}
                 >
-                  <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-slate-700/50" data-testid={`accordion-trigger-${item.id}`}>
-                    <div className="flex items-center gap-4 text-left">
-                      <div className="w-10 h-10 rounded-lg bg-purple-600/20 flex items-center justify-center flex-shrink-0">
-                        <item.icon className="h-5 w-5 text-purple-400" />
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-                        <p className="text-sm text-purple-300">{item.subtitle}</p>
-                      </div>
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-10 h-10 rounded-lg bg-purple-600/20 flex items-center justify-center flex-shrink-0">
+                      <item.icon className="h-5 w-5 text-purple-400" />
                     </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6">
-                    <p className="text-slate-300 mb-4 leading-relaxed">{item.description}</p>
-                    <ul className="space-y-2">
-                      {item.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start gap-2">
-                          <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0 mt-0.5" />
-                          <span className="text-slate-300">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                      <p className="text-sm text-purple-300">{item.subtitle}</p>
+                    </div>
+                  </div>
+                  <p className="text-slate-300 mb-4 leading-relaxed">{item.description}</p>
+                  <ul className="space-y-2">
+                    {item.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0 mt-0.5" />
+                        <span className="text-slate-300">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </TabsContent>
               ))}
-            </Accordion>
+            </Tabs>
           </div>
         </div>
       </section>
@@ -578,39 +592,47 @@ export default function PurpleSentry() {
         
         <div className="bg-slate-900 py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Accordion type="single" collapsible className="space-y-4" data-testid="accordion-easm">
+            <Tabs defaultValue={easmContent[0].id} className="w-full" data-testid="tabs-easm">
+              <TabsList className="grid grid-cols-2 md:grid-cols-4 w-full bg-slate-800 border border-slate-700 mb-6">
+                {easmContent.map((item) => (
+                  <TabsTrigger 
+                    key={item.id} 
+                    value={item.id}
+                    className="text-xs md:text-sm"
+                    data-testid={`tab-trigger-${item.id}`}
+                  >
+                    {item.title}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
               {easmContent.map((item) => (
-                <AccordionItem 
+                <TabsContent 
                   key={item.id} 
                   value={item.id}
-                  className="bg-slate-800 border border-slate-700 rounded-lg overflow-hidden"
-                  data-testid={`accordion-item-${item.id}`}
+                  className="bg-slate-800 border border-slate-700 rounded-lg p-6"
+                  data-testid={`tab-content-${item.id}`}
                 >
-                  <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-slate-700/50" data-testid={`accordion-trigger-${item.id}`}>
-                    <div className="flex items-center gap-4 text-left">
-                      <div className="w-10 h-10 rounded-lg bg-orange-600/20 flex items-center justify-center flex-shrink-0">
-                        <item.icon className="h-5 w-5 text-orange-400" />
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-                        <p className="text-sm text-orange-300">{item.subtitle}</p>
-                      </div>
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-10 h-10 rounded-lg bg-orange-600/20 flex items-center justify-center flex-shrink-0">
+                      <item.icon className="h-5 w-5 text-orange-400" />
                     </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6">
-                    <p className="text-slate-300 mb-4 leading-relaxed">{item.description}</p>
-                    <ul className="space-y-2">
-                      {item.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start gap-2">
-                          <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0 mt-0.5" />
-                          <span className="text-slate-300">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                      <p className="text-sm text-orange-300">{item.subtitle}</p>
+                    </div>
+                  </div>
+                  <p className="text-slate-300 mb-4 leading-relaxed">{item.description}</p>
+                  <ul className="space-y-2">
+                    {item.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0 mt-0.5" />
+                        <span className="text-slate-300">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </TabsContent>
               ))}
-            </Accordion>
+            </Tabs>
           </div>
         </div>
       </section>
@@ -627,39 +649,47 @@ export default function PurpleSentry() {
         
         <div className="bg-slate-900 py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Accordion type="single" collapsible className="space-y-4" data-testid="accordion-brand-protection">
+            <Tabs defaultValue={brandProtectionContent[0].id} className="w-full" data-testid="tabs-brand-protection">
+              <TabsList className="grid grid-cols-2 md:grid-cols-4 w-full bg-slate-800 border border-slate-700 mb-6">
+                {brandProtectionContent.map((item) => (
+                  <TabsTrigger 
+                    key={item.id} 
+                    value={item.id}
+                    className="text-xs md:text-sm"
+                    data-testid={`tab-trigger-${item.id}`}
+                  >
+                    {item.title}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
               {brandProtectionContent.map((item) => (
-                <AccordionItem 
+                <TabsContent 
                   key={item.id} 
                   value={item.id}
-                  className="bg-slate-800 border border-slate-700 rounded-lg overflow-hidden"
-                  data-testid={`accordion-item-${item.id}`}
+                  className="bg-slate-800 border border-slate-700 rounded-lg p-6 mb-6"
+                  data-testid={`tab-content-${item.id}`}
                 >
-                  <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-slate-700/50" data-testid={`accordion-trigger-${item.id}`}>
-                    <div className="flex items-center gap-4 text-left">
-                      <div className="w-10 h-10 rounded-lg bg-emerald-600/20 flex items-center justify-center flex-shrink-0">
-                        <item.icon className="h-5 w-5 text-emerald-400" />
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-                        <p className="text-sm text-emerald-300">{item.subtitle}</p>
-                      </div>
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-10 h-10 rounded-lg bg-emerald-600/20 flex items-center justify-center flex-shrink-0">
+                      <item.icon className="h-5 w-5 text-emerald-400" />
                     </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6">
-                    <p className="text-slate-300 mb-4 leading-relaxed">{item.description}</p>
-                    <ul className="space-y-2">
-                      {item.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start gap-2">
-                          <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0 mt-0.5" />
-                          <span className="text-slate-300">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                      <p className="text-sm text-emerald-300">{item.subtitle}</p>
+                    </div>
+                  </div>
+                  <p className="text-slate-300 mb-4 leading-relaxed">{item.description}</p>
+                  <ul className="space-y-2">
+                    {item.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0 mt-0.5" />
+                        <span className="text-slate-300">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </TabsContent>
               ))}
-            </Accordion>
+            </Tabs>
 
             {/* Brand Risk Checklist */}
             <div className="mt-12 bg-slate-800 border border-slate-700 rounded-lg p-6">
@@ -689,39 +719,47 @@ export default function PurpleSentry() {
         
         <div className="bg-slate-900 py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Accordion type="single" collapsible className="space-y-4" data-testid="accordion-cti">
+            <Tabs defaultValue={ctiContent[0].id} className="w-full" data-testid="tabs-cti">
+              <TabsList className="grid grid-cols-2 md:grid-cols-4 w-full bg-slate-800 border border-slate-700 mb-6">
+                {ctiContent.map((item) => (
+                  <TabsTrigger 
+                    key={item.id} 
+                    value={item.id}
+                    className="text-xs md:text-sm"
+                    data-testid={`tab-trigger-${item.id}`}
+                  >
+                    {item.title}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
               {ctiContent.map((item) => (
-                <AccordionItem 
+                <TabsContent 
                   key={item.id} 
                   value={item.id}
-                  className="bg-slate-800 border border-slate-700 rounded-lg overflow-hidden"
-                  data-testid={`accordion-item-${item.id}`}
+                  className="bg-slate-800 border border-slate-700 rounded-lg p-6"
+                  data-testid={`tab-content-${item.id}`}
                 >
-                  <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-slate-700/50" data-testid={`accordion-trigger-${item.id}`}>
-                    <div className="flex items-center gap-4 text-left">
-                      <div className="w-10 h-10 rounded-lg bg-blue-600/20 flex items-center justify-center flex-shrink-0">
-                        <item.icon className="h-5 w-5 text-blue-400" />
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold text-white">{item.title}</h3>
-                        <p className="text-sm text-blue-300">{item.subtitle}</p>
-                      </div>
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-10 h-10 rounded-lg bg-blue-600/20 flex items-center justify-center flex-shrink-0">
+                      <item.icon className="h-5 w-5 text-blue-400" />
                     </div>
-                  </AccordionTrigger>
-                  <AccordionContent className="px-6 pb-6">
-                    <p className="text-slate-300 mb-4 leading-relaxed">{item.description}</p>
-                    <ul className="space-y-2">
-                      {item.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-start gap-2">
-                          <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0 mt-0.5" />
-                          <span className="text-slate-300">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                      <p className="text-sm text-blue-300">{item.subtitle}</p>
+                    </div>
+                  </div>
+                  <p className="text-slate-300 mb-4 leading-relaxed">{item.description}</p>
+                  <ul className="space-y-2">
+                    {item.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <CheckCircle className="h-5 w-5 text-green-400 flex-shrink-0 mt-0.5" />
+                        <span className="text-slate-300">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </TabsContent>
               ))}
-            </Accordion>
+            </Tabs>
           </div>
         </div>
       </section>
