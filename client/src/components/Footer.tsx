@@ -11,17 +11,19 @@ export default function Footer() {
         <div className="grid lg:grid-cols-5 gap-12">
           {/* About PurpleGuard */}
           <div className="lg:col-span-2">
-            <div className="mb-6">
-              <img
-                src={purpleGuardLogo}
-                alt="PurpleGuard"
-                className="h-10 w-auto brightness-0 invert"
-                data-testid="footer-logo-purpleguard"
-              />
-              <p className="text-sm text-purple-300 mt-2 font-medium">
-                Smarter Security. Stronger Defense.
-              </p>
-            </div>
+            <Link href="/">
+              <div className="mb-6 cursor-pointer">
+                <img
+                  src={purpleGuardLogo}
+                  alt="PurpleGuard"
+                  className="h-10 w-auto brightness-0 invert"
+                  data-testid="footer-logo-purpleguard"
+                />
+                <p className="text-sm text-purple-300 mt-2 font-medium">
+                  Smarter Security. Stronger Defense.
+                </p>
+              </div>
+            </Link>
             <p className="text-slate-400 mb-6 leading-relaxed">
               PurpleGuard is a managed security services provider (MSSP) focused on SMEs and mid-market organizations. We deliver subscription-based, compliance-ready cybersecurity with 24/7 SOC monitoring and expert support.
             </p>

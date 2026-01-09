@@ -99,7 +99,7 @@ export default function Navigation() {
             <div className="flex items-center cursor-pointer">
               <img 
                 src={purpleGuardLogo} 
-                alt="PurpleGuard - Smarter Security. Stronger Defense." 
+                alt="PurpleGuard" 
                 className="h-12 w-auto"
                 data-testid="logo-purpleguard"
               />
