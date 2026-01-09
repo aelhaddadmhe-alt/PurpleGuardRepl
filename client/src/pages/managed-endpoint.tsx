@@ -118,13 +118,13 @@ export default function ManagedEndpoint() {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-[#ff6633] hover:bg-[#ff6633]/90 text-white">
+                <Button size="lg" className="bg-[#ff6633] hover:bg-[#ff6633]/90 text-white shadow-md">
                   <Calendar className="h-5 w-5 mr-2" />
                   Request a Consultation
                 </Button>
               </a>
               <Link href="/services/managed-x">
-                <Button size="lg" variant="outline" className="border-white/30 hover:bg-white/10 text-white">
+                <Button size="lg" variant="outline" className="border-white/40 hover:bg-white/10 text-white font-medium">
                   View Managed-X Services
                   <ChevronRight className="h-5 w-5 ml-2" />
                 </Button>
@@ -352,13 +352,13 @@ export default function ManagedEndpoint() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="mailto:mmowafy@purpleguard.io?subject=Managed Endpoint Custom Quote">
-              <Button size="lg" className="bg-[#ff6633] hover:bg-[#ff6633]/90 text-white">
+              <Button size="lg" className="bg-[#ff6633] hover:bg-[#ff6633]/90 text-white font-semibold shadow-md">
                 <Mail className="h-5 w-5 mr-2" />
                 Get a Custom Quote
               </Button>
             </a>
             <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="border-white/30 hover:bg-white/10 text-white">
+              <Button size="lg" variant="outline" className="border-white/40 hover:bg-white/10 text-white font-medium">
                 <Calendar className="h-5 w-5 mr-2" />
                 Talk to an Expert
               </Button>

@@ -20,7 +20,14 @@ export default function Navigation() {
     <>
       {mobile ? (
         <>
-          <div className="font-semibold text-slate-900 px-3 py-2 text-sm">Services</div>
+          <Link href="/services">
+            <div 
+              className="font-semibold text-slate-900 px-3 py-2 text-sm cursor-pointer hover:text-primary-600"
+              onClick={() => setIsOpen(false)}
+            >
+              Services
+            </div>
+          </Link>
           <Link href="/services/purple-x">
             <Button 
               variant="ghost" 
@@ -44,13 +51,15 @@ export default function Navigation() {
       ) : (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
-            <Button 
-              variant="ghost" 
-              className="text-slate-700 hover:text-primary-600 font-medium flex items-center gap-1"
-            >
-              Services
-              <ChevronDown className="h-4 w-4" />
-            </Button>
+            <Link href="/services">
+              <Button 
+                variant="ghost" 
+                className="text-slate-700 hover:text-primary-600 font-medium flex items-center gap-1"
+              >
+                Services
+                <ChevronDown className="h-4 w-4" />
+              </Button>
+            </Link>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="start" className="w-48">
             <DropdownMenuItem asChild>

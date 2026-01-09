@@ -30,7 +30,7 @@ const managedXServices = [
     category: "Endpoint Management",
     icon: Cpu,
     description: "Managed Endpoint provides continuous endpoint visibility, automated patching, and policy enforcement for workstations and servers in hybrid environments.",
-    pricing: "USD 6 / endpoint / month",
+    pricing: "$6 / endpoint / month",
     bestFor: "Organizations needing endpoint hygiene and compliance posture",
     emailSubject: "Managed Endpoint Inquiry",
     detailLink: "/services/managed-x/managed-endpoint",
@@ -56,7 +56,7 @@ const managedXServices = [
     category: "Endpoint Security",
     icon: Shield,
     description: "Managed EDR delivers behavioral threat detection, automated containment, and SOC-backed investigation using endpoint telemetry.",
-    pricing: "USD 18 / endpoint / month",
+    pricing: "$18 / endpoint / month",
     bestFor: "Organizations needing advanced endpoint protection",
     emailSubject: "Managed EDR Inquiry",
     detailLink: "/services/managed-x/managed-edr",
@@ -82,7 +82,7 @@ const managedXServices = [
     category: "Network Security",
     icon: Server,
     description: "Managed Firewall includes policy management, monitoring, tuning, and lifecycle support for on-prem and cloud firewalls.",
-    pricing: "USD 120 / firewall / month",
+    pricing: "$120 / firewall / month",
     bestFor: "Organizations with complex perimeter security needs",
     emailSubject: "Managed FW Inquiry",
     capabilities: [
@@ -107,7 +107,7 @@ const managedXServices = [
     category: "Application Security",
     icon: Globe,
     description: "Managed WAF protects applications and APIs from OWASP Top 10, bots, and volumetric attacks through continuous tuning.",
-    pricing: "USD 95 / application / month",
+    pricing: "$95 / application / month",
     bestFor: "Organizations with web applications and APIs to protect",
     emailSubject: "Managed WAF Inquiry",
     capabilities: [
@@ -132,7 +132,7 @@ const managedXServices = [
     category: "Email Security",
     icon: Mail,
     description: "Managed Email Security defends against phishing, BEC, malware, and impersonation with monitoring and response support.",
-    pricing: "USD 4 / mailbox / month",
+    pricing: "$4 / mailbox / month",
     bestFor: "Organizations needing protection against email threats",
     emailSubject: "Managed E-mail Security inquiry",
     capabilities: [
@@ -157,7 +157,7 @@ const managedXServices = [
     category: "Business Continuity",
     icon: Database,
     description: "Managed Backup delivers monitored backups, ransomware recovery readiness, and compliance-aligned retention policies.",
-    pricing: "USD 35 / workload / month",
+    pricing: "$35 / workload / month",
     bestFor: "Organizations requiring data protection and recovery",
     emailSubject: "Managed Backup & BCDR inquiry",
     capabilities: [
@@ -182,7 +182,7 @@ const managedXServices = [
     category: "Identity & Access",
     icon: KeyRound,
     description: "Managed Identity enforces zero-trust access using MFA, SSO, and conditional access policies.",
-    pricing: "USD 5 / user / month",
+    pricing: "$5 / user / month",
     bestFor: "Organizations implementing zero trust access",
     emailSubject: "Managed Identity inquiry",
     detailLink: "/services/managed-x/managed-identity",
@@ -208,7 +208,7 @@ const managedXServices = [
     category: "Secure Access",
     icon: Lock,
     description: "Managed SASE provides zero-trust access, secure web gateway, and cloud-delivered security for remote users.",
-    pricing: "USD 12 / user / month",
+    pricing: "$12 / user / month",
     bestFor: "Organizations with remote or hybrid workforces",
     emailSubject: "Managed SASE/ZTNA inquiry",
     detailLink: "/services/managed-x/managed-sase-ztna",
@@ -260,13 +260,13 @@ export default function ManagedX() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="bg-[#ff6633] hover:bg-[#ff6633]/90 text-white">
+                <Button size="lg" className="bg-[#ff6633] hover:bg-[#ff6633]/90 text-white shadow-md">
                   <Calendar className="h-5 w-5 mr-2" />
                   Talk to an Expert
                 </Button>
               </a>
               <Link href="#services">
-                <Button size="lg" variant="outline" className="border-white/30 hover:bg-white/10 text-white">
+                <Button size="lg" variant="outline" className="border-white/40 hover:bg-white/10 text-white font-medium">
                   Request Pricing
                   <ChevronRight className="h-5 w-5 ml-2" />
                 </Button>
@@ -341,20 +341,20 @@ export default function ManagedX() {
                     <div className="flex flex-col sm:flex-row gap-3 flex-wrap">
                       {service.detailLink && (
                         <Link href={service.detailLink}>
-                          <Button className="bg-[#ff6633] hover:bg-[#ff6633]/90">
+                          <Button className="bg-[#ff6633] hover:bg-[#ff6633]/90 text-white font-semibold">
                             View More
                             <ChevronRight className="h-4 w-4 ml-2" />
                           </Button>
                         </Link>
                       )}
                       <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer">
-                        <Button className="bg-blue-600 hover:bg-blue-700">
+                        <Button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold">
                           <Phone className="h-4 w-4 mr-2" />
                           Book Discovery Call
                         </Button>
                       </a>
                       <a href={`mailto:mmowafy@purpleguard.io?subject=${encodeURIComponent(service.emailSubject)}`}>
-                        <Button variant="outline">
+                        <Button variant="outline" className="border-slate-300 text-slate-700 font-medium">
                           <Mail className="h-4 w-4 mr-2" />
                           Email Inquiry
                         </Button>
@@ -454,13 +454,13 @@ export default function ManagedX() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold">
                 <Calendar className="h-5 w-5 mr-2" />
                 Schedule a Consultation
               </Button>
             </a>
             <a href="mailto:mmowafy@purpleguard.io">
-              <Button size="lg" variant="outline">
+              <Button size="lg" variant="outline" className="border-slate-300 text-slate-700 font-medium">
                 Contact Sales
                 <ChevronRight className="h-5 w-5 ml-2" />
               </Button>
