@@ -134,7 +134,7 @@ export default function Pricing() {
                 </Button>
               </a>
               <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer">
-                <Button size="lg" variant="outline" className="border-white/30 hover:bg-white/10 text-white">
+                <Button size="lg" variant="outline" className="border-white/50 bg-white/20 hover:bg-white/30 text-white">
                   <Calendar className="h-5 w-5 mr-2" />
                   Talk to an Expert
                 </Button>
@@ -420,7 +420,7 @@ export default function Pricing() {
               </Button>
             </a>
             <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="border-white/30 hover:bg-white/10 text-white">
+              <Button size="lg" variant="outline" className="border-white/50 bg-white/20 hover:bg-white/30 text-white">
                 <Calendar className="h-5 w-5 mr-2" />
                 Schedule a Consultation
               </Button>

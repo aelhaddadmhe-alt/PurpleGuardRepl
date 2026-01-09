@@ -266,7 +266,7 @@ export default function ManagedX() {
                 </Button>
               </a>
               <Link href="#services">
-                <Button size="lg" variant="outline" className="border-white/40 hover:bg-white/10 text-white font-medium">
+                <Button size="lg" variant="outline" className="border-white/50 bg-white/20 hover:bg-white/30 text-white font-medium">
                   Request Pricing
                   <ChevronRight className="h-5 w-5 ml-2" />
                 </Button>

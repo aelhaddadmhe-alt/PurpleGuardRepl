@@ -119,7 +119,7 @@ export default function Landing() {
                 </Button>
               </a>
               <a href="#services">
-                <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10 px-8">
+                <Button size="lg" variant="outline" className="border-white/50 text-white bg-white/20 hover:bg-white/30 px-8">
                   View Services
                   <ChevronRight className="h-5 w-5 ml-2" />
                 </Button>
@@ -365,7 +365,7 @@ export default function Landing() {
               </Button>
             </a>
             <a href="mailto:mmowafy@purpleguard.io">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 px-8">
+              <Button size="lg" variant="outline" className="border-white/50 text-white bg-white/20 hover:bg-white/30 px-8">
                 <Mail className="h-5 w-5 mr-2" />
                 Contact Sales
               </Button>

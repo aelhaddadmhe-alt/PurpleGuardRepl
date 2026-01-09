@@ -124,7 +124,7 @@ export default function ManagedEndpoint() {
                 </Button>
               </a>
               <Link href="/services/managed-x">
-                <Button size="lg" variant="outline" className="border-white/40 hover:bg-white/10 text-white font-medium">
+                <Button size="lg" variant="outline" className="border-white/50 bg-white/20 hover:bg-white/30 text-white font-medium">
                   View Managed-X Services
                   <ChevronRight className="h-5 w-5 ml-2" />
                 </Button>
@@ -358,7 +358,7 @@ export default function ManagedEndpoint() {
               </Button>
             </a>
             <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="border-white/40 hover:bg-white/10 text-white font-medium">
+              <Button size="lg" variant="outline" className="border-white/50 bg-white/20 hover:bg-white/30 text-white font-medium">
                 <Calendar className="h-5 w-5 mr-2" />
                 Talk to an Expert
               </Button>
