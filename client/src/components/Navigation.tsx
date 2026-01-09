@@ -21,15 +21,6 @@ export default function Navigation() {
       {mobile ? (
         <>
           <div className="font-semibold text-slate-900 px-3 py-2 text-sm">Services</div>
-          <Link href="/services">
-            <Button 
-              variant="ghost" 
-              className="w-full justify-start pl-8 text-slate-700 hover:text-primary-600 font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              All Services
-            </Button>
-          </Link>
           <Link href="/services/purple-x">
             <Button 
               variant="ghost" 
@@ -37,6 +28,15 @@ export default function Navigation() {
               onClick={() => setIsOpen(false)}
             >
               Purple X
+            </Button>
+          </Link>
+          <Link href="/services/managed-x">
+            <Button 
+              variant="ghost" 
+              className="w-full justify-start pl-8 text-slate-700 hover:text-primary-600 font-medium"
+              onClick={() => setIsOpen(false)}
+            >
+              Managed X
             </Button>
           </Link>
           <div className="border-b border-slate-200 my-2" />
@@ -54,14 +54,14 @@ export default function Navigation() {
           </DropdownMenuTrigger>
           <DropdownMenuContent align="start" className="w-48">
             <DropdownMenuItem asChild>
-              <Link href="/services" className="cursor-pointer">
-                All Services
+              <Link href="/services/purple-x" className="cursor-pointer">
+                Purple X Services
               </Link>
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem asChild>
-              <Link href="/services/purple-x" className="cursor-pointer">
-                Purple X Services
+              <Link href="/services/managed-x" className="cursor-pointer">
+                Managed X Services
               </Link>
             </DropdownMenuItem>
           </DropdownMenuContent>

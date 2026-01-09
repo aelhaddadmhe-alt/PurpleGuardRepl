@@ -9,6 +9,7 @@ import Home from "@/pages/home";
 import Services from "@/pages/services";
 import ServiceDetail from "@/pages/service-detail";
 import PurpleX from "@/pages/purple-x";
+import ManagedX from "@/pages/managed-x";
 import PurpleSentry from "@/pages/purplesentry";
 import Pricing from "@/pages/pricing";
 import Subscribe from "@/pages/subscribe";
@@ -28,6 +29,7 @@ function Router() {
           <Route path="/" component={Landing} />
           <Route path="/services" component={Services} />
           <Route path="/services/purple-x" component={PurpleX} />
+          <Route path="/services/managed-x" component={ManagedX} />
           <Route path="/services/purple-x/purplesentry" component={PurpleSentry} />
           <Route path="/services/:slug" component={ServiceDetail} />
           <Route path="/pricing" component={Pricing} />
@@ -41,6 +43,7 @@ function Router() {
           <Route path="/" component={Home} />
           <Route path="/services" component={Services} />
           <Route path="/services/purple-x" component={PurpleX} />
+          <Route path="/services/managed-x" component={ManagedX} />
           <Route path="/services/purple-x/purplesentry" component={PurpleSentry} />
           <Route path="/services/:slug" component={ServiceDetail} />
           <Route path="/pricing" component={Pricing} />

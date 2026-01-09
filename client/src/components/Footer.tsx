@@ -139,7 +139,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/services"
+                  href="/services/managed-x"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
                   Managed Endpoint
@@ -147,7 +147,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services"
+                  href="/services/managed-x"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
                   Managed Firewall
@@ -155,7 +155,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services"
+                  href="/services/managed-x"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
                   Managed Identity
@@ -163,7 +163,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services"
+                  href="/services/managed-x"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
                   Managed Email
@@ -171,7 +171,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services"
+                  href="/services/managed-x"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
                   Managed Backup
@@ -179,7 +179,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services"
+                  href="/services/managed-x"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
                   Managed SASE

@@ -1,0 +1,186 @@
+Page Title (≤ 60 characters)
+Managed Security Infrastructure Services | Managed-X by PurpleGuard
+________________________________________
+Meta Description (≤ 160 characters)
+Managed endpoint, firewall, WAF, identity, email, backup, and SASE services with 24/7 monitoring and compliance-ready operations.
+________________________________________
+URL: /services/managed-x
+________________________________________
+H1 — HERO SECTION
+Managed Security Infrastructure. Delivered as a Service.
+H2 — Subheading
+Fully managed security services that reduce operational burden while strengthening protection, visibility, and compliance.
+Primary CTA
+Talk to an Expert
+Secondary CTA
+Request Pricing
+________________________________________
+H2 — MANAGED-X SERVICE CATALOG
+________________________________________
+H3 — Managed Endpoint
+Brief description: Centralized endpoint management, patching, and health monitoring.
+About the service (≤200 chars):
+Managed Endpoint provides continuous endpoint visibility, automated patching, and policy enforcement for workstations and servers in hybrid environments.
+Starting price: USD 6 / endpoint / month
+Key capabilities:
+•	Patch and update management
+•	Endpoint inventory and lifecycle tracking
+•	Configuration and policy enforcement
+•	Device health monitoring
+•	Compliance posture reporting
+Business value:
+•	Reduces IT overhead
+•	Improves endpoint hygiene
+•	Lowers misconfiguration risk
+•	Supports audit readiness
+CTA:
+Book a discovery call
+Email inquiry (mailto:mmowafy@purpleguard.io, subject = Managed Endpoint Inquiry) 
+________________________________________
+H3 — Managed EDR
+Brief description: Continuous endpoint threat detection and response.
+About the service (≤200 chars):
+Managed EDR delivers behavioral threat detection, automated containment, and SOC-backed investigation using endpoint telemetry.
+Starting price: USD 18 / endpoint / month
+Key capabilities:
+•	Behavioral threat detection
+•	Automated isolation and remediation
+•	Endpoint telemetry correlation
+•	SOC escalation workflows
+•	Incident reporting
+Business value:
+•	Faster threat detection
+•	Reduced ransomware impact
+•	Lower dwell time
+•	Stronger endpoint visibility
+CTA:
+Book a discovery call
+Email inquiry (mailto:mmowafy@purpleguard.io, subject = Managed EDR Inquiry)
+________________________________________
+H3 — Managed Firewall
+Brief description: Fully managed perimeter and network firewall security.
+About the service (≤200 chars):
+Managed Firewall includes policy management, monitoring, tuning, and lifecycle support for on-prem and cloud firewalls.
+Starting price: USD 120 / firewall / month
+Key capabilities:
+•	NGFW & SD-WAN management
+•	Policy configuration and tuning
+•	IDS/IPS monitoring
+•	Log analysis and alerting
+•	Change management
+Business value:
+•	Reduces configuration errors
+•	Improves perimeter security
+•	Frees internal IT resources
+•	Supports regulatory controls
+CTA:
+Book a discovery call
+Email inquiry (mailto:mmowafy@purpleguard.io, subject = Managed FW Inquiry)________________________________________
+H3 — Managed WAF
+Brief description: Web application and API protection as a managed service.
+About the service (≤200 chars):
+Managed WAF protects applications and APIs from OWASP Top 10, bots, and volumetric attacks through continuous tuning.
+Starting price: USD 95 / application / month
+Key capabilities:
+•	OWASP Top 10 protection
+•	API security enforcement
+•	Bot mitigation
+•	DDoS protection
+•	Rule tuning and monitoring
+Business value:
+•	Reduces application attack surface
+•	Protects customer data
+•	Improves uptime
+•	Enables secure digital services
+CTA:
+Book a discovery call
+Email inquiry (mailto:mmowafy@purpleguard.io, subject = Managed WAF Inquiry)
+________________________________________
+H3 — Managed Email Security
+Brief description: Advanced protection against phishing and email-borne threats.
+About the service (≤200 chars):
+Managed Email Security defends against phishing, BEC, malware, and impersonation with monitoring and response support.
+Starting price: USD 4 / mailbox / month
+Key capabilities:
+•	Phishing and BEC protection
+•	DMARC and spoofing prevention
+•	Malware scanning
+•	Email continuity
+•	Incident response support
+Business value:
+•	Reduces user-driven breaches
+•	Protects brand reputation
+•	Lowers response costs
+•	Improves employee trust
+CTA:
+Book a discovery call
+Email inquiry (mailto:mmowafy@purpleguard.io, subject = Managed E-mail Security inquiry)
+________________________________________
+H3 — Managed Backup & BCDR
+Brief description: Business-grade backup and disaster recovery management.
+About the service (≤200 chars):
+Managed Backup delivers monitored backups, ransomware recovery readiness, and compliance-aligned retention policies.
+Starting price: USD 35 / workload / month
+Key capabilities:
+•	Cloud and on-prem backups
+•	Immutable storage
+•	Ransomware recovery
+•	Recovery testing
+•	Retention management
+Business value:
+•	Minimizes data loss
+•	Improves recovery time
+•	Strengthens ransomware resilience
+•	Supports audits
+CTA:
+Book a discovery call
+Email inquiry (mailto:mmowafy@purpleguard.io, subject = Managed Backup & BCDR inquiry)
+________________________________________
+H3 — Managed Identity
+Brief description: Centralized identity and access security management.
+About the service (≤200 chars):
+Managed Identity enforces zero-trust access using MFA, SSO, and conditional access policies.
+Starting price: USD 5 / user / month
+Key capabilities:
+•	MFA and SSO
+•	Conditional access
+•	Identity monitoring
+•	Access governance
+•	Policy enforcement
+Business value:
+•	Reduces account compromise
+•	Improves access visibility
+•	Simplifies user management
+•	Enables zero trust
+CTA:
+Book a discovery call
+Email inquiry (mailto:mmowafy@purpleguard.io, subject = Managed Identity inquiry)
+________________________________________
+H3 — Managed SASE / ZTNA
+Brief description: Secure cloud-delivered access for modern workforces.
+About the service (≤200 chars):
+Managed SASE provides zero-trust access, secure web gateway, and cloud-delivered security for remote users.
+Starting price: USD 12 / user / month
+Key capabilities:
+•	Zero Trust Network Access
+•	Secure Web Gateway
+•	CASB
+•	Policy-based access
+•	Encrypted traffic inspection
+Business value:
+•	Secures remote access
+•	Replaces legacy VPNs
+•	Improves user experience
+•	Scales securely
+CTA:
+Book a discovery call
+Email inquiry (mailto:mmowafy@purpleguard.io, subject = Managed SASE/ZTNA inquiry)
+________________________________________
+H2 — FINAL CTA
+Stop managing security tools. Start managing risk.
+Primary CTA: Schedule a Consultation
+Secondary CTA: Contact Sales (mailto:mmowafy@purpleguard.io
+
+________________________________________
+Add the following notes to the page: 
+Final pricing depends on scale, SLAs, integrations, and compliance scope

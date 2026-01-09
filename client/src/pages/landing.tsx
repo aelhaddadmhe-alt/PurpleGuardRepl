@@ -45,12 +45,12 @@ const purpleXServices = [
 ];
 
 const managedXServices = [
-  { name: "Managed Endpoint & EDR", description: "Endpoint protection with advanced threat detection", icon: Cpu, href: "/services" },
-  { name: "Managed Firewall & WAF", description: "Network perimeter and web application protection", icon: Shield, href: "/services" },
-  { name: "Managed Identity (SSO, MFA)", description: "Identity and access management solutions", icon: KeyRound, href: "/services" },
-  { name: "Managed Email Security", description: "Email threat protection and filtering", icon: Mail, href: "/services" },
-  { name: "Managed Backup & BCDR", description: "Business continuity and disaster recovery", icon: Server, href: "/services" },
-  { name: "Managed SASE / ZTNA", description: "Secure access service edge and zero trust", icon: Lock, href: "/services" },
+  { name: "Managed Endpoint & EDR", description: "Endpoint protection with advanced threat detection", icon: Cpu, href: "/services/managed-x" },
+  { name: "Managed Firewall & WAF", description: "Network perimeter and web application protection", icon: Shield, href: "/services/managed-x" },
+  { name: "Managed Identity (SSO, MFA)", description: "Identity and access management solutions", icon: KeyRound, href: "/services/managed-x" },
+  { name: "Managed Email Security", description: "Email threat protection and filtering", icon: Mail, href: "/services/managed-x" },
+  { name: "Managed Backup & BCDR", description: "Business continuity and disaster recovery", icon: Server, href: "/services/managed-x" },
+  { name: "Managed SASE / ZTNA", description: "Secure access service edge and zero trust", icon: Lock, href: "/services/managed-x" },
 ];
 
 const whyPurpleGuard = [
@@ -223,7 +223,7 @@ export default function Landing() {
             </div>
 
             <div className="text-center">
-              <Link href="/services">
+              <Link href="/services/managed-x">
                 <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white">
                   Explore Managed X Services
                   <ChevronRight className="h-4 w-4 ml-2" />
