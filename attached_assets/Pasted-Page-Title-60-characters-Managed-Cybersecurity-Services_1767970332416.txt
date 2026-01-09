@@ -1,0 +1,210 @@
+Page Title (≤ 60 characters)
+
+Managed Cybersecurity Services for SMEs | PurpleGuard MSSP
+
+Meta Description (≤ 160 characters)
+
+Subscription-based managed cybersecurity and infrastructure services for SMEs. 24/7 SOC, MDR, VAPT, compliance-ready protection.
+
+URL Structure
+
+/
+Primary internal links to:
+/services/purple-x
+/services/managed-x
+/solutions/compliance
+/industries
+/resources
+/about
+/contact
+
+H1 — HERO SECTION
+
+Smarter Security. Stronger Defense.
+
+Subheading (H2)
+
+Next-generation managed cybersecurity and exposure management for SMEs and mid-market organizations.
+
+Hook (Bullet or short paragraph)
+
+24/7 SOC, MDR, and Exposure Management
+
+Subscription-based, compliance-aware security
+
+Built for scale, automation, and measurable risk reduction
+
+Primary CTA (Button)
+
+Request a Security Assessment
+
+Secondary CTA
+
+View Services
+
+TRUST & AUTHORITY BAR (Below Hero)
+
+(Logos / badges / text-based if early-stage)
+
+Compliance-aligned (CIS, NIST, ISO-ready)
+
+MITRE ATT&CK aligned operations
+
+SME & Mid-Market Focused MSSP
+
+H2 — CORE SERVICE LINES OVERVIEW
+H3 — Purple X: Cybersecurity & Exposure Management
+
+Short description:
+Always-on security services covering prevention, detection, response, and exposure reduction.
+
+Internal links (cards):
+
+PurpleVAPT – Vulnerability Assessment & Pen Testing
+
+PurpleSOC – 24/7 SOC & Incident Response
+
+PurpleSentinel – Managed Detection & Response (MDR)
+
+PurpleSentry – Threat Intelligence & EASM
+
+PurpleStrike – Red Teaming & BAS
+
+PurpleConfig – Security Configuration & Hardening
+
+PurpleReveal – Network Detection & Response
+
+CTA:
+Explore Purple X Services →
+
+H3 — Managed X: Managed Security Infrastructure
+
+Short description:
+Fully managed security infrastructure and endpoint services with continuous monitoring and policy enforcement.
+
+Internal links (cards):
+
+Managed Endpoint & EDR
+
+Managed Firewall & WAF
+
+Managed Identity (SSO, MFA)
+
+Managed Email Security
+
+Managed Backup & BCDR
+
+Managed SASE / ZTNA
+
+CTA:
+Explore Managed X Services →
+
+H2 — WHY PURPLEGUARD (VALUE PROPOSITION)
+H3 Sections (3–4 columns)
+
+Built for SMEs: No enterprise bloat, predictable pricing
+
+Automation-Driven: SOAR, telemetry correlation, continuous validation
+
+Compliance-Ready: Audit-friendly reporting and evidence
+
+Single Partner Model: One MSSP, full security lifecycle
+
+Internal link:
+Learn How We Operate →
+
+H2 — USE CASES / SOLUTIONS
+
+Short intro paragraph focused on outcomes.
+
+Internal links:
+
+Compliance & Audit Readiness
+
+Ransomware Defense
+
+Cloud & SaaS Security
+
+External Attack Surface Management
+
+Zero Trust & Secure Remote Access
+
+CTA:
+View Solutions →
+
+H2 — WHO WE SERVE
+
+Industries grid with internal links:
+
+Healthcare
+
+Financial Services
+
+SaaS & Technology
+
+Professional Services
+
+Manufacturing
+
+CTA:
+See Industry Solutions →
+
+H2 — SECURITY INSIGHTS & RESOURCES
+
+SEO-driven content preview:
+
+Blog articles
+
+Threat advisories
+
+Compliance guides
+
+Security explainers
+
+Internal link:
+Visit Security Resources →
+
+H2 — FINAL CTA SECTION
+
+Know your risk. Control your exposure.
+
+Primary CTA:
+Book a Free Security Consultation
+
+Secondary CTA:
+Contact Sales
+
+FOOTER (SEO & UX)
+
+About PurpleGuard
+
+Services (Purple X / Managed X)
+
+Compliance & Trust
+
+Resources
+
+Careers
+
+Contact
+
+Include:
+
+NAP (Name, Address, Phone if applicable)
+
+Social proof links
+
+Privacy & Terms
+
+SEO NOTES FOR THE BUILDER
+
+One H1 only
+
+Logical H2 → H3 hierarchy
+
+Keyword focus:
+Managed Security Services Provider, MSSP for SMEs, Managed SOC, MDR Services, Cybersecurity Subscription Services
+
+Internal linking prioritized over outbound
+
+Fast load, schema-ready, mobile-first
