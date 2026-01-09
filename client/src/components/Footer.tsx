@@ -1,17 +1,16 @@
 import { Link } from "wouter";
-import { Linkedin, Twitter, Youtube, Phone, Shield } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { Linkedin, Twitter, Youtube, Phone, MapPin, Mail } from "lucide-react";
 import purpleGuardLogo from "@assets/Asset_30_1765969755163.png";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className="bg-[#000033] text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid lg:grid-cols-4 gap-12">
-          {/* Company Info */}
-          <div className="lg:col-span-1">
+        <div className="grid lg:grid-cols-5 gap-12">
+          {/* About PurpleGuard */}
+          <div className="lg:col-span-2">
             <div className="mb-6">
               <img
                 src={purpleGuardLogo}
@@ -19,32 +18,51 @@ export default function Footer() {
                 className="h-10 w-auto brightness-0 invert"
                 data-testid="footer-logo-purpleguard"
               />
-              <p className="text-sm text-slate-400 mt-2">
+              <p className="text-sm text-purple-300 mt-2 font-medium">
                 Smarter Security. Stronger Defense.
               </p>
             </div>
             <p className="text-slate-400 mb-6 leading-relaxed">
-              Protecting SMBs with enterprise-grade security solutions. 24/7
-              monitoring, expert support, and complete peace of mind.
+              PurpleGuard is a managed security services provider (MSSP) focused on SMEs and mid-market organizations. We deliver subscription-based, compliance-ready cybersecurity with 24/7 SOC monitoring and expert support.
             </p>
+            
+            {/* NAP Information */}
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center gap-2 text-slate-400">
+                <MapPin className="h-4 w-4 text-[#6633cc]" />
+                <span>CAI | DXB</span>
+              </div>
+              <div className="flex items-center gap-2 text-slate-400">
+                <Phone className="h-4 w-4 text-[#6633cc]" />
+                <a href="tel:+971585159666" className="hover:text-white transition-colors">+971 58 515 9666</a>
+              </div>
+              <div className="flex items-center gap-2 text-slate-400">
+                <Mail className="h-4 w-4 text-[#6633cc]" />
+                <a href="mailto:mmowafy@purpleguard.io" className="hover:text-white transition-colors">mmowafy@purpleguard.io</a>
+              </div>
+            </div>
+
+            {/* Social Links */}
             <div className="flex space-x-4">
               <a
-                href="#"
-                className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors"
+                href="https://www.linkedin.com/company/purpleguard"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-[#6633cc] transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-4 w-4 text-white" />
               </a>
               <a
-                href="https://www.linkedin.com/company/purpleguard"
-                className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors"
+                href="#"
+                className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-[#6633cc] transition-colors"
                 aria-label="Twitter"
               >
                 <Twitter className="h-4 w-4 text-white" />
               </a>
               <a
                 href="#"
-                className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-slate-700 transition-colors"
+                className="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-[#6633cc] transition-colors"
                 aria-label="YouTube"
               >
                 <Youtube className="h-4 w-4 text-white" />
@@ -52,56 +70,79 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Services - Purple X */}
           <div>
-            <h4 className="font-bold text-lg mb-6">Services</h4>
+            <h4 className="font-bold text-lg mb-6 text-white">Purple X</h4>
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/services/managed-firewall"
+                  href="/services/purple-x"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
-                  ManagedFirewall
+                  PurpleVAPT
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services/managed-endpoint"
+                  href="/services/purple-x"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
-                  ManagedEndpoint
+                  PurpleSOC
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services/managed-siem"
+                  href="/services/purple-x"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
-                  ManagedSIEM
+                  PurpleSentinel
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services/managed-backup"
+                  href="/services/purple-x/purplesentry"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
-                  ManagedBackup
+                  PurpleSentry
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services/managed-compliance"
+                  href="/services/purple-x"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
-                  ManagedCompliance
+                  PurpleStrike
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services/managed-identity"
+                  href="/services/purple-x"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
-                  ManagedIdentity
+                  PurpleConfig
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/purple-x"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  PurpleReveal
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Services - Managed X */}
+          <div>
+            <h4 className="font-bold text-lg mb-6 text-white">Managed X</h4>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  href="/services"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Managed Endpoint
                 </Link>
               </li>
               <li>
@@ -109,111 +150,92 @@ export default function Footer() {
                   href="/services"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
-                  Purple[X] Suite
+                  Managed Firewall
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Managed Identity
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Managed Email
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Managed Backup
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Managed SASE
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Company & Compliance */}
           <div>
-            <h4 className="font-bold text-lg mb-6">Resources</h4>
-            <ul className="space-y-3">
+            <h4 className="font-bold text-lg mb-6 text-white">Company</h4>
+            <ul className="space-y-3 mb-8">
+              <li>
+                <Link
+                  href="/services"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Industries
+                </Link>
+              </li>
               <li>
                 <Link
                   href="/blog"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
-                  Blog
+                  Resources
                 </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  Whitepapers
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  Webinars
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  Case Studies
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  Security Tools
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  Documentation
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  Support Center
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="font-bold text-lg mb-6">Company</h4>
-            <ul className="space-y-3 mb-8">
-              <li>
-                <a
-                  href="#"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  Careers
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  Partners
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
+                <Link
+                  href="/booking"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
                   Contact
-                </a>
+                </Link>
               </li>
+            </ul>
+
+            <h4 className="font-bold text-lg mb-4 text-white">Compliance & Trust</h4>
+            <ul className="space-y-3">
               <li>
                 <a
                   href="#"
@@ -241,12 +263,10 @@ export default function Footer() {
           </p>
           <div className="flex items-center space-x-6 text-sm text-slate-400 mt-4 md:mt-0">
             <span className="flex items-center">
-              <Shield className="h-4 w-4 text-secondary-500 mr-2" />
-              24/7 SOC Monitoring
+              CIS | NIST | ISO Aligned
             </span>
             <span className="flex items-center">
-              <Phone className="h-4 w-4 text-secondary-500 mr-2" />
-              +971585159666
+              MITRE ATT&CK Operations
             </span>
           </div>
         </div>
