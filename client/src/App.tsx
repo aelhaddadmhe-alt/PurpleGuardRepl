@@ -11,6 +11,13 @@ import ServiceDetail from "@/pages/service-detail";
 import PurpleX from "@/pages/purple-x";
 import ManagedX from "@/pages/managed-x";
 import PurpleSentry from "@/pages/purplesentry";
+import PurpleSentinel from "@/pages/purplesentinel";
+import PurpleSOC from "@/pages/purplesoc";
+import PurpleVAPT from "@/pages/purplevapt";
+import ManagedEndpoint from "@/pages/managed-endpoint";
+import ManagedEDR from "@/pages/managed-edr";
+import ManagedSASE from "@/pages/managed-sase";
+import ManagedIdentity from "@/pages/managed-identity";
 import Pricing from "@/pages/pricing";
 import Subscribe from "@/pages/subscribe";
 import Dashboard from "@/pages/dashboard";
@@ -31,6 +38,13 @@ function Router() {
           <Route path="/services/purple-x" component={PurpleX} />
           <Route path="/services/managed-x" component={ManagedX} />
           <Route path="/services/purple-x/purplesentry" component={PurpleSentry} />
+          <Route path="/services/purple-x/purplesentinel" component={PurpleSentinel} />
+          <Route path="/services/purple-x/purplesoc" component={PurpleSOC} />
+          <Route path="/services/purple-x/purplevapt" component={PurpleVAPT} />
+          <Route path="/services/managed-x/managed-endpoint" component={ManagedEndpoint} />
+          <Route path="/services/managed-x/managed-edr" component={ManagedEDR} />
+          <Route path="/services/managed-x/managed-sase-ztna" component={ManagedSASE} />
+          <Route path="/services/managed-x/managed-identity" component={ManagedIdentity} />
           <Route path="/services/:slug" component={ServiceDetail} />
           <Route path="/pricing" component={Pricing} />
           <Route path="/subscribe/:serviceId" component={Subscribe} />
@@ -45,6 +59,13 @@ function Router() {
           <Route path="/services/purple-x" component={PurpleX} />
           <Route path="/services/managed-x" component={ManagedX} />
           <Route path="/services/purple-x/purplesentry" component={PurpleSentry} />
+          <Route path="/services/purple-x/purplesentinel" component={PurpleSentinel} />
+          <Route path="/services/purple-x/purplesoc" component={PurpleSOC} />
+          <Route path="/services/purple-x/purplevapt" component={PurpleVAPT} />
+          <Route path="/services/managed-x/managed-endpoint" component={ManagedEndpoint} />
+          <Route path="/services/managed-x/managed-edr" component={ManagedEDR} />
+          <Route path="/services/managed-x/managed-sase-ztna" component={ManagedSASE} />
+          <Route path="/services/managed-x/managed-identity" component={ManagedIdentity} />
           <Route path="/services/:slug" component={ServiceDetail} />
           <Route path="/pricing" component={Pricing} />
           <Route path="/subscribe/:serviceId" component={Subscribe} />

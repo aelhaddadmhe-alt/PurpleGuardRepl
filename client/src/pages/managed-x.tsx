@@ -33,6 +33,7 @@ const managedXServices = [
     pricing: "USD 6 / endpoint / month",
     bestFor: "Organizations needing endpoint hygiene and compliance posture",
     emailSubject: "Managed Endpoint Inquiry",
+    detailLink: "/services/managed-x/managed-endpoint",
     capabilities: [
       "Patch and update management",
       "Endpoint inventory and lifecycle tracking",
@@ -58,6 +59,7 @@ const managedXServices = [
     pricing: "USD 18 / endpoint / month",
     bestFor: "Organizations needing advanced endpoint protection",
     emailSubject: "Managed EDR Inquiry",
+    detailLink: "/services/managed-x/managed-edr",
     capabilities: [
       "Behavioral threat detection",
       "Automated isolation and remediation",
@@ -183,6 +185,7 @@ const managedXServices = [
     pricing: "USD 5 / user / month",
     bestFor: "Organizations implementing zero trust access",
     emailSubject: "Managed Identity inquiry",
+    detailLink: "/services/managed-x/managed-identity",
     capabilities: [
       "MFA and SSO",
       "Conditional access",
@@ -208,6 +211,7 @@ const managedXServices = [
     pricing: "USD 12 / user / month",
     bestFor: "Organizations with remote or hybrid workforces",
     emailSubject: "Managed SASE/ZTNA inquiry",
+    detailLink: "/services/managed-x/managed-sase-ztna",
     capabilities: [
       "Zero Trust Network Access",
       "Secure Web Gateway",
@@ -335,6 +339,14 @@ export default function ManagedX() {
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-3 flex-wrap">
+                      {service.detailLink && (
+                        <Link href={service.detailLink}>
+                          <Button className="bg-[#ff6633] hover:bg-[#ff6633]/90">
+                            View More
+                            <ChevronRight className="h-4 w-4 ml-2" />
+                          </Button>
+                        </Link>
+                      )}
                       <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer">
                         <Button className="bg-blue-600 hover:bg-blue-700">
                           <Phone className="h-4 w-4 mr-2" />

@@ -139,10 +139,34 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/services/managed-x"
+                  href="/services/managed-x/managed-endpoint"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
                   Managed Endpoint
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/managed-x/managed-edr"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Managed EDR
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/managed-x/managed-identity"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Managed Identity
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/managed-x/managed-sase-ztna"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Managed SASE
                 </Link>
               </li>
               <li>
@@ -158,31 +182,7 @@ export default function Footer() {
                   href="/services/managed-x"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
-                  Managed Identity
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/managed-x"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  Managed Email
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/managed-x"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
                   Managed Backup
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/managed-x"
-                  className="text-slate-400 hover:text-white transition-colors"
-                >
-                  Managed SASE
                 </Link>
               </li>
             </ul>
