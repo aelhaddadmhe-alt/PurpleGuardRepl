@@ -10,7 +10,9 @@ deploymentTarget = "static"
 build = ["npm", "run", "build"]
 run = ["npm", "run", "start"]
 publicDir = "dist/public"
-
+[[deployment.rewrites]]
+from = "/*"
+to = "/index.html"
 
 [env]
 PORT = "5000"
