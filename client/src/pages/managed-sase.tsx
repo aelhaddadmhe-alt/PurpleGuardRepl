@@ -299,7 +299,7 @@ export default function ManagedSASE() {
             <Link href="/services/managed-x/managed-identity">
               <Button variant="outline">Managed Identity <ChevronRight className="h-4 w-4 ml-1" /></Button>
             </Link>
-            <Link href="/services/managed-x">
+            <Link href="/services/managed-x/managed-firewall">
               <Button variant="outline">Managed Firewall <ChevronRight className="h-4 w-4 ml-1" /></Button>
             </Link>
           </div>

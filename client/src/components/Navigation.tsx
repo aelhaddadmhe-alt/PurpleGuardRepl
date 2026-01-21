@@ -3,9 +3,31 @@ import { Link } from "wouter";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, User, LogOut, ChevronDown } from "lucide-react";
+import { Menu, User, LogOut, ChevronDown, ChevronRight, Shield, Search, Eye, AlertTriangle, Cpu, Server, Lock } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 import purpleGuardLogo from "@assets/Asset_30_1765969755163.png";
+
+const purpleXServices = [
+  { name: "PurpleVAPT", tagline: "Vulnerability Assessment & Pen Testing", href: "/services/purple-x/purplevapt", icon: Search, color: "from-purple-500 to-indigo-600" },
+  { name: "PurpleSOC", tagline: "24/7 Managed SOC & Incident Response", href: "/services/purple-x/purplesoc", icon: Eye, color: "from-blue-500 to-cyan-600" },
+  { name: "PurpleSentinel", tagline: "Managed Detection & Response (MDR)", href: "/services/purple-x/purplesentinel", icon: Shield, color: "from-violet-500 to-purple-600" },
+  { name: "PurpleSentry", tagline: "Threat Intelligence & Digital Risk", href: "/services/purple-x/purplesentry", icon: AlertTriangle, color: "from-orange-500 to-red-600" },
+];
+
+const managedXServices = [
+  { name: "Managed Endpoint", tagline: "Endpoint management & patching", href: "/services/managed-x/managed-endpoint", icon: Cpu, color: "from-blue-500 to-cyan-600" },
+  { name: "Managed EDR", tagline: "Endpoint threat detection & response", href: "/services/managed-x/managed-edr", icon: Shield, color: "from-purple-500 to-indigo-600" },
+  { name: "Managed Firewall", tagline: "Perimeter & network security", href: "/services/managed-x/managed-firewall", icon: Server, color: "from-emerald-500 to-teal-600" },
+  { name: "Managed SASE / ZTNA", tagline: "Secure cloud-delivered access", href: "/services/managed-x/managed-sase-ztna", icon: Lock, color: "from-slate-600 to-slate-800" },
+];
 
 export default function Navigation() {
   const { isAuthenticated, user } = useAuth();
@@ -15,6 +37,107 @@ export default function Navigation() {
     { label: "Pricing", href: "/pricing" },
     { label: "Resources", href: "/blog" },
   ];
+
+  const ServicesMenu = () => (
+    <NavigationMenu>
+      <NavigationMenuList>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger className="text-slate-700 hover:text-primary-600 font-medium bg-transparent hover:bg-transparent data-[state=open]:bg-transparent">
+            Services
+          </NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <div className="w-[600px] p-6">
+              <div className="grid grid-cols-2 gap-8">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-2 pb-2 border-b border-slate-100">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-600 to-indigo-600 flex items-center justify-center">
+                      <Shield className="h-4 w-4 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-slate-900">Purple X</h3>
+                      <p className="text-xs text-slate-500">Cybersecurity Services</p>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-1">
+                    {purpleXServices.map((service) => (
+                      <NavigationMenuLink key={service.name} asChild>
+                        <Link href={service.href}>
+                          <div className="group/item flex items-start gap-3 p-2 rounded-lg hover:bg-slate-50 cursor-pointer transition-colors">
+                            <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center flex-shrink-0`}>
+                              <service.icon className="h-4 w-4 text-white" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="font-medium text-slate-900 group-hover/item:text-[#6633cc] transition-colors text-sm">
+                                {service.name}
+                              </div>
+                              <div className="text-xs text-slate-500 truncate">{service.tagline}</div>
+                            </div>
+                            <ChevronRight className="h-4 w-4 text-slate-300 group-hover/item:text-[#6633cc] transition-colors flex-shrink-0 mt-1" />
+                          </div>
+                        </Link>
+                      </NavigationMenuLink>
+                    ))}
+                  </div>
+                  
+                  <NavigationMenuLink asChild>
+                    <Link href="/services/purple-x">
+                      <Button variant="outline" size="sm" className="w-full border-[#6633cc]/30 text-[#6633cc] hover:bg-[#6633cc]/5">
+                        View All Purple X
+                        <ChevronRight className="h-4 w-4 ml-1" />
+                      </Button>
+                    </Link>
+                  </NavigationMenuLink>
+                </div>
+                
+                <div className="space-y-4">
+                  <div className="flex items-center gap-2 pb-2 border-b border-slate-100">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 flex items-center justify-center">
+                      <Server className="h-4 w-4 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-slate-900">Managed X</h3>
+                      <p className="text-xs text-slate-500">Managed Infrastructure</p>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-1">
+                    {managedXServices.map((service) => (
+                      <NavigationMenuLink key={service.name} asChild>
+                        <Link href={service.href}>
+                          <div className="group/item flex items-start gap-3 p-2 rounded-lg hover:bg-slate-50 cursor-pointer transition-colors">
+                            <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center flex-shrink-0`}>
+                              <service.icon className="h-4 w-4 text-white" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="font-medium text-slate-900 group-hover/item:text-blue-600 transition-colors text-sm">
+                                {service.name}
+                              </div>
+                              <div className="text-xs text-slate-500 truncate">{service.tagline}</div>
+                            </div>
+                            <ChevronRight className="h-4 w-4 text-slate-300 group-hover/item:text-blue-600 transition-colors flex-shrink-0 mt-1" />
+                          </div>
+                        </Link>
+                      </NavigationMenuLink>
+                    ))}
+                  </div>
+                  
+                  <NavigationMenuLink asChild>
+                    <Link href="/services/managed-x">
+                      <Button variant="outline" size="sm" className="w-full border-blue-500/30 text-blue-600 hover:bg-blue-50">
+                        View All Managed X
+                        <ChevronRight className="h-4 w-4 ml-1" />
+                      </Button>
+                    </Link>
+                  </NavigationMenuLink>
+                </div>
+              </div>
+            </div>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
+  );
 
   const NavItems = ({ mobile = false }) => (
     <>
@@ -49,32 +172,7 @@ export default function Navigation() {
           <div className="border-b border-slate-200 my-2" />
         </>
       ) : (
-        <DropdownMenu>
-          <DropdownMenuTrigger asChild>
-            <Link href="/services">
-              <Button 
-                variant="ghost" 
-                className="text-slate-700 hover:text-primary-600 font-medium flex items-center gap-1"
-              >
-                Services
-                <ChevronDown className="h-4 w-4" />
-              </Button>
-            </Link>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent align="start" className="w-48">
-            <DropdownMenuItem asChild>
-              <Link href="/services/purple-x" className="cursor-pointer">
-                Purple X Services
-              </Link>
-            </DropdownMenuItem>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem asChild>
-              <Link href="/services/managed-x" className="cursor-pointer">
-                Managed X Services
-              </Link>
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
+        <ServicesMenu />
       )}
       {navigationItems.map((item) => (
         <Link key={item.label} href={item.href}>
@@ -94,7 +192,6 @@ export default function Navigation() {
     <nav className="bg-white/95 backdrop-blur-sm border-b border-slate-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <Link href="/">
             <div className="flex items-center cursor-pointer">
               <img 
@@ -106,12 +203,10 @@ export default function Navigation() {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <NavItems />
           </div>
 
-          {/* Auth & CTA */}
           <div className="flex items-center space-x-4">
             {isAuthenticated ? (
               <>
@@ -163,7 +258,6 @@ export default function Navigation() {
               </>
             )}
 
-            {/* Mobile Menu */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="sm" className="md:hidden">
