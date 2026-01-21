@@ -296,7 +296,7 @@ export default function ManagedFirewall() {
           </div>
           
           <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/services/managed-x/managed-sase">
+            <Link href="/services/managed-x/managed-sase-ztna">
               <Button variant="outline">Managed SASE / ZTNA <ChevronRight className="h-4 w-4 ml-1" /></Button>
             </Link>
             <Link href="/services/managed-x/managed-endpoint">
@@ -332,7 +332,7 @@ export default function ManagedFirewall() {
           </p>
           
           <div className="flex flex-wrap gap-4">
-            <Link href="/services/managed-x/managed-sase">
+            <Link href="/services/managed-x/managed-sase-ztna">
               <Button variant="outline">Managed SASE / ZTNA <ChevronRight className="h-4 w-4 ml-1" /></Button>
             </Link>
             <Link href="/services/managed-x/managed-identity">

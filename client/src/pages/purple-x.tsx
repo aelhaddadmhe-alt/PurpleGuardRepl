@@ -28,6 +28,7 @@ const purpleXServices = [
     description: "PurpleVAPT delivers continuous and on-demand vulnerability assessments and penetration testing to identify, validate, and prioritize security weaknesses across your environment.",
     pricing: "$500/month (VAaaS) or $3,000/test (PTaaS)",
     bestFor: "Organizations needing vulnerability visibility & compliance testing",
+    detailLink: "/services/purple-x/purplevapt",
     capabilities: [
       "Network vulnerability scanning (internal & external)",
       "Continuous Vulnerability Assessment (VAaaS)",
@@ -53,6 +54,7 @@ const purpleXServices = [
     description: "PurpleSOC provides a fully managed, 24/7 Security Operations Center that monitors, detects, investigates, and responds to security incidents across your environment.",
     pricing: "$1,500/month",
     bestFor: "24/7 monitoring without internal SOC overhead",
+    detailLink: "/services/purple-x/purplesoc",
     capabilities: [
       "Continuous security monitoring",
       "Alert triage and incident investigation",
@@ -78,6 +80,7 @@ const purpleXServices = [
     description: "PurpleSentinel is PurpleGuard's Managed Detection and Response service, delivering deep visibility and rapid response across endpoints, networks, and cloud environments.",
     pricing: "$25/endpoint/month",
     bestFor: "Endpoint, network & cloud threat detection",
+    detailLink: "/services/purple-x/purplesentinel",
     capabilities: [
       "Endpoint telemetry monitoring",
       "Threat detection and behavioral analysis",
@@ -129,6 +132,7 @@ const purpleXServices = [
     description: "PurpleStrike simulates real-world attacks to test the effectiveness of your security controls, people, and processes.",
     pricing: "$1,500/month (BAS) or $8,000/engagement",
     bestFor: "Security control validation & readiness testing",
+    detailLink: "/services/purple-x/purplestrike",
     capabilities: [
       "Red Team exercises",
       "Breach & Attack Simulation (BAS)",
@@ -179,6 +183,7 @@ const purpleXServices = [
     description: "PurpleReveal provides deep, real-time insight into network traffic to detect advanced threats that bypass traditional security controls.",
     pricing: "$1,500/month",
     bestFor: "Deep network visibility & advanced threat detection",
+    detailLink: "/services/purple-x/purplereveal",
     capabilities: [
       "Deep network traffic inspection",
       "East-west traffic visibility",
@@ -255,6 +260,38 @@ export default function PurpleX() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Jump Section */}
+      <section className="py-12 bg-gradient-to-b from-slate-100 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-2">Quick Navigation</h2>
+            <p className="text-slate-600">Jump directly to the service you're interested in</p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {purpleXServices.map((service) => (
+              <Link key={service.id} href={service.detailLink || `#${service.id}`}>
+                <div className="group relative bg-white rounded-xl p-4 border border-slate-200 hover:border-[#6633cc]/50 hover:shadow-lg transition-all duration-300 cursor-pointer overflow-hidden">
+                  <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-0 group-hover:opacity-5 transition-opacity`} />
+                  <div className="relative flex flex-col items-center text-center space-y-2">
+                    <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center`}>
+                      <service.icon className="h-5 w-5 text-white" />
+                    </div>
+                    <h3 className="font-semibold text-slate-900 group-hover:text-[#6633cc] transition-colors text-sm">
+                      {service.name}
+                    </h3>
+                    <p className="text-xs text-slate-500 line-clamp-2">{service.tagline}</p>
+                  </div>
+                  <div className="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <ChevronRight className="h-4 w-4 text-[#6633cc]" />
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

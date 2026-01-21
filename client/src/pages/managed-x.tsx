@@ -295,6 +295,38 @@ export default function ManagedX() {
         </div>
       </section>
 
+      {/* Quick Jump Section */}
+      <section className="py-12 bg-gradient-to-b from-slate-100 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-2">Quick Navigation</h2>
+            <p className="text-slate-600">Jump directly to the service you're interested in</p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {managedXServices.map((service) => (
+              <Link key={service.id} href={service.detailLink || `#${service.id}`}>
+                <div className="group relative bg-white rounded-xl p-4 border border-slate-200 hover:border-blue-500/50 hover:shadow-lg transition-all duration-300 cursor-pointer overflow-hidden">
+                  <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-0 group-hover:opacity-5 transition-opacity`} />
+                  <div className="relative flex flex-col items-center text-center space-y-2">
+                    <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center`}>
+                      <service.icon className="h-5 w-5 text-white" />
+                    </div>
+                    <h3 className="font-semibold text-slate-900 group-hover:text-blue-600 transition-colors text-sm">
+                      {service.name}
+                    </h3>
+                    <p className="text-xs text-slate-500 line-clamp-2">{service.tagline}</p>
+                  </div>
+                  <div className="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <ChevronRight className="h-4 w-4 text-blue-600" />
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services Overview */}
       <section id="services" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

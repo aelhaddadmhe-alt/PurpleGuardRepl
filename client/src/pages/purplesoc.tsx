@@ -431,7 +431,7 @@ export default function PurpleSOC() {
                 <ChevronRight className="h-4 w-4 ml-1" />
               </Button>
             </Link>
-            <Link href="/services/managed-edr">
+            <Link href="/services/managed-x/managed-edr">
               <Button variant="outline" className="border-blue-200 text-blue-600 hover:bg-blue-50">
                 Managed EDR
                 <ChevronRight className="h-4 w-4 ml-1" />
