@@ -78,7 +78,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/services/purple-x"
+                  href="/services/purple-x/purplevapt"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
                   PurpleVAPT
@@ -86,7 +86,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services/purple-x"
+                  href="/services/purple-x/purplesoc"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
                   PurpleSOC
@@ -94,7 +94,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services/purple-x"
+                  href="/services/purple-x/purplesentinel"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
                   PurpleSentinel
@@ -110,7 +110,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services/purple-x"
+                  href="/services/purple-x/purplestrike"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
                   PurpleStrike
@@ -126,7 +126,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services/purple-x"
+                  href="/services/purple-x/purplereveal"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
                   PurpleReveal

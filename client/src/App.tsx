@@ -15,6 +15,8 @@ import PurpleSentry from "@/pages/purplesentry";
 import PurpleSentinel from "@/pages/purplesentinel";
 import PurpleSOC from "@/pages/purplesoc";
 import PurpleVAPT from "@/pages/purplevapt";
+import PurpleStrike from "@/pages/purplestrike";
+import PurpleReveal from "@/pages/purplereveal";
 import ManagedEndpoint from "@/pages/managed-endpoint";
 import ManagedEDR from "@/pages/managed-edr";
 import ManagedSASE from "@/pages/managed-sase";
@@ -51,6 +53,8 @@ function Router() {
           <Route path="/services/purple-x/purplesentinel" component={PurpleSentinel} />
           <Route path="/services/purple-x/purplesoc" component={PurpleSOC} />
           <Route path="/services/purple-x/purplevapt" component={PurpleVAPT} />
+          <Route path="/services/purple-x/purplestrike" component={PurpleStrike} />
+          <Route path="/services/purple-x/purplereveal" component={PurpleReveal} />
           <Route path="/services/managed-x/managed-endpoint" component={ManagedEndpoint} />
           <Route path="/services/managed-x/managed-edr" component={ManagedEDR} />
           <Route path="/services/managed-x/managed-sase-ztna" component={ManagedSASE} />
@@ -76,6 +80,8 @@ function Router() {
           <Route path="/services/purple-x/purplesentinel" component={PurpleSentinel} />
           <Route path="/services/purple-x/purplesoc" component={PurpleSOC} />
           <Route path="/services/purple-x/purplevapt" component={PurpleVAPT} />
+          <Route path="/services/purple-x/purplestrike" component={PurpleStrike} />
+          <Route path="/services/purple-x/purplereveal" component={PurpleReveal} />
           <Route path="/services/managed-x/managed-endpoint" component={ManagedEndpoint} />
           <Route path="/services/managed-x/managed-edr" component={ManagedEDR} />
           <Route path="/services/managed-x/managed-sase-ztna" component={ManagedSASE} />
