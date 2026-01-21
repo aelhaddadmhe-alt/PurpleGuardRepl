@@ -173,7 +173,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services/managed-x"
+                  href="/services/managed-x/managed-firewall"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
                   Managed Firewall
@@ -181,7 +181,23 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services/managed-x"
+                  href="/services/managed-x/managed-waf"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Managed WAF
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/managed-x/managed-email-security"
+                  className="text-slate-400 hover:text-white transition-colors"
+                >
+                  Managed Email
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/managed-x/managed-backup-bcdr"
                   className="text-slate-400 hover:text-white transition-colors"
                 >
                   Managed Backup

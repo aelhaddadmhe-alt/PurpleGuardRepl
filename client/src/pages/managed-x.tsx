@@ -85,6 +85,7 @@ const managedXServices = [
     pricing: "$120 / firewall / month",
     bestFor: "Organizations with complex perimeter security needs",
     emailSubject: "Managed FW Inquiry",
+    detailLink: "/services/managed-x/managed-firewall",
     capabilities: [
       "NGFW & SD-WAN management",
       "Policy configuration and tuning",
@@ -110,6 +111,7 @@ const managedXServices = [
     pricing: "$95 / application / month",
     bestFor: "Organizations with web applications and APIs to protect",
     emailSubject: "Managed WAF Inquiry",
+    detailLink: "/services/managed-x/managed-waf",
     capabilities: [
       "OWASP Top 10 protection",
       "API security enforcement",
@@ -135,6 +137,7 @@ const managedXServices = [
     pricing: "$4 / mailbox / month",
     bestFor: "Organizations needing protection against email threats",
     emailSubject: "Managed E-mail Security inquiry",
+    detailLink: "/services/managed-x/managed-email-security",
     capabilities: [
       "Phishing and BEC protection",
       "DMARC and spoofing prevention",
@@ -160,6 +163,7 @@ const managedXServices = [
     pricing: "$35 / workload / month",
     bestFor: "Organizations requiring data protection and recovery",
     emailSubject: "Managed Backup & BCDR inquiry",
+    detailLink: "/services/managed-x/managed-backup-bcdr",
     capabilities: [
       "Cloud and on-prem backups",
       "Immutable storage",

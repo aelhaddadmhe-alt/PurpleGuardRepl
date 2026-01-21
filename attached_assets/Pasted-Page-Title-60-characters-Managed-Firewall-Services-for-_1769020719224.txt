@@ -1,0 +1,181 @@
+Page Title (≤ 60 characters)
+
+Managed Firewall Services for SMEs | PurpleGuard Managed-X
+
+Meta Description (≤ 160 characters)
+
+Fully managed firewall services including policy management, monitoring, and optimization. Secure networks across on-prem, cloud, and hybrid.
+
+URL
+
+/services/managed-x/managed-firewall
+
+SEO & TECHNICAL INSTRUCTIONS (FOR BUILDER)
+
+Mobile-first, responsive layout
+
+One H1 only; strict H2 → H3 hierarchy
+
+Use lightweight cards, icon grids, and simple comparison tables
+
+Avoid heavy JavaScript; CSS transitions only
+
+SVG icons and lazy-loaded images
+
+Schema-ready (Service, Organization)
+
+Optimize for Core Web Vitals (fast LCP, low CLS, minimal JS)
+
+H1 — HERO SECTION
+
+Managed Firewall & Network Security
+
+H2 — Subheading
+
+Policy-driven firewall management and monitoring—fully operated by PurpleGuard.
+
+Hook (Concise bullets)
+
+Centralized firewall policy management
+
+Continuous monitoring and tuning
+
+Designed for hybrid and cloud-first networks
+
+Primary CTA
+
+Request a Consultation
+
+Secondary CTA
+
+View Managed-X Services
+
+TRUST & CONTEXT STRIP
+
+Text or icon-based:
+
+Vendor-agnostic firewall management
+
+Aligned to network security best practices
+
+Subscription-based managed service
+
+H2 — WHAT IS MANAGED FIREWALL
+
+Short paragraph (SEO-focused):
+Managed Firewall is a fully managed service that delivers configuration, monitoring, and optimization of network firewalls across on-prem, cloud, and hybrid environments. PurpleGuard operates firewall platforms to reduce exposure, misconfigurations, and operational risk.
+
+Internal link:
+How Managed-X Works →
+
+H2 — WHAT’S INCLUDED IN MANAGED FIREWALL
+H3 — Firewall Policy Management
+
+Design, deployment, and maintenance of firewall rules aligned to security and business requirements.
+
+H3 — Continuous Monitoring & Alerting
+
+Monitoring of firewall activity, events, and anomalies to identify potential threats or misconfigurations.
+
+H3 — Configuration Hardening & Optimization
+
+Baseline configurations and ongoing tuning to reduce attack surface and improve performance.
+
+H3 — Change & Access Management
+
+Controlled policy changes with documentation and approval workflows.
+
+H3 — Logging, Reporting & Visibility
+
+Operational and security reporting for audits, troubleshooting, and compliance support.
+
+H2 — HOW THE SERVICE IS DELIVERED
+H3 — Vendor-Agnostic Firewall Platforms
+
+PurpleGuard manages industry-standard next-generation firewall platforms selected based on environment, scale, and risk profile.
+
+Do not publicly list specific firewall vendors.
+
+H3 — Fully Managed by PurpleGuard
+
+Rule creation and tuning
+
+Configuration management
+
+Monitoring and escalation
+
+Ongoing optimization and support
+
+Internal link:
+PurpleGuard Operating Model →
+
+H2 — BUSINESS VALUE
+4-Column Grid (Icons + Text)
+
+Reduces firewall misconfigurations
+
+Strengthens perimeter security
+
+Improves network visibility
+
+Lowers operational overhead
+
+H2 — WHO THIS IS FOR
+
+Bullet list:
+
+Organizations with hybrid or cloud networks
+
+Businesses managing multiple sites or firewalls
+
+IT teams needing operational relief
+
+Compliance-driven environments
+
+Internal link:
+Industries We Serve →
+
+H2 — MANAGED FIREWALL VS BASIC FIREWALL MANAGEMENT
+
+Lightweight comparison table:
+
+Basic Management: Static rules, limited monitoring, reactive changes
+
+Managed Firewall: Continuous tuning, monitoring, and expert oversight
+
+Internal links:
+
+Managed SASE / ZTNA →
+
+Managed Endpoint →
+
+H2 — PRICING MODEL (TRANSPARENT, NON-BINDING)
+
+Text block:
+Managed Firewall is priced per firewall, per month. Pricing depends on deployment type, traffic volume, rule complexity, and monitoring scope.
+
+Internal link:
+View Pricing Explained →
+
+H2 — PART OF A UNIFIED SECURITY STACK
+
+Short paragraph:
+Managed Firewall integrates with Managed Endpoint, Managed Identity, Managed SASE, and Purple-X services to deliver layered network security.
+
+Internal links:
+
+Managed SASE / ZTNA
+
+Managed Identity
+
+PurpleSentinel (MDR)
+
+FINAL CTA SECTION
+
+Secure your perimeter. Simplify firewall operations.
+
+Primary CTA:
+Get a Custom Quote
+
+Secondary CTA:
+Talk to an Expert

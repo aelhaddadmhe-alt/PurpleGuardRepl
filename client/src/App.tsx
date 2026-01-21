@@ -19,6 +19,10 @@ import ManagedEndpoint from "@/pages/managed-endpoint";
 import ManagedEDR from "@/pages/managed-edr";
 import ManagedSASE from "@/pages/managed-sase";
 import ManagedIdentity from "@/pages/managed-identity";
+import ManagedFirewall from "@/pages/managed-firewall";
+import ManagedEmail from "@/pages/managed-email";
+import ManagedWAF from "@/pages/managed-waf";
+import ManagedBackup from "@/pages/managed-backup";
 import Pricing from "@/pages/pricing";
 import Subscribe from "@/pages/subscribe";
 import Dashboard from "@/pages/dashboard";
@@ -51,6 +55,10 @@ function Router() {
           <Route path="/services/managed-x/managed-edr" component={ManagedEDR} />
           <Route path="/services/managed-x/managed-sase-ztna" component={ManagedSASE} />
           <Route path="/services/managed-x/managed-identity" component={ManagedIdentity} />
+          <Route path="/services/managed-x/managed-firewall" component={ManagedFirewall} />
+          <Route path="/services/managed-x/managed-email-security" component={ManagedEmail} />
+          <Route path="/services/managed-x/managed-waf" component={ManagedWAF} />
+          <Route path="/services/managed-x/managed-backup-bcdr" component={ManagedBackup} />
           <Route path="/services/:slug" component={ServiceDetail} />
           <Route path="/pricing" component={Pricing} />
           <Route path="/subscribe/:serviceId" component={Subscribe} />
@@ -72,6 +80,10 @@ function Router() {
           <Route path="/services/managed-x/managed-edr" component={ManagedEDR} />
           <Route path="/services/managed-x/managed-sase-ztna" component={ManagedSASE} />
           <Route path="/services/managed-x/managed-identity" component={ManagedIdentity} />
+          <Route path="/services/managed-x/managed-firewall" component={ManagedFirewall} />
+          <Route path="/services/managed-x/managed-email-security" component={ManagedEmail} />
+          <Route path="/services/managed-x/managed-waf" component={ManagedWAF} />
+          <Route path="/services/managed-x/managed-backup-bcdr" component={ManagedBackup} />
           <Route path="/services/:slug" component={ServiceDetail} />
           <Route path="/pricing" component={Pricing} />
           <Route path="/subscribe/:serviceId" component={Subscribe} />

@@ -1,0 +1,449 @@
+Managed Firewall
+Page Title (≤ 60 characters)
+Managed Firewall Services for SMEs | PurpleGuard Managed-X
+________________________________________
+Meta Description (≤ 160 characters)
+Fully managed firewall services including policy management, monitoring, and optimization. Secure networks across on-prem, cloud, and hybrid.
+________________________________________
+URL
+/services/managed-x/managed-firewall
+________________________________________
+SEO & TECHNICAL INSTRUCTIONS (FOR BUILDER)
+•	Mobile-first, responsive layout
+•	One H1 only; strict H2 → H3 hierarchy
+•	Use lightweight cards, icon grids, and simple comparison tables
+•	Avoid heavy JavaScript; CSS transitions only
+•	SVG icons and lazy-loaded images
+•	Schema-ready (Service, Organization)
+•	Optimize for Core Web Vitals (fast LCP, low CLS, minimal JS)
+________________________________________
+H1 — HERO SECTION
+Managed Firewall & Network Security
+H2 — Subheading
+Policy-driven firewall management and monitoring—fully operated by PurpleGuard.
+Hook (Concise bullets)
+•	Centralized firewall policy management
+•	Continuous monitoring and tuning
+•	Designed for hybrid and cloud-first networks
+Primary CTA
+Request a Consultation
+Secondary CTA
+View Managed-X Services
+________________________________________
+TRUST & CONTEXT STRIP
+Text or icon-based:
+•	Vendor-agnostic firewall management
+•	Aligned to network security best practices
+•	Subscription-based managed service
+________________________________________
+H2 — WHAT IS MANAGED FIREWALL
+Short paragraph (SEO-focused):
+Managed Firewall is a fully managed service that delivers configuration, monitoring, and optimization of network firewalls across on-prem, cloud, and hybrid environments. PurpleGuard operates firewall platforms to reduce exposure, misconfigurations, and operational risk.
+Internal link:
+How Managed-X Works →
+________________________________________
+H2 — WHAT’S INCLUDED IN MANAGED FIREWALL
+H3 — Firewall Policy Management
+Design, deployment, and maintenance of firewall rules aligned to security and business requirements.
+H3 — Continuous Monitoring & Alerting
+Monitoring of firewall activity, events, and anomalies to identify potential threats or misconfigurations.
+H3 — Configuration Hardening & Optimization
+Baseline configurations and ongoing tuning to reduce attack surface and improve performance.
+H3 — Change & Access Management
+Controlled policy changes with documentation and approval workflows.
+H3 — Logging, Reporting & Visibility
+Operational and security reporting for audits, troubleshooting, and compliance support.
+________________________________________
+H2 — HOW THE SERVICE IS DELIVERED
+H3 — Vendor-Agnostic Firewall Platforms
+PurpleGuard manages industry-standard next-generation firewall platforms selected based on environment, scale, and risk profile.
+Do not publicly list specific firewall vendors.
+H3 — Fully Managed by PurpleGuard
+•	Rule creation and tuning
+•	Configuration management
+•	Monitoring and escalation
+•	Ongoing optimization and support
+Internal link:
+PurpleGuard Operating Model →
+________________________________________
+H2 — BUSINESS VALUE
+4-Column Grid (Icons + Text)
+•	Reduces firewall misconfigurations
+•	Strengthens perimeter security
+•	Improves network visibility
+•	Lowers operational overhead
+________________________________________
+H2 — WHO THIS IS FOR
+Bullet list:
+•	Organizations with hybrid or cloud networks
+•	Businesses managing multiple sites or firewalls
+•	IT teams needing operational relief
+•	Compliance-driven environments
+Internal link:
+Industries We Serve →
+________________________________________
+H2 — MANAGED FIREWALL VS BASIC FIREWALL MANAGEMENT
+Lightweight comparison table:
+•	Basic Management: Static rules, limited monitoring, reactive changes
+•	Managed Firewall: Continuous tuning, monitoring, and expert oversight
+Internal links:
+•	Managed SASE / ZTNA →
+•	Managed Endpoint →
+________________________________________
+H2 — PRICING MODEL (TRANSPARENT, NON-BINDING)
+Text block:
+Managed Firewall is priced per firewall, per month. Pricing depends on deployment type, traffic volume, rule complexity, and monitoring scope.
+Internal link:
+View Pricing Explained →
+________________________________________
+H2 — PART OF A UNIFIED SECURITY STACK
+Short paragraph:
+Managed Firewall integrates with Managed Endpoint, Managed Identity, Managed SASE, and Purple-X services to deliver layered network security.
+Internal links:
+•	Managed SASE / ZTNA
+•	Managed Identity
+•	PurpleSentinel (MDR)
+________________________________________
+FINAL CTA SECTION
+Secure your perimeter. Simplify firewall operations.
+Primary CTA:
+Get a Custom Quote
+Secondary CTA:
+Talk to an Expert
+Managed E-mail Security
+Managed Email Security Services for SMEs | PurpleGuard
+________________________________________
+Meta Description (≤ 160 characters)
+Fully managed email security protecting against phishing, BEC, malware, and spoofing. Reduce human risk with 24/7 oversight.
+________________________________________
+URL
+/services/managed-x/managed-email-security
+________________________________________
+SEO & TECHNICAL INSTRUCTIONS (FOR BUILDER)
+•	Mobile-first, responsive layout
+•	One H1 only; strict H2 → H3 hierarchy
+•	Use lightweight cards, icon grids, and short comparison tables
+•	Avoid heavy JavaScript and trackers
+•	SVG icons, lazy-loaded images only
+•	Schema-ready (Service, Organization)
+•	Optimized for Core Web Vitals (fast LCP, minimal CLS, low JS)
+________________________________________
+H1 — HERO SECTION
+Managed Email Security & Threat Protection
+H2 — Subheading
+Protect users and inboxes from phishing, impersonation, and malware—fully managed by PurpleGuard.
+Hook (Concise bullets)
+•	Advanced phishing and BEC protection
+•	Continuous monitoring and response
+•	Designed for Microsoft 365 and cloud email
+Primary CTA
+Request a Consultation
+Secondary CTA
+View Managed-X Services
+________________________________________
+TRUST & CONTEXT STRIP
+Text or icon-based:
+•	Human-risk focused security
+•	Vendor-agnostic email protection
+•	Subscription-based managed service
+________________________________________
+H2 — WHAT IS MANAGED EMAIL SECURITY
+Short paragraph (SEO-focused):
+Managed Email Security is a fully managed service that protects inbound and outbound email from phishing, business email compromise (BEC), malware, and spoofing. PurpleGuard operates and tunes email security controls to reduce user-driven breaches.
+Internal link:
+How Managed-X Works →
+________________________________________
+H2 — WHAT’S INCLUDED IN MANAGED EMAIL SECURITY
+H3 — Anti-Phishing & BEC Protection
+Detection of credential harvesting, impersonation, and social-engineering attacks.
+H3 — Malware & Attachment Scanning
+Inspection of links and attachments to block malicious payloads.
+H3 — Impersonation & Spoofing Defense
+Protection against domain, brand, and executive impersonation attempts.
+H3 — DMARC & Domain Protection
+Policy configuration and monitoring to prevent email spoofing and domain abuse.
+H3 — Monitoring, Response & Reporting
+Alert triage, investigation support, and clear security reporting.
+________________________________________
+H2 — HOW THE SERVICE IS DELIVERED
+H3 — Vendor-Agnostic Email Security Platforms
+PurpleGuard selects and manages industry-standard email security technologies based on environment, threat profile, and scale.
+Do not publicly list specific email security vendors.
+H3 — Fully Managed by PurpleGuard
+•	Policy configuration and tuning
+•	Threat monitoring and alert handling
+•	Incident response coordination
+•	Ongoing optimization and reporting
+Internal link:
+PurpleGuard Operating Model →
+________________________________________
+H2 — BUSINESS VALUE
+4-Column Grid (Icons + Text)
+•	Reduces phishing-driven breaches
+•	Protects users and brand reputation
+•	Lowers incident response costs
+•	Improves overall security awareness
+________________________________________
+H2 — WHO THIS IS FOR
+Bullet list:
+•	Organizations using cloud email platforms
+•	Businesses targeted by phishing and BEC
+•	Remote and distributed teams
+•	Compliance-driven environments
+Internal link:
+Industries We Serve →
+________________________________________
+H2 — MANAGED EMAIL SECURITY VS BASIC EMAIL FILTERING
+Lightweight comparison table:
+•	Basic Filtering: Signature-based, limited visibility, reactive
+•	Managed Email Security: Behavioral detection, monitoring, and response
+Internal links:
+•	Managed Identity →
+•	Managed Endpoint →
+________________________________________
+H2 — PRICING MODEL (TRANSPARENT, NON-BINDING)
+Text block:
+Managed Email Security is priced per mailbox, per month. Pricing depends on mailbox count, threat protection scope, and response requirements.
+Internal link:
+View Pricing Explained →
+________________________________________
+H2 — PART OF A HUMAN-CENTRIC SECURITY MODEL
+Short paragraph:
+Managed Email Security integrates with Managed Identity, Managed Endpoint, and Purple-X services to reduce user-based attack vectors across the organization.
+Internal links:
+•	Managed Identity
+•	Managed Endpoint
+•	PurpleSentinel (MDR)
+________________________________________
+FINAL CTA SECTION
+Protect your inboxes. Reduce human risk.
+Primary CTA:
+Get a Custom Quote
+Secondary CTA:
+Talk to an Expert
+________________________________________
+Managed WAF
+Page Title (≤ 60 characters)
+Managed WAF Services & API Security | PurpleGuard Managed-X
+________________________________________
+Meta Description (≤ 160 characters)
+Managed Web Application Firewall (WAF) services protecting web apps and APIs from OWASP Top 10, bots, and DDoS attacks.
+________________________________________
+URL
+/services/managed-x/managed-waf
+________________________________________
+SEO & TECHNICAL INSTRUCTIONS (FOR BUILDER)
+•	Mobile-first, responsive layout
+•	One H1 only; strict H2 → H3 hierarchy
+•	Use lightweight cards, icon grids, and short comparison tables
+•	Avoid heavy JavaScript and client-side rendering dependencies
+•	SVG icons, lazy-loaded images only
+•	Schema-ready (Service, Organization)
+•	Optimize for Core Web Vitals (fast LCP, minimal CLS, low JS)
+________________________________________
+H1 — HERO SECTION
+Managed Web Application Firewall (WAF)
+H2 — Subheading
+Always-on protection for web applications and APIs—fully managed by PurpleGuard.
+Hook (Concise bullets)
+•	OWASP Top 10 and API attack protection
+•	Bot mitigation and DDoS defense
+•	Continuous tuning and monitoring
+Primary CTA
+Request a Consultation
+Secondary CTA
+View Managed-X Services
+________________________________________
+TRUST & CONTEXT STRIP
+Text or icon-based:
+•	Application-layer security focus
+•	Vendor-agnostic WAF delivery
+•	Subscription-based managed service
+________________________________________
+H2 — WHAT IS MANAGED WAF
+Short paragraph (SEO-focused):
+Managed WAF is a fully managed web application and API security service that protects internet-facing applications from common and advanced attacks. PurpleGuard operates and tunes WAF controls to reduce application risk without impacting performance.
+Internal link:
+How Managed-X Works →
+________________________________________
+H2 — WHAT’S INCLUDED IN MANAGED WAF
+H3 — OWASP Top 10 Protection
+Mitigation of common application vulnerabilities such as injection, XSS, and authentication flaws.
+H3 — API Security
+Inspection and protection of REST and API traffic against abuse and exploitation.
+H3 — Bot & Abuse Prevention
+Detection and blocking of malicious bots, scraping, and automated attacks.
+H3 — DDoS Protection
+Protection against volumetric and application-layer denial-of-service attacks.
+H3 — Monitoring, Tuning & Reporting
+Continuous rule tuning, alert monitoring, and security reporting.
+________________________________________
+H2 — HOW THE SERVICE IS DELIVERED
+H3 — Vendor-Agnostic WAF Platforms
+PurpleGuard selects and manages industry-standard WAF technologies based on application architecture, traffic profile, and risk.
+Do not publicly list specific WAF vendors.
+H3 — Fully Managed by PurpleGuard
+•	Rule configuration and optimization
+•	False-positive reduction
+•	Traffic monitoring and escalation
+•	Ongoing performance tuning
+Internal link:
+PurpleGuard Operating Model →
+________________________________________
+H2 — BUSINESS VALUE
+4-Column Grid (Icons + Text)
+•	Reduces application attack surface
+•	Protects customer data and revenue
+•	Improves application availability
+•	Lowers operational security overhead
+________________________________________
+H2 — WHO THIS IS FOR
+Bullet list:
+•	Organizations with public web applications
+•	SaaS and API-driven businesses
+•	Compliance-driven environments
+•	Teams without dedicated AppSec resources
+Internal link:
+Industries We Serve →
+________________________________________
+H2 — MANAGED WAF VS BASIC WAF
+Lightweight comparison table:
+•	Basic WAF: Static rules, minimal tuning, limited visibility
+•	Managed WAF: Continuous optimization, monitoring, and expert oversight
+Internal links:
+•	Managed Firewall →
+•	PurpleVAPT →
+________________________________________
+H2 — PRICING MODEL (TRANSPARENT, NON-BINDING)
+Text block:
+Managed WAF is priced per application or API, per month. Pricing depends on traffic volume, protection scope, and monitoring requirements.
+Internal link:
+View Pricing Explained →
+________________________________________
+H2 — PART OF A DEFENSE-IN-DEPTH MODEL
+Short paragraph:
+Managed WAF integrates with Managed Firewall, Managed Endpoint, and Purple-X services to provide layered protection from the network to the application layer.
+Internal links:
+•	Managed Firewall
+•	Managed Endpoint
+•	PurpleSentinel (MDR)
+________________________________________
+FINAL CTA SECTION
+Protect your applications. Defend your APIs.
+Primary CTA:
+Get a Custom Quote
+Secondary CTA:
+Talk to an Expert
+________________________________________
+Managed Backup and BCDR
+Page Title (≤ 60 characters)
+Managed Backup & BCDR Services for SMEs | PurpleGuard
+________________________________________
+Meta Description (≤ 160 characters)
+Managed backup and disaster recovery services protecting against ransomware, data loss, and outages. Secure, tested, and compliance-ready.
+________________________________________
+URL
+/services/managed-x/managed-backup-bcdr
+________________________________________
+SEO & TECHNICAL INSTRUCTIONS (FOR BUILDER)
+•	Mobile-first, responsive layout
+•	One H1 only; strict H2 → H3 hierarchy
+•	Use lightweight cards, icon grids, and simple recovery-flow diagrams
+•	Avoid heavy JavaScript; CSS transitions only
+•	SVG icons, lazy-loaded images
+•	Schema-ready (Service, Organization)
+•	Optimize for Core Web Vitals (fast LCP, minimal CLS, low JS)
+________________________________________
+H1 — HERO SECTION
+Managed Backup & Business Continuity Disaster Recovery (BCDR)
+H2 — Subheading
+Protect critical data, ensure rapid recovery, and maintain business continuity—fully managed by PurpleGuard.
+Hook (Concise bullets)
+•	Ransomware-resilient backups
+•	Tested recovery and continuity planning
+•	Fully managed, compliance-ready service
+Primary CTA
+Request a Consultation
+Secondary CTA
+View Managed-X Services
+________________________________________
+TRUST & CONTEXT STRIP
+Text or icon-based:
+•	Ransomware resilience focus
+•	Vendor-agnostic backup platforms
+•	Subscription-based managed service
+________________________________________
+H2 — WHAT IS MANAGED BACKUP & BCDR
+Short paragraph (SEO-focused):
+Managed Backup & BCDR is a fully managed service that ensures critical data is securely backed up, recoverable, and protected against ransomware, system failure, and disasters. PurpleGuard designs, operates, monitors, and tests backup and recovery processes on behalf of the customer.
+Internal link:
+How Managed-X Works →
+________________________________________
+H2 — WHAT’S INCLUDED IN MANAGED BACKUP & BCDR
+H3 — Managed Backup Operations
+Continuous management of backups for servers, endpoints, cloud workloads, and SaaS data.
+H3 — Ransomware-Resilient Storage
+Use of immutable and off-site backup storage to protect against encryption and deletion attacks.
+H3 — Disaster Recovery & Restore Support
+Defined recovery procedures with assisted restores for systems, applications, and data.
+H3 — Recovery Testing & Validation
+Regular recovery testing to verify backup integrity and recovery objectives.
+H3 — Monitoring, Alerting & Reporting
+Ongoing monitoring of backup jobs, failures, and recovery readiness with clear reporting.
+________________________________________
+H2 — HOW THE SERVICE IS DELIVERED
+H3 — Vendor-Agnostic Backup Architecture
+PurpleGuard selects and manages industry-standard backup and BCDR technologies based on environment, data criticality, and recovery objectives.
+Do not publicly list specific backup vendors.
+H3 — Fully Managed by PurpleGuard
+•	Backup policy design and tuning
+•	Job monitoring and failure remediation
+•	Recovery assistance and testing
+•	Retention and lifecycle management
+Internal link:
+PurpleGuard Operating Model →
+________________________________________
+H2 — BUSINESS VALUE
+4-Column Grid (Icons + Text)
+•	Reduces impact of ransomware attacks
+•	Improves recovery time and confidence
+•	Protects critical business data
+•	Supports compliance and audit needs
+________________________________________
+H2 — WHO THIS IS FOR
+Bullet list:
+•	Organizations concerned about ransomware
+•	Businesses with critical data and uptime needs
+•	IT teams without dedicated DR expertise
+•	Compliance-driven environments
+Internal link:
+Industries We Serve →
+________________________________________
+H2 — MANAGED BACKUP & BCDR VS BASIC BACKUPS
+Lightweight comparison table:
+•	Basic Backup: Untested restores, limited visibility, reactive recovery
+•	Managed BCDR: Monitored, tested, and supported recovery operations
+Internal links:
+•	Managed Endpoint →
+•	Managed Firewall →
+________________________________________
+H2 — PRICING MODEL (TRANSPARENT, NON-BINDING)
+Text block:
+Managed Backup & BCDR is priced per workload or per protected system, per month. Pricing depends on data volume, retention policies, and recovery objectives.
+Internal link:
+View Pricing Explained →
+________________________________________
+H2 — PART OF A RESILIENCE-DRIVEN SECURITY MODEL
+Short paragraph:
+Managed Backup & BCDR integrates with Managed Endpoint, Managed Firewall, and Purple-X services to strengthen ransomware defense and operational resilience.
+Internal links:
+•	Managed Endpoint
+•	Managed Firewall
+•	PurpleSentinel (MDR)
+________________________________________
+FINAL CTA SECTION
+Recover faster. Protect your business.
+Primary CTA:
+Get a Custom Quote
+Secondary CTA:
+Talk to an Expert
