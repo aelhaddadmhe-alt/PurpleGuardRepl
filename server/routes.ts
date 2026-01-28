@@ -4,6 +4,7 @@ import { setupAuth, isAuthenticated } from "./replitAuth";
 import { storage } from "./storage";
 import { insertBookingSchema, insertServiceSchema, insertBlogPostSchema } from "@shared/schema";
 import Stripe from "stripe";
+import PDFDocument from "pdfkit";
 
 const stripe = process.env.STRIPE_SECRET_KEY ? new Stripe(process.env.STRIPE_SECRET_KEY, {
   apiVersion: "2025-07-30.basil",
@@ -97,9 +98,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
         items: [{
           price_data: {
             currency: 'usd',
-            product: {
+            product_data: {
               name: service.name,
-              description: service.description,
+              description: service.description || undefined,
             },
             unit_amount: Math.round(parseFloat(service.monthlyPrice) * 100),
             recurring: {
@@ -283,6 +284,459 @@ export async function registerRoutes(app: Express): Promise<Server> {
       }
     });
   }
+
+  // Whitepaper PDF generation endpoint
+  app.get('/api/whitepapers/:slug', async (req, res) => {
+    const { slug } = req.params;
+    
+    const whitepapers: Record<string, { title: string; subtitle: string; sections: Array<{ heading: string; content: string[] }> }> = {
+      'compliance-audit-readiness': {
+        title: 'Continuous Compliance & Audit Readiness',
+        subtitle: 'with PurpleGuard',
+        sections: [
+          {
+            heading: 'Executive Summary',
+            content: [
+              'Compliance should not be a checkbox exercise. Traditional approaches rely on periodic assessments, static evidence, and manual effort—leaving organizations exposed between audits.',
+              'PurpleGuard delivers continuous, operationalized compliance by embedding security controls into managed services and exposure management.'
+            ]
+          },
+          {
+            heading: 'The Problem with Traditional Compliance',
+            content: [
+              '• Point-in-time assessments miss emerging risk',
+              '• Manual evidence collection is error-prone',
+              '• Security tools are not aligned to audit objectives',
+              '• Compliance becomes a burden instead of a security driver'
+            ]
+          },
+          {
+            heading: 'PurpleGuard\'s Continuous Compliance Model',
+            content: [
+              'PurpleGuard integrates compliance across Purple X and Managed X services:',
+              '• PurpleSOC / PurpleSentinel: Continuous monitoring, incident records, and response evidence',
+              '• PurpleVAPT / PurpleStrike: Control effectiveness testing and adversary validation',
+              '• PurpleConfig: CIS/NIST benchmark validation and configuration drift detection',
+              '• PurpleSentry: External exposure and third-party risk intelligence',
+              '• Managed X Services: Enforced operational controls for endpoints, identity, network, and cloud'
+            ]
+          },
+          {
+            heading: 'Compliance Framework Coverage',
+            content: [
+              'PurpleGuard supports organizations pursuing or maintaining:',
+              '• SOC 2 (Type I & II)',
+              '• ISO 27001 / 27002',
+              '• NIST CSF / NIST 800-53',
+              '• CIS Critical Security Controls',
+              '• HIPAA',
+              '• PCI DSS',
+              '• GDPR (security-related controls)'
+            ]
+          },
+          {
+            heading: 'Operational Workflow',
+            content: [
+              '1. Onboarding & Scoping: Define compliance targets and system boundaries',
+              '2. Control Mapping: Map PurpleGuard services to framework requirements',
+              '3. Continuous Validation: Monitor controls, detect drift, test defenses',
+              '4. Evidence Automation: Collect logs, alerts, reports, and metrics continuously',
+              '5. Audit Readiness & Support: Deliver auditor-ready evidence and ongoing guidance'
+            ]
+          },
+          {
+            heading: 'Business Outcomes',
+            content: [
+              '• Reduced compliance costs',
+              '• Faster audit cycles',
+              '• Lower security risk',
+              '• Improved security maturity',
+              '• Executive-level visibility and confidence'
+            ]
+          },
+          {
+            heading: 'Conclusion',
+            content: [
+              'PurpleGuard transforms compliance from a reactive obligation into a proactive security advantage. By aligning continuous security operations with regulatory requirements, organizations achieve real readiness—not just audit survival.'
+            ]
+          }
+        ]
+      },
+      'ransomware-defense': {
+        title: 'Modern Ransomware Defense',
+        subtitle: 'with PurpleGuard',
+        sections: [
+          {
+            heading: 'Executive Summary',
+            content: [
+              'Ransomware remains one of the most disruptive and costly cyber threats facing organizations today. Attackers exploit misconfigurations, stolen credentials, and unmonitored systems to gain persistence, exfiltrate data, and extort victims.',
+              'PurpleGuard delivers a resilient, managed ransomware defense strategy that prioritizes prevention, rapid detection, and assured recovery.'
+            ]
+          },
+          {
+            heading: 'Understanding the Ransomware Kill Chain',
+            content: [
+              'Modern ransomware attacks typically follow this path:',
+              '1. Initial access (phishing, RDP abuse, exploited vulnerabilities)',
+              '2. Credential theft and privilege escalation',
+              '3. Lateral movement and reconnaissance',
+              '4. Payload deployment and data encryption',
+              '5. Data exfiltration and extortion',
+              '',
+              'PurpleGuard maps security controls to each phase of this kill chain.'
+            ]
+          },
+          {
+            heading: 'PurpleGuard Ransomware Defense Architecture',
+            content: [
+              'Prevention & Hardening:',
+              '• CIS-aligned endpoint and server configurations',
+              '• Patch and vulnerability management',
+              '• Email and web threat protection',
+              '• Identity security with MFA and access controls',
+              '',
+              'Detection & Response:',
+              '• Endpoint, network, and cloud telemetry correlation',
+              '• Behavioral ransomware detection',
+              '• 24/7 SOC-driven response',
+              '• Automated isolation and containment',
+              '',
+              'Resilience & Recovery:',
+              '• Secure, immutable backups',
+              '• Regular recovery testing',
+              '• Incident-driven restoration workflows'
+            ]
+          },
+          {
+            heading: 'Integration Across Purple X & Managed X',
+            content: [
+              '• PurpleSOC / PurpleSentinel: Detection, response, and forensic evidence',
+              '• PurpleVAPT: Identify exploitable paths used by ransomware actors',
+              '• PurpleConfig: Reduce attack surface via hardened configurations',
+              '• PurpleSentry: External exposure and threat intelligence',
+              '• Managed Endpoint, Identity, Firewall, Backup: Enforced ransomware controls'
+            ]
+          },
+          {
+            heading: 'Measurable Outcomes',
+            content: [
+              '• Reduced ransomware attack success rate',
+              '• Faster detection and containment',
+              '• Minimized downtime and financial impact',
+              '• Improved cyber insurance posture',
+              '• Stronger regulatory and board-level confidence'
+            ]
+          },
+          {
+            heading: 'Conclusion',
+            content: [
+              'Ransomware defense requires continuous visibility, rapid response, and proven recovery. PurpleGuard delivers all three as a managed service—helping organizations withstand ransomware attacks without operational chaos.'
+            ]
+          }
+        ]
+      },
+      'cloud-saas-security': {
+        title: 'Securing Cloud & SaaS Environments',
+        subtitle: 'with PurpleGuard',
+        sections: [
+          {
+            heading: 'Executive Summary',
+            content: [
+              'Cloud platforms and SaaS applications are now core to business operations—but their dynamic nature makes traditional security models ineffective.',
+              'PurpleGuard delivers managed Cloud and SaaS security that aligns with the shared responsibility model while providing continuous assurance, detection, and response.'
+            ]
+          },
+          {
+            heading: 'The Shared Responsibility Reality',
+            content: [
+              'Cloud and SaaS providers secure the underlying infrastructure—but customers remain responsible for:',
+              '• Identity and access management',
+              '• Configuration and exposure management',
+              '• Data protection and logging',
+              '• Threat detection and response',
+              '',
+              'PurpleGuard operationalizes this responsibility as a managed service.'
+            ]
+          },
+          {
+            heading: 'PurpleGuard Cloud & SaaS Security Architecture',
+            content: [
+              'Posture & Configuration Assurance:',
+              '• Continuous CSPM and SSPM checks',
+              '• CIS/NIST-aligned baselines',
+              '• Detection of risky settings and configuration drift',
+              '',
+              'Identity-Centric Protection:',
+              '• Monitoring of user and service identities',
+              '• MFA and conditional access enforcement',
+              '• Detection of anomalous login and API behavior',
+              '',
+              'Threat Detection & Response:',
+              '• SOC-driven monitoring of cloud and SaaS activity',
+              '• Detection of account takeover, insider risk, and data exfiltration',
+              '• Automated containment actions'
+            ]
+          },
+          {
+            heading: 'Integration Across Purple X & Managed X',
+            content: [
+              '• PurpleSOC / PurpleSentinel: Cloud and SaaS threat monitoring and response',
+              '• PurpleConfig: Cloud and SaaS configuration assessment',
+              '• PurpleVAPT: Cloud workload and application testing',
+              '• PurpleSentry: External exposure and SaaS risk intelligence',
+              '• Managed Identity, Managed SASE, Managed Endpoint: Enforcement of access and device trust'
+            ]
+          },
+          {
+            heading: 'Business Outcomes',
+            content: [
+              '• Reduced cloud misconfiguration risk',
+              '• Improved SaaS visibility and control',
+              '• Faster detection of cloud-based attacks',
+              '• Stronger compliance and audit readiness',
+              '• Secure cloud adoption without slowing the business'
+            ]
+          },
+          {
+            heading: 'Conclusion',
+            content: [
+              'Cloud and SaaS security requires continuous oversight—not periodic reviews. PurpleGuard delivers managed, identity-driven, and compliance-aware security that keeps cloud environments resilient as they scale.'
+            ]
+          }
+        ]
+      },
+      'external-attack-surface-management': {
+        title: 'Managing the External Attack Surface',
+        subtitle: 'with PurpleGuard',
+        sections: [
+          {
+            heading: 'Executive Summary',
+            content: [
+              'The majority of modern breaches begin with the exploitation of external-facing assets. Yet many organizations lack accurate visibility into what is exposed to the internet.',
+              'PurpleGuard\'s External Attack Surface Management (EASM) delivers continuous discovery, risk prioritization, and threat-informed remediation—turning unknown exposure into manageable risk.'
+            ]
+          },
+          {
+            heading: 'Why External Attack Surface Management Matters',
+            content: [
+              'Traditional asset inventories are incomplete and quickly outdated. Cloud services, SaaS platforms, and DevOps workflows introduce assets faster than teams can track them.',
+              '',
+              'Attackers exploit this gap by targeting:',
+              '• Forgotten subdomains and test environments',
+              '• Misconfigured cloud storage and services',
+              '• Exposed RDP, SSH, VPN, and admin portals',
+              '• Leaked credentials tied to external assets',
+              '',
+              'EASM closes this visibility gap.'
+            ]
+          },
+          {
+            heading: 'PurpleGuard EASM Architecture',
+            content: [
+              'Discovery & Mapping:',
+              '• Internet-wide asset discovery',
+              '• Continuous monitoring for changes',
+              '• Attribution of assets to business units and environments',
+              '',
+              'Exposure Analysis:',
+              '• Identification of vulnerable and misconfigured services',
+              '• Detection of exposed credentials, certificates, and secrets',
+              '• Correlation with known exploit paths',
+              '',
+              'Threat Intelligence Integration:',
+              '• Mapping exposure to real-world threat activity',
+              '• Dark web monitoring for organization-related data',
+              '• Prioritization based on attacker behavior'
+            ]
+          },
+          {
+            heading: 'Integration Across Purple X & Managed X',
+            content: [
+              '• PurpleSentry: Core EASM, threat intelligence, and digital risk protection',
+              '• PurpleVAPT: Validation of exploitable external paths',
+              '• PurpleConfig: Reduction of misconfiguration-driven exposure',
+              '• PurpleSOC / PurpleSentinel: Monitoring and response for exploitation attempts',
+              '• Managed Firewall, WAF, SASE: Enforcement and mitigation controls'
+            ]
+          },
+          {
+            heading: 'Business Outcomes',
+            content: [
+              '• Reduced likelihood of initial compromise',
+              '• Faster detection of new exposure',
+              '• Improved risk prioritization',
+              '• Stronger compliance and cyber insurance posture',
+              '• Clear ownership of external-facing risk'
+            ]
+          },
+          {
+            heading: 'Conclusion',
+            content: [
+              'External attack surface management is no longer optional. PurpleGuard delivers continuous, threat-informed visibility into what attackers see—helping organizations close exposure gaps before they lead to breaches.'
+            ]
+          }
+        ]
+      },
+      'zero-trust-secure-remote-access': {
+        title: 'Zero Trust & Secure Remote Access',
+        subtitle: 'with PurpleGuard',
+        sections: [
+          {
+            heading: 'Executive Summary',
+            content: [
+              'As workforces become more distributed and applications move to the cloud, traditional perimeter-based security models break down. Zero Trust shifts security from the network to identity, device posture, and context.',
+              'PurpleGuard delivers Zero Trust and secure remote access as a managed, operational service—not just a technology deployment.'
+            ]
+          },
+          {
+            heading: 'Why Zero Trust Matters',
+            content: [
+              'Most breaches involve stolen credentials and lateral movement. VPNs amplify this risk by granting broad network access once connected.',
+              '',
+              'Zero Trust principles reduce breach impact by:',
+              '• Verifying identity and context continuously',
+              '• Limiting access to specific applications',
+              '• Eliminating implicit trust based on network location'
+            ]
+          },
+          {
+            heading: 'PurpleGuard Zero Trust Architecture',
+            content: [
+              'Identity & Access Enforcement:',
+              '• MFA and conditional access policies',
+              '• Least-privilege access models',
+              '• Monitoring of privileged and high-risk users',
+              '',
+              'Zero Trust Network Access (ZTNA):',
+              '• Application-level access control',
+              '• No exposed internal IPs or ports',
+              '• Secure connectivity for users and third parties',
+              '',
+              'Device & Risk Context:',
+              '• Endpoint compliance and health validation',
+              '• Integration with EDR and endpoint management',
+              '• Adaptive access decisions based on risk'
+            ]
+          },
+          {
+            heading: 'Monitoring & Response',
+            content: [
+              '• Full audit logging of access events',
+              '• Detection of anomalous access patterns',
+              '• Session termination and re-authentication on risk signals',
+              '• Integration with PurpleSOC for unified visibility'
+            ]
+          },
+          {
+            heading: 'Integration Across Purple X & Managed X',
+            content: [
+              '• Managed SASE / ZTNA: Secure, identity-aware access',
+              '• Managed Identity: SSO, MFA, conditional access',
+              '• Managed Endpoint / EDR: Device trust and posture',
+              '• PurpleSOC / PurpleSentinel: Access monitoring and threat response'
+            ]
+          },
+          {
+            heading: 'Business Outcomes',
+            content: [
+              '• Secure remote access without exposing the internal network',
+              '• Reduced reliance on traditional VPNs',
+              '• Improved visibility into access patterns',
+              '• Stronger protection against credential-based attacks',
+              '• Seamless user experience with stronger security'
+            ]
+          },
+          {
+            heading: 'Conclusion',
+            content: [
+              'Zero Trust is not a product—it\'s an operational approach. PurpleGuard delivers Zero Trust and secure remote access as a managed service, helping organizations protect distributed workforces without compromising productivity.'
+            ]
+          }
+        ]
+      }
+    };
+
+    const whitepaper = whitepapers[slug];
+    if (!whitepaper) {
+      return res.status(404).json({ message: 'Whitepaper not found' });
+    }
+
+    try {
+      const doc = new PDFDocument({ 
+        size: 'A4',
+        margins: { top: 72, bottom: 72, left: 72, right: 72 }
+      });
+
+      res.setHeader('Content-Type', 'application/pdf');
+      res.setHeader('Content-Disposition', `attachment; filename="PurpleGuard-${slug}.pdf"`);
+      
+      doc.pipe(res);
+
+      // Header with brand colors
+      doc.rect(0, 0, doc.page.width, 120).fill('#6633cc');
+      
+      // Title
+      doc.fillColor('#ffffff')
+         .fontSize(28)
+         .font('Helvetica-Bold')
+         .text(whitepaper.title, 72, 40, { width: doc.page.width - 144 });
+      
+      doc.fontSize(16)
+         .font('Helvetica')
+         .text(whitepaper.subtitle, 72, 75);
+
+      // Reset position after header
+      doc.y = 150;
+
+      // Content sections
+      whitepaper.sections.forEach((section, index) => {
+        // Check if we need a new page
+        if (doc.y > doc.page.height - 150) {
+          doc.addPage();
+          doc.y = 72;
+        }
+
+        // Section heading
+        doc.fillColor('#6633cc')
+           .fontSize(16)
+           .font('Helvetica-Bold')
+           .text(section.heading, { continued: false });
+        
+        doc.moveDown(0.5);
+
+        // Section content
+        doc.fillColor('#333333')
+           .fontSize(11)
+           .font('Helvetica');
+
+        section.content.forEach(paragraph => {
+          if (doc.y > doc.page.height - 100) {
+            doc.addPage();
+            doc.y = 72;
+          }
+          doc.text(paragraph, { lineGap: 4 });
+          doc.moveDown(0.3);
+        });
+
+        doc.moveDown(1);
+      });
+
+      // Footer
+      const footerY = doc.page.height - 50;
+      doc.fillColor('#6633cc')
+         .fontSize(10)
+         .font('Helvetica-Bold')
+         .text('PurpleGuard — Smarter Security. Stronger Defense.', 72, footerY, {
+           align: 'center',
+           width: doc.page.width - 144
+         });
+
+      doc.end();
+    } catch (error) {
+      console.error('Error generating PDF:', error);
+      res.status(500).json({ message: 'Failed to generate PDF' });
+    }
+  });
 
   const httpServer = createServer(app);
   return httpServer;

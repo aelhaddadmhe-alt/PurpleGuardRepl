@@ -61,11 +61,11 @@ const whyPurpleGuard = [
 ];
 
 const useCases = [
-  { name: "Compliance & Audit Readiness", icon: FileCheck, href: "/services" },
-  { name: "Ransomware Defense", icon: AlertTriangle, href: "/services" },
-  { name: "Cloud & SaaS Security", icon: Cloud, href: "/services" },
-  { name: "External Attack Surface Management", icon: Radar, href: "/services/purple-x/purplesentry" },
-  { name: "Zero Trust & Secure Remote Access", icon: KeyRound, href: "/services" },
+  { name: "Compliance & Audit Readiness", icon: FileCheck, href: "/solutions/compliance-audit-readiness" },
+  { name: "Ransomware Defense", icon: AlertTriangle, href: "/solutions/ransomware-defense" },
+  { name: "Cloud & SaaS Security", icon: Cloud, href: "/solutions/cloud-saas-security" },
+  { name: "External Attack Surface Management", icon: Radar, href: "/solutions/external-attack-surface-management" },
+  { name: "Zero Trust & Secure Remote Access", icon: KeyRound, href: "/solutions/zero-trust-secure-remote-access" },
 ];
 
 const industries = [
@@ -299,9 +299,9 @@ export default function Landing() {
           </div>
 
           <div className="text-center">
-            <Link href="/services">
+            <Link href="/solutions">
               <Button variant="outline" className="border-[#ff6633] text-[#ff6633] hover:bg-[#ff6633] hover:text-white">
-                View Solutions
+                View All Solutions
                 <ChevronRight className="h-4 w-4 ml-2" />
               </Button>
             </Link>

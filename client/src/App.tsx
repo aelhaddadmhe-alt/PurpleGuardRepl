@@ -33,6 +33,12 @@ import BlogPost from "@/pages/blog-post";
 import Booking from "@/pages/booking";
 import NotFound from "@/pages/not-found";
 import PurpleConfig from "@/pages/purpleconfig";
+import Solutions from "@/pages/solutions";
+import SolutionCompliance from "@/pages/solution-compliance";
+import SolutionRansomware from "@/pages/solution-ransomware";
+import SolutionCloud from "@/pages/solution-cloud";
+import SolutionEASM from "@/pages/solution-easm";
+import SolutionZeroTrust from "@/pages/solution-zero-trust";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 function Router() {
@@ -72,6 +78,12 @@ function Router() {
           <Route path="/blog" component={Blog} />
           <Route path="/blog/:slug" component={BlogPost} />
           <Route path="/booking" component={Booking} />
+          <Route path="/solutions" component={Solutions} />
+          <Route path="/solutions/compliance-audit-readiness" component={SolutionCompliance} />
+          <Route path="/solutions/ransomware-defense" component={SolutionRansomware} />
+          <Route path="/solutions/cloud-saas-security" component={SolutionCloud} />
+          <Route path="/solutions/external-attack-surface-management" component={SolutionEASM} />
+          <Route path="/solutions/zero-trust-secure-remote-access" component={SolutionZeroTrust} />
         </>
       ) : (
         <>
@@ -101,6 +113,12 @@ function Router() {
           <Route path="/blog" component={Blog} />
           <Route path="/blog/:slug" component={BlogPost} />
           <Route path="/booking" component={Booking} />
+          <Route path="/solutions" component={Solutions} />
+          <Route path="/solutions/compliance-audit-readiness" component={SolutionCompliance} />
+          <Route path="/solutions/ransomware-defense" component={SolutionRansomware} />
+          <Route path="/solutions/cloud-saas-security" component={SolutionCloud} />
+          <Route path="/solutions/external-attack-surface-management" component={SolutionEASM} />
+          <Route path="/solutions/zero-trust-secure-remote-access" component={SolutionZeroTrust} />
         </>
       )}
       <Route component={NotFound} />

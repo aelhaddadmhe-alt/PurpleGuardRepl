@@ -34,6 +34,7 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
   const navigationItems = [
+    { label: "Solutions", href: "/solutions" },
     { label: "Pricing", href: "/pricing" },
     { label: "Resources", href: "/blog" },
   ];
