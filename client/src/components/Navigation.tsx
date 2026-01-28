@@ -249,9 +249,6 @@ export default function Navigation() {
               </>
             ) : (
               <>
-                <a href="/api/login" className="hidden md:block">
-                  <Button variant="ghost">Sign In</Button>
-                </a>
                 <Link href="/booking">
                   <Button>Book Discovery Call</Button>
                 </Link>
@@ -282,11 +279,6 @@ export default function Navigation() {
                     </>
                   ) : (
                     <>
-                      <a href="/api/login">
-                        <Button variant="ghost" className="w-full justify-start">
-                          Sign In
-                        </Button>
-                      </a>
                       <Link href="/booking">
                         <Button className="w-full" onClick={() => setIsOpen(false)}>
                           Book Discovery Call
