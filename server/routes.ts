@@ -664,7 +664,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
     try {
       const doc = new PDFDocument({ 
         size: 'A4',
-        margins: { top: 72, bottom: 72, left: 72, right: 72 }
+        margins: { top: 72, bottom: 100, left: 72, right: 72 },
+        bufferPages: true
       });
 
       res.setHeader('Content-Type', 'application/pdf');
@@ -672,26 +673,47 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       doc.pipe(res);
 
-      // Header with brand colors
-      doc.rect(0, 0, doc.page.width, 120).fill('#6633cc');
+      // Contact information for footer
+      const contactInfo = {
+        name: 'PurpleGuard Security',
+        address: '123 Cybersecurity Ave, Tech District, CA 94105',
+        phone: '+1 (888) 555-GUARD',
+        website: 'www.purpleguard.io',
+        email: 'info@purpleguard.io'
+      };
+
+      // Header with brand colors - logo + tagline only
+      doc.rect(0, 0, doc.page.width, 60).fill('#6633cc');
       
-      // Title
+      // Logo text and tagline
       doc.fillColor('#ffffff')
+         .fontSize(20)
+         .font('Helvetica-Bold')
+         .text('PurpleGuard', 72, 20);
+      
+      doc.fontSize(10)
+         .font('Helvetica')
+         .text('Stronger Security. Smarter Defenses.', 72, 42);
+
+      // Whitepaper title - below the header
+      doc.y = 80;
+      doc.fillColor('#6633cc')
          .fontSize(28)
          .font('Helvetica-Bold')
-         .text(whitepaper.title, 72, 40, { width: doc.page.width - 144 });
+         .text(whitepaper.title, 72, doc.y, { width: doc.page.width - 144 });
       
-      doc.fontSize(16)
+      doc.moveDown(0.3);
+      doc.fillColor('#666666')
+         .fontSize(14)
          .font('Helvetica')
-         .text(whitepaper.subtitle, 72, 75);
+         .text(whitepaper.subtitle);
 
-      // Reset position after header
-      doc.y = 150;
+      doc.moveDown(1.5);
 
       // Content sections
       whitepaper.sections.forEach((section, index) => {
         // Check if we need a new page
-        if (doc.y > doc.page.height - 150) {
+        if (doc.y > doc.page.height - 180) {
           doc.addPage();
           doc.y = 72;
         }
@@ -710,7 +732,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
            .font('Helvetica');
 
         section.content.forEach(paragraph => {
-          if (doc.y > doc.page.height - 100) {
+          if (doc.y > doc.page.height - 140) {
             doc.addPage();
             doc.y = 72;
           }
@@ -721,15 +743,36 @@ export async function registerRoutes(app: Express): Promise<Server> {
         doc.moveDown(1);
       });
 
-      // Footer
-      const footerY = doc.page.height - 50;
-      doc.fillColor('#6633cc')
-         .fontSize(10)
-         .font('Helvetica-Bold')
-         .text('PurpleGuard — Smarter Security. Stronger Defense.', 72, footerY, {
-           align: 'center',
-           width: doc.page.width - 144
-         });
+      // Add footer to all pages
+      const pages = doc.bufferedPageRange();
+      for (let i = 0; i < pages.count; i++) {
+        doc.switchToPage(i);
+        
+        // Footer divider line
+        const footerY = doc.page.height - 85;
+        doc.strokeColor('#6633cc')
+           .lineWidth(1)
+           .moveTo(72, footerY)
+           .lineTo(doc.page.width - 72, footerY)
+           .stroke();
+
+        // Contact details footer
+        doc.fillColor('#6633cc')
+           .fontSize(9)
+           .font('Helvetica-Bold')
+           .text(contactInfo.name, 72, footerY + 10, { width: doc.page.width - 144, align: 'center' });
+        
+        doc.fillColor('#666666')
+           .fontSize(8)
+           .font('Helvetica')
+           .text(contactInfo.address, 72, footerY + 22, { width: doc.page.width - 144, align: 'center' })
+           .text(`Phone: ${contactInfo.phone}  |  Website: ${contactInfo.website}  |  Email: ${contactInfo.email}`, 72, footerY + 33, { width: doc.page.width - 144, align: 'center' });
+
+        // Page number
+        doc.fillColor('#999999')
+           .fontSize(8)
+           .text(`Page ${i + 1} of ${pages.count}`, 72, footerY + 50, { width: doc.page.width - 144, align: 'center' });
+      }
 
       doc.end();
     } catch (error) {

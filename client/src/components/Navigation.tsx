@@ -3,7 +3,7 @@ import { Link } from "wouter";
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, User, LogOut, ChevronDown, ChevronRight, Shield, Search, Eye, AlertTriangle, Cpu, Server, Lock } from "lucide-react";
+import { Menu, User, LogOut, ChevronDown, ChevronRight, Shield, Search, Eye, AlertTriangle, Cpu, Server, Lock, FileCheck, Cloud, Globe } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import {
   NavigationMenu,
@@ -29,15 +29,68 @@ const managedXServices = [
   { name: "Managed SASE / ZTNA", tagline: "Secure cloud-delivered access", href: "/services/managed-x/managed-sase-ztna", icon: Lock, color: "from-slate-600 to-slate-800" },
 ];
 
+const solutions = [
+  { name: "Compliance & Audit Readiness", href: "/solutions/compliance-audit-readiness", icon: FileCheck, color: "from-emerald-500 to-teal-600" },
+  { name: "Ransomware Defense", href: "/solutions/ransomware-defense", icon: Shield, color: "from-red-500 to-orange-600" },
+  { name: "Cloud & SaaS Security", href: "/solutions/cloud-saas-security", icon: Cloud, color: "from-blue-500 to-cyan-600" },
+  { name: "External Attack Surface Management", href: "/solutions/external-attack-surface-management", icon: Globe, color: "from-purple-500 to-indigo-600" },
+  { name: "Zero Trust & Secure Remote Access", href: "/solutions/zero-trust-secure-remote-access", icon: Lock, color: "from-slate-600 to-slate-800" },
+];
+
 export default function Navigation() {
   const { isAuthenticated, user } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
 
   const navigationItems = [
-    { label: "Solutions", href: "/solutions" },
     { label: "Pricing", href: "/pricing" },
     { label: "Resources", href: "/blog" },
   ];
+
+  const SolutionsMenu = () => (
+    <NavigationMenu>
+      <NavigationMenuList>
+        <NavigationMenuItem>
+          <NavigationMenuTrigger className="text-slate-700 hover:text-primary-600 font-medium bg-transparent hover:bg-transparent data-[state=open]:bg-transparent">
+            Solutions
+          </NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <div className="w-[350px] p-4">
+              <div className="space-y-1">
+                {solutions.map((solution) => (
+                  <NavigationMenuLink key={solution.name} asChild>
+                    <Link href={solution.href}>
+                      <div className="group/item flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 cursor-pointer transition-colors">
+                        <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${solution.color} flex items-center justify-center flex-shrink-0`}>
+                          <solution.icon className="h-4 w-4 text-white" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="font-medium text-slate-900 group-hover/item:text-[#6633cc] transition-colors text-sm">
+                            {solution.name}
+                          </div>
+                        </div>
+                        <ChevronRight className="h-4 w-4 text-slate-300 group-hover/item:text-[#6633cc] transition-colors flex-shrink-0" />
+                      </div>
+                    </Link>
+                  </NavigationMenuLink>
+                ))}
+              </div>
+              
+              <div className="mt-3 pt-3 border-t border-slate-100">
+                <NavigationMenuLink asChild>
+                  <Link href="/solutions">
+                    <Button variant="outline" size="sm" className="w-full border-[#6633cc]/30 text-[#6633cc] hover:bg-[#6633cc]/5">
+                      View All Solutions
+                      <ChevronRight className="h-4 w-4 ml-1" />
+                    </Button>
+                  </Link>
+                </NavigationMenuLink>
+              </div>
+            </div>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+      </NavigationMenuList>
+    </NavigationMenu>
+  );
 
   const ServicesMenu = () => (
     <NavigationMenu>
@@ -144,6 +197,26 @@ export default function Navigation() {
     <>
       {mobile ? (
         <>
+          <Link href="/solutions">
+            <div 
+              className="font-semibold text-slate-900 px-3 py-2 text-sm cursor-pointer hover:text-primary-600"
+              onClick={() => setIsOpen(false)}
+            >
+              Solutions
+            </div>
+          </Link>
+          {solutions.map((solution) => (
+            <Link key={solution.name} href={solution.href}>
+              <Button 
+                variant="ghost" 
+                className="w-full justify-start pl-8 text-slate-700 hover:text-primary-600 font-medium text-left"
+                onClick={() => setIsOpen(false)}
+              >
+                {solution.name}
+              </Button>
+            </Link>
+          ))}
+          <div className="border-b border-slate-200 my-2" />
           <Link href="/services">
             <div 
               className="font-semibold text-slate-900 px-3 py-2 text-sm cursor-pointer hover:text-primary-600"
@@ -173,7 +246,10 @@ export default function Navigation() {
           <div className="border-b border-slate-200 my-2" />
         </>
       ) : (
-        <ServicesMenu />
+        <>
+          <SolutionsMenu />
+          <ServicesMenu />
+        </>
       )}
       {navigationItems.map((item) => (
         <Link key={item.label} href={item.href}>

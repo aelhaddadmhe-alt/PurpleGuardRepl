@@ -108,12 +108,6 @@ export default function Solutions() {
                   Book a Consultation
                 </Button>
               </a>
-              <Link href="#solutions">
-                <Button size="lg" variant="outline" className="border-white bg-white/20 text-white hover:bg-white/30">
-                  Explore Solutions
-                  <ChevronRight className="h-5 w-5 ml-2" />
-                </Button>
-              </Link>
             </div>
           </div>
         </div>
