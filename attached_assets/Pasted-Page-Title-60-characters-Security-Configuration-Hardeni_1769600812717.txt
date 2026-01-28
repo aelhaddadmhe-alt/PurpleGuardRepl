@@ -1,0 +1,115 @@
+Page Title (≤ 60 characters)
+Security Configuration & Hardening | PurpleConfig
+________________________________________
+Meta Description (≤ 160 characters)
+Continuous security configuration assessment and hardening aligned to CIS and NIST. Detect drift, reduce misconfigurations, and stay compliant.
+________________________________________
+URL
+/services/purple-x/purpleconfig
+________________________________________
+SEO & TECHNICAL INSTRUCTIONS (FOR BUILDER)
+•	Mobile-first, responsive layout
+•	One H1 only; strict H2 → H3 hierarchy
+•	Use lightweight cards, icon grids, and simple compliance-mapping visuals
+•	Avoid heavy JavaScript and animated charts
+•	SVG icons, lazy-loaded visuals only
+•	Schema-ready (Service, Organization)
+•	Optimized for Core Web Vitals (fast LCP, minimal CLS, low JS)
+________________________________________
+H1 — HERO SECTION
+PurpleConfig — Security Configuration & Hardening
+H2 — Subheading
+Identify misconfigurations, enforce secure baselines, and maintain compliance—continuously.
+Hook (Concise bullets)
+•	CIS and NIST-aligned assessments
+•	Continuous configuration drift detection
+•	Endpoint, server, and cloud coverage
+Primary CTA
+Request a Configuration Assessment
+Secondary CTA
+View Purple-X Services
+________________________________________
+TRUST & CONTEXT STRIP
+Text or icon-based:
+•	Misconfiguration risk reduction
+•	Compliance-aware security controls
+•	Subscription-based or assessment-driven delivery
+________________________________________
+H2 — WHAT IS PURPLECONFIG
+Short paragraph (SEO-focused):
+PurpleConfig is PurpleGuard’s security configuration assessment and hardening service that continuously evaluates systems against recognized security benchmarks. It identifies misconfigurations, configuration drift, and weak controls that increase breach and compliance risk.
+Internal link:
+How Purple-X Works →
+________________________________________
+H2 — WHAT’S INCLUDED IN PURPLECONFIG
+H3 — Security Configuration Assessment
+Evaluation of systems against CIS, NIST, and security best-practice benchmarks.
+H3 — Endpoint & Server Hardening
+Assessment and guidance for Windows and Linux endpoint and server configurations.
+H3 — Cloud & Platform Configuration Review
+Identification of insecure settings across cloud and virtualized environments.
+H3 — Configuration Drift Detection
+Ongoing monitoring to identify deviations from approved secure baselines.
+H3 — Compliance Mapping & Reporting
+Clear reporting mapped to compliance frameworks and audit requirements.
+________________________________________
+H2 — HOW PURPLECONFIG IS DELIVERED
+H3 — Benchmark-Driven Methodology
+PurpleConfig assessments are aligned to recognized standards such as CIS Benchmarks and NIST guidance.
+Supported alignment examples:
+•	CIS Benchmarks
+•	NIST CSF / NIST 800-53
+•	ISO 27001
+•	SOC 2
+H3 — Vendor-Agnostic Assessment
+PurpleGuard evaluates configurations across environments without forcing specific tooling or platforms.
+Internal link:
+Compliance Solutions →
+________________________________________
+H2 — BUSINESS VALUE
+4-Column Grid (Icons + Text)
+•	Reduces misconfiguration-driven breaches
+•	Improves security baseline consistency
+•	Detects configuration drift early
+•	Supports audit and compliance readiness
+________________________________________
+H2 — WHO PURPLECONFIG IS FOR
+Bullet list:
+•	Organizations preparing for audits
+•	Businesses with complex or hybrid environments
+•	IT teams lacking configuration visibility
+•	Compliance-driven organizations
+Internal link:
+Industries We Serve →
+________________________________________
+H2 — PURPLECONFIG VS ONE-TIME HARDENING
+Lightweight comparison table:
+•	One-Time Hardening: Static, no drift detection
+•	PurpleConfig: Continuous assessment and monitoring
+Internal links:
+•	PurpleVAPT →
+•	PurpleStrike →
+________________________________________
+H2 — DELIVERY OPTIONS
+Short bullet list:
+•	One-time configuration assessment
+•	Scheduled recurring assessments
+•	Continuous configuration monitoring (subscription-based)
+Internal link:
+View Pricing Explained →
+________________________________________
+H2 — PART OF CONTINUOUS EXPOSURE MANAGEMENT
+Short paragraph:
+PurpleConfig integrates with PurpleVAPT, PurpleSOC, PurpleSentinel, and PurpleStrike to reduce exposure caused by misconfigurations across the attack surface.
+Internal links:
+•	PurpleVAPT
+•	PurpleSOC
+•	PurpleSentinel (MDR)
+•	PurpleStrike
+________________________________________
+FINAL CTA SECTION
+Eliminate misconfigurations. Maintain secure baselines.
+Primary CTA:
+Get a Custom Quote
+Secondary CTA:
+Talk to a Security Expert
