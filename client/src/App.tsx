@@ -32,6 +32,8 @@ import Blog from "@/pages/blog";
 import BlogPost from "@/pages/blog-post";
 import Booking from "@/pages/booking";
 import NotFound from "@/pages/not-found";
+import PurpleConfig from "@/pages/purpleconfig";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 function Router() {
   const { isAuthenticated, isLoading } = useAuth();
@@ -55,6 +57,7 @@ function Router() {
           <Route path="/services/purple-x/purplevapt" component={PurpleVAPT} />
           <Route path="/services/purple-x/purplestrike" component={PurpleStrike} />
           <Route path="/services/purple-x/purplereveal" component={PurpleReveal} />
+          <Route path="/services/purple-x/purpleconfig" component={PurpleConfig} />
           <Route path="/services/managed-x/managed-endpoint" component={ManagedEndpoint} />
           <Route path="/services/managed-x/managed-edr" component={ManagedEDR} />
           <Route path="/services/managed-x/managed-sase-ztna" component={ManagedSASE} />
@@ -82,6 +85,7 @@ function Router() {
           <Route path="/services/purple-x/purplevapt" component={PurpleVAPT} />
           <Route path="/services/purple-x/purplestrike" component={PurpleStrike} />
           <Route path="/services/purple-x/purplereveal" component={PurpleReveal} />
+          <Route path="/services/purple-x/purpleconfig" component={PurpleConfig} />
           <Route path="/services/managed-x/managed-endpoint" component={ManagedEndpoint} />
           <Route path="/services/managed-x/managed-edr" component={ManagedEDR} />
           <Route path="/services/managed-x/managed-sase-ztna" component={ManagedSASE} />
@@ -110,6 +114,7 @@ function App() {
       <TooltipProvider>
         <Toaster />
         <Router />
+        <WhatsAppButton />
       </TooltipProvider>
     </QueryClientProvider>
   );
