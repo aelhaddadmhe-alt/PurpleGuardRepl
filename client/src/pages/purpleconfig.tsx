@@ -172,7 +172,7 @@ export default function PurpleConfig() {
                   </Button>
                 </Link>
                 <Link href="/services/purple-x">
-                  <Button size="lg" variant="outline" className="border-slate-500 text-white hover:bg-slate-800">
+                  <Button size="lg" variant="outline" className="border-slate-400 bg-slate-700/50 text-white hover:bg-slate-700">
                     View Purple-X Services
                   </Button>
                 </Link>
@@ -490,7 +490,7 @@ export default function PurpleConfig() {
           <div className="flex flex-wrap justify-center gap-4">
             {relatedServices.map((service, idx) => (
               <Link key={idx} href={service.path}>
-                <Button variant="outline" className="border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-white">
+                <Button variant="outline" className="border-slate-500 bg-slate-700/50 text-white hover:bg-slate-700">
                   {service.name}
                   <ChevronRight className="h-4 w-4 ml-1" />
                 </Button>
@@ -517,7 +517,7 @@ export default function PurpleConfig() {
               </Button>
             </Link>
             <Link href="/booking">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button size="lg" variant="outline" className="border-white bg-white/20 text-white hover:bg-white/30">
                 <MessageSquare className="h-5 w-5 mr-2" />
                 Talk to a Security Expert
               </Button>

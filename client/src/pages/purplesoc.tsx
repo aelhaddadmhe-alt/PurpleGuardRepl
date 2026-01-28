@@ -171,7 +171,7 @@ export default function PurpleSOC() {
                 </Button>
               </a>
               <Link href="/services/purple-x">
-                <Button size="lg" variant="outline" className="border-white/30 hover:bg-white/10 text-white">
+                <Button size="lg" variant="outline" className="border-white bg-white/20 text-white hover:bg-white/30">
                   View Purple-X Services
                   <ChevronRight className="h-5 w-5 ml-2" />
                 </Button>
@@ -518,7 +518,7 @@ export default function PurpleSOC() {
               </Button>
             </a>
             <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer">
-              <Button size="lg" variant="outline" className="border-white/30 hover:bg-white/10 text-white min-w-[200px]">
+              <Button size="lg" variant="outline" className="border-white bg-white/20 text-white hover:bg-white/30 min-w-[200px]">
                 <MessageSquare className="h-5 w-5 mr-2" />
                 Talk to a SOC Expert
               </Button>
