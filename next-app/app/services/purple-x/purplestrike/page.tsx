@@ -18,8 +18,14 @@ export const metadata: Metadata = {
     title: "Red Teaming & BAS Dubai UAE — PurpleStrike | PurpleGuard",
     description: "Simulate real-world attacks to validate controls. Red teaming & BAS for UAE, Egypt & KSA.",
     images: [{ url: OG, width: 1200, height: 630, alt: "PurpleStrike — Red Teaming UAE" }],
-  },
-};
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "PurpleStrike — Red Team & BAS UAE | PurpleGuard",
+      description: "Adversary simulation & red team exercises for UAE, Egypt & KSA.",
+      images: [OG],
+    },
+  };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 

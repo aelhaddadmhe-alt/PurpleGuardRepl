@@ -18,8 +18,14 @@ export const metadata: Metadata = {
     title: "MDR Services Dubai UAE — PurpleSentinel | PurpleGuard",
     description: "Managed Detection & Response with automated containment and threat hunting for UAE, Egypt & KSA.",
     images: [{ url: OG, width: 1200, height: 630, alt: "PurpleSentinel — MDR UAE" }],
-  },
-};
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "PurpleSentinel — Managed MDR UAE | PurpleGuard",
+      description: "24/7 managed detection & response for UAE, Egypt & KSA organisations.",
+      images: [OG],
+    },
+  };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 

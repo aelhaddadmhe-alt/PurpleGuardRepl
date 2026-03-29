@@ -18,8 +18,14 @@ export const metadata: Metadata = {
     title: "VAPT Services Dubai UAE — PurpleVAPT | PurpleGuard",
     description: "Continuous VAPT across networks, apps, cloud & APIs. Risk-prioritized and compliance-ready for UAE, Egypt & KSA.",
     images: [{ url: OG, width: 1200, height: 630, alt: "PurpleVAPT — VAPT Services UAE" }],
-  },
-};
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "PurpleVAPT — VAPT Services UAE & Egypt | PurpleGuard",
+      description: "Continuous VAPT for networks, apps, cloud & APIs in UAE, Egypt & KSA.",
+      images: [OG],
+    },
+  };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 

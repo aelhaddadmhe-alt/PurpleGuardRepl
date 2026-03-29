@@ -18,8 +18,14 @@ export const metadata: Metadata = {
     title: "Managed Endpoint Security Dubai UAE | PurpleGuard",
     description: "Centralized patching, health monitoring, and endpoint compliance for UAE, Egypt & KSA.",
     images: [{ url: OG, width: 1200, height: 630, alt: "Managed Endpoint UAE" }],
-  },
-};
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Managed Endpoint — Patch & Hardening UAE | PurpleGuard",
+      description: "Fully managed endpoint patching & hardening for UAE, Egypt & KSA.",
+      images: [OG],
+    },
+  };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 

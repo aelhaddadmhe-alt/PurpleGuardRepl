@@ -18,8 +18,14 @@ export const metadata: Metadata = {
     title: "NDR Services Dubai UAE — PurpleReveal | PurpleGuard",
     description: "Deep network detection & response across on-prem and cloud for UAE, Egypt & KSA.",
     images: [{ url: OG, width: 1200, height: 630, alt: "PurpleReveal — NDR UAE" }],
-  },
-};
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "PurpleReveal — Threat Intelligence UAE | PurpleGuard",
+      description: "Dark web monitoring & threat intelligence for UAE, Egypt & KSA.",
+      images: [OG],
+    },
+  };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChevronRight, CheckCircle, Calendar, Shield, Cpu, Eye, Target, Users, Layers, Mail } from "lucide-react";
-import { ogImageUrl } from "@/lib/json-ld";
+import { breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
 
 const OG = ogImageUrl({ title: "Cybersecurity Pricing — UAE & Egypt", subtitle: "Transparent, Subscription-Based MSSP Pricing — No Lock-Ins", category: "Pricing", color: "slate" });
 
@@ -18,6 +18,12 @@ export const metadata: Metadata = {
     title: "Cybersecurity Pricing Dubai UAE | PurpleGuard",
     description: "Transparent MSSP pricing for UAE, Egypt & KSA — subscription-based, no lock-ins.",
     images: [{ url: OG, width: 1200, height: 630, alt: "PurpleGuard Cybersecurity Pricing UAE" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cybersecurity Pricing Dubai UAE | PurpleGuard",
+    description: "Transparent MSSP pricing for UAE, Egypt & KSA — subscription-based, no lock-ins.",
+    images: [OG],
   },
 };
 
@@ -49,8 +55,13 @@ const bundles = [
 ];
 
 export default function PricingPage() {
+  const breadcrumbSchema = breadcrumbJsonLd([
+    { name: "Home", url: "/" },
+    { name: "Pricing", url: "/pricing" },
+  ]);
   return (
     <div className="min-h-screen bg-slate-50">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-[#000033] via-[#6633cc] to-[#000033] overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
@@ -82,8 +93,11 @@ export default function PricingPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-slate-900 mb-6">How PurpleGuard Pricing Works</h2>
-          <p className="text-lg text-slate-600 leading-relaxed mb-8 max-w-3xl">
+          <p className="text-lg text-slate-600 leading-relaxed mb-4 max-w-3xl">
             PurpleGuard pricing is based on what you protect, how critical it is, and the level of operational support required. Services are billed monthly and aligned to real-world risk, not arbitrary licensing.
+          </p>
+          <p className="text-lg text-slate-600 leading-relaxed mb-8 max-w-3xl">
+            Quotes are provided in <strong>AED</strong> (UAE Dirham) for clients in the UAE and KSA, and in <strong>EGP</strong> (Egyptian Pound) for Egypt-based organisations — ensuring pricing is always clear, local, and comparable.
           </p>
           <div className="bg-slate-50 rounded-xl p-8">
             <h3 className="text-xl font-bold text-slate-900 mb-4">Pricing Factors</h3>

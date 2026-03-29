@@ -18,13 +18,19 @@ export const metadata: Metadata = {
     title: "Compliance & Audit Readiness UAE — PurpleGuard",
     description: "ISO 27001, NCA ECC, EG-CERT & SOC 2 compliance for UAE, Egypt & KSA.",
     images: [{ url: OG, width: 1200, height: 630, alt: "Compliance Audit Readiness UAE" }],
-  },
-};
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Compliance & Audit Readiness UAE | PurpleGuard",
+      description: "ISO 27001, NCA ECC, EG-CERT & SOC 2 compliance for UAE, Egypt & KSA.",
+      images: [OG],
+    },
+  };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 
 const complianceFaqs = [
-  { question: "Which compliance frameworks does PurpleGuard support?", answer: "PurpleGuard supports ISO 27001, NCA ECC (Saudi Arabia), NCA CCC, EG-CERT guidelines (Egypt), UAE TDRA requirements, NIST CSF, SOC 2, PCI DSS, and HIPAA. Our assessment covers the full control catalogue and maps gaps to your specific audit requirements." },
+  { question: "Which compliance frameworks does PurpleGuard support?", answer: "PurpleGuard supports ISO 27001:2022, NCA ECC and NCA CCC (Saudi Arabia), SAMA Cyber Security Framework (KSA financial sector), UAE TDRA / UAE Cyber Security Council requirements, EG-CERT guidelines (Egypt), NTRA cybersecurity requirements (Egyptian telecom sector), NIST CSF, SOC 2, PCI DSS, and HIPAA. Our assessment covers the full control catalogue and maps gaps to your specific audit requirements." },
   { question: "How long does a compliance readiness assessment take?", answer: "For a mid-market organisation, a gap assessment and audit-readiness roadmap typically takes 2–4 weeks. Ongoing compliance monitoring is a continuous service — we track control changes and evidence continuously so you are always audit-ready, not just once a year." },
   { question: "Can PurpleGuard help us prepare for an NCA ECC or ISO 27001 audit in UAE or Saudi Arabia?", answer: "Yes. We work with organisations in UAE, Saudi Arabia, and Egypt to close gaps against NCA ECC 1-1:2018, ISO 27001:2022, and sector-specific frameworks. We produce all required documentation, evidence artefacts, and treatment plans in the format auditors expect." },
   { question: "Do you help with evidence collection and documentation?", answer: "Yes. PurpleGuard's compliance service includes automated evidence collection, control documentation, policy templates, exception tracking, and a live compliance dashboard — so auditors see a complete, organised evidence pack rather than scattered spreadsheets." },
@@ -127,11 +133,17 @@ export default function ComplianceAuditReadinessPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Frameworks Supported</h2>
               <div className="space-y-4">
                 {[
-                  { name: "ISO 27001", description: "Information security management system controls and continuous monitoring" },
+                  { name: "NCA ECC (Saudi Arabia)", description: "National Cybersecurity Authority Essential Cybersecurity Controls for KSA organisations" },
+                  { name: "NCA CCC (Saudi Arabia)", description: "Critical Systems Cybersecurity Controls for critical infrastructure in KSA" },
+                  { name: "SAMA CSF (KSA)", description: "Saudi Central Bank (SAMA) Cyber Security Framework for financial institutions" },
+                  { name: "UAE TDRA / CSC", description: "UAE Telecommunications and Digital Government Regulatory Authority and Cyber Security Council requirements" },
+                  { name: "EG-CERT (Egypt)", description: "Egyptian Computer Emergency Readiness Team guidelines for organisations regulated in Egypt" },
+                  { name: "NTRA (Egypt)", description: "National Telecom Regulatory Authority cybersecurity requirements for Egyptian telecom sector organisations" },
+                  { name: "ISO 27001:2022", description: "Information security management system controls and continuous monitoring" },
                   { name: "SOC 2", description: "Trust service criteria for security, availability, and confidentiality" },
                   { name: "NIST CSF", description: "Cybersecurity framework identify, protect, detect, respond, recover functions" },
-                  { name: "HIPAA", description: "Healthcare data protection, access controls, and audit logging" },
                   { name: "PCI DSS", description: "Payment card data protection, network segmentation, and vulnerability management" },
+                  { name: "HIPAA", description: "Healthcare data protection, access controls, and audit logging" },
                   { name: "GDPR", description: "Data privacy, breach notification, and privacy by design requirements" },
                 ].map((fw) => (
                   <div key={fw.name} className="flex items-start gap-4 p-4 bg-slate-50 rounded-lg">

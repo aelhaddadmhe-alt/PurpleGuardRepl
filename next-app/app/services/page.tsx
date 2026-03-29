@@ -22,8 +22,14 @@ export const metadata: Metadata = {
     title: "Managed Security Services UAE — PurpleGuard",
     description: "Purple X cybersecurity + Managed X infrastructure — 15 services for UAE, Egypt & KSA.",
     images: [{ url: OG, width: 1200, height: 630, alt: "PurpleGuard Security Services UAE" }],
-  },
-};
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Managed Security Services UAE & Egypt | PurpleGuard",
+      description: "Purple X cybersecurity + Managed X infrastructure for UAE, Egypt & KSA.",
+      images: [OG],
+    },
+  };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 

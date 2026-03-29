@@ -18,8 +18,14 @@ export const metadata: Metadata = {
     title: "Managed Identity & IAM Dubai UAE | PurpleGuard",
     description: "MFA, SSO & zero trust identity management for UAE, Egypt & KSA.",
     images: [{ url: OG, width: 1200, height: 630, alt: "Managed Identity UAE" }],
-  },
-};
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Managed Identity — IAM & PAM UAE | PurpleGuard",
+      description: "Identity security management covering AD, Entra ID, MFA & PAM for UAE.",
+      images: [OG],
+    },
+  };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 

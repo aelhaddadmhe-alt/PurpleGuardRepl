@@ -19,8 +19,14 @@ export const metadata: Metadata = {
     title: "Cybersecurity Solutions UAE — PurpleGuard",
     description: "Compliance, ransomware, cloud security & EASM solutions for UAE, Egypt & KSA.",
     images: [{ url: OG, width: 1200, height: 630, alt: "PurpleGuard Cybersecurity Solutions" }],
-  },
-};
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Security Solutions UAE & Egypt | PurpleGuard",
+      description: "Compliance, ransomware defense, cloud security & zero trust for UAE, Egypt & KSA.",
+      images: [OG],
+    },
+  };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 

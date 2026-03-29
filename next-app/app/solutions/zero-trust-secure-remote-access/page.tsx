@@ -18,8 +18,14 @@ export const metadata: Metadata = {
     title: "Zero Trust & Secure Remote Access UAE — PurpleGuard",
     description: "ZTNA & SASE replacing VPNs for remote and hybrid workforces in UAE, Egypt & KSA.",
     images: [{ url: OG, width: 1200, height: 630, alt: "Zero Trust Secure Access UAE" }],
-  },
-};
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Zero Trust & Secure Access UAE | PurpleGuard",
+      description: "ZTNA & SASE replacing VPNs for remote workforces in UAE, Egypt & KSA.",
+      images: [OG],
+    },
+  };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 

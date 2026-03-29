@@ -18,8 +18,14 @@ export const metadata: Metadata = {
     title: "Managed Email Security Dubai UAE | PurpleGuard",
     description: "Phishing, BEC & email threat protection with DMARC enforcement for UAE, Egypt & KSA.",
     images: [{ url: OG, width: 1200, height: 630, alt: "Managed Email Security UAE" }],
-  },
-};
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Managed Email Security UAE | PurpleGuard",
+      description: "Phishing, BEC & malware protection for M365 & Google Workspace in UAE.",
+      images: [OG],
+    },
+  };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 

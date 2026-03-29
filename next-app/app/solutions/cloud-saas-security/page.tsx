@@ -18,8 +18,14 @@ export const metadata: Metadata = {
     title: "Cloud & SaaS Security UAE — PurpleGuard",
     description: "AWS, Azure, M365 & Google Workspace security for UAE, Egypt & KSA.",
     images: [{ url: OG, width: 1200, height: 630, alt: "Cloud SaaS Security UAE" }],
-  },
-};
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Cloud & SaaS Security UAE | PurpleGuard",
+      description: "AWS, Azure, M365 & Google Workspace security for UAE, Egypt & KSA.",
+      images: [OG],
+    },
+  };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 

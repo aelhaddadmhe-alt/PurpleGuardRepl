@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/services`, lastModified: NOW, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/services/purple-x`, lastModified: NOW, changeFrequency: "weekly", priority: 0.9 },
     { url: `${BASE}/services/managed-x`, lastModified: NOW, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${BASE}/solutions`, lastModified: NOW, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${BASE}/solutions`, lastModified: NOW, changeFrequency: "weekly", priority: 0.7 },
 
     { url: `${BASE}/services/purple-x/purplevapt`, lastModified: NOW, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/services/purple-x/purplesoc`, lastModified: NOW, changeFrequency: "monthly", priority: 0.8 },

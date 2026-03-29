@@ -746,6 +746,14 @@ const metadata = {
                 alt: "Purple X Cybersecurity UAE"
             }
         ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Purple X Cybersecurity Services UAE | PurpleGuard",
+        description: "VAPT, SOC, MDR, Threat Intelligence & Red Team services for UAE, Egypt & KSA.",
+        images: [
+            OG
+        ]
     }
 };
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
@@ -783,7 +791,7 @@ function PurpleXPage() {
                 }
             }, void 0, false, {
                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                lineNumber: 45,
+                lineNumber: 51,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -796,7 +804,7 @@ function PurpleXPage() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                        lineNumber: 48,
+                        lineNumber: 54,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -809,7 +817,7 @@ function PurpleXPage() {
                                     children: "Always-On Protection"
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                    lineNumber: 51,
+                                    lineNumber: 57,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -817,7 +825,7 @@ function PurpleXPage() {
                                     children: "Purple X – Cybersecurity & Exposure Management"
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                    lineNumber: 52,
+                                    lineNumber: 58,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -825,7 +833,7 @@ function PurpleXPage() {
                                     children: "PurpleGuard's advanced cybersecurity and exposure management service line, purpose-built for SMEs and mid-market organizations. Continuous, compliance-aware protection across infrastructure, endpoints, applications, cloud environments, and external attack surfaces."
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                    lineNumber: 55,
+                                    lineNumber: 61,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -843,19 +851,19 @@ function PurpleXPage() {
                                                         className: "h-5 w-5 mr-2"
                                                     }, void 0, false, {
                                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                        lineNumber: 62,
+                                                        lineNumber: 68,
                                                         columnNumber: 19
                                                     }, this),
                                                     " Book Security Assessment"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                lineNumber: 61,
+                                                lineNumber: 67,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                            lineNumber: 60,
+                                            lineNumber: 66,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -870,24 +878,24 @@ function PurpleXPage() {
                                                         className: "h-5 w-5 ml-2"
                                                     }, void 0, false, {
                                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                        lineNumber: 67,
+                                                        lineNumber: 73,
                                                         columnNumber: 36
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                lineNumber: 66,
+                                                lineNumber: 72,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                            lineNumber: 65,
+                                            lineNumber: 71,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                    lineNumber: 59,
+                                    lineNumber: 65,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -904,7 +912,7 @@ function PurpleXPage() {
                                                     className: "h-5 w-5 text-[#ff6633] flex-shrink-0 mt-0.5"
                                                 }, void 0, false, {
                                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                    lineNumber: 79,
+                                                    lineNumber: 85,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -912,35 +920,35 @@ function PurpleXPage() {
                                                     children: obj
                                                 }, void 0, false, {
                                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                    lineNumber: 80,
+                                                    lineNumber: 86,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, obj, true, {
                                             fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                            lineNumber: 78,
+                                            lineNumber: 84,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                    lineNumber: 71,
+                                    lineNumber: 77,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                            lineNumber: 50,
+                            lineNumber: 56,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                        lineNumber: 49,
+                        lineNumber: 55,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                lineNumber: 47,
+                lineNumber: 53,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -956,7 +964,7 @@ function PurpleXPage() {
                                     children: "Quick Navigation"
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                    lineNumber: 92,
+                                    lineNumber: 98,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -964,13 +972,13 @@ function PurpleXPage() {
                                     children: "Jump directly to the service you're interested in"
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                    lineNumber: 93,
+                                    lineNumber: 99,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                            lineNumber: 91,
+                            lineNumber: 97,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -986,7 +994,7 @@ function PurpleXPage() {
                                                 className: `absolute inset-0 bg-gradient-to-r ${service.color} opacity-0 group-hover:opacity-5 transition-opacity`
                                             }, void 0, false, {
                                                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                lineNumber: 101,
+                                                lineNumber: 107,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -998,12 +1006,12 @@ function PurpleXPage() {
                                                             className: "h-5 w-5 text-white"
                                                         }, void 0, false, {
                                                             fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                            lineNumber: 104,
+                                                            lineNumber: 110,
                                                             columnNumber: 25
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                        lineNumber: 103,
+                                                        lineNumber: 109,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1011,7 +1019,7 @@ function PurpleXPage() {
                                                         children: service.name
                                                     }, void 0, false, {
                                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                        lineNumber: 106,
+                                                        lineNumber: 112,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1019,13 +1027,13 @@ function PurpleXPage() {
                                                         children: service.tagline
                                                     }, void 0, false, {
                                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                        lineNumber: 107,
+                                                        lineNumber: 113,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                lineNumber: 102,
+                                                lineNumber: 108,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1034,40 +1042,40 @@ function PurpleXPage() {
                                                     className: "h-4 w-4 text-[#6633cc]"
                                                 }, void 0, false, {
                                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                    lineNumber: 110,
+                                                    lineNumber: 116,
                                                     columnNumber: 23
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                lineNumber: 109,
+                                                lineNumber: 115,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                        lineNumber: 100,
+                                        lineNumber: 106,
                                         columnNumber: 19
                                     }, this)
                                 }, service.id, false, {
                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                    lineNumber: 99,
+                                    lineNumber: 105,
                                     columnNumber: 17
                                 }, this);
                             })
                         }, void 0, false, {
                             fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                            lineNumber: 95,
+                            lineNumber: 101,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                    lineNumber: 90,
+                    lineNumber: 96,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                lineNumber: 89,
+                lineNumber: 95,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1084,7 +1092,7 @@ function PurpleXPage() {
                                     children: "Purple X Service Portfolio"
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                    lineNumber: 124,
+                                    lineNumber: 130,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1092,13 +1100,13 @@ function PurpleXPage() {
                                     children: "Seven specialized security services designed for comprehensive protection across your entire digital landscape"
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                    lineNumber: 125,
+                                    lineNumber: 131,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                            lineNumber: 123,
+                            lineNumber: 129,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1123,12 +1131,12 @@ function PurpleXPage() {
                                                                     className: "h-7 w-7 text-white"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                    lineNumber: 138,
+                                                                    lineNumber: 144,
                                                                     columnNumber: 27
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                lineNumber: 137,
+                                                                lineNumber: 143,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1139,7 +1147,7 @@ function PurpleXPage() {
                                                                         children: service.category
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                        lineNumber: 141,
+                                                                        lineNumber: 147,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -1149,24 +1157,24 @@ function PurpleXPage() {
                                                                             children: service.name
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                            lineNumber: 143,
+                                                                            lineNumber: 149,
                                                                             columnNumber: 29
                                                                         }, this)
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                        lineNumber: 142,
+                                                                        lineNumber: 148,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                lineNumber: 140,
+                                                                lineNumber: 146,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                        lineNumber: 136,
+                                                        lineNumber: 142,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1174,7 +1182,7 @@ function PurpleXPage() {
                                                         children: service.tagline
                                                     }, void 0, false, {
                                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                        lineNumber: 147,
+                                                        lineNumber: 153,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1182,7 +1190,7 @@ function PurpleXPage() {
                                                         children: service.description
                                                     }, void 0, false, {
                                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                        lineNumber: 148,
+                                                        lineNumber: 154,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1196,7 +1204,7 @@ function PurpleXPage() {
                                                                         children: "Starting Price"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                        lineNumber: 151,
+                                                                        lineNumber: 157,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1204,13 +1212,13 @@ function PurpleXPage() {
                                                                         children: service.pricing
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                        lineNumber: 152,
+                                                                        lineNumber: 158,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                lineNumber: 150,
+                                                                lineNumber: 156,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1220,7 +1228,7 @@ function PurpleXPage() {
                                                                         children: "Best For"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                        lineNumber: 155,
+                                                                        lineNumber: 161,
                                                                         columnNumber: 27
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1228,19 +1236,19 @@ function PurpleXPage() {
                                                                         children: service.bestFor
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                        lineNumber: 156,
+                                                                        lineNumber: 162,
                                                                         columnNumber: 27
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                lineNumber: 154,
+                                                                lineNumber: 160,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                        lineNumber: 149,
+                                                        lineNumber: 155,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1257,19 +1265,19 @@ function PurpleXPage() {
                                                                             className: "h-4 w-4 mr-2"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                            lineNumber: 162,
+                                                                            lineNumber: 168,
                                                                             columnNumber: 29
                                                                         }, this),
                                                                         " Book Discovery Call"
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                    lineNumber: 161,
+                                                                    lineNumber: 167,
                                                                     columnNumber: 27
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                lineNumber: 160,
+                                                                lineNumber: 166,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -1283,30 +1291,30 @@ function PurpleXPage() {
                                                                             className: "h-4 w-4 ml-2"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                            lineNumber: 167,
+                                                                            lineNumber: 173,
                                                                             columnNumber: 40
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                    lineNumber: 166,
+                                                                    lineNumber: 172,
                                                                     columnNumber: 27
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                lineNumber: 165,
+                                                                lineNumber: 171,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                        lineNumber: 159,
+                                                        lineNumber: 165,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                lineNumber: 135,
+                                                lineNumber: 141,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1325,19 +1333,19 @@ function PurpleXPage() {
                                                                                 className: "h-5 w-5 text-[#6633cc]"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                                lineNumber: 177,
+                                                                                lineNumber: 183,
                                                                                 columnNumber: 31
                                                                             }, this),
                                                                             " Key Capabilities"
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                        lineNumber: 176,
+                                                                        lineNumber: 182,
                                                                         columnNumber: 29
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                    lineNumber: 175,
+                                                                    lineNumber: 181,
                                                                     columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -1350,7 +1358,7 @@ function PurpleXPage() {
                                                                                         className: "h-4 w-4 text-green-500 flex-shrink-0 mt-1"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                                        lineNumber: 184,
+                                                                                        lineNumber: 190,
                                                                                         columnNumber: 35
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1358,29 +1366,29 @@ function PurpleXPage() {
                                                                                         children: cap
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                                        lineNumber: 185,
+                                                                                        lineNumber: 191,
                                                                                         columnNumber: 35
                                                                                     }, this)
                                                                                 ]
                                                                             }, cap, true, {
                                                                                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                                lineNumber: 183,
+                                                                                lineNumber: 189,
                                                                                 columnNumber: 33
                                                                             }, this))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                        lineNumber: 181,
+                                                                        lineNumber: 187,
                                                                         columnNumber: 29
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                    lineNumber: 180,
+                                                                    lineNumber: 186,
                                                                     columnNumber: 27
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                            lineNumber: 174,
+                                                            lineNumber: 180,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
@@ -1395,19 +1403,19 @@ function PurpleXPage() {
                                                                                 className: "h-5 w-5 text-[#ff6633]"
                                                                             }, void 0, false, {
                                                                                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                                lineNumber: 194,
+                                                                                lineNumber: 200,
                                                                                 columnNumber: 31
                                                                             }, this),
                                                                             " Business Value"
                                                                         ]
                                                                     }, void 0, true, {
                                                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                        lineNumber: 193,
+                                                                        lineNumber: 199,
                                                                         columnNumber: 29
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                    lineNumber: 192,
+                                                                    lineNumber: 198,
                                                                     columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -1420,7 +1428,7 @@ function PurpleXPage() {
                                                                                         className: "h-4 w-4 text-[#ff6633] flex-shrink-0 mt-1"
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                                        lineNumber: 201,
+                                                                                        lineNumber: 207,
                                                                                         columnNumber: 35
                                                                                     }, this),
                                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1428,68 +1436,68 @@ function PurpleXPage() {
                                                                                         children: val
                                                                                     }, void 0, false, {
                                                                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                                        lineNumber: 202,
+                                                                                        lineNumber: 208,
                                                                                         columnNumber: 35
                                                                                     }, this)
                                                                                 ]
                                                                             }, val, true, {
                                                                                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                                lineNumber: 200,
+                                                                                lineNumber: 206,
                                                                                 columnNumber: 33
                                                                             }, this))
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                        lineNumber: 198,
+                                                                        lineNumber: 204,
                                                                         columnNumber: 29
                                                                     }, this)
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                                    lineNumber: 197,
+                                                                    lineNumber: 203,
                                                                     columnNumber: 27
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                            lineNumber: 191,
+                                                            lineNumber: 197,
                                                             columnNumber: 25
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                    lineNumber: 173,
+                                                    lineNumber: 179,
                                                     columnNumber: 23
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                lineNumber: 172,
+                                                lineNumber: 178,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                        lineNumber: 134,
+                                        lineNumber: 140,
                                         columnNumber: 19
                                     }, this)
                                 }, service.id, false, {
                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                    lineNumber: 133,
+                                    lineNumber: 139,
                                     columnNumber: 17
                                 }, this);
                             })
                         }, void 0, false, {
                             fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                            lineNumber: 129,
+                            lineNumber: 135,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                    lineNumber: 122,
+                    lineNumber: 128,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                lineNumber: 121,
+                lineNumber: 127,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1505,7 +1513,7 @@ function PurpleXPage() {
                                     children: "Why Choose Purple X?"
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                    lineNumber: 222,
+                                    lineNumber: 228,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1513,13 +1521,13 @@ function PurpleXPage() {
                                     children: "Smarter security and stronger defense—continuously"
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                    lineNumber: 223,
+                                    lineNumber: 229,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                            lineNumber: 221,
+                            lineNumber: 227,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1559,7 +1567,7 @@ function PurpleXPage() {
                                                 children: item.title
                                             }, void 0, false, {
                                                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                lineNumber: 236,
+                                                lineNumber: 242,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1567,34 +1575,34 @@ function PurpleXPage() {
                                                 children: item.description
                                             }, void 0, false, {
                                                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                lineNumber: 237,
+                                                lineNumber: 243,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                        lineNumber: 235,
+                                        lineNumber: 241,
                                         columnNumber: 17
                                     }, this)
                                 }, item.title, false, {
                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                    lineNumber: 234,
+                                    lineNumber: 240,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                            lineNumber: 225,
+                            lineNumber: 231,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                    lineNumber: 220,
+                    lineNumber: 226,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                lineNumber: 219,
+                lineNumber: 225,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1607,7 +1615,7 @@ function PurpleXPage() {
                             children: "Ready to Elevate Your Security?"
                         }, void 0, false, {
                             fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                            lineNumber: 248,
+                            lineNumber: 254,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1615,7 +1623,7 @@ function PurpleXPage() {
                             children: "Schedule a free discovery call with our security experts to discuss how Purple X can protect your organization."
                         }, void 0, false, {
                             fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                            lineNumber: 249,
+                            lineNumber: 255,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1633,19 +1641,19 @@ function PurpleXPage() {
                                                 className: "h-5 w-5 mr-2"
                                             }, void 0, false, {
                                                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                lineNumber: 255,
+                                                lineNumber: 261,
                                                 columnNumber: 17
                                             }, this),
                                             " Book Free Discovery Call"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                        lineNumber: 254,
+                                        lineNumber: 260,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                    lineNumber: 253,
+                                    lineNumber: 259,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -1659,24 +1667,24 @@ function PurpleXPage() {
                                                 className: "h-5 w-5 ml-2"
                                             }, void 0, false, {
                                                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                                lineNumber: 260,
+                                                lineNumber: 266,
                                                 columnNumber: 36
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                        lineNumber: 259,
+                                        lineNumber: 265,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                                    lineNumber: 258,
+                                    lineNumber: 264,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                            lineNumber: 252,
+                            lineNumber: 258,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1684,24 +1692,24 @@ function PurpleXPage() {
                             children: "All pricing shown is indicative. Final pricing depends on environment size, complexity, and compliance requirements."
                         }, void 0, false, {
                             fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                            lineNumber: 264,
+                            lineNumber: 270,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                    lineNumber: 247,
+                    lineNumber: 253,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-                lineNumber: 246,
+                lineNumber: 252,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/next-app/app/services/purple-x/page.tsx",
-        lineNumber: 44,
+        lineNumber: 50,
         columnNumber: 5
     }, this);
 }

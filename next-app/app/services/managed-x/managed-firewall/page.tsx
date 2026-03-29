@@ -18,8 +18,14 @@ export const metadata: Metadata = {
     title: "Managed Firewall Dubai UAE | PurpleGuard",
     description: "Fully managed NGFW and SD-WAN with 24/7 network security for UAE, Egypt & KSA.",
     images: [{ url: OG, width: 1200, height: 630, alt: "Managed Firewall UAE" }],
-  },
-};
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Managed Firewall UAE — 24/7 Network Security | PurpleGuard",
+      description: "Expert-managed NGFW for UAE, Egypt & KSA — configuration, monitoring, compliance.",
+      images: [OG],
+    },
+  };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 

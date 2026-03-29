@@ -37,41 +37,77 @@ export function organizationJsonLd() {
 }
 
 export function localBusinessJsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": `${BASE}#localbusiness`,
-    name: "PurpleGuard",
-    url: BASE,
-    image: `${BASE}/logo.png`,
-    email: "hello@purpleguard.io",
-    telephone: "+971585159666",
-    description:
-      "Managed security services provider (MSSP) in Dubai and Cairo. 24/7 SOC, MDR, VAPT, and managed infrastructure for SMEs in UAE, Egypt, and Saudi Arabia.",
-    priceRange: "$$",
-    openingHours: "Mo-Su 00:00-24:00",
-    areaServed: [
-      { "@type": "Country", name: "United Arab Emirates" },
-      { "@type": "Country", name: "Egypt" },
-      { "@type": "Country", name: "Saudi Arabia" },
-    ],
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Dubai",
-      addressCountry: "AE",
-    },
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Managed Security Services",
-      itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "PurpleSOC — 24/7 Managed SOC" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "PurpleVAPT — Vulnerability Assessment & Penetration Testing" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "PurpleSentinel — Managed Detection & Response" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Managed EDR" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Managed Firewall" } },
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": `${BASE}#localbusiness-dubai`,
+      name: "PurpleGuard — Dubai",
+      url: BASE,
+      image: `${BASE}/logo.png`,
+      email: "hello@purpleguard.io",
+      telephone: "+971585159666",
+      description:
+        "Managed security services provider (MSSP) in Dubai, UAE. 24/7 SOC, MDR, VAPT, and managed infrastructure for SMEs in UAE, Egypt, and Saudi Arabia.",
+      priceRange: "$$",
+      openingHours: "Mo-Su 00:00-24:00",
+      areaServed: [
+        { "@type": "Country", name: "United Arab Emirates" },
+        { "@type": "Country", name: "Saudi Arabia" },
       ],
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Dubai",
+        addressRegion: "Dubai",
+        addressCountry: "AE",
+      },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Managed Security Services",
+        itemListElement: [
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "PurpleSOC — 24/7 Managed SOC" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "PurpleVAPT — Vulnerability Assessment & Penetration Testing" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "PurpleSentinel — Managed Detection & Response" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Managed EDR" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Managed Firewall" } },
+        ],
+      },
     },
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": `${BASE}#localbusiness-cairo`,
+      name: "PurpleGuard — Cairo",
+      url: BASE,
+      image: `${BASE}/logo.png`,
+      email: "hello@purpleguard.io",
+      telephone: "+971585159666",
+      description:
+        "Managed security services provider (MSSP) in Cairo, Egypt. 24/7 SOC, MDR, VAPT, and managed infrastructure aligned to EG-CERT, NTRA, and Egyptian Central Bank (CBE) requirements.",
+      priceRange: "$$",
+      openingHours: "Mo-Su 00:00-24:00",
+      areaServed: [
+        { "@type": "Country", name: "Egypt" },
+      ],
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Cairo",
+        addressRegion: "Cairo",
+        addressCountry: "EG",
+      },
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Managed Security Services",
+        itemListElement: [
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "PurpleSOC — 24/7 Managed SOC" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "PurpleVAPT — Vulnerability Assessment & Penetration Testing" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "PurpleSentinel — Managed Detection & Response" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Managed EDR" } },
+          { "@type": "Offer", itemOffered: { "@type": "Service", name: "Managed Firewall" } },
+        ],
+      },
+    },
+  ];
 }
 
 export function serviceJsonLd({

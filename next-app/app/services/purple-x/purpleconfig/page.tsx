@@ -18,8 +18,14 @@ export const metadata: Metadata = {
     title: "Security Configuration Hardening UAE — PurpleConfig | PurpleGuard",
     description: "CIS benchmark-aligned configuration hardening and misco detection for UAE, Egypt & KSA.",
     images: [{ url: OG, width: 1200, height: 630, alt: "PurpleConfig — Configuration Hardening UAE" }],
-  },
-};
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "PurpleConfig — Security Hardening UAE | PurpleGuard",
+      description: "CIS benchmarks & security configuration hardening for UAE, Egypt & KSA.",
+      images: [OG],
+    },
+  };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 

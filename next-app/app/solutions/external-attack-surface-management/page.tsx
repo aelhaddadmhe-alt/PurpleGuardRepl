@@ -18,8 +18,14 @@ export const metadata: Metadata = {
     title: "EASM Dubai UAE — PurpleGuard",
     description: "Continuous external attack surface discovery and monitoring for UAE, Egypt & KSA.",
     images: [{ url: OG, width: 1200, height: 630, alt: "EASM UAE" }],
-  },
-};
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "EASM Dubai UAE — Attack Surface Management | PurpleGuard",
+      description: "Continuous external attack surface discovery for UAE, Egypt & KSA.",
+      images: [OG],
+    },
+  };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 

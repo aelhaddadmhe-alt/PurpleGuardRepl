@@ -18,8 +18,14 @@ export const metadata: Metadata = {
     title: "Managed SOC Dubai UAE — PurpleSOC | PurpleGuard",
     description: "24/7 managed SOC with threat detection, incident response & compliance reporting for UAE, Egypt & KSA.",
     images: [{ url: OG, width: 1200, height: 630, alt: "PurpleSOC — 24/7 Managed SOC UAE" }],
-  },
-};
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "PurpleSOC — 24/7 Managed SOC UAE | PurpleGuard",
+      description: "24/7 SIEM-powered managed SOC covering UAE, Egypt & KSA threats.",
+      images: [OG],
+    },
+  };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 

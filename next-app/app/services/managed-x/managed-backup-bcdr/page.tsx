@@ -18,8 +18,14 @@ export const metadata: Metadata = {
     title: "Managed Backup & BCDR Dubai UAE | PurpleGuard",
     description: "Immutable backup, ransomware recovery & business continuity for UAE, Egypt & KSA.",
     images: [{ url: OG, width: 1200, height: 630, alt: "Managed Backup BCDR UAE" }],
-  },
-};
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Managed Backup & BCDR UAE | PurpleGuard",
+      description: "Immutable backup & disaster recovery management for UAE, Egypt & KSA.",
+      images: [OG],
+    },
+  };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 

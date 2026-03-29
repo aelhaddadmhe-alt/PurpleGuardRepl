@@ -271,6 +271,14 @@ const metadata = {
                 alt: "PurpleGuard Cybersecurity Pricing UAE"
             }
         ]
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Cybersecurity Pricing Dubai UAE | PurpleGuard",
+        description: "Transparent MSSP pricing for UAE, Egypt & KSA — subscription-based, no lock-ins.",
+        images: [
+            OG
+        ]
     }
 };
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
@@ -313,9 +321,29 @@ const bundles = [
     }
 ];
 function PricingPage() {
+    const breadcrumbSchema = (0, __TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$lib$2f$json$2d$ld$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["breadcrumbJsonLd"])([
+        {
+            name: "Home",
+            url: "/"
+        },
+        {
+            name: "Pricing",
+            url: "/pricing"
+        }
+    ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "min-h-screen bg-slate-50",
         children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("script", {
+                type: "application/ld+json",
+                dangerouslySetInnerHTML: {
+                    __html: JSON.stringify(breadcrumbSchema)
+                }
+            }, void 0, false, {
+                fileName: "[project]/next-app/app/pricing/page.tsx",
+                lineNumber: 64,
+                columnNumber: 7
+            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 className: "relative bg-gradient-to-br from-[#000033] via-[#6633cc] to-[#000033] overflow-hidden",
                 children: [
@@ -326,7 +354,7 @@ function PricingPage() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                        lineNumber: 56,
+                        lineNumber: 67,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -339,7 +367,7 @@ function PricingPage() {
                                     children: "Pricing"
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                    lineNumber: 59,
+                                    lineNumber: 70,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -347,7 +375,7 @@ function PricingPage() {
                                     children: "Pricing, Without the Confusion"
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                    lineNumber: 60,
+                                    lineNumber: 71,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -355,7 +383,7 @@ function PricingPage() {
                                     children: "Clear. Scalable. Built for SMEs."
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                    lineNumber: 61,
+                                    lineNumber: 72,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -363,7 +391,7 @@ function PricingPage() {
                                     children: "PurpleGuard pricing is subscription-based, risk-aligned, and designed to scale with your business—without hidden costs or tool sprawl."
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                    lineNumber: 62,
+                                    lineNumber: 73,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -379,19 +407,19 @@ function PricingPage() {
                                                         className: "h-5 w-5 mr-2"
                                                     }, void 0, false, {
                                                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                        lineNumber: 68,
+                                                        lineNumber: 79,
                                                         columnNumber: 19
                                                     }, this),
                                                     " Get a Custom Quote"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                lineNumber: 67,
+                                                lineNumber: 78,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                            lineNumber: 66,
+                                            lineNumber: 77,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -407,42 +435,42 @@ function PricingPage() {
                                                         className: "h-5 w-5 mr-2"
                                                     }, void 0, false, {
                                                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                        lineNumber: 73,
+                                                        lineNumber: 84,
                                                         columnNumber: 19
                                                     }, this),
                                                     " Talk to an Expert"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                lineNumber: 72,
+                                                lineNumber: 83,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                            lineNumber: 71,
+                                            lineNumber: 82,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                    lineNumber: 65,
+                                    lineNumber: 76,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                            lineNumber: 58,
+                            lineNumber: 69,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                        lineNumber: 57,
+                        lineNumber: 68,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/next-app/app/pricing/page.tsx",
-                lineNumber: 55,
+                lineNumber: 66,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -455,15 +483,41 @@ function PricingPage() {
                             children: "How PurpleGuard Pricing Works"
                         }, void 0, false, {
                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                            lineNumber: 84,
+                            lineNumber: 95,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                            className: "text-lg text-slate-600 leading-relaxed mb-4 max-w-3xl",
+                            children: "PurpleGuard pricing is based on what you protect, how critical it is, and the level of operational support required. Services are billed monthly and aligned to real-world risk, not arbitrary licensing."
+                        }, void 0, false, {
+                            fileName: "[project]/next-app/app/pricing/page.tsx",
+                            lineNumber: 96,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: "text-lg text-slate-600 leading-relaxed mb-8 max-w-3xl",
-                            children: "PurpleGuard pricing is based on what you protect, how critical it is, and the level of operational support required. Services are billed monthly and aligned to real-world risk, not arbitrary licensing."
-                        }, void 0, false, {
+                            children: [
+                                "Quotes are provided in ",
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                    children: "AED"
+                                }, void 0, false, {
+                                    fileName: "[project]/next-app/app/pricing/page.tsx",
+                                    lineNumber: 100,
+                                    columnNumber: 36
+                                }, this),
+                                " (UAE Dirham) for clients in the UAE and KSA, and in ",
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                    children: "EGP"
+                                }, void 0, false, {
+                                    fileName: "[project]/next-app/app/pricing/page.tsx",
+                                    lineNumber: 100,
+                                    columnNumber: 109
+                                }, this),
+                                " (Egyptian Pound) for Egypt-based organisations — ensuring pricing is always clear, local, and comparable."
+                            ]
+                        }, void 0, true, {
                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                            lineNumber: 85,
+                            lineNumber: 99,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -474,7 +528,7 @@ function PricingPage() {
                                     children: "Pricing Factors"
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                    lineNumber: 89,
+                                    lineNumber: 103,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -491,7 +545,7 @@ function PricingPage() {
                                                     className: "h-5 w-5 text-[#6633cc] flex-shrink-0 mt-0.5"
                                                 }, void 0, false, {
                                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                    lineNumber: 98,
+                                                    lineNumber: 112,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -499,35 +553,35 @@ function PricingPage() {
                                                     children: factor
                                                 }, void 0, false, {
                                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                    lineNumber: 99,
+                                                    lineNumber: 113,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, factor, true, {
                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                            lineNumber: 97,
+                                            lineNumber: 111,
                                             columnNumber: 17
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                    lineNumber: 90,
+                                    lineNumber: 104,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                            lineNumber: 88,
+                            lineNumber: 102,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                    lineNumber: 83,
+                    lineNumber: 94,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/next-app/app/pricing/page.tsx",
-                lineNumber: 82,
+                lineNumber: 93,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -544,12 +598,12 @@ function PricingPage() {
                                         className: "h-6 w-6 text-blue-600"
                                     }, void 0, false, {
                                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                                        lineNumber: 112,
+                                        lineNumber: 126,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                    lineNumber: 111,
+                                    lineNumber: 125,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -559,7 +613,7 @@ function PricingPage() {
                                             children: "Pricing for Managed-X Services"
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                            lineNumber: 115,
+                                            lineNumber: 129,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -567,19 +621,19 @@ function PricingPage() {
                                             children: "Security Infrastructure"
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                            lineNumber: 116,
+                                            lineNumber: 130,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                    lineNumber: 114,
+                                    lineNumber: 128,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                            lineNumber: 110,
+                            lineNumber: 124,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -592,7 +646,7 @@ function PricingPage() {
                                             children: "What You're Paying For"
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                            lineNumber: 121,
+                                            lineNumber: 135,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -600,7 +654,7 @@ function PricingPage() {
                                             children: "Managed-X pricing covers technology, configuration, continuous management, monitoring, and support—not just access to tools."
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                            lineNumber: 122,
+                                            lineNumber: 136,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -608,7 +662,7 @@ function PricingPage() {
                                             children: "Included by default:"
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                            lineNumber: 125,
+                                            lineNumber: 139,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -626,7 +680,7 @@ function PricingPage() {
                                                             className: "h-5 w-5 text-green-500 flex-shrink-0 mt-0.5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                            lineNumber: 129,
+                                                            lineNumber: 143,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -634,24 +688,24 @@ function PricingPage() {
                                                             children: item
                                                         }, void 0, false, {
                                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                            lineNumber: 130,
+                                                            lineNumber: 144,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, item, true, {
                                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                    lineNumber: 128,
+                                                    lineNumber: 142,
                                                     columnNumber: 19
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                            lineNumber: 126,
+                                            lineNumber: 140,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                    lineNumber: 120,
+                                    lineNumber: 134,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
@@ -662,12 +716,12 @@ function PricingPage() {
                                                 children: "Typical Pricing Model"
                                             }, void 0, false, {
                                                 fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                lineNumber: 136,
+                                                lineNumber: 150,
                                                 columnNumber: 27
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                            lineNumber: 136,
+                                            lineNumber: 150,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -696,7 +750,7 @@ function PricingPage() {
                                                                 className: "h-5 w-5 text-blue-600"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                                lineNumber: 144,
+                                                                lineNumber: 158,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -706,7 +760,7 @@ function PricingPage() {
                                                                         children: item.label
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                                        lineNumber: 146,
+                                                                        lineNumber: 160,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -714,19 +768,19 @@ function PricingPage() {
                                                                         children: item.sub
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                                        lineNumber: 147,
+                                                                        lineNumber: 161,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                                lineNumber: 145,
+                                                                lineNumber: 159,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, item.label, true, {
                                                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                        lineNumber: 143,
+                                                        lineNumber: 157,
                                                         columnNumber: 19
                                                     }, this)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -740,47 +794,47 @@ function PricingPage() {
                                                                 className: "h-4 w-4 ml-2"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                                lineNumber: 152,
+                                                                lineNumber: 166,
                                                                 columnNumber: 93
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                        lineNumber: 152,
+                                                        lineNumber: 166,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                    lineNumber: 151,
+                                                    lineNumber: 165,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                            lineNumber: 137,
+                                            lineNumber: 151,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                    lineNumber: 135,
+                                    lineNumber: 149,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                            lineNumber: 119,
+                            lineNumber: 133,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                    lineNumber: 109,
+                    lineNumber: 123,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/next-app/app/pricing/page.tsx",
-                lineNumber: 108,
+                lineNumber: 122,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -797,12 +851,12 @@ function PricingPage() {
                                         className: "h-6 w-6 text-purple-600"
                                     }, void 0, false, {
                                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                                        lineNumber: 165,
+                                        lineNumber: 179,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                    lineNumber: 164,
+                                    lineNumber: 178,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -812,7 +866,7 @@ function PricingPage() {
                                             children: "Pricing for Purple-X Services"
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                            lineNumber: 168,
+                                            lineNumber: 182,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -820,19 +874,19 @@ function PricingPage() {
                                             children: "Cybersecurity & Exposure Management"
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                            lineNumber: 169,
+                                            lineNumber: 183,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                    lineNumber: 167,
+                                    lineNumber: 181,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                            lineNumber: 163,
+                            lineNumber: 177,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -845,7 +899,7 @@ function PricingPage() {
                                             children: "What Makes Purple-X Different"
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                            lineNumber: 174,
+                                            lineNumber: 188,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -853,7 +907,7 @@ function PricingPage() {
                                             children: "Purple-X services price expertise, automation, and outcomes, not infrastructure. These services actively reduce exposure and respond to threats."
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                            lineNumber: 175,
+                                            lineNumber: 189,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
@@ -861,7 +915,7 @@ function PricingPage() {
                                             children: "Included by default:"
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                            lineNumber: 178,
+                                            lineNumber: 192,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -879,7 +933,7 @@ function PricingPage() {
                                                             className: "h-5 w-5 text-green-500 flex-shrink-0 mt-0.5"
                                                         }, void 0, false, {
                                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                            lineNumber: 182,
+                                                            lineNumber: 196,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -887,24 +941,24 @@ function PricingPage() {
                                                             children: item
                                                         }, void 0, false, {
                                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                            lineNumber: 183,
+                                                            lineNumber: 197,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, item, true, {
                                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                    lineNumber: 181,
+                                                    lineNumber: 195,
                                                     columnNumber: 19
                                                 }, this))
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                            lineNumber: 179,
+                                            lineNumber: 193,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                    lineNumber: 173,
+                                    lineNumber: 187,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
@@ -915,12 +969,12 @@ function PricingPage() {
                                                 children: "Typical Pricing Model"
                                             }, void 0, false, {
                                                 fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                lineNumber: 189,
+                                                lineNumber: 203,
                                                 columnNumber: 27
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                            lineNumber: 189,
+                                            lineNumber: 203,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -949,7 +1003,7 @@ function PricingPage() {
                                                                 className: "h-5 w-5 text-purple-600"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                                lineNumber: 197,
+                                                                lineNumber: 211,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -959,7 +1013,7 @@ function PricingPage() {
                                                                         children: item.label
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                                        lineNumber: 199,
+                                                                        lineNumber: 213,
                                                                         columnNumber: 23
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -967,19 +1021,19 @@ function PricingPage() {
                                                                         children: item.sub
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                                        lineNumber: 200,
+                                                                        lineNumber: 214,
                                                                         columnNumber: 23
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                                lineNumber: 198,
+                                                                lineNumber: 212,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, item.label, true, {
                                                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                        lineNumber: 196,
+                                                        lineNumber: 210,
                                                         columnNumber: 19
                                                     }, this)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -993,47 +1047,47 @@ function PricingPage() {
                                                                 className: "h-4 w-4 ml-2"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                                lineNumber: 205,
+                                                                lineNumber: 219,
                                                                 columnNumber: 92
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                        lineNumber: 205,
+                                                        lineNumber: 219,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                    lineNumber: 204,
+                                                    lineNumber: 218,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                            lineNumber: 190,
+                                            lineNumber: 204,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                    lineNumber: 188,
+                                    lineNumber: 202,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                            lineNumber: 172,
+                            lineNumber: 186,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                    lineNumber: 162,
+                    lineNumber: 176,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/next-app/app/pricing/page.tsx",
-                lineNumber: 161,
+                lineNumber: 175,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1049,7 +1103,7 @@ function PricingPage() {
                                     children: "Do You Offer Bundles?"
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                    lineNumber: 217,
+                                    lineNumber: 231,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1057,13 +1111,13 @@ function PricingPage() {
                                     children: "Yes. PurpleGuard offers bundled security packages."
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                    lineNumber: 218,
+                                    lineNumber: 232,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                            lineNumber: 216,
+                            lineNumber: 230,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1074,7 +1128,7 @@ function PricingPage() {
                                     children: "Why Bundles Exist"
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                    lineNumber: 221,
+                                    lineNumber: 235,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1082,13 +1136,13 @@ function PricingPage() {
                                     children: "Bundles reduce cost, simplify operations, and eliminate security gaps by combining prevention, detection, and response under one operating model."
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                    lineNumber: 222,
+                                    lineNumber: 236,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                            lineNumber: 220,
+                            lineNumber: 234,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1100,7 +1154,7 @@ function PricingPage() {
                                             className: `h-2 bg-gradient-to-r ${bundle.color}`
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                            lineNumber: 229,
+                                            lineNumber: 243,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardHeader"], {
@@ -1111,7 +1165,7 @@ function PricingPage() {
                                                     children: bundle.bestFor
                                                 }, void 0, false, {
                                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                    lineNumber: 231,
+                                                    lineNumber: 245,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardTitle"], {
@@ -1119,7 +1173,7 @@ function PricingPage() {
                                                     children: bundle.name
                                                 }, void 0, false, {
                                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                    lineNumber: 232,
+                                                    lineNumber: 246,
                                                     columnNumber: 19
                                                 }, this),
                                                 bundle.subtitle && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardDescription"], {
@@ -1127,13 +1181,13 @@ function PricingPage() {
                                                     children: bundle.subtitle
                                                 }, void 0, false, {
                                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                    lineNumber: 233,
+                                                    lineNumber: 247,
                                                     columnNumber: 39
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                            lineNumber: 230,
+                                            lineNumber: 244,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -1143,7 +1197,7 @@ function PricingPage() {
                                                     children: "Includes:"
                                                 }, void 0, false, {
                                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                    lineNumber: 236,
+                                                    lineNumber: 250,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1155,7 +1209,7 @@ function PricingPage() {
                                                                     className: "h-4 w-4 text-green-500 flex-shrink-0 mt-0.5"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                                    lineNumber: 240,
+                                                                    lineNumber: 254,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1163,18 +1217,18 @@ function PricingPage() {
                                                                     children: item
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                                    lineNumber: 241,
+                                                                    lineNumber: 255,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             ]
                                                         }, item, true, {
                                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                            lineNumber: 239,
+                                                            lineNumber: 253,
                                                             columnNumber: 23
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                    lineNumber: 237,
+                                                    lineNumber: 251,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1185,7 +1239,7 @@ function PricingPage() {
                                                             children: "Business outcome:"
                                                         }, void 0, false, {
                                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                            lineNumber: 246,
+                                                            lineNumber: 260,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1193,13 +1247,13 @@ function PricingPage() {
                                                             children: bundle.outcome
                                                         }, void 0, false, {
                                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                            lineNumber: 247,
+                                                            lineNumber: 261,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                    lineNumber: 245,
+                                                    lineNumber: 259,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1212,46 +1266,46 @@ function PricingPage() {
                                                                 className: "h-4 w-4 ml-2"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                                lineNumber: 251,
+                                                                lineNumber: 265,
                                                                 columnNumber: 46
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                        lineNumber: 250,
+                                                        lineNumber: 264,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                    lineNumber: 249,
+                                                    lineNumber: 263,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                                            lineNumber: 235,
+                                            lineNumber: 249,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, bundle.name, true, {
                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                    lineNumber: 228,
+                                    lineNumber: 242,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                            lineNumber: 226,
+                            lineNumber: 240,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                    lineNumber: 215,
+                    lineNumber: 229,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/next-app/app/pricing/page.tsx",
-                lineNumber: 214,
+                lineNumber: 228,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1268,7 +1322,7 @@ function PricingPage() {
                                         children: "Compliance & Pricing"
                                     }, void 0, false, {
                                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                                        lineNumber: 266,
+                                        lineNumber: 280,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1276,7 +1330,7 @@ function PricingPage() {
                                         children: "Compliance requirements influence pricing due to evidence collection, reporting depth, and response SLAs."
                                     }, void 0, false, {
                                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                                        lineNumber: 267,
+                                        lineNumber: 281,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1284,7 +1338,7 @@ function PricingPage() {
                                         children: "Frameworks supported:"
                                     }, void 0, false, {
                                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                                        lineNumber: 270,
+                                        lineNumber: 284,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1301,18 +1355,18 @@ function PricingPage() {
                                                 children: fw
                                             }, fw, false, {
                                                 fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                lineNumber: 273,
+                                                lineNumber: 287,
                                                 columnNumber: 19
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                                        lineNumber: 271,
+                                        lineNumber: 285,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/next-app/app/pricing/page.tsx",
-                                lineNumber: 265,
+                                lineNumber: 279,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1322,7 +1376,7 @@ function PricingPage() {
                                         children: "Why We Don't Show a Simple Price List"
                                     }, void 0, false, {
                                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                                        lineNumber: 278,
+                                        lineNumber: 292,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1330,7 +1384,7 @@ function PricingPage() {
                                         children: "Cybersecurity pricing varies based on environment complexity and risk. Flat pricing often leads to under-protection or surprise costs later."
                                     }, void 0, false, {
                                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                                        lineNumber: 279,
+                                        lineNumber: 293,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1338,7 +1392,7 @@ function PricingPage() {
                                         children: "What you get instead:"
                                     }, void 0, false, {
                                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                                        lineNumber: 282,
+                                        lineNumber: 296,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1355,7 +1409,7 @@ function PricingPage() {
                                                         className: "h-5 w-5 text-green-500 flex-shrink-0"
                                                     }, void 0, false, {
                                                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                        lineNumber: 286,
+                                                        lineNumber: 300,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1363,40 +1417,40 @@ function PricingPage() {
                                                         children: item
                                                     }, void 0, false, {
                                                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                        lineNumber: 287,
+                                                        lineNumber: 301,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, item, true, {
                                                 fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                lineNumber: 285,
+                                                lineNumber: 299,
                                                 columnNumber: 19
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                                        lineNumber: 283,
+                                        lineNumber: 297,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/next-app/app/pricing/page.tsx",
-                                lineNumber: 277,
+                                lineNumber: 291,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                        lineNumber: 264,
+                        lineNumber: 278,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                    lineNumber: 263,
+                    lineNumber: 277,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/next-app/app/pricing/page.tsx",
-                lineNumber: 262,
+                lineNumber: 276,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1409,7 +1463,7 @@ function PricingPage() {
                             children: "Know your risk. Pay only for what you need."
                         }, void 0, false, {
                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                            lineNumber: 299,
+                            lineNumber: 313,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1425,19 +1479,19 @@ function PricingPage() {
                                                 className: "h-5 w-5 mr-2"
                                             }, void 0, false, {
                                                 fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                lineNumber: 303,
+                                                lineNumber: 317,
                                                 columnNumber: 17
                                             }, this),
                                             " Get a Custom Quote"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                                        lineNumber: 302,
+                                        lineNumber: 316,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                    lineNumber: 301,
+                                    lineNumber: 315,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1453,42 +1507,42 @@ function PricingPage() {
                                                 className: "h-5 w-5 mr-2"
                                             }, void 0, false, {
                                                 fileName: "[project]/next-app/app/pricing/page.tsx",
-                                                lineNumber: 308,
+                                                lineNumber: 322,
                                                 columnNumber: 17
                                             }, this),
                                             " Schedule a Consultation"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/next-app/app/pricing/page.tsx",
-                                        lineNumber: 307,
+                                        lineNumber: 321,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                                    lineNumber: 306,
+                                    lineNumber: 320,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/next-app/app/pricing/page.tsx",
-                            lineNumber: 300,
+                            lineNumber: 314,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/next-app/app/pricing/page.tsx",
-                    lineNumber: 298,
+                    lineNumber: 312,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/next-app/app/pricing/page.tsx",
-                lineNumber: 297,
+                lineNumber: 311,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/next-app/app/pricing/page.tsx",
-        lineNumber: 53,
+        lineNumber: 63,
         columnNumber: 5
     }, this);
 }

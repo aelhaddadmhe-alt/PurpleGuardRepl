@@ -18,8 +18,14 @@ export const metadata: Metadata = {
     title: "Managed WAF Dubai UAE | PurpleGuard",
     description: "OWASP Top 10, DDoS & API protection as a managed service for UAE, Egypt & KSA.",
     images: [{ url: OG, width: 1200, height: 630, alt: "Managed WAF UAE" }],
-  },
-};
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Managed WAF UAE — Web App Protection | PurpleGuard",
+      description: "Continuously tuned WAF against OWASP & API threats for UAE, Egypt & KSA.",
+      images: [OG],
+    },
+  };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 

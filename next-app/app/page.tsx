@@ -89,24 +89,20 @@ const industries = [
 
 const homeFaqs = [
   {
-    question: "What is PurpleGuard?",
-    answer: "PurpleGuard is a managed security services provider (MSSP) headquartered in Dubai, UAE, with operations in Cairo, Egypt. We deliver subscription-based cybersecurity — including 24/7 SOC monitoring, MDR, VAPT, and managed infrastructure — to SMEs and mid-market organisations across UAE, Egypt, and KSA.",
+    question: "What is a managed SOC?",
+    answer: "A managed Security Operations Centre (SOC) is a 24/7 service where a team of security analysts monitors your IT environment for threats, investigates alerts, and responds to incidents on your behalf. PurpleGuard's managed SOC — PurpleSOC — covers UAE, Egypt, and Saudi Arabia and is staffed around the clock so you have expert protection without hiring an in-house team.",
   },
   {
-    question: "Does PurpleGuard operate in UAE and Egypt?",
-    answer: "Yes. PurpleGuard operates from offices in Dubai (UAE) and Cairo (Egypt), serving clients across the UAE, Egypt, and Saudi Arabia. Our services align with UAE TDRA requirements, UAE Cyber Security Council directives, Egyptian EG-CERT guidelines, and Saudi NCA ECC frameworks.",
+    question: "How much does VAPT cost in UAE?",
+    answer: "VAPT (Vulnerability Assessment and Penetration Testing) pricing in the UAE depends on scope: the number of IPs, web applications, cloud resources, and testing depth. PurpleGuard's PurpleVAPT starts from a project-based engagement and is also available as a continuous subscription. Contact us for a scoped quote in AED.",
   },
   {
-    question: "What cybersecurity services does PurpleGuard offer?",
-    answer: "PurpleGuard offers two service lines: Purple X (advanced cybersecurity — VAPT, SOC, MDR, threat intelligence, red teaming, configuration hardening, NDR) and Managed X (ongoing managed infrastructure — EDR, firewall, WAF, email security, backup/BCDR, identity, and SASE/ZTNA).",
+    question: "What is MDR (Managed Detection and Response)?",
+    answer: "MDR is a fully managed service combining advanced threat detection technology (EDR, XDR, SIEM) with human expert analysts who investigate, validate, and respond to threats on your behalf — 24/7. PurpleGuard's PurpleSentinel MDR service covers endpoints, cloud, and network for organisations in UAE, Egypt, and KSA.",
   },
   {
-    question: "How does PurpleGuard pricing work?",
-    answer: "All services are subscription-based and priced per endpoint, user, or asset depending on the service. There are no forced multi-year lock-ins. Final pricing depends on environment size, coverage hours, and compliance requirements. Contact us for a custom quote.",
-  },
-  {
-    question: "Is PurpleGuard suitable for SMEs?",
-    answer: "Absolutely. PurpleGuard is purpose-built for SMEs and mid-market organisations that cannot afford to build or staff an enterprise-grade security team in-house. We provide enterprise-quality security operations at an SME-appropriate cost and scale.",
+    question: "Is PurpleGuard suitable for SMEs in Egypt?",
+    answer: "Yes. PurpleGuard is purpose-built for SMEs and mid-market organisations in Egypt, UAE, and Saudi Arabia. Our subscription model eliminates the need to hire a full internal security team — you get enterprise-grade 24/7 protection at an SME-appropriate cost, with compliance alignment to EG-CERT, Egyptian Central Bank (CBE), and NTRA requirements.",
   },
 ];
 

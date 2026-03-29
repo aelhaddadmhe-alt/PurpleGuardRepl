@@ -18,8 +18,14 @@ export const metadata: Metadata = {
     title: "Ransomware Defense UAE — PurpleGuard",
     description: "Layered ransomware prevention, detection, containment & recovery for UAE, Egypt & KSA.",
     images: [{ url: OG, width: 1200, height: 630, alt: "Ransomware Defense UAE" }],
-  },
-};
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Ransomware Defense UAE & Egypt | PurpleGuard",
+      description: "Full ransomware prevention, detection & recovery for UAE, Egypt & KSA.",
+      images: [OG],
+    },
+  };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 

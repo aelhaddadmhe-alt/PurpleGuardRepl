@@ -18,8 +18,14 @@ export const metadata: Metadata = {
     title: "Managed EDR Dubai UAE | PurpleGuard",
     description: "Behavioural EDR with automated containment and SOC investigation for UAE, Egypt & KSA.",
     images: [{ url: OG, width: 1200, height: 630, alt: "Managed EDR UAE" }],
-  },
-};
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Managed EDR UAE — Endpoint Detection | PurpleGuard",
+      description: "24/7 managed endpoint detection & response for UAE, Egypt & KSA.",
+      images: [OG],
+    },
+  };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 

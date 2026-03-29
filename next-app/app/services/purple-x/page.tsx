@@ -19,8 +19,14 @@ export const metadata: Metadata = {
     title: "Cybersecurity Services Dubai UAE — Purple X | PurpleGuard",
     description: "VAPT, SOC, MDR, threat intelligence & red teaming for UAE, Egypt & KSA.",
     images: [{ url: OG, width: 1200, height: 630, alt: "Purple X Cybersecurity UAE" }],
-  },
-};
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Purple X Cybersecurity Services UAE | PurpleGuard",
+      description: "VAPT, SOC, MDR, Threat Intelligence & Red Team services for UAE, Egypt & KSA.",
+      images: [OG],
+    },
+  };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 

@@ -19,8 +19,14 @@ export const metadata: Metadata = {
     title: "Managed Security Infrastructure UAE — Managed X | PurpleGuard",
     description: "Fully managed EDR, firewall, WAF, identity, email & backup for UAE, Egypt & KSA.",
     images: [{ url: OG, width: 1200, height: 630, alt: "Managed X Services UAE" }],
-  },
-};
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Managed X Infrastructure Services UAE | PurpleGuard",
+      description: "Managed EDR, Firewall, Email, Backup & SASE for UAE, Egypt & KSA.",
+      images: [OG],
+    },
+  };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 

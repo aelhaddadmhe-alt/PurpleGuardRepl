@@ -18,8 +18,14 @@ export const metadata: Metadata = {
     title: "Threat Intelligence & EASM UAE — PurpleSentry | PurpleGuard",
     description: "Continuous external attack surface monitoring and threat intelligence for UAE, Egypt & KSA.",
     images: [{ url: OG, width: 1200, height: 630, alt: "PurpleSentry — EASM UAE" }],
-  },
-};
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "PurpleSentry — NDR Network Detection UAE | PurpleGuard",
+      description: "Network detection & response for UAE, Egypt & KSA east-west traffic.",
+      images: [OG],
+    },
+  };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 

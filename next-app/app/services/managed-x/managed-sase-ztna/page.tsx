@@ -18,8 +18,14 @@ export const metadata: Metadata = {
     title: "Managed SASE & ZTNA Dubai UAE | PurpleGuard",
     description: "Zero Trust Network Access, SWG & CASB managed cloud service for UAE, Egypt & KSA.",
     images: [{ url: OG, width: 1200, height: 630, alt: "Managed SASE ZTNA UAE" }],
-  },
-};
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "Managed SASE & ZTNA UAE — Secure Access | PurpleGuard",
+      description: "Cloud-delivered SASE replacing VPN with zero trust for UAE, Egypt & KSA.",
+      images: [OG],
+    },
+  };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 
