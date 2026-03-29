@@ -9,9 +9,9 @@ import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/js
 const OG = ogImageUrl({ title: "Managed Backup & BCDR — UAE & Egypt", subtitle: "Ransomware-Proof Backup, Immutable Storage & Business Continuity", category: "Managed X", color: "cyan" });
 
 export const metadata: Metadata = {
-  title: "Managed Backup & BCDR Dubai UAE — Business Continuity & Disaster Recovery",
+  title: { absolute: "Managed Backup & BCDR Dubai UAE — Business Continuity & Disaster Recovery" },
   description:
-    "PurpleGuard Managed Backup & BCDR delivers immutable storage, ransomware recovery, and business continuity testing. Protecting data and operations across UAE, Egypt, and KSA.",
+    "Managed Backup & BCDR: immutable storage, ransomware recovery & continuity testing for UAE, Egypt & KSA. Book a free data protection review.",
   keywords: ["managed backup UAE", "BCDR service Dubai", "business continuity Egypt", "ransomware recovery UAE", "disaster recovery service", "immutable backup UAE", "NCA ECC backup"],
   alternates: { canonical: "https://www.purpleguard.io/services/managed-x/managed-backup-bcdr" },
   openGraph: {

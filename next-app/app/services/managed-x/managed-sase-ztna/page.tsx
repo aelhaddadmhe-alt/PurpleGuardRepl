@@ -9,9 +9,9 @@ import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/js
 const OG = ogImageUrl({ title: "Managed SASE / ZTNA — UAE & Egypt", subtitle: "Zero Trust Network Access, SWG & CASB as a Managed Cloud Service", category: "Managed X", color: "slate" });
 
 export const metadata: Metadata = {
-  title: "Managed SASE & ZTNA Dubai UAE — Zero Trust Secure Access",
+  title: { absolute: "Managed SASE & ZTNA Dubai UAE — Zero Trust Secure Access" },
   description:
-    "PurpleGuard Managed SASE/ZTNA delivers Zero Trust Network Access, Secure Web Gateway, and CASB as a managed cloud service — replacing VPNs for organisations in UAE, Egypt, and KSA.",
+    "Managed SASE & ZTNA: cloud-delivered zero trust replacing VPNs for UAE, Egypt & KSA. Book a free secure access assessment today.",
   keywords: ["managed SASE UAE", "ZTNA service Dubai", "zero trust network access Egypt", "CASB managed UAE", "secure web gateway UAE", "VPN replacement", "NCA ECC ZTNA"],
   alternates: { canonical: "https://www.purpleguard.io/services/managed-x/managed-sase-ztna" },
   openGraph: {

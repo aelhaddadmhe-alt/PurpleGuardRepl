@@ -9,9 +9,9 @@ import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/js
 const OG = ogImageUrl({ title: "Managed Endpoint UAE & Egypt", subtitle: "Centralized Endpoint Management, Patching & Compliance Monitoring", category: "Managed X", color: "blue" });
 
 export const metadata: Metadata = {
-  title: "Managed Endpoint Security Dubai UAE — Patching & Compliance Monitoring",
+  title: { absolute: "Managed Endpoint Security Dubai UAE — Patching & Compliance Monitoring" },
   description:
-    "PurpleGuard's Managed Endpoint service delivers centralized patching, health monitoring, and compliance posture management for Windows and Linux in hybrid environments. Serving UAE, Egypt, and KSA.",
+    "Managed Endpoint: centralized patching, health monitoring & compliance posture for UAE, Egypt & KSA. Book a free endpoint security assessment.",
   keywords: ["managed endpoint UAE", "endpoint management Dubai", "patch management Egypt", "endpoint compliance UAE", "Windows Linux patching", "TDRA compliance", "NCA ECC endpoint"],
   alternates: { canonical: "https://www.purpleguard.io/services/managed-x/managed-endpoint" },
   openGraph: {

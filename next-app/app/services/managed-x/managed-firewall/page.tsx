@@ -9,9 +9,9 @@ import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/js
 const OG = ogImageUrl({ title: "Managed Firewall UAE & Egypt", subtitle: "NGFW Policy Management, IDS/IPS & 24/7 Network Security Operations", category: "Managed X", color: "emerald" });
 
 export const metadata: Metadata = {
-  title: "Managed Firewall Dubai UAE — NGFW & Perimeter Security Service",
+  title: { absolute: "Managed Firewall Dubai UAE — NGFW & Perimeter Security Service" },
   description:
-    "PurpleGuard Managed Firewall delivers fully managed NGFW and SD-WAN with policy management, IDS/IPS monitoring, and 24/7 network security operations for UAE, Egypt, and KSA.",
+    "Managed Firewall: fully managed NGFW with IDS/IPS & 24/7 monitoring for UAE, Egypt & KSA. Book a free network security assessment today.",
   keywords: ["managed firewall UAE", "NGFW service Dubai", "firewall management Egypt", "network security UAE", "SD-WAN managed", "IDS IPS monitoring", "NCA ECC firewall"],
   alternates: { canonical: "https://www.purpleguard.io/services/managed-x/managed-firewall" },
   openGraph: {

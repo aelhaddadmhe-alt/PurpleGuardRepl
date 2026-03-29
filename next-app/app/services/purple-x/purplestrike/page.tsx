@@ -9,9 +9,9 @@ import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/js
 const OG = ogImageUrl({ title: "Red Teaming & BAS — UAE & Egypt", subtitle: "PurpleStrike: Adversary Emulation & Breach Attack Simulation", category: "Purple X", color: "red" });
 
 export const metadata: Metadata = {
-  title: "Red Team & Breach Attack Simulation Dubai UAE — PurpleStrike",
+  title: { absolute: "Red Team & Breach Attack Simulation Dubai UAE — PurpleStrike" },
   description:
-    "PurpleStrike simulates real-world adversary attacks to validate security controls. Red teaming, BAS, and MITRE ATT&CK-aligned adversary emulation for organisations in UAE, Egypt, and KSA.",
+    "PurpleStrike: red team & BAS services simulating real-world adversary attacks for UAE, Egypt & KSA. MITRE ATT&CK-aligned. Book a free consult.",
   keywords: ["red team UAE", "breach attack simulation Dubai", "adversary emulation Egypt", "BAS cybersecurity", "red teaming UAE", "MITRE ATT&CK testing", "NCA ECC red team"],
   alternates: { canonical: "https://www.purpleguard.io/services/purple-x/purplestrike" },
   openGraph: {

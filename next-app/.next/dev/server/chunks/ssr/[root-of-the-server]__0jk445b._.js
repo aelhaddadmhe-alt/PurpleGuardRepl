@@ -256,14 +256,16 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$lib$2f
 ;
 ;
 const OG = (0, __TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$lib$2f$json$2d$ld$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ogImageUrl"])({
-    title: "Managed Security Services UAE & Egypt",
+    title: {
+        absolute: "Managed Security Services UAE & Egypt"
+    },
     subtitle: "24/7 SOC · MDR · VAPT · Managed Infrastructure — SME-Focused MSSP",
     category: "MSSP",
     color: "purple"
 });
 const metadata = {
     title: "Managed Security Services Provider (MSSP) — UAE, Egypt & KSA | PurpleGuard",
-    description: "PurpleGuard is a managed security services provider (MSSP) in Dubai and Cairo delivering 24/7 SOC, MDR, VAPT, and managed infrastructure for SMEs and mid-market organisations in UAE, Egypt, and KSA. Subscription-based. Compliance-ready.",
+    description: "PurpleGuard — MSSP delivering 24/7 SOC, MDR, VAPT & managed infrastructure for SMEs in UAE, Egypt & KSA. Subscription-based. Get a free assessment.",
     keywords: [
         "MSSP UAE",
         "managed security services Dubai",

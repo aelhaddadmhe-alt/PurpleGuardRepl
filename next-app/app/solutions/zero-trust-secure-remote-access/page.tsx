@@ -9,9 +9,9 @@ import { faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
 const OG = ogImageUrl({ title: "Zero Trust & Secure Access — UAE & Egypt", subtitle: "ZTNA · SASE · Identity-Driven Access for Remote & Hybrid Workforces", category: "Solutions", color: "indigo" });
 
 export const metadata: Metadata = {
-  title: "Zero Trust & Secure Remote Access Dubai UAE — ZTNA & SASE",
+  title: { absolute: "Zero Trust & Secure Remote Access Dubai UAE — ZTNA & SASE" },
   description:
-    "PurpleGuard replaces legacy VPNs with identity-driven zero trust access (ZTNA & SASE). Continuously verify users, devices, and context for remote and hybrid workforces in UAE, Egypt, and KSA.",
+    "Zero Trust & ZTNA: replace VPNs with identity-driven secure access for UAE, Egypt & KSA. Managed SASE service. Book a free zero trust review.",
   keywords: ["zero trust UAE", "ZTNA Dubai", "secure remote access Egypt", "VPN replacement UAE", "SASE service", "zero trust network access UAE", "NCA ECC zero trust"],
   alternates: { canonical: "https://www.purpleguard.io/solutions/zero-trust-secure-remote-access" },
   openGraph: {

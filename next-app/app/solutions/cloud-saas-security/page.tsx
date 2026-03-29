@@ -9,9 +9,9 @@ import { faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
 const OG = ogImageUrl({ title: "Cloud & SaaS Security — UAE & Egypt", subtitle: "AWS · Azure · GCP · Microsoft 365 · Google Workspace Protection", category: "Solutions", color: "cyan" });
 
 export const metadata: Metadata = {
-  title: "Cloud & SaaS Security Dubai UAE — AWS, Azure, M365 Protection",
+  title: { absolute: "Cloud & SaaS Security Dubai UAE — AWS, Azure, M365 Protection" },
   description:
-    "PurpleGuard secures cloud identities, configurations, data, and access across AWS, Azure, GCP, Microsoft 365, and Google Workspace for organisations in UAE, Egypt, and KSA.",
+    "PurpleGuard secures AWS, Azure, GCP, M365 & Google Workspace for UAE, Egypt & KSA. CSPM & SSPM managed service. Book a free cloud review.",
   keywords: ["cloud security UAE", "SaaS security Dubai", "AWS security Egypt", "Azure security UAE", "Microsoft 365 security", "cloud posture management UAE", "NCA CCC cloud compliance"],
   alternates: { canonical: "https://www.purpleguard.io/solutions/cloud-saas-security" },
   openGraph: {

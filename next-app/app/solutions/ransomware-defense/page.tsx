@@ -9,9 +9,9 @@ import { faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
 const OG = ogImageUrl({ title: "Ransomware Defense — UAE & Egypt", subtitle: "Prevention · Detection · Containment · Recovery Across All Layers", category: "Solutions", color: "red" });
 
 export const metadata: Metadata = {
-  title: "Ransomware Defense Dubai UAE — Prevention, Detection & Recovery",
+  title: { absolute: "Ransomware Defense Dubai UAE — Prevention, Detection & Recovery" },
   description:
-    "PurpleGuard's ransomware defense solution combines layered prevention, real-time detection, automated containment, and rapid recovery for organisations in UAE, Egypt, and KSA.",
+    "Ransomware defense for UAE, Egypt & KSA: layered prevention, real-time detection, automated containment & rapid recovery. Book a free review.",
   keywords: ["ransomware defense UAE", "ransomware protection Dubai", "ransomware recovery Egypt", "ransomware prevention UAE", "immutable backup UAE", "EDR ransomware", "NCA ECC ransomware"],
   alternates: { canonical: "https://www.purpleguard.io/solutions/ransomware-defense" },
   openGraph: {

@@ -9,9 +9,9 @@ import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/js
 const OG = ogImageUrl({ title: "24/7 Managed SOC — UAE & Egypt", subtitle: "PurpleSOC: Always-On Threat Monitoring & Incident Response", category: "Purple X", color: "blue" });
 
 export const metadata: Metadata = {
-  title: "Managed SOC Dubai UAE — 24/7 Security Operations Center",
+  title: { absolute: "Managed SOC Dubai UAE — 24/7 Security Operations Center" },
   description:
-    "PurpleSOC is a fully managed 24/7 Security Operations Centre delivering continuous threat detection, alert triage, and incident response for SMEs in UAE, Egypt, and KSA. No internal SOC overhead.",
+    "PurpleSOC: 24/7 managed SOC for UAE, Egypt & KSA. SIEM-powered threat detection, alert triage & incident response. Book a free SOC assessment.",
   keywords: ["managed SOC UAE", "SOC as a service Dubai", "24/7 security monitoring Egypt", "SIEM managed service", "incident response UAE", "SOC 2 compliance", "NCA ECC SOC"],
   alternates: { canonical: "https://www.purpleguard.io/services/purple-x/purplesoc" },
   openGraph: {

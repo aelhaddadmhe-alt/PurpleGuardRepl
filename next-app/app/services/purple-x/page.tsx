@@ -10,9 +10,9 @@ import { breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
 const OG = ogImageUrl({ title: "Purple X — Cybersecurity Services UAE & Egypt", subtitle: "VAPT · SOC · MDR · Threat Intelligence · Red Team · NDR", category: "Purple X", color: "purple" });
 
 export const metadata: Metadata = {
-  title: "Cybersecurity Services Dubai UAE — Purple X Advanced Security",
+  title: { absolute: "Cybersecurity Services Dubai UAE — Purple X Advanced Security" },
   description:
-    "Purple X delivers continuous, compliance-aware cybersecurity for SMEs in UAE, Egypt, and KSA. VAPT, 24/7 SOC, MDR, threat intelligence, red teaming, configuration hardening, and NDR.",
+    "Purple X: continuous cybersecurity for UAE, Egypt & KSA. VAPT, 24/7 SOC, MDR, threat intelligence, red teaming & NDR. Book a free consult.",
   keywords: ["cybersecurity services UAE", "VAPT Dubai", "managed SOC Egypt", "MDR UAE", "threat intelligence Dubai", "red teaming UAE", "NDR managed service", "NCA ECC cybersecurity"],
   alternates: { canonical: "https://www.purpleguard.io/services/purple-x" },
   openGraph: {

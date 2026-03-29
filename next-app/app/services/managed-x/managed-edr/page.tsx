@@ -9,9 +9,9 @@ import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/js
 const OG = ogImageUrl({ title: "Managed EDR — UAE & Egypt", subtitle: "Endpoint Threat Detection, Automated Containment & SOC-Backed Response", category: "Managed X", color: "indigo" });
 
 export const metadata: Metadata = {
-  title: "Managed EDR Dubai UAE — Endpoint Threat Detection & Response",
+  title: { absolute: "Managed EDR Dubai UAE — Endpoint Threat Detection & Response" },
   description:
-    "PurpleGuard Managed EDR delivers behavioural threat detection, automated endpoint containment, and SOC-backed investigation. Protecting organisations in UAE, Egypt, and KSA.",
+    "Managed EDR: behavioural threat detection, automated containment & SOC-backed investigation for UAE, Egypt & KSA. Book a free endpoint review.",
   keywords: ["managed EDR UAE", "endpoint detection response Dubai", "EDR service Egypt", "behavioural threat detection", "endpoint security UAE", "MITRE ATT&CK EDR", "NCA ECC EDR"],
   alternates: { canonical: "https://www.purpleguard.io/services/managed-x/managed-edr" },
   openGraph: {

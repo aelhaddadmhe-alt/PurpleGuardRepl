@@ -9,9 +9,9 @@ import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/js
 const OG = ogImageUrl({ title: "Managed Email Security — UAE & Egypt", subtitle: "Phishing, BEC & Email Threat Protection with DMARC & SPF/DKIM", category: "Managed X", color: "red" });
 
 export const metadata: Metadata = {
-  title: "Managed Email Security Dubai UAE — Phishing & BEC Protection",
+  title: { absolute: "Managed Email Security Dubai UAE — Phishing & BEC Protection" },
   description:
-    "PurpleGuard Managed Email Security defends against phishing, BEC, malware, and impersonation with DMARC, SPF/DKIM enforcement. Protecting organisations in UAE, Egypt, and KSA.",
+    "Managed Email Security: phishing, BEC & malware protection with DMARC enforcement for UAE, Egypt & KSA. Book a free email security assessment.",
   keywords: ["managed email security UAE", "phishing protection Dubai", "BEC defence Egypt", "DMARC service UAE", "email threat protection", "business email compromise UAE", "NCA ECC email security"],
   alternates: { canonical: "https://www.purpleguard.io/services/managed-x/managed-email-security" },
   openGraph: {

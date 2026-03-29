@@ -12,7 +12,7 @@ import {
 import { faqJsonLd, ogImageUrl } from "@/lib/json-ld";
 
 const OG = ogImageUrl({
-  title: "Managed Security Services UAE & Egypt",
+  title: { absolute: "Managed Security Services UAE & Egypt" },
   subtitle: "24/7 SOC · MDR · VAPT · Managed Infrastructure — SME-Focused MSSP",
   category: "MSSP",
   color: "purple",
@@ -21,7 +21,7 @@ const OG = ogImageUrl({
 export const metadata: Metadata = {
   title: "Managed Security Services Provider (MSSP) — UAE, Egypt & KSA | PurpleGuard",
   description:
-    "PurpleGuard is a managed security services provider (MSSP) in Dubai and Cairo delivering 24/7 SOC, MDR, VAPT, and managed infrastructure for SMEs and mid-market organisations in UAE, Egypt, and KSA. Subscription-based. Compliance-ready.",
+    "PurpleGuard — MSSP delivering 24/7 SOC, MDR, VAPT & managed infrastructure for SMEs in UAE, Egypt & KSA. Subscription-based. Get a free assessment.",
   keywords: [
     "MSSP UAE", "managed security services Dubai", "cybersecurity Egypt Cairo", "SOC as a service UAE",
     "MDR managed detection response", "VAPT penetration testing UAE", "ISO 27001 compliance Egypt",

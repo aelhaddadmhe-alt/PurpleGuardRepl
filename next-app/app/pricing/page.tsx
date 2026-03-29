@@ -9,9 +9,9 @@ import { breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
 const OG = ogImageUrl({ title: "Cybersecurity Pricing — UAE & Egypt", subtitle: "Transparent, Subscription-Based MSSP Pricing — No Lock-Ins", category: "Pricing", color: "slate" });
 
 export const metadata: Metadata = {
-  title: "Cybersecurity Pricing Dubai UAE — MSSP Pricing Explained | PurpleGuard",
+  title: { absolute: "Cybersecurity Pricing Dubai UAE — MSSP Pricing Explained | PurpleGuard" },
   description:
-    "Understand how PurpleGuard pricing works for managed security, MDR, VAPT, and infrastructure services in UAE, Egypt, and KSA. Transparent, subscription-based, SME-focused — no shelfware, no lock-ins.",
+    "PurpleGuard MSSP pricing: subscription-based, no lock-ins. Quotes in AED & EGP for UAE, Egypt & KSA. Book a free scoping call today.",
   keywords: ["cybersecurity pricing UAE", "MSSP pricing Dubai", "managed security cost Egypt", "SOC pricing UAE", "VAPT cost", "MDR subscription UAE", "security services pricing"],
   alternates: { canonical: "https://www.purpleguard.io/pricing" },
   openGraph: {

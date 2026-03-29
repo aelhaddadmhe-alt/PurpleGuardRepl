@@ -9,9 +9,9 @@ import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/js
 const OG = ogImageUrl({ title: "Threat Intelligence & EASM — UAE, Egypt & KSA", subtitle: "PurpleSentry: External Attack Surface Management & Digital Risk Protection", category: "Purple X", color: "orange" });
 
 export const metadata: Metadata = {
-  title: "Threat Intelligence & EASM Dubai UAE — PurpleSentry | PurpleGuard",
+  title: { absolute: "Threat Intelligence & EASM Dubai UAE — PurpleSentry | PurpleGuard" },
   description:
-    "PurpleSentry continuously monitors your external attack surface, dark web exposure, and digital risk. Threat intelligence and EASM for SMEs in UAE, Egypt, and KSA.",
+    "PurpleSentry: external attack surface monitoring & dark web threat intelligence for UAE, Egypt & KSA. Book your free exposure assessment today.",
   keywords: ["threat intelligence UAE", "EASM Dubai", "external attack surface management Egypt", "dark web monitoring UAE", "digital risk protection", "CTI service", "NCA ECC threat intelligence"],
   alternates: { canonical: "https://www.purpleguard.io/services/purple-x/purplesentry" },
   openGraph: {

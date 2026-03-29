@@ -254,8 +254,10 @@ const OG = (0, __TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$sr
     color: "purple"
 });
 const metadata = {
-    title: "VAPT Services Dubai UAE — Vulnerability Assessment & Penetration Testing",
-    description: "PurpleVAPT delivers continuous vulnerability assessment and penetration testing across networks, applications, cloud, and APIs for organisations in UAE, Egypt, and KSA. Risk-prioritized, OWASP-aligned, and compliance-ready.",
+    title: {
+        absolute: "VAPT Services Dubai UAE — Vulnerability Assessment & Penetration Testing"
+    },
+    description: "PurpleVAPT: VAPT for networks, apps, cloud & APIs in UAE, Egypt & KSA. Risk-prioritized, compliance-ready. Book a free VAPT assessment today.",
     keywords: [
         "VAPT UAE",
         "penetration testing Dubai",

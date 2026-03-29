@@ -9,9 +9,9 @@ import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/js
 const OG = ogImageUrl({ title: "Configuration Hardening — UAE & Egypt", subtitle: "PurpleConfig: CIS Benchmarks & Security Hardening", category: "Purple X", color: "emerald" });
 
 export const metadata: Metadata = {
-  title: "Security Configuration Hardening UAE — CIS Benchmarks | PurpleConfig",
+  title: { absolute: "Security Configuration Hardening UAE — CIS Benchmarks | PurpleConfig" },
   description:
-    "PurpleConfig continuously assesses endpoints and systems against CIS benchmarks and NIST controls. Detect misconfigurations and enforce secure baselines across UAE, Egypt, and KSA.",
+    "PurpleConfig: CIS & NIST security configuration hardening for UAE, Egypt & KSA. Detect misconfigurations, enforce secure baselines. Get started.",
   keywords: ["security hardening UAE", "CIS benchmarks Dubai", "configuration assessment Egypt", "NIST security controls", "secure baseline UAE", "ISO 27001 hardening", "NCA ECC configuration"],
   alternates: { canonical: "https://www.purpleguard.io/services/purple-x/purpleconfig" },
   openGraph: {

@@ -9,9 +9,9 @@ import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/js
 const OG = ogImageUrl({ title: "Managed WAF — Web & API Protection UAE & Egypt", subtitle: "OWASP Top 10, Bot Mitigation & DDoS Protection as a Managed Service", category: "Managed X", color: "orange" });
 
 export const metadata: Metadata = {
-  title: "Managed WAF Dubai UAE — Web Application & API Security Service",
+  title: { absolute: "Managed WAF Dubai UAE — Web Application & API Security Service" },
   description:
-    "PurpleGuard Managed WAF delivers OWASP Top 10 protection, bot mitigation, DDoS defence, and API security as a fully managed service for UAE, Egypt, and KSA.",
+    "Managed WAF: OWASP Top 10 protection, bot mitigation & API security for UAE, Egypt & KSA. Fully managed, 24/7. Book a free assessment.",
   keywords: ["managed WAF UAE", "web application firewall Dubai", "API security Egypt", "OWASP protection UAE", "DDoS mitigation", "bot management UAE", "NCA ECC WAF"],
   alternates: { canonical: "https://www.purpleguard.io/services/managed-x/managed-waf" },
   openGraph: {

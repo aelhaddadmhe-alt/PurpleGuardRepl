@@ -10,9 +10,9 @@ import { breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
 const OG = ogImageUrl({ title: "Security Solutions UAE & Egypt", subtitle: "Compliance · Ransomware Defense · Cloud Security · EASM · Zero Trust", category: "Solutions", color: "orange" });
 
 export const metadata: Metadata = {
-  title: "Cybersecurity Solutions Dubai UAE — Compliance, Ransomware & Cloud Security",
+  title: { absolute: "Cybersecurity Solutions Dubai UAE — Compliance, Ransomware & Cloud Security" },
   description:
-    "Outcome-focused cybersecurity solutions for UAE, Egypt, and KSA: compliance & audit readiness, ransomware defense, cloud & SaaS security, external attack surface management, and zero trust access.",
+    "Outcome-focused security solutions for UAE, Egypt & KSA: compliance, ransomware defense, cloud security, EASM & zero trust. Book a consult.",
   keywords: ["cybersecurity solutions UAE", "compliance readiness Dubai", "ransomware defense Egypt", "cloud security UAE", "EASM service", "zero trust UAE", "NCA ECC solutions"],
   alternates: { canonical: "https://www.purpleguard.io/solutions" },
   openGraph: {

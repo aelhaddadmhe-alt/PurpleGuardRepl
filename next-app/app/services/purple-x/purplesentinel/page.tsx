@@ -9,9 +9,9 @@ import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/js
 const OG = ogImageUrl({ title: "MDR Services UAE & Egypt", subtitle: "PurpleSentinel: Managed Detection & Response (MDR/MXDR)", category: "Purple X", color: "indigo" });
 
 export const metadata: Metadata = {
-  title: "Managed Detection & Response (MDR) Dubai UAE — PurpleSentinel",
+  title: { absolute: "Managed Detection & Response (MDR) Dubai UAE — PurpleSentinel" },
   description:
-    "PurpleSentinel delivers MDR/MXDR with deep visibility across endpoints, networks, and cloud — plus automated containment and threat hunting. Serving SMEs in UAE, Egypt, and KSA.",
+    "PurpleSentinel MDR/MXDR: deep visibility across endpoints, cloud & network with automated containment for UAE, Egypt & KSA. Book a free demo.",
   keywords: ["MDR UAE", "managed detection response Dubai", "MXDR Egypt", "endpoint detection response", "threat hunting UAE", "XDR managed service", "NCA ECC MDR"],
   alternates: { canonical: "https://www.purpleguard.io/services/purple-x/purplesentinel" },
   openGraph: {

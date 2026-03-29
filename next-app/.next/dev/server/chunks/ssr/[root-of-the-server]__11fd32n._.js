@@ -720,8 +720,10 @@ const OG = (0, __TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$sr
     color: "purple"
 });
 const metadata = {
-    title: "Cybersecurity Services Dubai UAE — Purple X Advanced Security",
-    description: "Purple X delivers continuous, compliance-aware cybersecurity for SMEs in UAE, Egypt, and KSA. VAPT, 24/7 SOC, MDR, threat intelligence, red teaming, configuration hardening, and NDR.",
+    title: {
+        absolute: "Cybersecurity Services Dubai UAE — Purple X Advanced Security"
+    },
+    description: "Purple X: continuous cybersecurity for UAE, Egypt & KSA. VAPT, 24/7 SOC, MDR, threat intelligence, red teaming & NDR. Book a free consult.",
     keywords: [
         "cybersecurity services UAE",
         "VAPT Dubai",

@@ -9,9 +9,9 @@ import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/js
 const OG = ogImageUrl({ title: "NDR — Network Detection & Response UAE & Egypt", subtitle: "PurpleReveal: Deep Network Traffic Inspection & Behavioural Detection", category: "Purple X", color: "cyan" });
 
 export const metadata: Metadata = {
-  title: "Network Detection & Response (NDR) Dubai UAE — PurpleReveal",
+  title: { absolute: "Network Detection & Response (NDR) Dubai UAE — PurpleReveal" },
   description:
-    "PurpleReveal delivers deep network traffic inspection and behavioural threat detection across on-premises and cloud networks. NDR managed service for UAE, Egypt, and KSA.",
+    "PurpleReveal NDR: deep network traffic inspection & behavioural threat detection for UAE, Egypt & KSA. 24/7 managed service. Book a free demo.",
   keywords: ["NDR UAE", "network detection response Dubai", "NTA Egypt", "network traffic analysis UAE", "lateral movement detection", "managed NDR", "NCA ECC network monitoring"],
   alternates: { canonical: "https://www.purpleguard.io/services/purple-x/purplereveal" },
   openGraph: {

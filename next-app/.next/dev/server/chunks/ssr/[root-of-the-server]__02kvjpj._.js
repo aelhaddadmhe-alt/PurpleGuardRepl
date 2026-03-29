@@ -717,8 +717,10 @@ const OG = (0, __TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$sr
     color: "orange"
 });
 const metadata = {
-    title: "Cybersecurity Solutions Dubai UAE — Compliance, Ransomware & Cloud Security",
-    description: "Outcome-focused cybersecurity solutions for UAE, Egypt, and KSA: compliance & audit readiness, ransomware defense, cloud & SaaS security, external attack surface management, and zero trust access.",
+    title: {
+        absolute: "Cybersecurity Solutions Dubai UAE — Compliance, Ransomware & Cloud Security"
+    },
+    description: "Outcome-focused security solutions for UAE, Egypt & KSA: compliance, ransomware defense, cloud security, EASM & zero trust. Book a consult.",
     keywords: [
         "cybersecurity solutions UAE",
         "compliance readiness Dubai",

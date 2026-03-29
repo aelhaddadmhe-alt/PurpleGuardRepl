@@ -246,8 +246,10 @@ const OG = (0, __TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$sr
     color: "slate"
 });
 const metadata = {
-    title: "Cybersecurity Pricing Dubai UAE — MSSP Pricing Explained | PurpleGuard",
-    description: "Understand how PurpleGuard pricing works for managed security, MDR, VAPT, and infrastructure services in UAE, Egypt, and KSA. Transparent, subscription-based, SME-focused — no shelfware, no lock-ins.",
+    title: {
+        absolute: "Cybersecurity Pricing Dubai UAE — MSSP Pricing Explained | PurpleGuard"
+    },
+    description: "PurpleGuard MSSP pricing: subscription-based, no lock-ins. Quotes in AED & EGP for UAE, Egypt & KSA. Book a free scoping call today.",
     keywords: [
         "cybersecurity pricing UAE",
         "MSSP pricing Dubai",

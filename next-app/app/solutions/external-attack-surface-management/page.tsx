@@ -9,9 +9,9 @@ import { faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
 const OG = ogImageUrl({ title: "EASM — External Attack Surface Management UAE & Egypt", subtitle: "Discover, Monitor & Reduce Your Internet-Facing Attack Surface", category: "Solutions", color: "orange" });
 
 export const metadata: Metadata = {
-  title: "External Attack Surface Management (EASM) Dubai UAE — PurpleGuard",
+  title: { absolute: "External Attack Surface Management (EASM) Dubai UAE — PurpleGuard" },
   description:
-    "PurpleGuard continuously discovers, monitors, and reduces your internet-facing attack surface. EASM and digital risk protection for organisations in UAE, Egypt, and KSA.",
+    "EASM: continuous discovery & monitoring of your internet-facing attack surface for UAE, Egypt & KSA. Book a free exposure report today.",
   keywords: ["EASM UAE", "attack surface management Dubai", "digital risk protection Egypt", "external attack surface UAE", "internet-facing assets", "domain monitoring UAE", "NCA ECC EASM"],
   alternates: { canonical: "https://www.purpleguard.io/solutions/external-attack-surface-management" },
   openGraph: {

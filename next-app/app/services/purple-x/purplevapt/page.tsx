@@ -9,9 +9,9 @@ import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/js
 const OG = ogImageUrl({ title: "VAPT Services UAE & Egypt", subtitle: "Vulnerability Assessment & Penetration Testing — PurpleVAPT", category: "Purple X", color: "purple" });
 
 export const metadata: Metadata = {
-  title: "VAPT Services Dubai UAE — Vulnerability Assessment & Penetration Testing",
+  title: { absolute: "VAPT Services Dubai UAE — Vulnerability Assessment & Penetration Testing" },
   description:
-    "PurpleVAPT delivers continuous vulnerability assessment and penetration testing across networks, applications, cloud, and APIs for organisations in UAE, Egypt, and KSA. Risk-prioritized, OWASP-aligned, and compliance-ready.",
+    "PurpleVAPT: VAPT for networks, apps, cloud & APIs in UAE, Egypt & KSA. Risk-prioritized, compliance-ready. Book a free VAPT assessment today.",
   keywords: ["VAPT UAE", "penetration testing Dubai", "vulnerability assessment Egypt", "OWASP testing", "pen test UAE", "ISO 27001 VAPT", "NCA ECC vulnerability assessment"],
   alternates: { canonical: "https://www.purpleguard.io/services/purple-x/purplevapt" },
   openGraph: {

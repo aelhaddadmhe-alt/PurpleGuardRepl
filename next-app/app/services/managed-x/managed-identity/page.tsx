@@ -9,9 +9,9 @@ import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/js
 const OG = ogImageUrl({ title: "Managed Identity — MFA, SSO & Zero Trust UAE & Egypt", subtitle: "Centralized IAM with MFA, Conditional Access & Zero Trust Enforcement", category: "Managed X", color: "purple" });
 
 export const metadata: Metadata = {
-  title: "Managed Identity & IAM Dubai UAE — MFA, SSO & Zero Trust",
+  title: { absolute: "Managed Identity & IAM Dubai UAE — MFA, SSO & Zero Trust" },
   description:
-    "PurpleGuard Managed Identity delivers centralised IAM with MFA, SSO, conditional access, and zero trust enforcement for organisations in UAE, Egypt, and KSA.",
+    "Managed Identity: IAM with MFA, SSO & zero trust enforcement for UAE, Egypt & KSA. Book a free identity security assessment today.",
   keywords: ["managed identity UAE", "IAM service Dubai", "MFA managed Egypt", "SSO service UAE", "zero trust identity", "conditional access UAE", "NCA ECC identity management"],
   alternates: { canonical: "https://www.purpleguard.io/services/managed-x/managed-identity" },
   openGraph: {
