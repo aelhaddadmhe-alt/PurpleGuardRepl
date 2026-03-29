@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -47,30 +47,14 @@ const navigationItems = [
   { label: "Resources", href: "/blog" },
 ];
 
-type ActiveMenu = "solutions" | "services" | null;
-
 export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeMenu, setActiveMenu] = useState<ActiveMenu>(null);
-  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  const openMenu = (menu: ActiveMenu) => {
-    if (closeTimer.current) clearTimeout(closeTimer.current);
-    setActiveMenu(menu);
-  };
-
-  const scheduleClose = () => {
-    closeTimer.current = setTimeout(() => setActiveMenu(null), 80);
-  };
-
-  const cancelClose = () => {
-    if (closeTimer.current) clearTimeout(closeTimer.current);
-  };
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
     <nav className="bg-white/95 backdrop-blur-sm border-b border-slate-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
+
           {/* Logo */}
           <Link href="/">
             <div className="flex items-center cursor-pointer">
@@ -81,150 +65,128 @@ export default function Navigation() {
           {/* Desktop nav */}
           <div className="hidden md:flex items-center space-x-1">
 
-            {/* Solutions trigger */}
-            <div
-              className="relative"
-              onMouseEnter={() => openMenu("solutions")}
-              onMouseLeave={scheduleClose}
-            >
-              <button
-                className="inline-flex items-center gap-1 px-4 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-[#6633cc] hover:bg-slate-50 transition-colors"
-                onClick={() => setActiveMenu(activeMenu === "solutions" ? null : "solutions")}
-              >
+            {/* Solutions — pure CSS hover via group */}
+            <div className="group relative">
+              <button className="inline-flex items-center gap-1 px-4 py-2 h-16 text-sm font-medium text-slate-700 group-hover:text-[#6633cc] transition-colors">
                 Solutions
-                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeMenu === "solutions" ? "rotate-180" : ""}`} />
+                <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
               </button>
 
-              {activeMenu === "solutions" && (
-                <div
-                  className="absolute left-0 top-full pt-2 z-50"
-                  onMouseEnter={cancelClose}
-                  onMouseLeave={scheduleClose}
-                >
-                  <div className="w-[360px] rounded-xl border border-slate-200 bg-white shadow-xl p-4">
-                    <div className="space-y-1">
-                      {solutions.map((solution) => (
-                        <Link key={solution.name} href={solution.href} onClick={() => setActiveMenu(null)}>
-                          <div className="group flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 cursor-pointer transition-colors">
-                            <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${solution.color} flex items-center justify-center flex-shrink-0`}>
-                              <solution.icon className="h-4 w-4 text-white" />
-                            </div>
-                            <div className="flex-1 min-w-0">
-                              <div className="font-medium text-slate-900 group-hover:text-[#6633cc] transition-colors text-sm">
-                                {solution.name}
-                              </div>
-                            </div>
-                            <ChevronRight className="h-4 w-4 text-slate-300 group-hover:text-[#6633cc] transition-colors flex-shrink-0" />
+              {/* Dropdown panel — hidden by default, visible on group hover */}
+              <div className="absolute left-0 top-full pt-0 z-50 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-150">
+                <div className="w-[360px] rounded-xl border border-slate-200 bg-white shadow-xl p-4 mt-0">
+                  <div className="space-y-1">
+                    {solutions.map((solution) => (
+                      <Link key={solution.name} href={solution.href}>
+                        <div className="group/item flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 cursor-pointer transition-colors">
+                          <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${solution.color} flex items-center justify-center flex-shrink-0`}>
+                            <solution.icon className="h-4 w-4 text-white" />
                           </div>
-                        </Link>
-                      ))}
-                    </div>
-                    <div className="mt-3 pt-3 border-t border-slate-100">
-                      <Link href="/solutions" onClick={() => setActiveMenu(null)}>
+                          <div className="flex-1 min-w-0">
+                            <div className="font-medium text-slate-900 group-hover/item:text-[#6633cc] transition-colors text-sm">
+                              {solution.name}
+                            </div>
+                          </div>
+                          <ChevronRight className="h-4 w-4 text-slate-300 group-hover/item:text-[#6633cc] transition-colors flex-shrink-0" />
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                  <div className="mt-3 pt-3 border-t border-slate-100">
+                    <Link href="/solutions">
+                      <Button variant="outline" size="sm" className="w-full border-[#6633cc]/30 text-[#6633cc] hover:bg-[#6633cc]/5">
+                        View All Solutions
+                        <ChevronRight className="h-4 w-4 ml-1" />
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Services — pure CSS hover via group */}
+            <div className="group relative">
+              <button className="inline-flex items-center gap-1 px-4 py-2 h-16 text-sm font-medium text-slate-700 group-hover:text-[#6633cc] transition-colors">
+                Services
+                <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
+              </button>
+
+              {/* Dropdown panel */}
+              <div className="absolute left-0 top-full z-50 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-150">
+                <div className="w-[620px] rounded-xl border border-slate-200 bg-white shadow-xl p-6">
+                  <div className="grid grid-cols-2 gap-8">
+
+                    {/* Purple X */}
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-2 pb-2 border-b border-slate-100">
+                        <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-600 to-indigo-600 flex items-center justify-center">
+                          <Shield className="h-4 w-4 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-slate-900">Purple X</h3>
+                          <p className="text-xs text-slate-500">Cybersecurity Services</p>
+                        </div>
+                      </div>
+                      <div className="space-y-1">
+                        {purpleXServices.map((service) => (
+                          <Link key={service.name} href={service.href}>
+                            <div className="group/item flex items-start gap-3 p-2 rounded-lg hover:bg-slate-50 cursor-pointer transition-colors">
+                              <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center flex-shrink-0`}>
+                                <service.icon className="h-4 w-4 text-white" />
+                              </div>
+                              <div className="flex-1 min-w-0">
+                                <div className="font-medium text-slate-900 group-hover/item:text-[#6633cc] transition-colors text-sm">{service.name}</div>
+                                <div className="text-xs text-slate-500 truncate">{service.tagline}</div>
+                              </div>
+                              <ChevronRight className="h-4 w-4 text-slate-300 group-hover/item:text-[#6633cc] transition-colors flex-shrink-0 mt-1" />
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                      <Link href="/services/purple-x">
                         <Button variant="outline" size="sm" className="w-full border-[#6633cc]/30 text-[#6633cc] hover:bg-[#6633cc]/5">
-                          View All Solutions
-                          <ChevronRight className="h-4 w-4 ml-1" />
+                          View All Purple X <ChevronRight className="h-4 w-4 ml-1" />
                         </Button>
                       </Link>
                     </div>
-                  </div>
-                </div>
-              )}
-            </div>
 
-            {/* Services trigger */}
-            <div
-              className="relative"
-              onMouseEnter={() => openMenu("services")}
-              onMouseLeave={scheduleClose}
-            >
-              <button
-                className="inline-flex items-center gap-1 px-4 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-[#6633cc] hover:bg-slate-50 transition-colors"
-                onClick={() => setActiveMenu(activeMenu === "services" ? null : "services")}
-              >
-                Services
-                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeMenu === "services" ? "rotate-180" : ""}`} />
-              </button>
-
-              {activeMenu === "services" && (
-                <div
-                  className="absolute left-0 top-full pt-2 z-50"
-                  onMouseEnter={cancelClose}
-                  onMouseLeave={scheduleClose}
-                >
-                  <div className="w-[620px] rounded-xl border border-slate-200 bg-white shadow-xl p-6">
-                    <div className="grid grid-cols-2 gap-8">
-                      {/* Purple X */}
-                      <div className="space-y-4">
-                        <div className="flex items-center gap-2 pb-2 border-b border-slate-100">
-                          <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-600 to-indigo-600 flex items-center justify-center">
-                            <Shield className="h-4 w-4 text-white" />
-                          </div>
-                          <div>
-                            <h3 className="font-bold text-slate-900">Purple X</h3>
-                            <p className="text-xs text-slate-500">Cybersecurity Services</p>
-                          </div>
+                    {/* Managed X */}
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-2 pb-2 border-b border-slate-100">
+                        <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 flex items-center justify-center">
+                          <Server className="h-4 w-4 text-white" />
                         </div>
-                        <div className="space-y-1">
-                          {purpleXServices.map((service) => (
-                            <Link key={service.name} href={service.href} onClick={() => setActiveMenu(null)}>
-                              <div className="group flex items-start gap-3 p-2 rounded-lg hover:bg-slate-50 cursor-pointer transition-colors">
-                                <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center flex-shrink-0`}>
-                                  <service.icon className="h-4 w-4 text-white" />
-                                </div>
-                                <div className="flex-1 min-w-0">
-                                  <div className="font-medium text-slate-900 group-hover:text-[#6633cc] transition-colors text-sm">{service.name}</div>
-                                  <div className="text-xs text-slate-500 truncate">{service.tagline}</div>
-                                </div>
-                                <ChevronRight className="h-4 w-4 text-slate-300 group-hover:text-[#6633cc] transition-colors flex-shrink-0 mt-1" />
-                              </div>
-                            </Link>
-                          ))}
+                        <div>
+                          <h3 className="font-bold text-slate-900">Managed X</h3>
+                          <p className="text-xs text-slate-500">Managed Infrastructure</p>
                         </div>
-                        <Link href="/services/purple-x" onClick={() => setActiveMenu(null)}>
-                          <Button variant="outline" size="sm" className="w-full border-[#6633cc]/30 text-[#6633cc] hover:bg-[#6633cc]/5">
-                            View All Purple X <ChevronRight className="h-4 w-4 ml-1" />
-                          </Button>
-                        </Link>
                       </div>
-
-                      {/* Managed X */}
-                      <div className="space-y-4">
-                        <div className="flex items-center gap-2 pb-2 border-b border-slate-100">
-                          <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 flex items-center justify-center">
-                            <Server className="h-4 w-4 text-white" />
-                          </div>
-                          <div>
-                            <h3 className="font-bold text-slate-900">Managed X</h3>
-                            <p className="text-xs text-slate-500">Managed Infrastructure</p>
-                          </div>
-                        </div>
-                        <div className="space-y-1">
-                          {managedXServices.map((service) => (
-                            <Link key={service.name} href={service.href} onClick={() => setActiveMenu(null)}>
-                              <div className="group flex items-start gap-3 p-2 rounded-lg hover:bg-slate-50 cursor-pointer transition-colors">
-                                <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center flex-shrink-0`}>
-                                  <service.icon className="h-4 w-4 text-white" />
-                                </div>
-                                <div className="flex-1 min-w-0">
-                                  <div className="font-medium text-slate-900 group-hover:text-blue-600 transition-colors text-sm">{service.name}</div>
-                                  <div className="text-xs text-slate-500 truncate">{service.tagline}</div>
-                                </div>
-                                <ChevronRight className="h-4 w-4 text-slate-300 group-hover:text-blue-600 transition-colors flex-shrink-0 mt-1" />
+                      <div className="space-y-1">
+                        {managedXServices.map((service) => (
+                          <Link key={service.name} href={service.href}>
+                            <div className="group/item flex items-start gap-3 p-2 rounded-lg hover:bg-slate-50 cursor-pointer transition-colors">
+                              <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center flex-shrink-0`}>
+                                <service.icon className="h-4 w-4 text-white" />
                               </div>
-                            </Link>
-                          ))}
-                        </div>
-                        <Link href="/services/managed-x" onClick={() => setActiveMenu(null)}>
-                          <Button variant="outline" size="sm" className="w-full border-blue-500/30 text-blue-600 hover:bg-blue-50">
-                            View All Managed X <ChevronRight className="h-4 w-4 ml-1" />
-                          </Button>
-                        </Link>
+                              <div className="flex-1 min-w-0">
+                                <div className="font-medium text-slate-900 group-hover/item:text-blue-600 transition-colors text-sm">{service.name}</div>
+                                <div className="text-xs text-slate-500 truncate">{service.tagline}</div>
+                              </div>
+                              <ChevronRight className="h-4 w-4 text-slate-300 group-hover/item:text-blue-600 transition-colors flex-shrink-0 mt-1" />
+                            </div>
+                          </Link>
+                        ))}
                       </div>
+                      <Link href="/services/managed-x">
+                        <Button variant="outline" size="sm" className="w-full border-blue-500/30 text-blue-600 hover:bg-blue-50">
+                          View All Managed X <ChevronRight className="h-4 w-4 ml-1" />
+                        </Button>
+                      </Link>
                     </div>
+
                   </div>
                 </div>
-              )}
+              </div>
             </div>
 
             {navigationItems.map((item) => (
@@ -242,7 +204,7 @@ export default function Navigation() {
               <Button>Book Discovery Call</Button>
             </Link>
 
-            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+            <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="sm" className="md:hidden">
                   <Menu className="h-5 w-5" />
@@ -250,14 +212,11 @@ export default function Navigation() {
               </SheetTrigger>
               <SheetContent side="right">
                 <div className="flex flex-col space-y-2 mt-8">
-                  {/* Mobile: Solutions */}
-                  <Link href="/solutions" onClick={() => setIsOpen(false)}>
-                    <div className="font-semibold text-slate-900 px-3 py-2 text-sm cursor-pointer hover:text-[#6633cc]">
-                      Solutions
-                    </div>
+                  <Link href="/solutions" onClick={() => setMobileOpen(false)}>
+                    <div className="font-semibold text-slate-900 px-3 py-2 text-sm cursor-pointer hover:text-[#6633cc]">Solutions</div>
                   </Link>
                   {solutions.map((s) => (
-                    <Link key={s.name} href={s.href} onClick={() => setIsOpen(false)}>
+                    <Link key={s.name} href={s.href} onClick={() => setMobileOpen(false)}>
                       <Button variant="ghost" className="w-full justify-start pl-8 text-slate-700 hover:text-[#6633cc] font-medium text-left">
                         {s.name}
                       </Button>
@@ -266,27 +225,20 @@ export default function Navigation() {
 
                   <div className="border-b border-slate-200 my-2" />
 
-                  {/* Mobile: Services */}
-                  <Link href="/services" onClick={() => setIsOpen(false)}>
-                    <div className="font-semibold text-slate-900 px-3 py-2 text-sm cursor-pointer hover:text-[#6633cc]">
-                      Services
-                    </div>
+                  <Link href="/services" onClick={() => setMobileOpen(false)}>
+                    <div className="font-semibold text-slate-900 px-3 py-2 text-sm cursor-pointer hover:text-[#6633cc]">Services</div>
                   </Link>
-                  <Link href="/services/purple-x" onClick={() => setIsOpen(false)}>
-                    <Button variant="ghost" className="w-full justify-start pl-8 text-slate-700 hover:text-[#6633cc] font-medium">
-                      Purple X
-                    </Button>
+                  <Link href="/services/purple-x" onClick={() => setMobileOpen(false)}>
+                    <Button variant="ghost" className="w-full justify-start pl-8 text-slate-700 hover:text-[#6633cc] font-medium">Purple X</Button>
                   </Link>
-                  <Link href="/services/managed-x" onClick={() => setIsOpen(false)}>
-                    <Button variant="ghost" className="w-full justify-start pl-8 text-slate-700 hover:text-[#6633cc] font-medium">
-                      Managed X
-                    </Button>
+                  <Link href="/services/managed-x" onClick={() => setMobileOpen(false)}>
+                    <Button variant="ghost" className="w-full justify-start pl-8 text-slate-700 hover:text-[#6633cc] font-medium">Managed X</Button>
                   </Link>
 
                   <div className="border-b border-slate-200 my-2" />
 
                   {navigationItems.map((item) => (
-                    <Link key={item.label} href={item.href} onClick={() => setIsOpen(false)}>
+                    <Link key={item.label} href={item.href} onClick={() => setMobileOpen(false)}>
                       <Button variant="ghost" className="w-full justify-start text-slate-700 hover:text-[#6633cc] font-medium">
                         {item.label}
                       </Button>
@@ -295,13 +247,14 @@ export default function Navigation() {
 
                   <div className="border-b border-slate-200 my-2" />
 
-                  <Link href="/booking" onClick={() => setIsOpen(false)}>
+                  <Link href="/booking" onClick={() => setMobileOpen(false)}>
                     <Button className="w-full">Book Discovery Call</Button>
                   </Link>
                 </div>
               </SheetContent>
             </Sheet>
           </div>
+
         </div>
       </div>
     </nav>
