@@ -39,6 +39,7 @@ import SolutionRansomware from "@/pages/solution-ransomware";
 import SolutionCloud from "@/pages/solution-cloud";
 import SolutionEASM from "@/pages/solution-easm";
 import SolutionZeroTrust from "@/pages/solution-zero-trust";
+import AssistantPage from "@/pages/assistant";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 function Router() {
@@ -84,6 +85,7 @@ function Router() {
           <Route path="/solutions/cloud-saas-security" component={SolutionCloud} />
           <Route path="/solutions/external-attack-surface-management" component={SolutionEASM} />
           <Route path="/solutions/zero-trust-secure-remote-access" component={SolutionZeroTrust} />
+          <Route path="/assistant" component={AssistantPage} />
         </>
       ) : (
         <>
@@ -119,6 +121,7 @@ function Router() {
           <Route path="/solutions/cloud-saas-security" component={SolutionCloud} />
           <Route path="/solutions/external-attack-surface-management" component={SolutionEASM} />
           <Route path="/solutions/zero-trust-secure-remote-access" component={SolutionZeroTrust} />
+          <Route path="/assistant" component={AssistantPage} />
         </>
       )}
       <Route component={NotFound} />

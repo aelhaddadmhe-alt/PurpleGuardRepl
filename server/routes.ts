@@ -781,6 +781,94 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // AI Assistant proxy endpoint
+  app.post('/api/assistant', async (req, res) => {
+    const { messages } = req.body;
+    if (!Array.isArray(messages) || messages.length === 0) {
+      return res.status(400).json({ reply: "Invalid request." });
+    }
+
+    const apiKey = process.env.ANTHROPIC_API_KEY;
+    if (!apiKey) {
+      return res.json({
+        reply: "The AI Security Advisor is not yet connected. Once the Anthropic API key is configured, I'll be able to answer questions about PurpleGuard's services, pricing, and scoping.\n\nIn the meantime, you can:\n- **Browse our services** at [/services](/services)\n- **Explore our solutions** at [/solutions](/solutions)\n- **Book a discovery call** at [/booking](/booking)",
+      });
+    }
+
+    try {
+      const SYSTEM_PROMPT = `You are the PurpleGuard AI Security Advisor — a knowledgeable, confident, and commercially sharp assistant for PurpleGuard, an MSSP (Managed Security Services Provider) based in UAE, serving Egypt and the Gulf (KSA, UAE).
+
+Your job is to help prospects and clients understand PurpleGuard's services, get sizing guidance, and receive ballpark pricing — all in a clear, trustworthy, and direct manner.
+
+## ABOUT PURPLEGUARD
+- **Tagline**: Smarter Security. Stronger Defense.
+- **Type**: Subscription-based MSSP
+- **Markets**: Egypt, UAE, KSA (Saudi Arabia)
+- **Clients**: SMBs and mid-market enterprises
+- **Model**: Monthly subscription, no annual contracts, no upfront fees
+- **Key differentiator**: Purple team concept — attack + defend in one loop.
+- **Website**: https://www.purpleguard.io
+
+## SERVICES & PRICING
+
+### MANAGED X (Ongoing Managed Services)
+
+**Managed EDR** — ~$12–20/endpoint/month (CrowdStrike, SentinelOne, SonicWall)
+**Managed Endpoint / UEM** — ~$5–10/endpoint/month (NinjaOne)
+**Managed Firewall / FWaaS** — ~$200–600/month per site (SonicWall MSSP)
+**Managed WAF** — ~$150–400/month per application (Barracuda MSP)
+**Managed Email Protection** — ~$4–8/user/month (Barracuda, SonicWall)
+**Managed Backup / BCDR** — ~$0.05–0.15/GB/month + base fee (Barracuda MSP)
+**Managed Identity / IAM** — ~$5–10/user/month (EVO Security)
+**Managed SASE / ZTNA** — ~$10–18/user/month (SonicWall MSSP)
+
+### PURPLE X (Advanced Security Services)
+
+**PurpleVAPT** — Network VAPT: $2,000–4,000 | Web App: $2,500–5,000 | AD Assessment: $3,000–6,000 | Full Red Team: $8,000–20,000
+**PurpleSOC** — Starter (10 LDS): $500–800/month | Growth (25 LDS): $1,200–1,800/month | Enterprise: custom
+**PurpleSentry** — ~$500–1,500/month (SOCRadar — dark web, brand protection, EASM)
+**PurpleSentinel** — ~$15–25/endpoint/month (XDR/MDR — SonicWall MSSP)
+
+## COMPLIANCE FRAMEWORKS
+NIST CSF, ISO 27001, NCA (roadmap), PCI-DSS (roadmap)
+
+## TONE & STYLE
+- Confident, direct, commercially aware. Not salesy — be a trusted advisor.
+- Give ballpark ranges openly. Always clarify these are estimates.
+- Use bullet points for service features and pricing breakdowns.
+- Always end with a clear next step.
+
+If a prospect seems ready, suggest: "You can reach our team at https://www.purpleguard.io or I can help you draft a scope of work right now."`;
+
+      const response = await fetch("https://api.anthropic.com/v1/messages", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-api-key": apiKey,
+          "anthropic-version": "2023-06-01",
+        },
+        body: JSON.stringify({
+          model: "claude-opus-4-5",
+          max_tokens: 1024,
+          system: SYSTEM_PROMPT,
+          messages: messages.map((m: { role: string; content: string }) => ({
+            role: m.role,
+            content: m.content,
+          })),
+        }),
+      });
+
+      const data = (await response.json()) as { content?: Array<{ type: string; text: string }> };
+      const reply =
+        data.content?.find((b) => b.type === "text")?.text ||
+        "Sorry, I couldn't generate a response.";
+      res.json({ reply });
+    } catch (error) {
+      console.error("AI assistant error:", error);
+      res.status(500).json({ reply: "Something went wrong. Please try again." });
+    }
+  });
+
   const httpServer = createServer(app);
   return httpServer;
 }

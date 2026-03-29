@@ -44,6 +44,7 @@ export default function Navigation() {
   const navigationItems = [
     { label: "Pricing", href: "/pricing" },
     { label: "Resources", href: "/blog" },
+    { label: "AI Advisor", href: "/assistant" },
   ];
 
   const SolutionsMenu = () => (
@@ -253,13 +254,29 @@ export default function Navigation() {
       )}
       {navigationItems.map((item) => (
         <Link key={item.label} href={item.href}>
-          <Button 
-            variant="ghost" 
-            className={`${mobile ? 'w-full justify-start' : ''} text-slate-700 hover:text-primary-600 font-medium`}
-            onClick={() => mobile && setIsOpen(false)}
-          >
-            {item.label}
-          </Button>
+          {item.label === "AI Advisor" && !mobile ? (
+            <button
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-semibold transition-all"
+              style={{
+                background: "linear-gradient(135deg, #7c3aed, #a855f7)",
+                color: "white",
+                border: "none",
+                cursor: "pointer",
+                boxShadow: "0 0 16px rgba(124,58,237,0.35)",
+              }}
+            >
+              <span style={{ fontSize: 10 }}>✦</span>
+              AI Advisor
+            </button>
+          ) : (
+            <Button 
+              variant="ghost" 
+              className={`${mobile ? 'w-full justify-start' : ''} text-slate-700 hover:text-primary-600 font-medium`}
+              onClick={() => mobile && setIsOpen(false)}
+            >
+              {item.label}
+            </Button>
+          )}
         </Link>
       ))}
     </>
