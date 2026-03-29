@@ -12,7 +12,7 @@ import {
 import { faqJsonLd, ogImageUrl } from "@/lib/json-ld";
 
 const OG = ogImageUrl({
-  title: { absolute: "Managed Security Services UAE & Egypt" },
+  title: "Managed Security Services UAE & Egypt",
   subtitle: "24/7 SOC · MDR · VAPT · Managed Infrastructure — SME-Focused MSSP",
   category: "MSSP",
   color: "purple",

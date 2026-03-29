@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 
 const complianceFaqs = [
-  { question: "Which compliance frameworks does PurpleGuard support?", answer: "PurpleGuard supports ISO 27001:2022, NCA ECC and NCA CCC (Saudi Arabia), SAMA Cyber Security Framework and SCA requirements (KSA financial & capital markets sector), UAE TDRA / UAE Cyber Security Council, EG-CERT guidelines and NTRA requirements (Egypt), NIST CSF, SOC 2, PCI DSS, and HIPAA." },
+  { question: "Which compliance frameworks does PurpleGuard support?", answer: "PurpleGuard supports ISO 27001:2022, NCA ECC and NCA CCC (Saudi Arabia), SAMA Cyber Security Framework (KSA financial sector), SCA and UAE TDRA / UAE Cyber Security Council requirements (UAE), EG-CERT guidelines and NTRA requirements (Egypt), NIST CSF, SOC 2, PCI DSS, and HIPAA." },
   { question: "How long does a compliance readiness assessment take?", answer: "For a mid-market organisation, a gap assessment and audit-readiness roadmap typically takes 2–4 weeks. Ongoing compliance monitoring is a continuous service — we track control changes and evidence continuously so you are always audit-ready, not just once a year." },
   { question: "Can PurpleGuard help us prepare for an NCA ECC or ISO 27001 audit in UAE or Saudi Arabia?", answer: "Yes. We work with organisations in UAE, Saudi Arabia, and Egypt to close gaps against NCA ECC 1-1:2018, ISO 27001:2022, and sector-specific frameworks. We produce all required documentation, evidence artefacts, and treatment plans in the format auditors expect." },
   { question: "Do you help with evidence collection and documentation?", answer: "Yes. PurpleGuard's compliance service includes automated evidence collection, control documentation, policy templates, exception tracking, and a live compliance dashboard — so auditors see a complete, organised evidence pack rather than scattered spreadsheets." },
@@ -136,7 +136,7 @@ export default function ComplianceAuditReadinessPage() {
                   { name: "NCA ECC (Saudi Arabia)", description: "National Cybersecurity Authority Essential Cybersecurity Controls for KSA organisations" },
                   { name: "NCA CCC (Saudi Arabia)", description: "Critical Systems Cybersecurity Controls for critical infrastructure in KSA" },
                   { name: "SAMA CSF (KSA)", description: "Saudi Central Bank (SAMA) Cyber Security Framework for banking & financial institutions" },
-                  { name: "SCA (KSA)", description: "Capital Market Authority / Saudi CMA cybersecurity requirements for capital market participants" },
+                  { name: "SCA (UAE)", description: "UAE Securities and Commodities Authority cybersecurity requirements for UAE capital market participants" },
                   { name: "UAE TDRA / CSC", description: "UAE Telecommunications and Digital Government Regulatory Authority and Cyber Security Council requirements" },
                   { name: "EG-CERT (Egypt)", description: "Egyptian Computer Emergency Readiness Team guidelines for organisations regulated in Egypt" },
                   { name: "NTRA (Egypt)", description: "National Telecom Regulatory Authority cybersecurity requirements for Egyptian telecom sector organisations" },
