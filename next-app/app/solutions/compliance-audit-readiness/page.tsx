@@ -9,7 +9,7 @@ import { faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
 const OG = ogImageUrl({ title: "Compliance & Audit Readiness — UAE & Egypt", subtitle: "ISO 27001 · NCA ECC · EG-CERT · SOC 2 · NIST Compliance", category: "Solutions", color: "emerald" });
 
 export const metadata: Metadata = {
-  title: { absolute: "Compliance & Audit Readiness Dubai UAE — ISO 27001, NCA ECC & EG-CERT" },
+  title: { absolute: "Compliance & Audit Readiness Dubai UAE — ISO 27001, NCA ECC & EG-CERT | PurpleGuard" },
   description:
     "PurpleGuard helps UAE, Egypt & KSA achieve ISO 27001, NCA ECC, SAMA, EG-CERT & SOC 2 compliance with audit-ready documentation. Get started.",
   keywords: ["ISO 27001 compliance UAE", "NCA ECC compliance Saudi Arabia", "EG-CERT compliance Egypt", "audit readiness Dubai", "SOC 2 UAE", "PCI DSS compliance", "NIST compliance UAE"],
@@ -185,7 +185,28 @@ export default function ComplianceAuditReadinessPage() {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* Geo-Regulatory Context */}
+        <section className="py-12 bg-slate-50 border-t border-slate-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">Serving UAE, Egypt &amp; Saudi Arabia</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">United Arab Emirates</div>
+                <p className="text-slate-600 text-sm leading-relaxed">In the UAE, PurpleGuard covers UAE TDRA requirements, UAE Cyber Security Council (CSC) mandates, and SCA (Securities and Commodities Authority) cybersecurity requirements for capital market participants in Dubai.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">Saudi Arabia</div>
+                <p className="text-slate-600 text-sm leading-relaxed">In Saudi Arabia, PurpleGuard covers NCA ECC 1-1:2018, NCA CCC, SAMA Cyber Security Framework, and SCA (Capital Market Authority) requirements for financial and capital market organisations in Riyadh.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">Egypt</div>
+                <p className="text-slate-600 text-sm leading-relaxed">In Egypt, PurpleGuard addresses EG-CERT guidelines, NTRA cybersecurity requirements for the telecom sector, and CBE cybersecurity requirements for financial institutions in Cairo.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>

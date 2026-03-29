@@ -10,7 +10,7 @@ import { breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
 const OG = ogImageUrl({ title: "Managed X — Security Infrastructure UAE & Egypt", subtitle: "EDR · Firewall · WAF · Email · Backup · Identity · SASE", category: "Managed X", color: "blue" });
 
 export const metadata: Metadata = {
-  title: { absolute: "Managed Security Infrastructure Dubai UAE — Managed X Services" },
+  title: { absolute: "Managed Security Infrastructure Dubai UAE — Managed X Services | PurpleGuard" },
   description:
     "Managed X: fully managed EDR, firewall, WAF, identity, email security, backup & SASE for SMEs in UAE, Egypt & KSA. Book a free assessment.",
   keywords: ["managed security infrastructure UAE", "managed EDR Dubai", "managed firewall Egypt", "managed WAF UAE", "managed email security", "SASE managed UAE", "NCA ECC managed services"],

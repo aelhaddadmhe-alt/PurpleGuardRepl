@@ -9,7 +9,7 @@ import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/js
 const OG = ogImageUrl({ title: "Red Teaming & BAS — UAE & Egypt", subtitle: "PurpleStrike: Adversary Emulation & Breach Attack Simulation", category: "Purple X", color: "red" });
 
 export const metadata: Metadata = {
-  title: { absolute: "Red Team & Breach Attack Simulation Dubai UAE — PurpleStrike" },
+  title: { absolute: "Red Team & Breach Attack Simulation Dubai UAE — PurpleStrike | PurpleGuard" },
   description:
     "PurpleStrike: red team & BAS services simulating real-world adversary attacks for UAE, Egypt & KSA. MITRE ATT&CK-aligned. Book a free consult.",
   keywords: ["red team UAE", "breach attack simulation Dubai", "adversary emulation Egypt", "BAS cybersecurity", "red teaming UAE", "MITRE ATT&CK testing", "NCA ECC red team"],
@@ -185,7 +185,28 @@ export default function PurpleStrikePage() {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* Geo-Regulatory Context */}
+        <section className="py-12 bg-slate-50 border-t border-slate-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">Serving UAE, Egypt &amp; Saudi Arabia</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">United Arab Emirates</div>
+                <p className="text-slate-600 text-sm leading-relaxed">PurpleStrike red team operations validate controls required by UAE TDRA and the UAE Cyber Security Council for organisations in Dubai and across the UAE.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">Saudi Arabia</div>
+                <p className="text-slate-600 text-sm leading-relaxed">In KSA, PurpleStrike adversary emulation validates compliance against NCA ECC and NCA CCC controls, supporting organisations in Riyadh preparing for NCA assessments.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">Egypt</div>
+                <p className="text-slate-600 text-sm leading-relaxed">For Egyptian organisations, PurpleStrike adversary simulation aligns with EG-CERT and NTRA security testing requirements for critical infrastructure sectors.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>

@@ -9,7 +9,7 @@ import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/js
 const OG = ogImageUrl({ title: "NDR — Network Detection & Response UAE & Egypt", subtitle: "PurpleReveal: Deep Network Traffic Inspection & Behavioural Detection", category: "Purple X", color: "cyan" });
 
 export const metadata: Metadata = {
-  title: { absolute: "Network Detection & Response (NDR) Dubai UAE — PurpleReveal" },
+  title: { absolute: "Network Detection & Response (NDR) Dubai UAE — PurpleReveal | PurpleGuard" },
   description:
     "PurpleReveal NDR: deep network traffic inspection & behavioural threat detection for UAE, Egypt & KSA. 24/7 managed service. Book a free demo.",
   keywords: ["NDR UAE", "network detection response Dubai", "NTA Egypt", "network traffic analysis UAE", "lateral movement detection", "managed NDR", "NCA ECC network monitoring"],
@@ -170,7 +170,28 @@ export default function PurpleRevealPage() {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* Geo-Regulatory Context */}
+        <section className="py-12 bg-slate-50 border-t border-slate-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">Serving UAE, Egypt &amp; Saudi Arabia</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">United Arab Emirates</div>
+                <p className="text-slate-600 text-sm leading-relaxed">PurpleReveal NDR supports UAE TDRA and UAE Cyber Security Council network visibility requirements for critical infrastructure organisations in Dubai and the UAE.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">Saudi Arabia</div>
+                <p className="text-slate-600 text-sm leading-relaxed">In KSA, PurpleReveal network detection aligns with NCA ECC 1-1:2018 network monitoring controls and SAMA Cyber Security Framework requirements.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">Egypt</div>
+                <p className="text-slate-600 text-sm leading-relaxed">For Egyptian organisations, PurpleReveal NDR provides EG-CERT-aligned network traffic analysis, meeting NTRA and CBE network security requirements.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>

@@ -9,7 +9,7 @@ import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/js
 const OG = ogImageUrl({ title: "Managed SASE / ZTNA — UAE & Egypt", subtitle: "Zero Trust Network Access, SWG & CASB as a Managed Cloud Service", category: "Managed X", color: "slate" });
 
 export const metadata: Metadata = {
-  title: { absolute: "Managed SASE & ZTNA Dubai UAE — Zero Trust Secure Access" },
+  title: { absolute: "Managed SASE & ZTNA Dubai UAE — Zero Trust Secure Access | PurpleGuard" },
   description:
     "Managed SASE & ZTNA: cloud-delivered zero trust replacing VPNs for UAE, Egypt & KSA. Book a free secure access assessment today.",
   keywords: ["managed SASE UAE", "ZTNA service Dubai", "zero trust network access Egypt", "CASB managed UAE", "secure web gateway UAE", "VPN replacement", "NCA ECC ZTNA"],
@@ -169,7 +169,28 @@ export default function ManagedSASEZTNAPage() {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* Geo-Regulatory Context */}
+        <section className="py-12 bg-slate-50 border-t border-slate-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">Serving UAE, Egypt &amp; Saudi Arabia</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">United Arab Emirates</div>
+                <p className="text-slate-600 text-sm leading-relaxed">Managed SASE & ZTNA supports UAE TDRA and UAE Cyber Security Council secure remote access requirements for organisations in Dubai and across the Emirates.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">Saudi Arabia</div>
+                <p className="text-slate-600 text-sm leading-relaxed">In Saudi Arabia, Managed SASE/ZTNA aligns with NCA ECC 1-1:2018 secure connectivity controls and SAMA Cyber Security Framework zero trust requirements.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">Egypt</div>
+                <p className="text-slate-600 text-sm leading-relaxed">For Egyptian organisations, Managed SASE & ZTNA meets EG-CERT guidelines and NTRA remote access security requirements.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>

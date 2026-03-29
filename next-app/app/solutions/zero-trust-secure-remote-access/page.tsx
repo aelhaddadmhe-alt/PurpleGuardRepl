@@ -9,7 +9,7 @@ import { faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
 const OG = ogImageUrl({ title: "Zero Trust & Secure Access — UAE & Egypt", subtitle: "ZTNA · SASE · Identity-Driven Access for Remote & Hybrid Workforces", category: "Solutions", color: "indigo" });
 
 export const metadata: Metadata = {
-  title: { absolute: "Zero Trust & Secure Remote Access Dubai UAE — ZTNA & SASE" },
+  title: { absolute: "Zero Trust & Secure Remote Access Dubai UAE — ZTNA & SASE | PurpleGuard" },
   description:
     "Zero Trust & ZTNA: replace VPNs with identity-driven secure access for UAE, Egypt & KSA. Managed SASE service. Book a free zero trust review.",
   keywords: ["zero trust UAE", "ZTNA Dubai", "secure remote access Egypt", "VPN replacement UAE", "SASE service", "zero trust network access UAE", "NCA ECC zero trust"],
@@ -151,7 +151,28 @@ export default function ZeroTrustPage() {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* Geo-Regulatory Context */}
+        <section className="py-12 bg-slate-50 border-t border-slate-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">Serving UAE, Egypt &amp; Saudi Arabia</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">United Arab Emirates</div>
+                <p className="text-slate-600 text-sm leading-relaxed">In the UAE, Zero Trust & ZTNA supports UAE TDRA secure access requirements and UAE Cyber Security Council zero trust mandates for organisations in Dubai.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">Saudi Arabia</div>
+                <p className="text-slate-600 text-sm leading-relaxed">In Saudi Arabia, Zero Trust aligns with NCA ECC 1-1:2018 access control controls and SAMA Cyber Security Framework zero trust requirements.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">Egypt</div>
+                <p className="text-slate-600 text-sm leading-relaxed">For Egyptian organisations, Zero Trust meets EG-CERT secure access guidelines and NTRA remote access security requirements.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>

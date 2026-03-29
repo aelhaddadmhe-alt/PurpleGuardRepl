@@ -9,7 +9,7 @@ import {
   CheckCircle, ShieldCheck, Cpu, FileCheck, Handshake, AlertTriangle,
   Cloud, Radar, KeyRound, MapPin
 } from "lucide-react";
-import { faqJsonLd, ogImageUrl } from "@/lib/json-ld";
+import { faqJsonLd, ogImageUrl, websiteJsonLd } from "@/lib/json-ld";
 
 const OG = ogImageUrl({
   title: "Managed Security Services UAE & Egypt",
@@ -108,9 +108,14 @@ const homeFaqs = [
 
 export default function HomePage() {
   const faqSchema = faqJsonLd(homeFaqs);
+  const siteSchema = websiteJsonLd();
 
   return (
     <div className="min-h-screen bg-slate-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}

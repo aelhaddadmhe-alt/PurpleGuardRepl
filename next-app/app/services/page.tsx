@@ -13,7 +13,7 @@ import { breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
 const OG = ogImageUrl({ title: "Managed Security Services — UAE & Egypt", subtitle: "Purple X Cybersecurity · Managed X Infrastructure", category: "MSSP", color: "purple" });
 
 export const metadata: Metadata = {
-  title: { absolute: "Managed Security Services Dubai UAE — Purple X & Managed X" },
+  title: { absolute: "Managed Security Services Dubai UAE — Purple X & Managed X | PurpleGuard" },
   description:
     "Purple X cybersecurity & Managed X infrastructure services for UAE, Egypt & KSA. VAPT, SOC, MDR, EDR, firewall & more. Book a free consultation.",
   keywords: ["managed security services UAE", "cybersecurity services Dubai", "MSSP Egypt", "Purple X Managed X", "SOC VAPT MDR UAE", "NCA ECC MSSP", "TDRA cybersecurity"],

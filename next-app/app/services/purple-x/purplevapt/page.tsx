@@ -9,7 +9,7 @@ import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/js
 const OG = ogImageUrl({ title: "VAPT Services UAE & Egypt", subtitle: "Vulnerability Assessment & Penetration Testing — PurpleVAPT", category: "Purple X", color: "purple" });
 
 export const metadata: Metadata = {
-  title: { absolute: "VAPT Services Dubai UAE — Vulnerability Assessment & Penetration Testing" },
+  title: { absolute: "VAPT Services Dubai UAE — Vulnerability Assessment & Penetration Testing | PurpleGuard" },
   description:
     "PurpleVAPT: VAPT for networks, apps, cloud & APIs in UAE, Egypt & KSA. Risk-prioritized, compliance-ready. Book a free VAPT assessment today.",
   keywords: ["VAPT UAE", "penetration testing Dubai", "vulnerability assessment Egypt", "OWASP testing", "pen test UAE", "ISO 27001 VAPT", "NCA ECC vulnerability assessment"],
@@ -342,7 +342,28 @@ export default function PurpleVAPTPage() {
         </div>
       </section>
 
-      {/* Final CTA */}
+
+        {/* Geo-Regulatory Context */}
+        <section className="py-12 bg-slate-50 border-t border-slate-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">Serving UAE, Egypt & Saudi Arabia</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">🇦🇪 United Arab Emirates</div>
+                <p className="text-slate-600 text-sm leading-relaxed">PurpleVAPT testing methodology aligns with UAE TDRA and UAE Cyber Security Council requirements, helping Dubai and Abu Dhabi organisations meet vulnerability assessment mandates.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">🇸🇦 Saudi Arabia</div>
+                <p className="text-slate-600 text-sm leading-relaxed">In Saudi Arabia, PurpleVAPT maps findings to NCA ECC 1-1:2018 and NCA CCC controls, supporting organisations in Riyadh and Jeddah preparing for NCA audits.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">🇪🇬 Egypt</div>
+                <p className="text-slate-600 text-sm leading-relaxed">For Egyptian organisations, PurpleVAPT reports are structured to meet EG-CERT guidelines and NTRA security requirements for the banking and telecom sectors.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Final CTA */}
       <section className="py-16 lg:py-24 bg-gradient-to-br from-purple-900 via-indigo-800 to-purple-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Know your weaknesses before attackers do.</h2>

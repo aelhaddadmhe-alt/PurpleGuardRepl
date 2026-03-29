@@ -9,7 +9,7 @@ import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/js
 const OG = ogImageUrl({ title: "MDR Services UAE & Egypt", subtitle: "PurpleSentinel: Managed Detection & Response (MDR/MXDR)", category: "Purple X", color: "indigo" });
 
 export const metadata: Metadata = {
-  title: { absolute: "Managed Detection & Response (MDR) Dubai UAE — PurpleSentinel" },
+  title: { absolute: "Managed Detection & Response (MDR) Dubai UAE — PurpleSentinel | PurpleGuard" },
   description:
     "PurpleSentinel MDR/MXDR: deep visibility across endpoints, cloud & network with automated containment for UAE, Egypt & KSA. Book a free demo.",
   keywords: ["MDR UAE", "managed detection response Dubai", "MXDR Egypt", "endpoint detection response", "threat hunting UAE", "XDR managed service", "NCA ECC MDR"],
@@ -172,7 +172,28 @@ export default function PurpleSentinelPage() {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* Geo-Regulatory Context */}
+        <section className="py-12 bg-slate-50 border-t border-slate-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">Serving UAE, Egypt &amp; Saudi Arabia</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">United Arab Emirates</div>
+                <p className="text-slate-600 text-sm leading-relaxed">PurpleSentinel MDR supports UAE TDRA requirements for continuous threat monitoring and incident response for regulated entities in Dubai and the UAE.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">Saudi Arabia</div>
+                <p className="text-slate-600 text-sm leading-relaxed">In Saudi Arabia, PurpleSentinel aligns with NCA ECC 1-1:2018 threat detection controls and SAMA Cyber Security Framework MDR requirements.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">Egypt</div>
+                <p className="text-slate-600 text-sm leading-relaxed">For Egyptian organisations, PurpleSentinel provides EG-CERT-aligned managed detection and response, meeting NTRA and CBE continuous monitoring requirements.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>

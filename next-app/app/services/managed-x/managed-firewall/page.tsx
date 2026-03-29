@@ -9,7 +9,7 @@ import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/js
 const OG = ogImageUrl({ title: "Managed Firewall UAE & Egypt", subtitle: "NGFW Policy Management, IDS/IPS & 24/7 Network Security Operations", category: "Managed X", color: "emerald" });
 
 export const metadata: Metadata = {
-  title: { absolute: "Managed Firewall Dubai UAE — NGFW & Perimeter Security Service" },
+  title: { absolute: "Managed Firewall Dubai UAE — NGFW & Perimeter Security Service | PurpleGuard" },
   description:
     "Managed Firewall: fully managed NGFW with IDS/IPS & 24/7 monitoring for UAE, Egypt & KSA. Book a free network security assessment today.",
   keywords: ["managed firewall UAE", "NGFW service Dubai", "firewall management Egypt", "network security UAE", "SD-WAN managed", "IDS IPS monitoring", "NCA ECC firewall"],
@@ -169,7 +169,28 @@ export default function ManagedFirewallPage() {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* Geo-Regulatory Context */}
+        <section className="py-12 bg-slate-50 border-t border-slate-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">Serving UAE, Egypt &amp; Saudi Arabia</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">United Arab Emirates</div>
+                <p className="text-slate-600 text-sm leading-relaxed">Managed Firewall supports UAE TDRA and UAE Cyber Security Council network perimeter security requirements for organisations in Dubai and across the Emirates.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">Saudi Arabia</div>
+                <p className="text-slate-600 text-sm leading-relaxed">In KSA, Managed Firewall aligns with NCA ECC 1-1:2018 network security controls and SAMA Cyber Security Framework firewall management requirements.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">Egypt</div>
+                <p className="text-slate-600 text-sm leading-relaxed">For Egyptian organisations, Managed Firewall meets EG-CERT guidelines and NTRA network security requirements for regulated sectors in Cairo.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>

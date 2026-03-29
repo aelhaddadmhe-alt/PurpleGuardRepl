@@ -9,7 +9,7 @@ import { faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
 const OG = ogImageUrl({ title: "EASM — External Attack Surface Management UAE & Egypt", subtitle: "Discover, Monitor & Reduce Your Internet-Facing Attack Surface", category: "Solutions", color: "orange" });
 
 export const metadata: Metadata = {
-  title: { absolute: "External Attack Surface Management (EASM) Dubai UAE — PurpleGuard" },
+  title: { absolute: "External Attack Surface Management (EASM) Dubai UAE — PurpleSentry | PurpleGuard" },
   description:
     "EASM: continuous discovery & monitoring of your internet-facing attack surface for UAE, Egypt & KSA. Book a free exposure report today.",
   keywords: ["EASM UAE", "attack surface management Dubai", "digital risk protection Egypt", "external attack surface UAE", "internet-facing assets", "domain monitoring UAE", "NCA ECC EASM"],
@@ -151,7 +151,28 @@ export default function EASMPage() {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* Geo-Regulatory Context */}
+        <section className="py-12 bg-slate-50 border-t border-slate-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">Serving UAE, Egypt &amp; Saudi Arabia</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">United Arab Emirates</div>
+                <p className="text-slate-600 text-sm leading-relaxed">In the UAE, EASM supports UAE TDRA and UAE Cyber Security Council external exposure monitoring requirements for organisations in Dubai and across the Emirates.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">Saudi Arabia</div>
+                <p className="text-slate-600 text-sm leading-relaxed">In Saudi Arabia, EASM aligns with NCA ECC 1-1:2018 external attack surface controls and SAMA Cyber Security Framework digital risk requirements.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">Egypt</div>
+                <p className="text-slate-600 text-sm leading-relaxed">For Egyptian organisations, EASM meets EG-CERT exposure monitoring guidelines and NTRA internet-facing asset management requirements.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>

@@ -9,7 +9,7 @@ import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/js
 const OG = ogImageUrl({ title: "Managed WAF — Web & API Protection UAE & Egypt", subtitle: "OWASP Top 10, Bot Mitigation & DDoS Protection as a Managed Service", category: "Managed X", color: "orange" });
 
 export const metadata: Metadata = {
-  title: { absolute: "Managed WAF Dubai UAE — Web Application & API Security Service" },
+  title: { absolute: "Managed WAF Dubai UAE — Web Application & API Security Service | PurpleGuard" },
   description:
     "Managed WAF: OWASP Top 10 protection, bot mitigation & API security for UAE, Egypt & KSA. Fully managed, 24/7. Book a free assessment.",
   keywords: ["managed WAF UAE", "web application firewall Dubai", "API security Egypt", "OWASP protection UAE", "DDoS mitigation", "bot management UAE", "NCA ECC WAF"],
@@ -169,7 +169,28 @@ export default function ManagedWAFPage() {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* Geo-Regulatory Context */}
+        <section className="py-12 bg-slate-50 border-t border-slate-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">Serving UAE, Egypt &amp; Saudi Arabia</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">United Arab Emirates</div>
+                <p className="text-slate-600 text-sm leading-relaxed">Managed WAF supports UAE TDRA and UAE Cyber Security Council web application security requirements for organisations in Dubai and across the UAE.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">Saudi Arabia</div>
+                <p className="text-slate-600 text-sm leading-relaxed">In KSA, Managed WAF aligns with NCA ECC 1-1:2018 web application protection controls and SAMA Cyber Security Framework application security requirements.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">Egypt</div>
+                <p className="text-slate-600 text-sm leading-relaxed">For Egyptian organisations, Managed WAF meets EG-CERT guidelines and NTRA application security requirements for the banking and telecom sectors.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>

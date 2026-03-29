@@ -9,7 +9,7 @@ import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/js
 const OG = ogImageUrl({ title: "Managed Identity — MFA, SSO & Zero Trust UAE & Egypt", subtitle: "Centralized IAM with MFA, Conditional Access & Zero Trust Enforcement", category: "Managed X", color: "purple" });
 
 export const metadata: Metadata = {
-  title: { absolute: "Managed Identity & IAM Dubai UAE — MFA, SSO & Zero Trust" },
+  title: { absolute: "Managed Identity & IAM Dubai UAE — MFA, SSO & Zero Trust | PurpleGuard" },
   description:
     "Managed Identity: IAM with MFA, SSO & zero trust enforcement for UAE, Egypt & KSA. Book a free identity security assessment today.",
   keywords: ["managed identity UAE", "IAM service Dubai", "MFA managed Egypt", "SSO service UAE", "zero trust identity", "conditional access UAE", "NCA ECC identity management"],
@@ -169,7 +169,28 @@ export default function ManagedIdentityPage() {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* Geo-Regulatory Context */}
+        <section className="py-12 bg-slate-50 border-t border-slate-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">Serving UAE, Egypt &amp; Saudi Arabia</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">United Arab Emirates</div>
+                <p className="text-slate-600 text-sm leading-relaxed">Managed Identity supports UAE TDRA and UAE Cyber Security Council identity and access management requirements for organisations in Dubai and across the UAE.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">Saudi Arabia</div>
+                <p className="text-slate-600 text-sm leading-relaxed">In KSA, Managed Identity aligns with NCA ECC 1-1:2018 identity controls and SAMA Cyber Security Framework IAM requirements for financial institutions.</p>
+              </div>
+              <div className="bg-white rounded-xl p-6 border border-slate-200">
+                <div className="font-semibold text-slate-900 mb-2">Egypt</div>
+                <p className="text-slate-600 text-sm leading-relaxed">For Egyptian organisations, Managed Identity meets EG-CERT guidelines and NTRA access control requirements for regulated sectors.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
       <section className="py-16 lg:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
