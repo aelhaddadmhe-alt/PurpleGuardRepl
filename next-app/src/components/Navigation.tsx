@@ -1,11 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import {
   Menu,
+  ChevronDown,
   ChevronRight,
   Shield,
   Search,
@@ -18,14 +19,6 @@ import {
   Cloud,
   Globe,
 } from "lucide-react";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 
 const purpleXServices = [
   { name: "PurpleVAPT", tagline: "Vulnerability Assessment & Pen Testing", href: "/services/purple-x/purplevapt", icon: Search, color: "from-purple-500 to-indigo-600" },
@@ -54,8 +47,25 @@ const navigationItems = [
   { label: "Resources", href: "/blog" },
 ];
 
+type ActiveMenu = "solutions" | "services" | null;
+
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeMenu, setActiveMenu] = useState<ActiveMenu>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const openMenu = (menu: ActiveMenu) => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setActiveMenu(menu);
+  };
+
+  const scheduleClose = () => {
+    closeTimer.current = setTimeout(() => setActiveMenu(null), 80);
+  };
+
+  const cancelClose = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+  };
 
   return (
     <nav className="bg-white/95 backdrop-blur-sm border-b border-slate-200 sticky top-0 z-50">
@@ -64,147 +74,158 @@ export default function Navigation() {
           {/* Logo */}
           <Link href="/">
             <div className="flex items-center cursor-pointer">
-              <img
-                src="/logo.png"
-                alt="PurpleGuard"
-                className="h-12 w-auto"
-              />
+              <img src="/logo.png" alt="PurpleGuard" className="h-12 w-auto" />
             </div>
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center space-x-2">
-            <NavigationMenu>
-              <NavigationMenuList>
-                {/* Solutions dropdown */}
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-slate-700 hover:text-[#6633cc] font-medium bg-transparent hover:bg-transparent data-[state=open]:bg-transparent">
-                    Solutions
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="w-[350px] p-4">
-                      <div className="space-y-1">
-                        {solutions.map((solution) => (
-                          <NavigationMenuLink key={solution.name} asChild>
-                            <Link href={solution.href}>
-                              <div className="group/item flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 cursor-pointer transition-colors">
-                                <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${solution.color} flex items-center justify-center flex-shrink-0`}>
-                                  <solution.icon className="h-4 w-4 text-white" />
+          <div className="hidden md:flex items-center space-x-1">
+
+            {/* Solutions trigger */}
+            <div
+              className="relative"
+              onMouseEnter={() => openMenu("solutions")}
+              onMouseLeave={scheduleClose}
+            >
+              <button
+                className="inline-flex items-center gap-1 px-4 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-[#6633cc] hover:bg-slate-50 transition-colors"
+                onClick={() => setActiveMenu(activeMenu === "solutions" ? null : "solutions")}
+              >
+                Solutions
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeMenu === "solutions" ? "rotate-180" : ""}`} />
+              </button>
+
+              {activeMenu === "solutions" && (
+                <div
+                  className="absolute left-0 top-full pt-2 z-50"
+                  onMouseEnter={cancelClose}
+                  onMouseLeave={scheduleClose}
+                >
+                  <div className="w-[360px] rounded-xl border border-slate-200 bg-white shadow-xl p-4">
+                    <div className="space-y-1">
+                      {solutions.map((solution) => (
+                        <Link key={solution.name} href={solution.href} onClick={() => setActiveMenu(null)}>
+                          <div className="group flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 cursor-pointer transition-colors">
+                            <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${solution.color} flex items-center justify-center flex-shrink-0`}>
+                              <solution.icon className="h-4 w-4 text-white" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="font-medium text-slate-900 group-hover:text-[#6633cc] transition-colors text-sm">
+                                {solution.name}
+                              </div>
+                            </div>
+                            <ChevronRight className="h-4 w-4 text-slate-300 group-hover:text-[#6633cc] transition-colors flex-shrink-0" />
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                    <div className="mt-3 pt-3 border-t border-slate-100">
+                      <Link href="/solutions" onClick={() => setActiveMenu(null)}>
+                        <Button variant="outline" size="sm" className="w-full border-[#6633cc]/30 text-[#6633cc] hover:bg-[#6633cc]/5">
+                          View All Solutions
+                          <ChevronRight className="h-4 w-4 ml-1" />
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Services trigger */}
+            <div
+              className="relative"
+              onMouseEnter={() => openMenu("services")}
+              onMouseLeave={scheduleClose}
+            >
+              <button
+                className="inline-flex items-center gap-1 px-4 py-2 rounded-md text-sm font-medium text-slate-700 hover:text-[#6633cc] hover:bg-slate-50 transition-colors"
+                onClick={() => setActiveMenu(activeMenu === "services" ? null : "services")}
+              >
+                Services
+                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${activeMenu === "services" ? "rotate-180" : ""}`} />
+              </button>
+
+              {activeMenu === "services" && (
+                <div
+                  className="absolute left-0 top-full pt-2 z-50"
+                  onMouseEnter={cancelClose}
+                  onMouseLeave={scheduleClose}
+                >
+                  <div className="w-[620px] rounded-xl border border-slate-200 bg-white shadow-xl p-6">
+                    <div className="grid grid-cols-2 gap-8">
+                      {/* Purple X */}
+                      <div className="space-y-4">
+                        <div className="flex items-center gap-2 pb-2 border-b border-slate-100">
+                          <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-600 to-indigo-600 flex items-center justify-center">
+                            <Shield className="h-4 w-4 text-white" />
+                          </div>
+                          <div>
+                            <h3 className="font-bold text-slate-900">Purple X</h3>
+                            <p className="text-xs text-slate-500">Cybersecurity Services</p>
+                          </div>
+                        </div>
+                        <div className="space-y-1">
+                          {purpleXServices.map((service) => (
+                            <Link key={service.name} href={service.href} onClick={() => setActiveMenu(null)}>
+                              <div className="group flex items-start gap-3 p-2 rounded-lg hover:bg-slate-50 cursor-pointer transition-colors">
+                                <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center flex-shrink-0`}>
+                                  <service.icon className="h-4 w-4 text-white" />
                                 </div>
                                 <div className="flex-1 min-w-0">
-                                  <div className="font-medium text-slate-900 group-hover/item:text-[#6633cc] transition-colors text-sm">
-                                    {solution.name}
-                                  </div>
+                                  <div className="font-medium text-slate-900 group-hover:text-[#6633cc] transition-colors text-sm">{service.name}</div>
+                                  <div className="text-xs text-slate-500 truncate">{service.tagline}</div>
                                 </div>
-                                <ChevronRight className="h-4 w-4 text-slate-300 group-hover/item:text-[#6633cc] transition-colors flex-shrink-0" />
+                                <ChevronRight className="h-4 w-4 text-slate-300 group-hover:text-[#6633cc] transition-colors flex-shrink-0 mt-1" />
                               </div>
                             </Link>
-                          </NavigationMenuLink>
-                        ))}
+                          ))}
+                        </div>
+                        <Link href="/services/purple-x" onClick={() => setActiveMenu(null)}>
+                          <Button variant="outline" size="sm" className="w-full border-[#6633cc]/30 text-[#6633cc] hover:bg-[#6633cc]/5">
+                            View All Purple X <ChevronRight className="h-4 w-4 ml-1" />
+                          </Button>
+                        </Link>
                       </div>
-                      <div className="mt-3 pt-3 border-t border-slate-100">
-                        <NavigationMenuLink asChild>
-                          <Link href="/solutions">
-                            <Button variant="outline" size="sm" className="w-full border-[#6633cc]/30 text-[#6633cc] hover:bg-[#6633cc]/5">
-                              View All Solutions
-                              <ChevronRight className="h-4 w-4 ml-1" />
-                            </Button>
-                          </Link>
-                        </NavigationMenuLink>
+
+                      {/* Managed X */}
+                      <div className="space-y-4">
+                        <div className="flex items-center gap-2 pb-2 border-b border-slate-100">
+                          <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 flex items-center justify-center">
+                            <Server className="h-4 w-4 text-white" />
+                          </div>
+                          <div>
+                            <h3 className="font-bold text-slate-900">Managed X</h3>
+                            <p className="text-xs text-slate-500">Managed Infrastructure</p>
+                          </div>
+                        </div>
+                        <div className="space-y-1">
+                          {managedXServices.map((service) => (
+                            <Link key={service.name} href={service.href} onClick={() => setActiveMenu(null)}>
+                              <div className="group flex items-start gap-3 p-2 rounded-lg hover:bg-slate-50 cursor-pointer transition-colors">
+                                <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center flex-shrink-0`}>
+                                  <service.icon className="h-4 w-4 text-white" />
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                  <div className="font-medium text-slate-900 group-hover:text-blue-600 transition-colors text-sm">{service.name}</div>
+                                  <div className="text-xs text-slate-500 truncate">{service.tagline}</div>
+                                </div>
+                                <ChevronRight className="h-4 w-4 text-slate-300 group-hover:text-blue-600 transition-colors flex-shrink-0 mt-1" />
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                        <Link href="/services/managed-x" onClick={() => setActiveMenu(null)}>
+                          <Button variant="outline" size="sm" className="w-full border-blue-500/30 text-blue-600 hover:bg-blue-50">
+                            View All Managed X <ChevronRight className="h-4 w-4 ml-1" />
+                          </Button>
+                        </Link>
                       </div>
                     </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-
-                {/* Services dropdown */}
-                <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-slate-700 hover:text-[#6633cc] font-medium bg-transparent hover:bg-transparent data-[state=open]:bg-transparent">
-                    Services
-                  </NavigationMenuTrigger>
-                  <NavigationMenuContent>
-                    <div className="w-[600px] p-6">
-                      <div className="grid grid-cols-2 gap-8">
-                        {/* Purple X */}
-                        <div className="space-y-4">
-                          <div className="flex items-center gap-2 pb-2 border-b border-slate-100">
-                            <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-600 to-indigo-600 flex items-center justify-center">
-                              <Shield className="h-4 w-4 text-white" />
-                            </div>
-                            <div>
-                              <h3 className="font-bold text-slate-900">Purple X</h3>
-                              <p className="text-xs text-slate-500">Cybersecurity Services</p>
-                            </div>
-                          </div>
-                          <div className="space-y-1">
-                            {purpleXServices.map((service) => (
-                              <NavigationMenuLink key={service.name} asChild>
-                                <Link href={service.href}>
-                                  <div className="group/item flex items-start gap-3 p-2 rounded-lg hover:bg-slate-50 cursor-pointer transition-colors">
-                                    <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center flex-shrink-0`}>
-                                      <service.icon className="h-4 w-4 text-white" />
-                                    </div>
-                                    <div className="flex-1 min-w-0">
-                                      <div className="font-medium text-slate-900 group-hover/item:text-[#6633cc] transition-colors text-sm">{service.name}</div>
-                                      <div className="text-xs text-slate-500 truncate">{service.tagline}</div>
-                                    </div>
-                                    <ChevronRight className="h-4 w-4 text-slate-300 group-hover/item:text-[#6633cc] transition-colors flex-shrink-0 mt-1" />
-                                  </div>
-                                </Link>
-                              </NavigationMenuLink>
-                            ))}
-                          </div>
-                          <NavigationMenuLink asChild>
-                            <Link href="/services/purple-x">
-                              <Button variant="outline" size="sm" className="w-full border-[#6633cc]/30 text-[#6633cc] hover:bg-[#6633cc]/5">
-                                View All Purple X <ChevronRight className="h-4 w-4 ml-1" />
-                              </Button>
-                            </Link>
-                          </NavigationMenuLink>
-                        </div>
-
-                        {/* Managed X */}
-                        <div className="space-y-4">
-                          <div className="flex items-center gap-2 pb-2 border-b border-slate-100">
-                            <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 flex items-center justify-center">
-                              <Server className="h-4 w-4 text-white" />
-                            </div>
-                            <div>
-                              <h3 className="font-bold text-slate-900">Managed X</h3>
-                              <p className="text-xs text-slate-500">Managed Infrastructure</p>
-                            </div>
-                          </div>
-                          <div className="space-y-1">
-                            {managedXServices.map((service) => (
-                              <NavigationMenuLink key={service.name} asChild>
-                                <Link href={service.href}>
-                                  <div className="group/item flex items-start gap-3 p-2 rounded-lg hover:bg-slate-50 cursor-pointer transition-colors">
-                                    <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center flex-shrink-0`}>
-                                      <service.icon className="h-4 w-4 text-white" />
-                                    </div>
-                                    <div className="flex-1 min-w-0">
-                                      <div className="font-medium text-slate-900 group-hover/item:text-blue-600 transition-colors text-sm">{service.name}</div>
-                                      <div className="text-xs text-slate-500 truncate">{service.tagline}</div>
-                                    </div>
-                                    <ChevronRight className="h-4 w-4 text-slate-300 group-hover/item:text-blue-600 transition-colors flex-shrink-0 mt-1" />
-                                  </div>
-                                </Link>
-                              </NavigationMenuLink>
-                            ))}
-                          </div>
-                          <NavigationMenuLink asChild>
-                            <Link href="/services/managed-x">
-                              <Button variant="outline" size="sm" className="w-full border-blue-500/30 text-blue-600 hover:bg-blue-50">
-                                View All Managed X <ChevronRight className="h-4 w-4 ml-1" />
-                              </Button>
-                            </Link>
-                          </NavigationMenuLink>
-                        </div>
-                      </div>
-                    </div>
-                  </NavigationMenuContent>
-                </NavigationMenuItem>
-              </NavigationMenuList>
-            </NavigationMenu>
+                  </div>
+                </div>
+              )}
+            </div>
 
             {navigationItems.map((item) => (
               <Link key={item.label} href={item.href}>
