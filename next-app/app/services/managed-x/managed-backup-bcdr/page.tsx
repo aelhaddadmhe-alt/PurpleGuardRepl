@@ -4,17 +4,46 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Database, ChevronRight, Calendar, ArrowLeft, Shield, Server, RefreshCw, Lock, FileText, CheckCircle, TrendingUp, Zap, Cloud } from "lucide-react";
+import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
+
+const OG = ogImageUrl({ title: "Managed Backup & BCDR — UAE & Egypt", subtitle: "Ransomware-Proof Backup, Immutable Storage & Business Continuity", category: "Managed X", color: "cyan" });
 
 export const metadata: Metadata = {
-  title: "Managed Backup & BCDR — Business Continuity & Disaster Recovery",
-  description: "Managed backup, immutable storage, ransomware recovery, and business continuity testing. Starting at $35/workload/month.",
+  title: "Managed Backup & BCDR Dubai UAE — Business Continuity & Disaster Recovery",
+  description:
+    "PurpleGuard Managed Backup & BCDR delivers immutable storage, ransomware recovery, and business continuity testing. Protecting data and operations across UAE, Egypt, and KSA.",
+  keywords: ["managed backup UAE", "BCDR service Dubai", "business continuity Egypt", "ransomware recovery UAE", "disaster recovery service", "immutable backup UAE", "NCA ECC backup"],
+  alternates: { canonical: "https://www.purpleguard.io/services/managed-x/managed-backup-bcdr" },
+  openGraph: {
+    title: "Managed Backup & BCDR Dubai UAE | PurpleGuard",
+    description: "Immutable backup, ransomware recovery & business continuity for UAE, Egypt & KSA.",
+    images: [{ url: OG, width: 1200, height: 630, alt: "Managed Backup BCDR UAE" }],
+  },
 };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 
+const backupFaqs = [
+  { question: "What is BCDR and how does Managed Backup protect us?", answer: "Business Continuity and Disaster Recovery (BCDR) ensures your organisation can recover from ransomware, hardware failure, or data loss. PurpleGuard manages immutable, air-gapped backups with automated recovery testing — so you have a verified clean copy of your data ready at all times." },
+  { question: "How quickly can we recover with Managed Backup?", answer: "Recovery time depends on your environment and the chosen tier, but Managed Backup targets recovery time objectives (RTO) as low as 1 hour for critical systems. Automated runbooks and pre-tested recovery procedures eliminate the scramble that extends downtime in a real incident." },
+  { question: "Are backups protected from ransomware encryption?", answer: "Yes. PurpleGuard uses immutable backup storage — once written, backups cannot be modified or deleted by ransomware. Air-gapped copies ensure attackers who gain access to your primary environment cannot reach or encrypt your backup data." },
+  { question: "Does Managed Backup meet NCA ECC or ISO 27001 backup requirements?", answer: "Yes. Our backup and recovery service aligns with NCA ECC Data Protection controls, ISO 27001 Annex A.12.3 requirements, and Egyptian Central Bank/EG-CERT continuity guidelines. Monthly recovery test reports provide audit-ready evidence." },
+];
+
 export default function ManagedBackupBCDRPage() {
-  return (
-    <div className="min-h-screen bg-slate-50">
+  const serviceSchema = serviceJsonLd({ name: "Managed Backup & BCDR — Business Continuity & Disaster Recovery", description: "Immutable, air-gapped backup management with automated BCDR for rapid recovery from ransomware or disasters. Compliance-ready for UAE, Egypt, and KSA.", url: "/services/managed-x/managed-backup-bcdr", category: "Managed Security" });
+  const faqSchema = faqJsonLd(backupFaqs);
+  const breadcrumbSchema = breadcrumbJsonLd([
+      { name: "Home", url: "/" },
+      { name: "Services", url: "/services" },
+      { name: "Managed X", url: "/services/managed-x" },
+      { name: "Managed Backup & BCDR", url: "/services/managed-x/managed-backup-bcdr" },
+    ]);
+    return (
+      <div className="min-h-screen bg-slate-50">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative bg-gradient-to-br from-violet-900 via-purple-800 to-violet-900 overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
@@ -130,6 +159,21 @@ export default function ManagedBackupBCDRPage() {
             <a href="mailto:hello@purpleguard.io?subject=Managed Backup &amp; BCDR Inquiry">
               <Button size="lg" variant="outline">Contact Sales <ChevronRight className="h-5 w-5 ml-2" /></Button>
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            {backupFaqs.map((faq) => (
+              <div key={faq.question} className="border border-slate-200 rounded-xl p-6">
+                <h3 className="font-bold text-slate-900 mb-3">{faq.question}</h3>
+                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

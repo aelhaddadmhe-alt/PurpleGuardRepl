@@ -7,13 +7,40 @@ import {
   Shield, ChevronRight, Calendar, Mail, Target, Eye, Zap, Lock, Server,
   Globe, Building2, Stethoscope, Landmark, Code, Briefcase, Factory,
   CheckCircle, ShieldCheck, Cpu, FileCheck, Handshake, AlertTriangle,
-  Cloud, Radar, KeyRound
+  Cloud, Radar, KeyRound, MapPin
 } from "lucide-react";
+import { faqJsonLd, ogImageUrl } from "@/lib/json-ld";
+
+const OG = ogImageUrl({
+  title: "Managed Security Services UAE & Egypt",
+  subtitle: "24/7 SOC · MDR · VAPT · Managed Infrastructure — SME-Focused MSSP",
+  category: "MSSP",
+  color: "purple",
+});
 
 export const metadata: Metadata = {
-  title: "PurpleGuard — Smarter Security. Stronger Defense.",
+  title: "Managed Security Services Provider (MSSP) — UAE, Egypt & KSA | PurpleGuard",
   description:
-    "Next-generation managed cybersecurity and exposure management for SMEs and mid-market organizations in Egypt, UAE, and KSA. 24/7 SOC, MDR, VAPT, subscription-based.",
+    "PurpleGuard is a managed security services provider (MSSP) in Dubai and Cairo delivering 24/7 SOC, MDR, VAPT, and managed infrastructure for SMEs and mid-market organisations in UAE, Egypt, and KSA. Subscription-based. Compliance-ready.",
+  keywords: [
+    "MSSP UAE", "managed security services Dubai", "cybersecurity Egypt Cairo", "SOC as a service UAE",
+    "MDR managed detection response", "VAPT penetration testing UAE", "ISO 27001 compliance Egypt",
+    "NCA ECC compliance Saudi Arabia", "EG-CERT compliance", "TDRA cybersecurity UAE",
+  ],
+  alternates: { canonical: "https://www.purpleguard.io" },
+  openGraph: {
+    title: "PurpleGuard — Managed Security Services UAE, Egypt & KSA",
+    description:
+      "24/7 SOC, MDR, VAPT, and managed infrastructure for SMEs in UAE, Egypt, and KSA.",
+    url: "https://www.purpleguard.io",
+    images: [{ url: OG, width: 1200, height: 630, alt: "PurpleGuard MSSP" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PurpleGuard — MSSP UAE, Egypt & KSA",
+    description: "Subscription-based managed cybersecurity for SMEs.",
+    images: [OG],
+  },
 };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
@@ -60,9 +87,39 @@ const industries = [
   { name: "Manufacturing", icon: Factory },
 ];
 
+const homeFaqs = [
+  {
+    question: "What is PurpleGuard?",
+    answer: "PurpleGuard is a managed security services provider (MSSP) headquartered in Dubai, UAE, with operations in Cairo, Egypt. We deliver subscription-based cybersecurity — including 24/7 SOC monitoring, MDR, VAPT, and managed infrastructure — to SMEs and mid-market organisations across UAE, Egypt, and KSA.",
+  },
+  {
+    question: "Does PurpleGuard operate in UAE and Egypt?",
+    answer: "Yes. PurpleGuard operates from offices in Dubai (UAE) and Cairo (Egypt), serving clients across the UAE, Egypt, and Saudi Arabia. Our services align with UAE TDRA requirements, UAE Cyber Security Council directives, Egyptian EG-CERT guidelines, and Saudi NCA ECC frameworks.",
+  },
+  {
+    question: "What cybersecurity services does PurpleGuard offer?",
+    answer: "PurpleGuard offers two service lines: Purple X (advanced cybersecurity — VAPT, SOC, MDR, threat intelligence, red teaming, configuration hardening, NDR) and Managed X (ongoing managed infrastructure — EDR, firewall, WAF, email security, backup/BCDR, identity, and SASE/ZTNA).",
+  },
+  {
+    question: "How does PurpleGuard pricing work?",
+    answer: "All services are subscription-based and priced per endpoint, user, or asset depending on the service. There are no forced multi-year lock-ins. Final pricing depends on environment size, coverage hours, and compliance requirements. Contact us for a custom quote.",
+  },
+  {
+    question: "Is PurpleGuard suitable for SMEs?",
+    answer: "Absolutely. PurpleGuard is purpose-built for SMEs and mid-market organisations that cannot afford to build or staff an enterprise-grade security team in-house. We provide enterprise-quality security operations at an SME-appropriate cost and scale.",
+  },
+];
+
 export default function HomePage() {
+  const faqSchema = faqJsonLd(homeFaqs);
+
   return (
     <div className="min-h-screen bg-slate-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-[#000033] via-slate-900 to-[#000033] overflow-hidden">
         <div
@@ -71,11 +128,14 @@ export default function HomePage() {
         />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="max-w-4xl mx-auto text-center">
+            <Badge className="bg-[#6633cc]/20 text-purple-300 border-purple-400/30 mb-6">
+              Managed Security Services — UAE · Egypt · KSA
+            </Badge>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Smarter Security. Stronger Defense.
             </h1>
             <p className="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed">
-              Next-generation managed cybersecurity and exposure management for SMEs and mid-market organizations.
+              Next-generation managed cybersecurity and exposure management for SMEs and mid-market organizations in the UAE, Egypt, and Saudi Arabia.
             </p>
             <ul className="flex flex-col md:flex-row justify-center gap-4 md:gap-8 mb-10 text-slate-300">
               {["24/7 SOC, MDR, and Exposure Management", "Subscription-based, compliance-aware", "Built for scale and automation"].map((item) => (
@@ -247,6 +307,77 @@ export default function HomePage() {
                 View All Solutions <ChevronRight className="h-4 w-4 ml-2" />
               </Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Where We Operate — GEO block */}
+      <section className="py-20 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Where We Operate</h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Regional MSSP with offices in Dubai and Cairo — serving clients across UAE, Egypt, and Saudi Arabia.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                flag: "🇦🇪",
+                country: "United Arab Emirates",
+                city: "Dubai",
+                detail: "PurpleGuard's primary hub. We help UAE businesses meet TDRA regulations, UAE Cyber Security Council directives, and Central Bank of UAE cybersecurity circulars. Industries served: banking & finance, healthcare, logistics, government-adjacent entities.",
+                color: "border-blue-200 bg-blue-50",
+                accent: "text-blue-700",
+              },
+              {
+                flag: "🇪🇬",
+                country: "Egypt",
+                city: "Cairo",
+                detail: "Operations centre serving Egyptian SMEs and regulated sectors. PurpleGuard supports alignment with EG-CERT advisories, NTRA cybersecurity frameworks, and Egyptian Central Bank cybersecurity guidelines. Industries served: fintech, telecom, professional services.",
+                color: "border-purple-200 bg-purple-50",
+                accent: "text-purple-700",
+              },
+              {
+                flag: "🇸🇦",
+                country: "Saudi Arabia",
+                city: "Riyadh · Jeddah",
+                detail: "Serving KSA clients remotely with full alignment to NCA ECC (Essential Cybersecurity Controls) and NCA CCC (Cloud Cybersecurity Controls). Helping organisations achieve SAMA compliance and NCA compliance across critical sectors.",
+                color: "border-emerald-200 bg-emerald-50",
+                accent: "text-emerald-700",
+              },
+            ].map((loc) => (
+              <div key={loc.country} className={`rounded-xl border p-6 ${loc.color}`}>
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-3xl">{loc.flag}</span>
+                  <div>
+                    <div className={`font-bold text-lg ${loc.accent}`}>{loc.country}</div>
+                    <div className="flex items-center gap-1 text-slate-600 text-sm">
+                      <MapPin className="h-3 w-3" /> {loc.city}
+                    </div>
+                  </div>
+                </div>
+                <p className="text-slate-700 text-sm leading-relaxed">{loc.detail}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
+            <p className="text-xl text-slate-600">Common questions about PurpleGuard and managed security services</p>
+          </div>
+          <div className="space-y-6">
+            {homeFaqs.map((faq) => (
+              <div key={faq.question} className="border border-slate-200 rounded-xl p-6">
+                <h3 className="font-bold text-slate-900 mb-3 text-lg">{faq.question}</h3>
+                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

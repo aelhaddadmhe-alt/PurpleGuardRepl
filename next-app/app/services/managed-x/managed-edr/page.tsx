@@ -4,17 +4,46 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, ChevronRight, Calendar, ArrowLeft, Activity, Lock, Eye, FileText, CheckCircle, TrendingUp, Zap, AlertTriangle } from "lucide-react";
+import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
+
+const OG = ogImageUrl({ title: "Managed EDR — UAE & Egypt", subtitle: "Endpoint Threat Detection, Automated Containment & SOC-Backed Response", category: "Managed X", color: "indigo" });
 
 export const metadata: Metadata = {
-  title: "Managed EDR — Endpoint Threat Detection & Response",
-  description: "Behavioral threat detection, automated containment, and SOC-backed investigation for endpoints. Starting at $18/endpoint/month.",
+  title: "Managed EDR Dubai UAE — Endpoint Threat Detection & Response",
+  description:
+    "PurpleGuard Managed EDR delivers behavioural threat detection, automated endpoint containment, and SOC-backed investigation. Protecting organisations in UAE, Egypt, and KSA.",
+  keywords: ["managed EDR UAE", "endpoint detection response Dubai", "EDR service Egypt", "behavioural threat detection", "endpoint security UAE", "MITRE ATT&CK EDR", "NCA ECC EDR"],
+  alternates: { canonical: "https://www.purpleguard.io/services/managed-x/managed-edr" },
+  openGraph: {
+    title: "Managed EDR Dubai UAE | PurpleGuard",
+    description: "Behavioural EDR with automated containment and SOC investigation for UAE, Egypt & KSA.",
+    images: [{ url: OG, width: 1200, height: 630, alt: "Managed EDR UAE" }],
+  },
 };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 
+const edrFaqs = [
+  { question: "What is Managed EDR and how is it different from traditional antivirus?", answer: "Endpoint Detection and Response (EDR) goes beyond signature-based antivirus. Managed EDR uses behavioural AI to detect fileless attacks, living-off-the-land techniques, and zero-day exploits that antivirus misses. PurpleGuard manages the entire EDR lifecycle — deployment, tuning, monitoring, and response — on your behalf 24/7." },
+  { question: "Which EDR platforms does PurpleGuard support?", answer: "PurpleGuard can manage leading EDR platforms including Microsoft Defender for Endpoint, CrowdStrike Falcon, SentinelOne, and others. We normalise alerts, tune detection rules, and provide expert-led response — regardless of which platform fits your environment." },
+  { question: "Does Managed EDR support NCA ECC endpoint protection requirements?", answer: "Yes. Our Managed EDR service aligns with NCA ECC Endpoint Security controls, UAE TDRA security baseline requirements, and ISO 27001 malware protection controls. Monthly reports map detected and blocked threats to framework controls." },
+  { question: "How does PurpleGuard respond when an endpoint is compromised?", answer: "When a threat is detected, our SOC analysts validate the alert, isolate the affected endpoint if needed, conduct root cause analysis, remove the threat, and guide remediation. All response actions are documented and reported within agreed SLAs." },
+];
+
 export default function ManagedEDRPage() {
-  return (
-    <div className="min-h-screen bg-slate-50">
+  const serviceSchema = serviceJsonLd({ name: "Managed EDR — Endpoint Detection & Response", description: "24/7 managed endpoint detection and response. Behavioural AI plus expert analyst response for all endpoints across UAE, Egypt, and KSA.", url: "/services/managed-x/managed-edr", category: "Managed Security" });
+  const faqSchema = faqJsonLd(edrFaqs);
+  const breadcrumbSchema = breadcrumbJsonLd([
+      { name: "Home", url: "/" },
+      { name: "Services", url: "/services" },
+      { name: "Managed X", url: "/services/managed-x" },
+      { name: "Managed EDR", url: "/services/managed-x/managed-edr" },
+    ]);
+    return (
+      <div className="min-h-screen bg-slate-50">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative bg-gradient-to-br from-purple-900 via-indigo-800 to-purple-900 overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
@@ -129,6 +158,21 @@ export default function ManagedEDRPage() {
             <a href="mailto:hello@purpleguard.io?subject=Managed EDR Inquiry">
               <Button size="lg" variant="outline">Contact Sales <ChevronRight className="h-5 w-5 ml-2" /></Button>
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            {edrFaqs.map((faq) => (
+              <div key={faq.question} className="border border-slate-200 rounded-xl p-6">
+                <h3 className="font-bold text-slate-900 mb-3">{faq.question}</h3>
+                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

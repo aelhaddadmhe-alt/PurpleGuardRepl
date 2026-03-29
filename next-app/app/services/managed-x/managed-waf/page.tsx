@@ -4,17 +4,46 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Globe, ChevronRight, Calendar, ArrowLeft, Shield, Activity, Settings, AlertTriangle, CheckCircle, TrendingUp, Zap, Lock } from "lucide-react";
+import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
+
+const OG = ogImageUrl({ title: "Managed WAF — Web & API Protection UAE & Egypt", subtitle: "OWASP Top 10, Bot Mitigation & DDoS Protection as a Managed Service", category: "Managed X", color: "orange" });
 
 export const metadata: Metadata = {
-  title: "Managed WAF — Web Application & API Protection",
-  description: "OWASP Top 10, bot mitigation, DDoS, and API security as a managed service. Starting at $95/application/month.",
+  title: "Managed WAF Dubai UAE — Web Application & API Security Service",
+  description:
+    "PurpleGuard Managed WAF delivers OWASP Top 10 protection, bot mitigation, DDoS defence, and API security as a fully managed service for UAE, Egypt, and KSA.",
+  keywords: ["managed WAF UAE", "web application firewall Dubai", "API security Egypt", "OWASP protection UAE", "DDoS mitigation", "bot management UAE", "NCA ECC WAF"],
+  alternates: { canonical: "https://www.purpleguard.io/services/managed-x/managed-waf" },
+  openGraph: {
+    title: "Managed WAF Dubai UAE | PurpleGuard",
+    description: "OWASP Top 10, DDoS & API protection as a managed service for UAE, Egypt & KSA.",
+    images: [{ url: OG, width: 1200, height: 630, alt: "Managed WAF UAE" }],
+  },
 };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 
+const wafFaqs = [
+  { question: "What does a Managed WAF protect?", answer: "A Web Application Firewall (WAF) protects your web applications and APIs from OWASP Top 10 threats — SQL injection, XSS, RFI, CSRF, path traversal, bot attacks, and DDoS at the application layer. PurpleGuard manages WAF rules, monitors traffic, responds to attack spikes, and tunes the WAF continuously to match your specific application behaviour." },
+  { question: "Does Managed WAF also protect APIs?", answer: "Yes. PurpleGuard's Managed WAF includes API security — protecting REST and GraphQL APIs from injection attacks, broken authentication, data exposure, and rate-limiting bypass. API protection policies are tuned to your specific API schema to minimise false positives." },
+  { question: "How does Managed WAF help with NCA ECC or PCI DSS compliance?", answer: "PCI DSS requires a WAF or equivalent control for all internet-facing web applications that process card data. NCA ECC includes web application protection controls. PurpleGuard's Managed WAF provides the control implementation plus monthly compliance reports mapping WAF activity to applicable requirements." },
+  { question: "Will the WAF block legitimate users or cause performance issues?", answer: "A poorly tuned WAF can create false positives. PurpleGuard's Managed WAF service includes a learning/tuning period where we baseline your normal traffic patterns before switching to enforcement mode. Continuous tuning ensures high detection rates with minimal impact on legitimate users and application performance." },
+];
+
 export default function ManagedWAFPage() {
-  return (
-    <div className="min-h-screen bg-slate-50">
+  const serviceSchema = serviceJsonLd({ name: "Managed WAF — Web Application & API Protection", description: "Continuously managed WAF protection against OWASP Top 10, bot attacks, and API threats. Tuned and monitored 24/7 for UAE, Egypt, and KSA.", url: "/services/managed-x/managed-waf", category: "Managed Security" });
+  const faqSchema = faqJsonLd(wafFaqs);
+  const breadcrumbSchema = breadcrumbJsonLd([
+      { name: "Home", url: "/" },
+      { name: "Services", url: "/services" },
+      { name: "Managed X", url: "/services/managed-x" },
+      { name: "Managed WAF", url: "/services/managed-x/managed-waf" },
+    ]);
+    return (
+      <div className="min-h-screen bg-slate-50">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative bg-gradient-to-br from-orange-900 via-red-800 to-orange-900 overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
@@ -130,6 +159,21 @@ export default function ManagedWAFPage() {
             <a href="mailto:hello@purpleguard.io?subject=Managed WAF Inquiry">
               <Button size="lg" variant="outline">Contact Sales <ChevronRight className="h-5 w-5 ml-2" /></Button>
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            {wafFaqs.map((faq) => (
+              <div key={faq.question} className="border border-slate-200 rounded-xl p-6">
+                <h3 className="font-bold text-slate-900 mb-3">{faq.question}</h3>
+                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

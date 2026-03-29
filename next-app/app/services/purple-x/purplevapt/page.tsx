@@ -4,17 +4,47 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Search, ChevronRight, Calendar, ArrowLeft, Shield, Target, Globe, Cloud, FileSearch, CheckCircle, Eye, Zap, TrendingUp, X, Check, RefreshCw, Clock, Layers } from "lucide-react";
+import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
+
+const OG = ogImageUrl({ title: "VAPT Services UAE & Egypt", subtitle: "Vulnerability Assessment & Penetration Testing — PurpleVAPT", category: "Purple X", color: "purple" });
 
 export const metadata: Metadata = {
-  title: "PurpleVAPT — Vulnerability Assessment & Penetration Testing",
-  description: "Continuous vulnerability assessment and penetration testing for networks, applications, cloud, and APIs. Risk-prioritized and compliance-ready.",
+  title: "VAPT Services Dubai UAE — Vulnerability Assessment & Penetration Testing",
+  description:
+    "PurpleVAPT delivers continuous vulnerability assessment and penetration testing across networks, applications, cloud, and APIs for organisations in UAE, Egypt, and KSA. Risk-prioritized, OWASP-aligned, and compliance-ready.",
+  keywords: ["VAPT UAE", "penetration testing Dubai", "vulnerability assessment Egypt", "OWASP testing", "pen test UAE", "ISO 27001 VAPT", "NCA ECC vulnerability assessment"],
+  alternates: { canonical: "https://www.purpleguard.io/services/purple-x/purplevapt" },
+  openGraph: {
+    title: "VAPT Services Dubai UAE — PurpleVAPT | PurpleGuard",
+    description: "Continuous VAPT across networks, apps, cloud & APIs. Risk-prioritized and compliance-ready for UAE, Egypt & KSA.",
+    images: [{ url: OG, width: 1200, height: 630, alt: "PurpleVAPT — VAPT Services UAE" }],
+  },
 };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 
+const vaptFaqs = [
+  { question: "What does PurpleVAPT include?", answer: "PurpleVAPT covers vulnerability assessment, penetration testing, application and API testing, cloud/SaaS configuration review, and business-aligned risk reporting. Testing is delivered in hybrid model — automated scanning plus expert-led manual validation." },
+  { question: "How is PurpleVAPT different from a standard vulnerability scan?", answer: "A basic vulnerability scan is automated and generates raw output. PurpleVAPT adds expert-led penetration testing, exploit validation, business-risk prioritization, and compliance-aligned reporting — giving you validated, actionable findings rather than noisy scanner output." },
+  { question: "Does PurpleVAPT meet UAE TDRA or NCA ECC requirements?", answer: "Yes. PurpleVAPT testing methodology aligns with UAE TDRA requirements and Saudi NCA ECC controls. Reports are structured to support audit evidence for ISO 27001, NCA ECC, and similar frameworks." },
+  { question: "Can PurpleVAPT test cloud environments?", answer: "Yes. PurpleVAPT includes cloud and SaaS security evaluation covering configuration review for AWS, Azure, GCP, and Microsoft 365 — including exposed services, access controls, and storage misconfiguration." },
+];
+
 export default function PurpleVAPTPage() {
-  return (
-    <div className="min-h-screen bg-slate-50">
+  const serviceSchema = serviceJsonLd({ name: "PurpleVAPT — Vulnerability Assessment & Penetration Testing", description: "Continuous vulnerability assessment and penetration testing for networks, applications, cloud, and APIs. Risk-prioritized and compliance-ready.", url: "/services/purple-x/purplevapt", category: "Cybersecurity" });
+  const faqSchema = faqJsonLd(vaptFaqs);
+
+  const breadcrumbSchema = breadcrumbJsonLd([
+      { name: "Home", url: "/" },
+      { name: "Services", url: "/services" },
+      { name: "Purple X", url: "/services/purple-x" },
+      { name: "PurpleVAPT", url: "/services/purple-x/purplevapt" },
+    ]);
+    return (
+      <div className="min-h-screen bg-slate-50">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-purple-900 via-indigo-800 to-purple-900 overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
@@ -286,6 +316,21 @@ export default function PurpleVAPTPage() {
                   </CardContent>
                 </Card>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            {vaptFaqs.map((faq) => (
+              <div key={faq.question} className="border border-slate-200 rounded-xl p-6">
+                <h3 className="font-bold text-slate-900 mb-3">{faq.question}</h3>
+                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+              </div>
             ))}
           </div>
         </div>

@@ -4,17 +4,47 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AlertTriangle, ChevronRight, Calendar, ArrowLeft, Globe, Shield, Eye, Search, KeyRound, CheckCircle, Zap, TrendingUp, Target } from "lucide-react";
+import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
+
+const OG = ogImageUrl({ title: "Threat Intelligence & EASM — UAE, Egypt & KSA", subtitle: "PurpleSentry: External Attack Surface Management & Digital Risk Protection", category: "Purple X", color: "orange" });
 
 export const metadata: Metadata = {
-  title: "PurpleSentry — Threat Intelligence, EASM & Digital Risk Protection",
-  description: "Continuously monitor your external attack surface, dark web exposure, and digital risk. PurpleSentry identifies threats before attackers exploit them.",
+  title: "Threat Intelligence & EASM Dubai UAE — PurpleSentry | PurpleGuard",
+  description:
+    "PurpleSentry continuously monitors your external attack surface, dark web exposure, and digital risk. Threat intelligence and EASM for SMEs in UAE, Egypt, and KSA.",
+  keywords: ["threat intelligence UAE", "EASM Dubai", "external attack surface management Egypt", "dark web monitoring UAE", "digital risk protection", "CTI service", "NCA ECC threat intelligence"],
+  alternates: { canonical: "https://www.purpleguard.io/services/purple-x/purplesentry" },
+  openGraph: {
+    title: "Threat Intelligence & EASM UAE — PurpleSentry | PurpleGuard",
+    description: "Continuous external attack surface monitoring and threat intelligence for UAE, Egypt & KSA.",
+    images: [{ url: OG, width: 1200, height: 630, alt: "PurpleSentry — EASM UAE" }],
+  },
 };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 
+const sentryFaqs = [
+  { question: "What does PurpleSentry monitor?", answer: "PurpleSentry continuously monitors your internet-facing attack surface — domains, subdomains, IP ranges, cloud assets, exposed services, SSL certificates, leaked credentials, and dark web mentions. It provides 24/7 digital risk protection with real-time alerts when new exposure is detected." },
+  { question: "How is PurpleSentry different from a one-time penetration test?", answer: "A penetration test is a point-in-time assessment. PurpleSentry is continuous — it monitors your external attack surface 24/7 and alerts you whenever your exposure changes. New domains, misconfigured services, or exposed credentials are flagged automatically as they appear." },
+  { question: "Does PurpleSentry support NCA ECC threat intelligence requirements?", answer: "Yes. PurpleSentry's threat intelligence feeds and attack surface monitoring align with NCA ECC Threat Management controls and UAE TDRA requirements. Dark web monitoring also supports brand protection and data leakage detection required by Egyptian EG-CERT guidelines." },
+  { question: "Can PurpleSentry discover assets we don't know we have?", answer: "Yes. PurpleSentry's asset discovery engine continuously scans the internet to find domains, cloud resources, and services associated with your organisation — including shadow IT and forgotten assets that your internal inventory may not include." },
+];
+
 export default function PurpleSentryPage() {
-  return (
-    <div className="min-h-screen bg-slate-50">
+  const serviceSchema = serviceJsonLd({ name: "PurpleSentry — Threat Intelligence & External Attack Surface Management", description: "Continuous external attack surface monitoring, dark web surveillance, and digital risk protection for organisations in UAE, Egypt, and KSA.", url: "/services/purple-x/purplesentry", category: "Cybersecurity" });
+  const faqSchema = faqJsonLd(sentryFaqs);
+
+  const breadcrumbSchema = breadcrumbJsonLd([
+      { name: "Home", url: "/" },
+      { name: "Services", url: "/services" },
+      { name: "Purple X", url: "/services/purple-x" },
+      { name: "PurpleSentry", url: "/services/purple-x/purplesentry" },
+    ]);
+    return (
+      <div className="min-h-screen bg-slate-50">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative bg-gradient-to-br from-orange-900 via-red-800 to-orange-900 overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
@@ -130,6 +160,21 @@ export default function PurpleSentryPage() {
             <Link href="/pricing">
               <Button size="lg" variant="outline">View Pricing Details <ChevronRight className="h-5 w-5 ml-2" /></Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            {sentryFaqs.map((faq) => (
+              <div key={faq.question} className="border border-slate-200 rounded-xl p-6">
+                <h3 className="font-bold text-slate-900 mb-3">{faq.question}</h3>
+                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

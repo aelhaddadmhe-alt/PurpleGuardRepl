@@ -239,21 +239,126 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$refresh$2d$cw$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__RefreshCw$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/refresh-cw.js [app-rsc] (ecmascript) <export default as RefreshCw>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$clock$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Clock$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/clock.js [app-rsc] (ecmascript) <export default as Clock>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$layers$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Layers$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/layers.js [app-rsc] (ecmascript) <export default as Layers>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$lib$2f$json$2d$ld$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/next-app/src/lib/json-ld.ts [app-rsc] (ecmascript)");
 ;
 ;
 ;
 ;
 ;
 ;
+;
+const OG = (0, __TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$lib$2f$json$2d$ld$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ogImageUrl"])({
+    title: "VAPT Services UAE & Egypt",
+    subtitle: "Vulnerability Assessment & Penetration Testing — PurpleVAPT",
+    category: "Purple X",
+    color: "purple"
+});
 const metadata = {
-    title: "PurpleVAPT — Vulnerability Assessment & Penetration Testing",
-    description: "Continuous vulnerability assessment and penetration testing for networks, applications, cloud, and APIs. Risk-prioritized and compliance-ready."
+    title: "VAPT Services Dubai UAE — Vulnerability Assessment & Penetration Testing",
+    description: "PurpleVAPT delivers continuous vulnerability assessment and penetration testing across networks, applications, cloud, and APIs for organisations in UAE, Egypt, and KSA. Risk-prioritized, OWASP-aligned, and compliance-ready.",
+    keywords: [
+        "VAPT UAE",
+        "penetration testing Dubai",
+        "vulnerability assessment Egypt",
+        "OWASP testing",
+        "pen test UAE",
+        "ISO 27001 VAPT",
+        "NCA ECC vulnerability assessment"
+    ],
+    alternates: {
+        canonical: "https://www.purpleguard.io/services/purple-x/purplevapt"
+    },
+    openGraph: {
+        title: "VAPT Services Dubai UAE — PurpleVAPT | PurpleGuard",
+        description: "Continuous VAPT across networks, apps, cloud & APIs. Risk-prioritized and compliance-ready for UAE, Egypt & KSA.",
+        images: [
+            {
+                url: OG,
+                width: 1200,
+                height: 630,
+                alt: "PurpleVAPT — VAPT Services UAE"
+            }
+        ]
+    }
 };
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
+const vaptFaqs = [
+    {
+        question: "What does PurpleVAPT include?",
+        answer: "PurpleVAPT covers vulnerability assessment, penetration testing, application and API testing, cloud/SaaS configuration review, and business-aligned risk reporting. Testing is delivered in hybrid model — automated scanning plus expert-led manual validation."
+    },
+    {
+        question: "How is PurpleVAPT different from a standard vulnerability scan?",
+        answer: "A basic vulnerability scan is automated and generates raw output. PurpleVAPT adds expert-led penetration testing, exploit validation, business-risk prioritization, and compliance-aligned reporting — giving you validated, actionable findings rather than noisy scanner output."
+    },
+    {
+        question: "Does PurpleVAPT meet UAE TDRA or NCA ECC requirements?",
+        answer: "Yes. PurpleVAPT testing methodology aligns with UAE TDRA requirements and Saudi NCA ECC controls. Reports are structured to support audit evidence for ISO 27001, NCA ECC, and similar frameworks."
+    },
+    {
+        question: "Can PurpleVAPT test cloud environments?",
+        answer: "Yes. PurpleVAPT includes cloud and SaaS security evaluation covering configuration review for AWS, Azure, GCP, and Microsoft 365 — including exposed services, access controls, and storage misconfiguration."
+    }
+];
 function PurpleVAPTPage() {
+    const serviceSchema = (0, __TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$lib$2f$json$2d$ld$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["serviceJsonLd"])({
+        name: "PurpleVAPT — Vulnerability Assessment & Penetration Testing",
+        description: "Continuous vulnerability assessment and penetration testing for networks, applications, cloud, and APIs. Risk-prioritized and compliance-ready.",
+        url: "/services/purple-x/purplevapt",
+        category: "Cybersecurity"
+    });
+    const faqSchema = (0, __TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$lib$2f$json$2d$ld$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["faqJsonLd"])(vaptFaqs);
+    const breadcrumbSchema = (0, __TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$lib$2f$json$2d$ld$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["breadcrumbJsonLd"])([
+        {
+            name: "Home",
+            url: "/"
+        },
+        {
+            name: "Services",
+            url: "/services"
+        },
+        {
+            name: "Purple X",
+            url: "/services/purple-x"
+        },
+        {
+            name: "PurpleVAPT",
+            url: "/services/purple-x/purplevapt"
+        }
+    ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "min-h-screen bg-slate-50",
         children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("script", {
+                type: "application/ld+json",
+                dangerouslySetInnerHTML: {
+                    __html: JSON.stringify(serviceSchema)
+                }
+            }, void 0, false, {
+                fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
+                lineNumber: 45,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("script", {
+                type: "application/ld+json",
+                dangerouslySetInnerHTML: {
+                    __html: JSON.stringify(faqSchema)
+                }
+            }, void 0, false, {
+                fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
+                lineNumber: 46,
+                columnNumber: 9
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("script", {
+                type: "application/ld+json",
+                dangerouslySetInnerHTML: {
+                    __html: JSON.stringify(breadcrumbSchema)
+                }
+            }, void 0, false, {
+                fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
+                lineNumber: 47,
+                columnNumber: 9
+            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 className: "relative bg-gradient-to-br from-purple-900 via-indigo-800 to-purple-900 overflow-hidden",
                 children: [
@@ -264,7 +369,7 @@ function PurpleVAPTPage() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                        lineNumber: 20,
+                        lineNumber: 50,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -280,19 +385,19 @@ function PurpleVAPTPage() {
                                             className: "h-4 w-4 mr-2"
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                            lineNumber: 24,
+                                            lineNumber: 54,
                                             columnNumber: 15
                                         }, this),
                                         " Back to Purple-X Services"
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                    lineNumber: 23,
+                                    lineNumber: 53,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                lineNumber: 22,
+                                lineNumber: 52,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -303,7 +408,7 @@ function PurpleVAPTPage() {
                                         children: "Purple-X | Exposure Identification"
                                     }, void 0, false, {
                                         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                        lineNumber: 28,
+                                        lineNumber: 58,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -311,7 +416,7 @@ function PurpleVAPTPage() {
                                         children: "PurpleVAPT — Vulnerability Assessment & Penetration Testing"
                                     }, void 0, false, {
                                         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                        lineNumber: 29,
+                                        lineNumber: 59,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -319,7 +424,7 @@ function PurpleVAPTPage() {
                                         children: "Identify, validate, and prioritize exploitable risk across your environment—continuously and on demand."
                                     }, void 0, false, {
                                         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                        lineNumber: 32,
+                                        lineNumber: 62,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -335,7 +440,7 @@ function PurpleVAPTPage() {
                                                         className: "h-5 w-5 text-purple-400 mt-0.5 flex-shrink-0"
                                                     }, void 0, false, {
                                                         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                        lineNumber: 38,
+                                                        lineNumber: 68,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -343,18 +448,18 @@ function PurpleVAPTPage() {
                                                         children: item
                                                     }, void 0, false, {
                                                         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                        lineNumber: 39,
+                                                        lineNumber: 69,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, item, true, {
                                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                lineNumber: 37,
+                                                lineNumber: 67,
                                                 columnNumber: 17
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                        lineNumber: 35,
+                                        lineNumber: 65,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -372,19 +477,19 @@ function PurpleVAPTPage() {
                                                             className: "h-5 w-5 mr-2"
                                                         }, void 0, false, {
                                                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                            lineNumber: 46,
+                                                            lineNumber: 76,
                                                             columnNumber: 19
                                                         }, this),
                                                         " Request a VAPT Assessment"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                    lineNumber: 45,
+                                                    lineNumber: 75,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                lineNumber: 44,
+                                                lineNumber: 74,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -399,42 +504,42 @@ function PurpleVAPTPage() {
                                                             className: "h-5 w-5 ml-2"
                                                         }, void 0, false, {
                                                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                            lineNumber: 51,
+                                                            lineNumber: 81,
                                                             columnNumber: 42
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                    lineNumber: 50,
+                                                    lineNumber: 80,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                lineNumber: 49,
+                                                lineNumber: 79,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                        lineNumber: 43,
+                                        lineNumber: 73,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                lineNumber: 27,
+                                lineNumber: 57,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                        lineNumber: 21,
+                        lineNumber: 51,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                lineNumber: 19,
+                lineNumber: 49,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -463,7 +568,7 @@ function PurpleVAPTPage() {
                                         className: "h-5 w-5 text-purple-600"
                                     }, void 0, false, {
                                         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                        lineNumber: 65,
+                                        lineNumber: 95,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -471,28 +576,28 @@ function PurpleVAPTPage() {
                                         children: item.label
                                     }, void 0, false, {
                                         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                        lineNumber: 66,
+                                        lineNumber: 96,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, item.label, true, {
                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                lineNumber: 64,
+                                lineNumber: 94,
                                 columnNumber: 15
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                        lineNumber: 62,
+                        lineNumber: 92,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                    lineNumber: 61,
+                    lineNumber: 91,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                lineNumber: 60,
+                lineNumber: 90,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -507,7 +612,7 @@ function PurpleVAPTPage() {
                                 children: "What is PurpleVAPT?"
                             }, void 0, false, {
                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                lineNumber: 77,
+                                lineNumber: 107,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -515,23 +620,23 @@ function PurpleVAPTPage() {
                                 children: "PurpleVAPT is PurpleGuard's vulnerability assessment and penetration testing service designed to identify security weaknesses, validate real-world exploitability, and prioritize remediation based on business risk—not just CVSS scores."
                             }, void 0, false, {
                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                lineNumber: 78,
+                                lineNumber: 108,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                        lineNumber: 76,
+                        lineNumber: 106,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                    lineNumber: 75,
+                    lineNumber: 105,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                lineNumber: 74,
+                lineNumber: 104,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -547,7 +652,7 @@ function PurpleVAPTPage() {
                                     children: "What's Included in PurpleVAPT"
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                    lineNumber: 89,
+                                    lineNumber: 119,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -555,13 +660,13 @@ function PurpleVAPTPage() {
                                     children: "Comprehensive testing coverage across your entire environment"
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                    lineNumber: 90,
+                                    lineNumber: 120,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                            lineNumber: 88,
+                            lineNumber: 118,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -608,12 +713,12 @@ function PurpleVAPTPage() {
                                                         className: "h-6 w-6 text-white"
                                                     }, void 0, false, {
                                                         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                        lineNumber: 103,
+                                                        lineNumber: 133,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                    lineNumber: 102,
+                                                    lineNumber: 132,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardTitle"], {
@@ -621,13 +726,13 @@ function PurpleVAPTPage() {
                                                     children: card.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                    lineNumber: 105,
+                                                    lineNumber: 135,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                            lineNumber: 101,
+                                            lineNumber: 131,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -636,34 +741,34 @@ function PurpleVAPTPage() {
                                                 children: card.description
                                             }, void 0, false, {
                                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                lineNumber: 107,
+                                                lineNumber: 137,
                                                 columnNumber: 30
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                            lineNumber: 107,
+                                            lineNumber: 137,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, card.title, true, {
                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                    lineNumber: 100,
+                                    lineNumber: 130,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                            lineNumber: 92,
+                            lineNumber: 122,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                    lineNumber: 87,
+                    lineNumber: 117,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                lineNumber: 86,
+                lineNumber: 116,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -678,12 +783,12 @@ function PurpleVAPTPage() {
                                 children: "How PurpleVAPT is Delivered"
                             }, void 0, false, {
                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                lineNumber: 118,
+                                lineNumber: 148,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                            lineNumber: 117,
+                            lineNumber: 147,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -700,12 +805,12 @@ function PurpleVAPTPage() {
                                                         className: "h-6 w-6 text-white"
                                                     }, void 0, false, {
                                                         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                        lineNumber: 124,
+                                                        lineNumber: 154,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                    lineNumber: 123,
+                                                    lineNumber: 153,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardTitle"], {
@@ -713,13 +818,13 @@ function PurpleVAPTPage() {
                                                     children: "Hybrid Testing Model"
                                                 }, void 0, false, {
                                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                    lineNumber: 126,
+                                                    lineNumber: 156,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                            lineNumber: 122,
+                                            lineNumber: 152,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -728,18 +833,18 @@ function PurpleVAPTPage() {
                                                 children: "PurpleVAPT combines automated scanning with manual validation to reduce false positives and highlight real risk."
                                             }, void 0, false, {
                                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                lineNumber: 129,
+                                                lineNumber: 159,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                            lineNumber: 128,
+                                            lineNumber: 158,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                    lineNumber: 121,
+                                    lineNumber: 151,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
@@ -753,12 +858,12 @@ function PurpleVAPTPage() {
                                                         className: "h-6 w-6 text-white"
                                                     }, void 0, false, {
                                                         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                        lineNumber: 135,
+                                                        lineNumber: 165,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                    lineNumber: 134,
+                                                    lineNumber: 164,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardTitle"], {
@@ -766,13 +871,13 @@ function PurpleVAPTPage() {
                                                     children: "Compliance-Aware Methodology"
                                                 }, void 0, false, {
                                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                    lineNumber: 137,
+                                                    lineNumber: 167,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                            lineNumber: 133,
+                                            lineNumber: 163,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -782,7 +887,7 @@ function PurpleVAPTPage() {
                                                     children: 'Testing aligned to common frameworks and audit expectations without "checkbox-only" output.'
                                                 }, void 0, false, {
                                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                    lineNumber: 140,
+                                                    lineNumber: 170,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -799,41 +904,41 @@ function PurpleVAPTPage() {
                                                             children: fw
                                                         }, fw, false, {
                                                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                            lineNumber: 143,
+                                                            lineNumber: 173,
                                                             columnNumber: 21
                                                         }, this))
                                                 }, void 0, false, {
                                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                    lineNumber: 141,
+                                                    lineNumber: 171,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                            lineNumber: 139,
+                                            lineNumber: 169,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                    lineNumber: 132,
+                                    lineNumber: 162,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                            lineNumber: 120,
+                            lineNumber: 150,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                    lineNumber: 116,
+                    lineNumber: 146,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                lineNumber: 115,
+                lineNumber: 145,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -848,12 +953,12 @@ function PurpleVAPTPage() {
                                 children: "Business Value"
                             }, void 0, false, {
                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                lineNumber: 156,
+                                lineNumber: 186,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                            lineNumber: 155,
+                            lineNumber: 185,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -884,12 +989,12 @@ function PurpleVAPTPage() {
                                                 className: "h-7 w-7 text-white"
                                             }, void 0, false, {
                                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                lineNumber: 167,
+                                                lineNumber: 197,
                                                 columnNumber: 19
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                            lineNumber: 166,
+                                            lineNumber: 196,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -897,29 +1002,29 @@ function PurpleVAPTPage() {
                                             children: item.title
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                            lineNumber: 169,
+                                            lineNumber: 199,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, item.title, true, {
                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                    lineNumber: 165,
+                                    lineNumber: 195,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                            lineNumber: 158,
+                            lineNumber: 188,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                    lineNumber: 154,
+                    lineNumber: 184,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                lineNumber: 153,
+                lineNumber: 183,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -934,7 +1039,7 @@ function PurpleVAPTPage() {
                                 children: "Who PurpleVAPT is For"
                             }, void 0, false, {
                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                lineNumber: 180,
+                                lineNumber: 210,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -951,7 +1056,7 @@ function PurpleVAPTPage() {
                                                 className: "h-6 w-6 text-purple-600 flex-shrink-0 mt-0.5"
                                             }, void 0, false, {
                                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                lineNumber: 184,
+                                                lineNumber: 214,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -959,34 +1064,34 @@ function PurpleVAPTPage() {
                                                 children: item
                                             }, void 0, false, {
                                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                lineNumber: 185,
+                                                lineNumber: 215,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, item, true, {
                                         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                        lineNumber: 183,
+                                        lineNumber: 213,
                                         columnNumber: 17
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                lineNumber: 181,
+                                lineNumber: 211,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                        lineNumber: 179,
+                        lineNumber: 209,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                    lineNumber: 178,
+                    lineNumber: 208,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                lineNumber: 177,
+                lineNumber: 207,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1001,12 +1106,12 @@ function PurpleVAPTPage() {
                                 children: "PurpleVAPT vs Basic Vulnerability Scanning"
                             }, void 0, false, {
                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                lineNumber: 197,
+                                lineNumber: 227,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                            lineNumber: 196,
+                            lineNumber: 226,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1024,19 +1129,19 @@ function PurpleVAPTPage() {
                                                         className: "h-5 w-5 text-slate-400"
                                                     }, void 0, false, {
                                                         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                        lineNumber: 202,
+                                                        lineNumber: 232,
                                                         columnNumber: 87
                                                     }, this),
                                                     " Basic Scanning"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                lineNumber: 202,
+                                                lineNumber: 232,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                            lineNumber: 201,
+                                            lineNumber: 231,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -1054,7 +1159,7 @@ function PurpleVAPTPage() {
                                                                 className: "h-5 w-5 text-slate-400 flex-shrink-0 mt-0.5"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                                lineNumber: 208,
+                                                                lineNumber: 238,
                                                                 columnNumber: 23
                                                             }, this),
                                                             " ",
@@ -1062,23 +1167,23 @@ function PurpleVAPTPage() {
                                                         ]
                                                     }, item, true, {
                                                         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                        lineNumber: 207,
+                                                        lineNumber: 237,
                                                         columnNumber: 21
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                lineNumber: 205,
+                                                lineNumber: 235,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                            lineNumber: 204,
+                                            lineNumber: 234,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                    lineNumber: 200,
+                                    lineNumber: 230,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["Card"], {
@@ -1093,19 +1198,19 @@ function PurpleVAPTPage() {
                                                         className: "h-5 w-5"
                                                     }, void 0, false, {
                                                         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                        lineNumber: 216,
+                                                        lineNumber: 246,
                                                         columnNumber: 83
                                                     }, this),
                                                     " PurpleVAPT"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                lineNumber: 216,
+                                                lineNumber: 246,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                            lineNumber: 215,
+                                            lineNumber: 245,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -1123,7 +1228,7 @@ function PurpleVAPTPage() {
                                                                 className: "h-5 w-5 text-purple-600 flex-shrink-0 mt-0.5"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                                lineNumber: 222,
+                                                                lineNumber: 252,
                                                                 columnNumber: 23
                                                             }, this),
                                                             " ",
@@ -1131,40 +1236,40 @@ function PurpleVAPTPage() {
                                                         ]
                                                     }, item, true, {
                                                         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                        lineNumber: 221,
+                                                        lineNumber: 251,
                                                         columnNumber: 21
                                                     }, this))
                                             }, void 0, false, {
                                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                lineNumber: 219,
+                                                lineNumber: 249,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                            lineNumber: 218,
+                                            lineNumber: 248,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                    lineNumber: 214,
+                                    lineNumber: 244,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                            lineNumber: 199,
+                            lineNumber: 229,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                    lineNumber: 195,
+                    lineNumber: 225,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                lineNumber: 194,
+                lineNumber: 224,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1179,12 +1284,12 @@ function PurpleVAPTPage() {
                                 children: "Delivery Options"
                             }, void 0, false, {
                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                lineNumber: 236,
+                                lineNumber: 266,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                            lineNumber: 235,
+                            lineNumber: 265,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1216,12 +1321,12 @@ function PurpleVAPTPage() {
                                                         className: "h-7 w-7 text-purple-600"
                                                     }, void 0, false, {
                                                         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                        lineNumber: 247,
+                                                        lineNumber: 277,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                    lineNumber: 246,
+                                                    lineNumber: 276,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardTitle"], {
@@ -1229,13 +1334,13 @@ function PurpleVAPTPage() {
                                                     children: option.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                    lineNumber: 249,
+                                                    lineNumber: 279,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                            lineNumber: 245,
+                                            lineNumber: 275,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$components$2f$ui$2f$card$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["CardContent"], {
@@ -1244,23 +1349,23 @@ function PurpleVAPTPage() {
                                                 children: option.description
                                             }, void 0, false, {
                                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                lineNumber: 251,
+                                                lineNumber: 281,
                                                 columnNumber: 30
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                            lineNumber: 251,
+                                            lineNumber: 281,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, option.title, true, {
                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                    lineNumber: 244,
+                                    lineNumber: 274,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                            lineNumber: 238,
+                            lineNumber: 268,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1276,34 +1381,34 @@ function PurpleVAPTPage() {
                                             className: "h-4 w-4 ml-1"
                                         }, void 0, false, {
                                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                            lineNumber: 258,
+                                            lineNumber: 288,
                                             columnNumber: 40
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                    lineNumber: 257,
+                                    lineNumber: 287,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                lineNumber: 256,
+                                lineNumber: 286,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                            lineNumber: 255,
+                            lineNumber: 285,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                    lineNumber: 234,
+                    lineNumber: 264,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                lineNumber: 233,
+                lineNumber: 263,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1319,7 +1424,7 @@ function PurpleVAPTPage() {
                                     children: "Part of the Purple-X Security Lifecycle"
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                    lineNumber: 269,
+                                    lineNumber: 299,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1327,13 +1432,13 @@ function PurpleVAPTPage() {
                                     children: "PurpleVAPT integrates with PurpleSOC, PurpleSentinel (MDR), PurpleConfig, and PurpleStrike to provide continuous exposure management and validation."
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                    lineNumber: 270,
+                                    lineNumber: 300,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                            lineNumber: 268,
+                            lineNumber: 298,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1371,7 +1476,7 @@ function PurpleVAPTPage() {
                                                     children: service.name
                                                 }, void 0, false, {
                                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                    lineNumber: 284,
+                                                    lineNumber: 314,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1379,39 +1484,95 @@ function PurpleVAPTPage() {
                                                     children: service.description
                                                 }, void 0, false, {
                                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                    lineNumber: 285,
+                                                    lineNumber: 315,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                            lineNumber: 283,
+                                            lineNumber: 313,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                        lineNumber: 282,
+                                        lineNumber: 312,
                                         columnNumber: 17
                                     }, this)
                                 }, service.name, false, {
                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                    lineNumber: 281,
+                                    lineNumber: 311,
                                     columnNumber: 15
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                            lineNumber: 274,
+                            lineNumber: 304,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                    lineNumber: 267,
+                    lineNumber: 297,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                lineNumber: 266,
+                lineNumber: 296,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+                className: "py-16 lg:py-24 bg-white",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "max-w-4xl mx-auto px-4 sm:px-6 lg:px-8",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                            className: "text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center",
+                            children: "Frequently Asked Questions"
+                        }, void 0, false, {
+                            fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
+                            lineNumber: 327,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "space-y-6",
+                            children: vaptFaqs.map((faq)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "border border-slate-200 rounded-xl p-6",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                            className: "font-bold text-slate-900 mb-3",
+                                            children: faq.question
+                                        }, void 0, false, {
+                                            fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
+                                            lineNumber: 331,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "text-slate-600 leading-relaxed",
+                                            children: faq.answer
+                                        }, void 0, false, {
+                                            fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
+                                            lineNumber: 332,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, faq.question, true, {
+                                    fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
+                                    lineNumber: 330,
+                                    columnNumber: 15
+                                }, this))
+                        }, void 0, false, {
+                            fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
+                            lineNumber: 328,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
+                    lineNumber: 326,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
+                lineNumber: 325,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1424,7 +1585,7 @@ function PurpleVAPTPage() {
                             children: "Know your weaknesses before attackers do."
                         }, void 0, false, {
                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                            lineNumber: 297,
+                            lineNumber: 342,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1432,7 +1593,7 @@ function PurpleVAPTPage() {
                             children: "Get proactive about your security posture with continuous vulnerability assessment and penetration testing."
                         }, void 0, false, {
                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                            lineNumber: 298,
+                            lineNumber: 343,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1450,19 +1611,19 @@ function PurpleVAPTPage() {
                                                 className: "h-5 w-5 mr-2"
                                             }, void 0, false, {
                                                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                                lineNumber: 302,
+                                                lineNumber: 347,
                                                 columnNumber: 17
                                             }, this),
                                             " Get a Custom Quote"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                        lineNumber: 301,
+                                        lineNumber: 346,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                    lineNumber: 300,
+                                    lineNumber: 345,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -1476,36 +1637,36 @@ function PurpleVAPTPage() {
                                         children: "Talk to a Security Expert"
                                     }, void 0, false, {
                                         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                        lineNumber: 306,
+                                        lineNumber: 351,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                                    lineNumber: 305,
+                                    lineNumber: 350,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                            lineNumber: 299,
+                            lineNumber: 344,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                    lineNumber: 296,
+                    lineNumber: 341,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-                lineNumber: 295,
+                lineNumber: 340,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/next-app/app/services/purple-x/purplevapt/page.tsx",
-        lineNumber: 17,
-        columnNumber: 5
+        lineNumber: 44,
+        columnNumber: 7
     }, this);
 }
 }),

@@ -4,17 +4,47 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Target, ChevronRight, Calendar, ArrowLeft, Shield, Eye, Zap, Users, Activity, CheckCircle, TrendingUp, RefreshCw } from "lucide-react";
+import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
+
+const OG = ogImageUrl({ title: "Red Teaming & BAS — UAE & Egypt", subtitle: "PurpleStrike: Adversary Emulation & Breach Attack Simulation", category: "Purple X", color: "red" });
 
 export const metadata: Metadata = {
-  title: "PurpleStrike — Red Teaming & Breach Attack Simulation",
-  description: "Simulate real-world attacks to validate security controls. PurpleStrike delivers red team exercises, BAS, and MITRE ATT&CK-aligned adversary emulation.",
+  title: "Red Team & Breach Attack Simulation Dubai UAE — PurpleStrike",
+  description:
+    "PurpleStrike simulates real-world adversary attacks to validate security controls. Red teaming, BAS, and MITRE ATT&CK-aligned adversary emulation for organisations in UAE, Egypt, and KSA.",
+  keywords: ["red team UAE", "breach attack simulation Dubai", "adversary emulation Egypt", "BAS cybersecurity", "red teaming UAE", "MITRE ATT&CK testing", "NCA ECC red team"],
+  alternates: { canonical: "https://www.purpleguard.io/services/purple-x/purplestrike" },
+  openGraph: {
+    title: "Red Teaming & BAS Dubai UAE — PurpleStrike | PurpleGuard",
+    description: "Simulate real-world attacks to validate controls. Red teaming & BAS for UAE, Egypt & KSA.",
+    images: [{ url: OG, width: 1200, height: 630, alt: "PurpleStrike — Red Teaming UAE" }],
+  },
 };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 
+const strikeFaqs = [
+  { question: "What is red teaming and how does PurpleStrike work?", answer: "Red teaming is an adversarial simulation where PurpleGuard's certified experts attempt to breach your organisation using the same techniques as real attackers — phishing, credential attacks, lateral movement, privilege escalation, and data exfiltration. PurpleStrike also includes Breach and Attack Simulation (BAS) for continuous automated validation between engagements." },
+  { question: "How is PurpleStrike different from a penetration test?", answer: "A penetration test is scoped to specific systems. PurpleStrike red team exercises test your entire security programme — people, processes, and technology — with a goal-oriented adversary simulation over weeks. It validates whether your SOC can detect and respond to a real attacker, not just whether specific systems have known vulnerabilities." },
+  { question: "Does PurpleStrike support NCA ECC red team requirements?", answer: "Yes. PurpleStrike exercises align with NCA ECC adversarial simulation controls and UAE TDRA red team requirements. Detailed engagement reports provide evidence for regulators and auditors showing your organisation's resilience to targeted attacks." },
+  { question: "Can PurpleStrike test our employees' susceptibility to phishing?", answer: "Yes. PurpleStrike engagements can include social engineering and phishing simulations targeting your employees. Results are reported with actionable recommendations for awareness training and process improvement — not just technical fixes." },
+];
+
 export default function PurpleStrikePage() {
-  return (
-    <div className="min-h-screen bg-slate-50">
+  const serviceSchema = serviceJsonLd({ name: "PurpleStrike — Red Teaming & Breach Attack Simulation", description: "Adversary emulation and breach attack simulation to test the effectiveness of your security programme against real-world attack techniques.", url: "/services/purple-x/purplestrike", category: "Cybersecurity" });
+  const faqSchema = faqJsonLd(strikeFaqs);
+
+  const breadcrumbSchema = breadcrumbJsonLd([
+      { name: "Home", url: "/" },
+      { name: "Services", url: "/services" },
+      { name: "Purple X", url: "/services/purple-x" },
+      { name: "PurpleStrike", url: "/services/purple-x/purplestrike" },
+    ]);
+    return (
+      <div className="min-h-screen bg-slate-50">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative bg-gradient-to-br from-red-900 via-pink-800 to-red-900 overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
@@ -145,6 +175,21 @@ export default function PurpleStrikePage() {
             <Link href="/pricing">
               <Button size="lg" variant="outline">View All Pricing <ChevronRight className="h-5 w-5 ml-2" /></Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            {strikeFaqs.map((faq) => (
+              <div key={faq.question} className="border border-slate-200 rounded-xl p-6">
+                <h3 className="font-bold text-slate-900 mb-3">{faq.question}</h3>
+                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

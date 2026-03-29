@@ -4,17 +4,46 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Server, ChevronRight, Calendar, ArrowLeft, Shield, Activity, Settings, FileText, RefreshCw, CheckCircle, TrendingUp, Zap, AlertTriangle } from "lucide-react";
+import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
+
+const OG = ogImageUrl({ title: "Managed Firewall UAE & Egypt", subtitle: "NGFW Policy Management, IDS/IPS & 24/7 Network Security Operations", category: "Managed X", color: "emerald" });
 
 export const metadata: Metadata = {
-  title: "Managed Firewall — Fully Managed Perimeter Network Security",
-  description: "Managed NGFW and SD-WAN with policy management, IDS/IPS monitoring, and 24/7 operations. Starting at $120/firewall/month.",
+  title: "Managed Firewall Dubai UAE — NGFW & Perimeter Security Service",
+  description:
+    "PurpleGuard Managed Firewall delivers fully managed NGFW and SD-WAN with policy management, IDS/IPS monitoring, and 24/7 network security operations for UAE, Egypt, and KSA.",
+  keywords: ["managed firewall UAE", "NGFW service Dubai", "firewall management Egypt", "network security UAE", "SD-WAN managed", "IDS IPS monitoring", "NCA ECC firewall"],
+  alternates: { canonical: "https://www.purpleguard.io/services/managed-x/managed-firewall" },
+  openGraph: {
+    title: "Managed Firewall Dubai UAE | PurpleGuard",
+    description: "Fully managed NGFW and SD-WAN with 24/7 network security for UAE, Egypt & KSA.",
+    images: [{ url: OG, width: 1200, height: 630, alt: "Managed Firewall UAE" }],
+  },
 };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 
+const firewallFaqs = [
+  { question: "What does Managed Firewall include?", answer: "PurpleGuard's Managed Firewall service covers deployment, configuration, continuous monitoring, rule management, firmware updates, and compliance reporting for your network firewalls. This includes next-generation firewall (NGFW) features like application control, IPS, and SSL inspection — all managed by our expert team 24/7." },
+  { question: "Which firewall vendors does PurpleGuard support?", answer: "PurpleGuard manages firewalls from leading vendors including Palo Alto Networks, Fortinet, Check Point, Cisco, and Sophos. We can take over management of your existing firewalls or design and deploy a new architecture aligned to your environment and compliance requirements." },
+  { question: "How does Managed Firewall support NCA ECC compliance?", answer: "NCA ECC includes specific controls for network segmentation, access control, and perimeter security. PurpleGuard's Managed Firewall ensures rule sets are reviewed regularly, unnecessary access is revoked, and firewall configuration is audited against NCA ECC and UAE TDRA requirements with documented evidence." },
+  { question: "What happens when a firewall alert fires at 3am?", answer: "PurpleGuard's SOC monitors firewall alerts 24/7. Critical alerts — such as blocked lateral movement, detected port scanning, or policy violations — are triaged immediately. Our analysts validate, escalate if needed, and take corrective action, so your team is only woken up for confirmed high-severity events." },
+];
+
 export default function ManagedFirewallPage() {
-  return (
-    <div className="min-h-screen bg-slate-50">
+  const serviceSchema = serviceJsonLd({ name: "Managed Firewall — 24/7 Network Security Management", description: "Fully managed next-generation firewall service: configuration, monitoring, rule management, and compliance reporting for UAE, Egypt, and KSA.", url: "/services/managed-x/managed-firewall", category: "Managed Security" });
+  const faqSchema = faqJsonLd(firewallFaqs);
+  const breadcrumbSchema = breadcrumbJsonLd([
+      { name: "Home", url: "/" },
+      { name: "Services", url: "/services" },
+      { name: "Managed X", url: "/services/managed-x" },
+      { name: "Managed Firewall", url: "/services/managed-x/managed-firewall" },
+    ]);
+    return (
+      <div className="min-h-screen bg-slate-50">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative bg-gradient-to-br from-emerald-900 via-teal-800 to-emerald-900 overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
@@ -130,6 +159,21 @@ export default function ManagedFirewallPage() {
             <a href="mailto:hello@purpleguard.io?subject=Managed FW Inquiry">
               <Button size="lg" variant="outline">Contact Sales <ChevronRight className="h-5 w-5 ml-2" /></Button>
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            {firewallFaqs.map((faq) => (
+              <div key={faq.question} className="border border-slate-200 rounded-xl p-6">
+                <h3 className="font-bold text-slate-900 mb-3">{faq.question}</h3>
+                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

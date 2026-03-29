@@ -4,17 +4,44 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FileCheck, ChevronRight, Calendar, ArrowLeft, Shield, CheckCircle, FileText, Activity, Settings, Eye } from "lucide-react";
+import { faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
+
+const OG = ogImageUrl({ title: "Compliance & Audit Readiness — UAE & Egypt", subtitle: "ISO 27001 · NCA ECC · EG-CERT · SOC 2 · NIST Compliance", category: "Solutions", color: "emerald" });
 
 export const metadata: Metadata = {
-  title: "Compliance & Audit Readiness — PurpleGuard Security Solution",
-  description: "Achieve and maintain compliance with ISO 27001, SOC 2, NIST, HIPAA, PCI DSS, and GDPR through continuous monitoring and audit-ready documentation.",
+  title: "Compliance & Audit Readiness Dubai UAE — ISO 27001, NCA ECC & EG-CERT",
+  description:
+    "PurpleGuard helps organisations in UAE, Egypt, and KSA achieve compliance with ISO 27001, NCA ECC, EG-CERT, SOC 2, NIST, and PCI DSS through continuous monitoring and audit-ready documentation.",
+  keywords: ["ISO 27001 compliance UAE", "NCA ECC compliance Saudi Arabia", "EG-CERT compliance Egypt", "audit readiness Dubai", "SOC 2 UAE", "PCI DSS compliance", "NIST compliance UAE"],
+  alternates: { canonical: "https://www.purpleguard.io/solutions/compliance-audit-readiness" },
+  openGraph: {
+    title: "Compliance & Audit Readiness UAE — PurpleGuard",
+    description: "ISO 27001, NCA ECC, EG-CERT & SOC 2 compliance for UAE, Egypt & KSA.",
+    images: [{ url: OG, width: 1200, height: 630, alt: "Compliance Audit Readiness UAE" }],
+  },
 };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 
+const complianceFaqs = [
+  { question: "Which compliance frameworks does PurpleGuard support?", answer: "PurpleGuard supports ISO 27001, NCA ECC (Saudi Arabia), NCA CCC, EG-CERT guidelines (Egypt), UAE TDRA requirements, NIST CSF, SOC 2, PCI DSS, and HIPAA. Our assessment covers the full control catalogue and maps gaps to your specific audit requirements." },
+  { question: "How long does a compliance readiness assessment take?", answer: "For a mid-market organisation, a gap assessment and audit-readiness roadmap typically takes 2–4 weeks. Ongoing compliance monitoring is a continuous service — we track control changes and evidence continuously so you are always audit-ready, not just once a year." },
+  { question: "Can PurpleGuard help us prepare for an NCA ECC or ISO 27001 audit in UAE or Saudi Arabia?", answer: "Yes. We work with organisations in UAE, Saudi Arabia, and Egypt to close gaps against NCA ECC 1-1:2018, ISO 27001:2022, and sector-specific frameworks. We produce all required documentation, evidence artefacts, and treatment plans in the format auditors expect." },
+  { question: "Do you help with evidence collection and documentation?", answer: "Yes. PurpleGuard's compliance service includes automated evidence collection, control documentation, policy templates, exception tracking, and a live compliance dashboard — so auditors see a complete, organised evidence pack rather than scattered spreadsheets." },
+];
+
 export default function ComplianceAuditReadinessPage() {
+  const serviceSchema = faqJsonLd(complianceFaqs);
+  const breadcrumbSchema = breadcrumbJsonLd([
+    { name: "Home", url: "/" },
+    { name: "Solutions", url: "/solutions" },
+    { name: "Compliance & Audit Readiness", url: "/solutions/compliance-audit-readiness" },
+  ]);
+
   return (
     <div className="min-h-screen bg-slate-50">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative bg-gradient-to-br from-emerald-900 via-teal-800 to-emerald-900 overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
@@ -141,6 +168,21 @@ export default function ComplianceAuditReadinessPage() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            {complianceFaqs.map((faq) => (
+              <div key={faq.question} className="border border-slate-200 rounded-xl p-6">
+                <h3 className="font-bold text-slate-900 mb-3">{faq.question}</h3>
+                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

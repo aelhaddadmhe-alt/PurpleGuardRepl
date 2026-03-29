@@ -4,17 +4,46 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Cpu, ChevronRight, Calendar, ArrowLeft, Shield, RefreshCw, Activity, Settings, FileText, CheckCircle, TrendingUp, Zap, Server } from "lucide-react";
+import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
+
+const OG = ogImageUrl({ title: "Managed Endpoint UAE & Egypt", subtitle: "Centralized Endpoint Management, Patching & Compliance Monitoring", category: "Managed X", color: "blue" });
 
 export const metadata: Metadata = {
-  title: "Managed Endpoint — Centralized Endpoint Management & Patching",
-  description: "Managed endpoint patching, health monitoring, and compliance posture for Windows and Linux in hybrid environments. Starting at $6/endpoint/month.",
+  title: "Managed Endpoint Security Dubai UAE — Patching & Compliance Monitoring",
+  description:
+    "PurpleGuard's Managed Endpoint service delivers centralized patching, health monitoring, and compliance posture management for Windows and Linux in hybrid environments. Serving UAE, Egypt, and KSA.",
+  keywords: ["managed endpoint UAE", "endpoint management Dubai", "patch management Egypt", "endpoint compliance UAE", "Windows Linux patching", "TDRA compliance", "NCA ECC endpoint"],
+  alternates: { canonical: "https://www.purpleguard.io/services/managed-x/managed-endpoint" },
+  openGraph: {
+    title: "Managed Endpoint Security Dubai UAE | PurpleGuard",
+    description: "Centralized patching, health monitoring, and endpoint compliance for UAE, Egypt & KSA.",
+    images: [{ url: OG, width: 1200, height: 630, alt: "Managed Endpoint UAE" }],
+  },
 };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 
+const endpointFaqs = [
+  { question: "What does Managed Endpoint cover?", answer: "Managed Endpoint handles the full lifecycle of your endpoints — Windows, macOS, and Linux. This includes patch management, OS and software updates, configuration hardening, software deployment, compliance monitoring, and device health reporting — all delivered as a managed service without requiring your internal IT team." },
+  { question: "How does Managed Endpoint reduce security risk?", answer: "Unpatched software is one of the top causes of compromise. Managed Endpoint ensures all systems are patched within agreed SLAs, hardened against known misconfigurations, and continuously monitored for compliance drift — closing the gaps that ransomware and threat actors exploit." },
+  { question: "Does Managed Endpoint support NCA ECC vulnerability management requirements?", answer: "Yes. Managed Endpoint's patch management and configuration hardening aligns with NCA ECC Vulnerability Management controls, UAE TDRA security requirements, and ISO 27001 patch management controls. Monthly dashboards show patch compliance rates ready for auditors." },
+  { question: "Can Managed Endpoint work alongside our existing IT helpdesk?", answer: "Yes. PurpleGuard Managed Endpoint is designed to complement your internal IT team. We handle the security-focused management tasks — patching, hardening, compliance monitoring — while your helpdesk focuses on user support. Clear escalation paths keep coordination seamless." },
+];
+
 export default function ManagedEndpointPage() {
-  return (
-    <div className="min-h-screen bg-slate-50">
+  const serviceSchema = serviceJsonLd({ name: "Managed Endpoint — Patch Management & Device Hardening", description: "Fully managed endpoint lifecycle: patching, hardening, and compliance monitoring for Windows, macOS, and Linux across UAE, Egypt, and KSA.", url: "/services/managed-x/managed-endpoint", category: "Managed Security" });
+  const faqSchema = faqJsonLd(endpointFaqs);
+  const breadcrumbSchema = breadcrumbJsonLd([
+      { name: "Home", url: "/" },
+      { name: "Services", url: "/services" },
+      { name: "Managed X", url: "/services/managed-x" },
+      { name: "Managed Endpoint", url: "/services/managed-x/managed-endpoint" },
+    ]);
+    return (
+      <div className="min-h-screen bg-slate-50">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative bg-gradient-to-br from-blue-900 via-cyan-800 to-blue-900 overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
@@ -129,6 +158,21 @@ export default function ManagedEndpointPage() {
             <a href="mailto:hello@purpleguard.io?subject=Managed Endpoint Inquiry">
               <Button size="lg" variant="outline">Contact Sales <ChevronRight className="h-5 w-5 ml-2" /></Button>
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            {endpointFaqs.map((faq) => (
+              <div key={faq.question} className="border border-slate-200 rounded-xl p-6">
+                <h3 className="font-bold text-slate-900 mb-3">{faq.question}</h3>
+                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

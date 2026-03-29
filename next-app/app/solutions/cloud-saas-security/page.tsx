@@ -4,17 +4,44 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Cloud, ChevronRight, Calendar, ArrowLeft, Shield, Settings, Eye, Lock, KeyRound, Activity, CheckCircle } from "lucide-react";
+import { faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
+
+const OG = ogImageUrl({ title: "Cloud & SaaS Security — UAE & Egypt", subtitle: "AWS · Azure · GCP · Microsoft 365 · Google Workspace Protection", category: "Solutions", color: "cyan" });
 
 export const metadata: Metadata = {
-  title: "Cloud & SaaS Security — Continuous Cloud Protection",
-  description: "Protect identities, configurations, data, and access across AWS, Azure, GCP, Microsoft 365, and Google Workspace with PurpleGuard managed cloud security.",
+  title: "Cloud & SaaS Security Dubai UAE — AWS, Azure, M365 Protection",
+  description:
+    "PurpleGuard secures cloud identities, configurations, data, and access across AWS, Azure, GCP, Microsoft 365, and Google Workspace for organisations in UAE, Egypt, and KSA.",
+  keywords: ["cloud security UAE", "SaaS security Dubai", "AWS security Egypt", "Azure security UAE", "Microsoft 365 security", "cloud posture management UAE", "NCA CCC cloud compliance"],
+  alternates: { canonical: "https://www.purpleguard.io/solutions/cloud-saas-security" },
+  openGraph: {
+    title: "Cloud & SaaS Security UAE — PurpleGuard",
+    description: "AWS, Azure, M365 & Google Workspace security for UAE, Egypt & KSA.",
+    images: [{ url: OG, width: 1200, height: 630, alt: "Cloud SaaS Security UAE" }],
+  },
 };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 
+const cloudFaqs = [
+  { question: "What cloud platforms does PurpleGuard support?", answer: "We support all major cloud platforms including AWS, Microsoft Azure, Google Cloud Platform (GCP), Microsoft 365, and Google Workspace. Our CSPM and SSPM capabilities cover identity, configuration, data, and access across all platforms." },
+  { question: "How does Cloud Security Posture Management (CSPM) work?", answer: "CSPM continuously scans your cloud environments for misconfigurations, compliance violations, and exposed resources. Our team remediates issues before attackers exploit them — covering CIS benchmarks, NCA ECC, and TDRA cloud security requirements." },
+  { question: "Can you secure our Microsoft 365 and Google Workspace environments?", answer: "Yes. Our SaaS Security Posture Management (SSPM) covers Microsoft 365 and Google Workspace, monitoring for misconfigured sharing settings, over-privileged users, OAuth app risks, and suspicious sign-in activity." },
+  { question: "How does cloud security help with NCA ECC compliance in KSA?", answer: "NCA ECC requires organisations to maintain a secure cloud posture, enforce identity controls, and document their cloud configurations. PurpleGuard maps your cloud controls directly to NCA ECC requirements and generates compliance-ready evidence." },
+  { question: "What is the difference between CSPM and CWPP?", answer: "CSPM (Cloud Security Posture Management) focuses on the configuration and compliance of cloud resources, while CWPP (Cloud Workload Protection Platform) protects the workloads themselves — virtual machines, containers, and serverless functions. PurpleGuard provides both." },
+];
+
 export default function CloudSaaSSecurityPage() {
-  return (
-    <div className="min-h-screen bg-slate-50">
+  const faqSchema = faqJsonLd(cloudFaqs);
+  const breadcrumbSchema = breadcrumbJsonLd([
+      { name: "Home", url: "/" },
+      { name: "Solutions", url: "/solutions" },
+      { name: "Cloud & SaaS Security", url: "/solutions/cloud-saas-security" },
+    ]);
+    return (
+      <div className="min-h-screen bg-slate-50">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative bg-gradient-to-br from-blue-900 via-cyan-800 to-blue-900 overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
@@ -112,6 +139,21 @@ export default function CloudSaaSSecurityPage() {
                   </CardContent>
                 </Card>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            {cloudFaqs.map((faq) => (
+              <div key={faq.question} className="border border-slate-200 rounded-xl p-6">
+                <h3 className="font-bold text-slate-900 mb-3">{faq.question}</h3>
+                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+              </div>
             ))}
           </div>
         </div>

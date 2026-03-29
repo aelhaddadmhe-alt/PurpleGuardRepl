@@ -4,17 +4,46 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, ChevronRight, Calendar, ArrowLeft, Shield, AlertTriangle, Globe, Activity, FileText, CheckCircle, TrendingUp, Zap, Eye } from "lucide-react";
+import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
+
+const OG = ogImageUrl({ title: "Managed Email Security — UAE & Egypt", subtitle: "Phishing, BEC & Email Threat Protection with DMARC & SPF/DKIM", category: "Managed X", color: "red" });
 
 export const metadata: Metadata = {
-  title: "Managed Email Security — Phishing, BEC & Email Threat Protection",
-  description: "Advanced email security against phishing, BEC, malware, and impersonation with DMARC, SPF/DKIM enforcement. Starting at $4/mailbox/month.",
+  title: "Managed Email Security Dubai UAE — Phishing & BEC Protection",
+  description:
+    "PurpleGuard Managed Email Security defends against phishing, BEC, malware, and impersonation with DMARC, SPF/DKIM enforcement. Protecting organisations in UAE, Egypt, and KSA.",
+  keywords: ["managed email security UAE", "phishing protection Dubai", "BEC defence Egypt", "DMARC service UAE", "email threat protection", "business email compromise UAE", "NCA ECC email security"],
+  alternates: { canonical: "https://www.purpleguard.io/services/managed-x/managed-email-security" },
+  openGraph: {
+    title: "Managed Email Security Dubai UAE | PurpleGuard",
+    description: "Phishing, BEC & email threat protection with DMARC enforcement for UAE, Egypt & KSA.",
+    images: [{ url: OG, width: 1200, height: 630, alt: "Managed Email Security UAE" }],
+  },
 };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 
+const emailFaqs = [
+  { question: "What does Managed Email Security protect against?", answer: "PurpleGuard's Managed Email Security protects against phishing, spear-phishing, business email compromise (BEC), malware attachments, ransomware delivery via email, spoofing, and brand impersonation. AI-based threat detection catches novel attacks that bypass traditional gateways." },
+  { question: "Does it work with Microsoft 365 and Google Workspace?", answer: "Yes. PurpleGuard Managed Email Security integrates natively with Microsoft 365 and Google Workspace. We layer AI-based threat detection on top of Microsoft Defender for Office 365 or add a dedicated secure email gateway for deeper protection." },
+  { question: "Can Managed Email Security help meet NCA ECC or EG-CERT requirements?", answer: "Yes. Email is the top attack vector and a key focus of both NCA ECC (Saudi Arabia) and EG-CERT (Egypt) guidelines. PurpleGuard's email security reporting maps phishing attempts, BEC incidents, and blocking stats to compliance framework controls." },
+  { question: "What happens when a suspicious email is detected?", answer: "Suspicious emails are quarantined for review. High-severity threats (BEC, targeted spear-phishing) trigger immediate alerts to your team with context and recommended actions. PurpleGuard analysts validate detections and tune filters continuously to minimise both false positives and missed threats." },
+];
+
 export default function ManagedEmailSecurityPage() {
-  return (
-    <div className="min-h-screen bg-slate-50">
+  const serviceSchema = serviceJsonLd({ name: "Managed Email Security — Phishing, BEC & Malware Protection", description: "AI-powered email threat detection for phishing, BEC, ransomware, and impersonation attacks. Managed 24/7 for Microsoft 365 and Google Workspace.", url: "/services/managed-x/managed-email-security", category: "Managed Security" });
+  const faqSchema = faqJsonLd(emailFaqs);
+  const breadcrumbSchema = breadcrumbJsonLd([
+      { name: "Home", url: "/" },
+      { name: "Services", url: "/services" },
+      { name: "Managed X", url: "/services/managed-x" },
+      { name: "Managed Email Security", url: "/services/managed-x/managed-email-security" },
+    ]);
+    return (
+      <div className="min-h-screen bg-slate-50">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative bg-gradient-to-br from-red-900 via-pink-800 to-red-900 overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
@@ -130,6 +159,21 @@ export default function ManagedEmailSecurityPage() {
             <a href="mailto:hello@purpleguard.io?subject=Managed E-mail Security Inquiry">
               <Button size="lg" variant="outline">Contact Sales <ChevronRight className="h-5 w-5 ml-2" /></Button>
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            {emailFaqs.map((faq) => (
+              <div key={faq.question} className="border border-slate-200 rounded-xl p-6">
+                <h3 className="font-bold text-slate-900 mb-3">{faq.question}</h3>
+                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

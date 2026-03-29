@@ -3,38 +3,45 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { organizationJsonLd, localBusinessJsonLd, websiteJsonLd } from "@/lib/json-ld";
+
+const OG_IMAGE = "/api/og?title=PurpleGuard%20MSSP&subtitle=Managed%20Security%20Services%20%E2%80%94%20UAE%2C%20Egypt%20%26%20KSA&category=MSSP&color=purple";
 
 export const metadata: Metadata = {
   title: {
-    default: "PurpleGuard — Smarter Security. Stronger Defense.",
+    default: "PurpleGuard — Managed Security Services UAE & Egypt | MSSP",
     template: "%s | PurpleGuard",
   },
   description:
-    "PurpleGuard is a managed security services provider (MSSP) delivering subscription-based, compliance-ready cybersecurity with 24/7 SOC monitoring for SMEs and mid-market organizations in Egypt, UAE, and KSA.",
+    "PurpleGuard is a managed security services provider (MSSP) delivering 24/7 SOC, MDR, VAPT, and managed infrastructure for SMEs and mid-market organisations in UAE, Egypt, and KSA. Subscription-based. Compliance-ready.",
   metadataBase: new URL("https://www.purpleguard.io"),
+  keywords: [
+    "MSSP UAE", "managed security services Dubai", "cybersecurity Egypt", "SOC as a service",
+    "managed EDR", "VAPT UAE", "ISO 27001 compliance", "MDR services", "PurpleGuard",
+  ],
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://www.purpleguard.io",
     siteName: "PurpleGuard",
-    title: "PurpleGuard — Smarter Security. Stronger Defense.",
+    title: "PurpleGuard — Managed Security Services UAE & Egypt | MSSP",
     description:
-      "Subscription-based managed cybersecurity for SMEs. 24/7 SOC, EDR, VAPT, threat intelligence and more — no annual contracts.",
+      "24/7 SOC, MDR, VAPT, and managed infrastructure for SMEs in UAE, Egypt, and KSA. Subscription-based. Compliance-ready.",
     images: [
       {
-        url: "/logo.png",
-        width: 400,
-        height: 120,
-        alt: "PurpleGuard",
+        url: OG_IMAGE,
+        width: 1200,
+        height: 630,
+        alt: "PurpleGuard — Managed Security Services",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "PurpleGuard — Smarter Security. Stronger Defense.",
+    title: "PurpleGuard — Managed Security Services UAE & Egypt",
     description:
-      "Subscription-based managed cybersecurity for SMEs in Egypt, UAE, and KSA.",
-    images: ["/logo.png"],
+      "Subscription-based managed cybersecurity for SMEs in UAE, Egypt, and KSA.",
+    images: [OG_IMAGE],
   },
 };
 
@@ -43,8 +50,26 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const org = organizationJsonLd();
+  const local = localBusinessJsonLd();
+  const site = websiteJsonLd();
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(local) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(site) }}
+        />
+      </head>
       <body>
         <Navigation />
         {children}

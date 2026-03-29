@@ -4,17 +4,44 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Lock, ChevronRight, Calendar, ArrowLeft, Shield, Users, Globe, KeyRound, Cpu, Eye, CheckCircle } from "lucide-react";
+import { faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
+
+const OG = ogImageUrl({ title: "Zero Trust & Secure Access — UAE & Egypt", subtitle: "ZTNA · SASE · Identity-Driven Access for Remote & Hybrid Workforces", category: "Solutions", color: "indigo" });
 
 export const metadata: Metadata = {
-  title: "Zero Trust & Secure Remote Access — PurpleGuard",
-  description: "Replace legacy VPNs with identity-driven zero trust access. Continuously verify users, devices, and context for secure remote and hybrid workforce access.",
+  title: "Zero Trust & Secure Remote Access Dubai UAE — ZTNA & SASE",
+  description:
+    "PurpleGuard replaces legacy VPNs with identity-driven zero trust access (ZTNA & SASE). Continuously verify users, devices, and context for remote and hybrid workforces in UAE, Egypt, and KSA.",
+  keywords: ["zero trust UAE", "ZTNA Dubai", "secure remote access Egypt", "VPN replacement UAE", "SASE service", "zero trust network access UAE", "NCA ECC zero trust"],
+  alternates: { canonical: "https://www.purpleguard.io/solutions/zero-trust-secure-remote-access" },
+  openGraph: {
+    title: "Zero Trust & Secure Remote Access UAE — PurpleGuard",
+    description: "ZTNA & SASE replacing VPNs for remote and hybrid workforces in UAE, Egypt & KSA.",
+    images: [{ url: OG, width: 1200, height: 630, alt: "Zero Trust Secure Access UAE" }],
+  },
 };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 
+const ztFaqs = [
+  { question: "What is Zero Trust Network Access (ZTNA)?", answer: "ZTNA is a security model that eliminates implicit trust — every user, device, and connection is verified before access is granted, regardless of location. Unlike VPNs that give broad network access, ZTNA enforces least-privilege, application-level access based on identity and context." },
+  { question: "How is ZTNA better than a traditional VPN?", answer: "Traditional VPNs grant broad network access once connected — creating lateral movement risk if credentials are compromised. ZTNA grants access only to the specific applications needed, continuously validates the user and device, and reduces your attack surface significantly." },
+  { question: "What does SASE mean and how does it relate to ZTNA?", answer: "SASE (Secure Access Service Edge) combines networking (SD-WAN) and security (ZTNA, SWG, CASB, FWaaS) into a single cloud-delivered architecture. ZTNA is the access control component of SASE. PurpleGuard delivers full SASE with ZTNA at its core." },
+  { question: "Does Zero Trust compliance support NCA ECC requirements in KSA?", answer: "Yes. NCA ECC mandates strong authentication, least-privilege access, and continuous monitoring. A Zero Trust architecture natively addresses these requirements and PurpleGuard provides compliance mapping and evidence for NCA ECC and SAMA assessments." },
+  { question: "Can we implement Zero Trust without replacing all existing infrastructure?", answer: "Absolutely. PurpleGuard takes an incremental approach — we overlay ZTNA controls on your existing infrastructure, starting with the highest-risk access paths. You do not need to rip and replace existing systems to benefit from Zero Trust principles." },
+];
+
 export default function ZeroTrustPage() {
-  return (
-    <div className="min-h-screen bg-slate-50">
+  const faqSchema = faqJsonLd(ztFaqs);
+  const breadcrumbSchema = breadcrumbJsonLd([
+      { name: "Home", url: "/" },
+      { name: "Solutions", url: "/solutions" },
+      { name: "Zero Trust & Secure Remote Access", url: "/solutions/zero-trust-secure-remote-access" },
+    ]);
+    return (
+      <div className="min-h-screen bg-slate-50">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800 overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
@@ -113,6 +140,21 @@ export default function ZeroTrustPage() {
                   </CardContent>
                 </Card>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            {ztFaqs.map((faq) => (
+              <div key={faq.question} className="border border-slate-200 rounded-xl p-6">
+                <h3 className="font-bold text-slate-900 mb-3">{faq.question}</h3>
+                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+              </div>
             ))}
           </div>
         </div>

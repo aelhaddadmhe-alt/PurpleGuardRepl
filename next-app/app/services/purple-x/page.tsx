@@ -5,11 +5,21 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, Search, Eye, AlertTriangle, Target, Settings, Network, ChevronRight, CheckCircle, Calendar, Phone } from "lucide-react";
 import { purpleXServices } from "@/lib/services-data";
+import { breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
+
+const OG = ogImageUrl({ title: "Purple X — Cybersecurity Services UAE & Egypt", subtitle: "VAPT · SOC · MDR · Threat Intelligence · Red Team · NDR", category: "Purple X", color: "purple" });
 
 export const metadata: Metadata = {
-  title: "Purple X Services — Advanced Cybersecurity & Exposure Management",
+  title: "Cybersecurity Services Dubai UAE — Purple X Advanced Security",
   description:
-    "Purple X delivers continuous, compliance-aware cybersecurity for SMEs. Explore PurpleVAPT, PurpleSOC, PurpleSentinel, PurpleSentry, PurpleStrike, PurpleConfig, and PurpleReveal.",
+    "Purple X delivers continuous, compliance-aware cybersecurity for SMEs in UAE, Egypt, and KSA. VAPT, 24/7 SOC, MDR, threat intelligence, red teaming, configuration hardening, and NDR.",
+  keywords: ["cybersecurity services UAE", "VAPT Dubai", "managed SOC Egypt", "MDR UAE", "threat intelligence Dubai", "red teaming UAE", "NDR managed service", "NCA ECC cybersecurity"],
+  alternates: { canonical: "https://www.purpleguard.io/services/purple-x" },
+  openGraph: {
+    title: "Cybersecurity Services Dubai UAE — Purple X | PurpleGuard",
+    description: "VAPT, SOC, MDR, threat intelligence & red teaming for UAE, Egypt & KSA.",
+    images: [{ url: OG, width: 1200, height: 630, alt: "Purple X Cybersecurity UAE" }],
+  },
 };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
@@ -25,8 +35,14 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 };
 
 export default function PurpleXPage() {
+  const breadcrumbSchema = breadcrumbJsonLd([
+    { name: "Home", url: "/" },
+    { name: "Services", url: "/services" },
+    { name: "Purple X", url: "/services/purple-x" },
+  ]);
   return (
     <div className="min-h-screen bg-slate-50">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-[#000033] via-[#6633cc] to-[#000033] overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />

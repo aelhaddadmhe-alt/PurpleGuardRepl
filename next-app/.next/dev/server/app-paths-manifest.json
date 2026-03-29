@@ -1,3 +1,8 @@
 {
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/services/managed-x/managed-firewall/page": "app/services/managed-x/managed-firewall/page.js",
+  "/services/purple-x/purplesoc/page": "app/services/purple-x/purplesoc/page.js",
+  "/solutions/cloud-saas-security/page": "app/solutions/cloud-saas-security/page.js",
+  "/solutions/external-attack-surface-management/page": "app/solutions/external-attack-surface-management/page.js",
+  "/solutions/zero-trust-secure-remote-access/page": "app/solutions/zero-trust-secure-remote-access/page.js"
 }

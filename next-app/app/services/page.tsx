@@ -8,11 +8,21 @@ import {
   Cpu, Server, Lock, Mail, Database, KeyRound, Globe,
   ChevronRight, CheckCircle, Calendar
 } from "lucide-react";
+import { breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
+
+const OG = ogImageUrl({ title: "Managed Security Services — UAE & Egypt", subtitle: "Purple X Cybersecurity · Managed X Infrastructure", category: "MSSP", color: "purple" });
 
 export const metadata: Metadata = {
-  title: "Security Services — Purple X & Managed X",
+  title: "Managed Security Services Dubai UAE — Purple X & Managed X",
   description:
-    "Explore PurpleGuard's full security services portfolio: Purple X cybersecurity services (VAPT, SOC, MDR, threat intelligence) and Managed X infrastructure services (EDR, firewall, WAF, backup).",
+    "PurpleGuard offers 15 managed security services across two lines: Purple X (VAPT, SOC, MDR, threat intelligence, red teaming, NDR) and Managed X (EDR, firewall, WAF, email, backup, SASE). Serving UAE, Egypt, and KSA.",
+  keywords: ["managed security services UAE", "cybersecurity services Dubai", "MSSP Egypt", "Purple X Managed X", "SOC VAPT MDR UAE", "NCA ECC MSSP", "TDRA cybersecurity"],
+  alternates: { canonical: "https://www.purpleguard.io/services" },
+  openGraph: {
+    title: "Managed Security Services UAE — PurpleGuard",
+    description: "Purple X cybersecurity + Managed X infrastructure — 15 services for UAE, Egypt & KSA.",
+    images: [{ url: OG, width: 1200, height: 630, alt: "PurpleGuard Security Services UAE" }],
+  },
 };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
@@ -39,8 +49,13 @@ const managedXItems = [
 ];
 
 export default function ServicesPage() {
+  const breadcrumbSchema = breadcrumbJsonLd([
+    { name: "Home", url: "/" },
+    { name: "Services", url: "/services" },
+  ]);
   return (
     <div className="min-h-screen bg-slate-50">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-[#000033] via-[#6633cc] to-[#000033] overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />

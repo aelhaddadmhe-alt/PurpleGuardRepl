@@ -4,17 +4,44 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, ChevronRight, Calendar, ArrowLeft, AlertTriangle, Eye, Database, Settings, Lock, Zap, CheckCircle } from "lucide-react";
+import { faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
+
+const OG = ogImageUrl({ title: "Ransomware Defense — UAE & Egypt", subtitle: "Prevention · Detection · Containment · Recovery Across All Layers", category: "Solutions", color: "red" });
 
 export const metadata: Metadata = {
-  title: "Ransomware Defense — Layered Protection & Recovery",
-  description: "Layered ransomware defense combining prevention, detection, containment, and recovery across endpoints, identities, networks, cloud, and backup.",
+  title: "Ransomware Defense Dubai UAE — Prevention, Detection & Recovery",
+  description:
+    "PurpleGuard's ransomware defense solution combines layered prevention, real-time detection, automated containment, and rapid recovery for organisations in UAE, Egypt, and KSA.",
+  keywords: ["ransomware defense UAE", "ransomware protection Dubai", "ransomware recovery Egypt", "ransomware prevention UAE", "immutable backup UAE", "EDR ransomware", "NCA ECC ransomware"],
+  alternates: { canonical: "https://www.purpleguard.io/solutions/ransomware-defense" },
+  openGraph: {
+    title: "Ransomware Defense UAE — PurpleGuard",
+    description: "Layered ransomware prevention, detection, containment & recovery for UAE, Egypt & KSA.",
+    images: [{ url: OG, width: 1200, height: 630, alt: "Ransomware Defense UAE" }],
+  },
 };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 
+const ransomwareFaqs = [
+  { question: "How does PurpleGuard protect against ransomware?", answer: "PurpleGuard provides a layered ransomware defense: endpoint detection and response (EDR) to block and contain execution; network detection (NDR) to identify lateral movement; identity protection to stop credential-based access; immutable backup to guarantee recovery; and 24/7 SOC monitoring to catch early-stage indicators before encryption begins." },
+  { question: "What happens if ransomware gets through — can we recover?", answer: "Yes. PurpleGuard's defense includes air-gapped, immutable backup management so you always have a clean, recent restore point. In the event of a ransomware incident, our SOC team isolates affected systems, preserves forensic evidence, and guides recovery — reducing downtime from weeks to hours." },
+  { question: "Does ransomware defense meet NCA ECC or EG-CERT incident response requirements?", answer: "Yes. Our incident response procedures are aligned with NCA ECC incident management controls, EG-CERT best practices, and UAE TDRA guidelines. We maintain a documented IR plan and provide post-incident reports in the format required by regulators." },
+  { question: "How quickly can ransomware be contained?", answer: "Our SOC monitors for ransomware indicators 24/7 with automated isolation playbooks. In most cases, containment of an active ransomware event is achieved within minutes of detection — before encryption spreads beyond the initially compromised host." },
+];
+
 export default function RansomwareDefensePage() {
-  return (
-    <div className="min-h-screen bg-slate-50">
+  const faqSchema = faqJsonLd(ransomwareFaqs);
+
+  const breadcrumbSchema = breadcrumbJsonLd([
+      { name: "Home", url: "/" },
+      { name: "Solutions", url: "/solutions" },
+      { name: "Ransomware Defense", url: "/solutions/ransomware-defense" },
+    ]);
+    return (
+      <div className="min-h-screen bg-slate-50">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative bg-gradient-to-br from-red-900 via-orange-800 to-red-900 overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
@@ -114,6 +141,21 @@ export default function RansomwareDefensePage() {
                   </CardContent>
                 </Card>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            {ransomwareFaqs.map((faq) => (
+              <div key={faq.question} className="border border-slate-200 rounded-xl p-6">
+                <h3 className="font-bold text-slate-900 mb-3">{faq.question}</h3>
+                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+              </div>
             ))}
           </div>
         </div>

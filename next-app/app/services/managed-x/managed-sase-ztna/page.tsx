@@ -4,17 +4,46 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Lock, ChevronRight, Calendar, ArrowLeft, Shield, Globe, Users, Activity, Eye, CheckCircle, TrendingUp, Zap, KeyRound } from "lucide-react";
+import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
+
+const OG = ogImageUrl({ title: "Managed SASE / ZTNA — UAE & Egypt", subtitle: "Zero Trust Network Access, SWG & CASB as a Managed Cloud Service", category: "Managed X", color: "slate" });
 
 export const metadata: Metadata = {
-  title: "Managed SASE / ZTNA — Secure Cloud-Delivered Access",
-  description: "Zero Trust Network Access, Secure Web Gateway, and CASB as a managed service. Replace VPNs and secure remote workforces. Starting at $12/user/month.",
+  title: "Managed SASE & ZTNA Dubai UAE — Zero Trust Secure Access",
+  description:
+    "PurpleGuard Managed SASE/ZTNA delivers Zero Trust Network Access, Secure Web Gateway, and CASB as a managed cloud service — replacing VPNs for organisations in UAE, Egypt, and KSA.",
+  keywords: ["managed SASE UAE", "ZTNA service Dubai", "zero trust network access Egypt", "CASB managed UAE", "secure web gateway UAE", "VPN replacement", "NCA ECC ZTNA"],
+  alternates: { canonical: "https://www.purpleguard.io/services/managed-x/managed-sase-ztna" },
+  openGraph: {
+    title: "Managed SASE & ZTNA Dubai UAE | PurpleGuard",
+    description: "Zero Trust Network Access, SWG & CASB managed cloud service for UAE, Egypt & KSA.",
+    images: [{ url: OG, width: 1200, height: 630, alt: "Managed SASE ZTNA UAE" }],
+  },
 };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 
+const saseFaqs = [
+  { question: "What is SASE and how is it different from a traditional VPN?", answer: "Secure Access Service Edge (SASE) combines network security and wide-area networking into a cloud-delivered service. Unlike traditional VPNs that backhaul traffic through a data centre and grant broad network access, SASE enforces identity-based zero trust access — users connect directly to the application they need, and access is verified continuously based on identity, device posture, and context." },
+  { question: "What is ZTNA and how does it fit into SASE?", answer: "Zero Trust Network Access (ZTNA) is the access control layer within SASE. It replaces VPN by granting application-level access only after verifying user identity, device health, and context — never exposing the full network. PurpleGuard's Managed SASE includes ZTNA as the core access model for all remote and hybrid workers." },
+  { question: "Does Managed SASE support NCA ECC or UAE TDRA requirements?", answer: "Yes. SASE and ZTNA architectures align with NCA ECC access control requirements, UAE TDRA cybersecurity guidelines, and Zero Trust principles increasingly required by regulators in Egypt and KSA. PurpleGuard provides compliance-mapped reports for each framework." },
+  { question: "Can Managed SASE replace our existing VPN immediately?", answer: "PurpleGuard's migration approach is phased — we assess your current remote access architecture, identify critical application groups, and migrate them to SASE incrementally to avoid disruption. Most organisations complete their VPN migration within 60–90 days with zero downtime." },
+];
+
 export default function ManagedSASEZTNAPage() {
-  return (
-    <div className="min-h-screen bg-slate-50">
+  const serviceSchema = serviceJsonLd({ name: "Managed SASE & ZTNA — Cloud-Delivered Secure Access", description: "Cloud-delivered SASE replacing legacy VPN with identity-driven zero trust access. Secure remote and hybrid workforce access for UAE, Egypt, and KSA.", url: "/services/managed-x/managed-sase-ztna", category: "Managed Security" });
+  const faqSchema = faqJsonLd(saseFaqs);
+  const breadcrumbSchema = breadcrumbJsonLd([
+      { name: "Home", url: "/" },
+      { name: "Services", url: "/services" },
+      { name: "Managed X", url: "/services/managed-x" },
+      { name: "Managed SASE & ZTNA", url: "/services/managed-x/managed-sase-ztna" },
+    ]);
+    return (
+      <div className="min-h-screen bg-slate-50">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800 overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
@@ -130,6 +159,21 @@ export default function ManagedSASEZTNAPage() {
             <a href="mailto:hello@purpleguard.io?subject=Managed SASE/ZTNA Inquiry">
               <Button size="lg" variant="outline">Contact Sales <ChevronRight className="h-5 w-5 ml-2" /></Button>
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            {saseFaqs.map((faq) => (
+              <div key={faq.question} className="border border-slate-200 rounded-xl p-6">
+                <h3 className="font-bold text-slate-900 mb-3">{faq.question}</h3>
+                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

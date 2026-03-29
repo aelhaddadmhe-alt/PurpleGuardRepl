@@ -4,17 +4,47 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Settings, ChevronRight, Calendar, ArrowLeft, Shield, CheckCircle, RefreshCw, FileText, AlertTriangle, TrendingUp, Zap } from "lucide-react";
+import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
+
+const OG = ogImageUrl({ title: "Configuration Hardening — UAE & Egypt", subtitle: "PurpleConfig: CIS Benchmarks & Security Hardening", category: "Purple X", color: "emerald" });
 
 export const metadata: Metadata = {
-  title: "PurpleConfig — Security Configuration Assessment & Hardening",
-  description: "Continuously assess endpoints and systems against CIS benchmarks and NIST controls. Detect misconfigurations and enforce secure baselines.",
+  title: "Security Configuration Hardening UAE — CIS Benchmarks | PurpleConfig",
+  description:
+    "PurpleConfig continuously assesses endpoints and systems against CIS benchmarks and NIST controls. Detect misconfigurations and enforce secure baselines across UAE, Egypt, and KSA.",
+  keywords: ["security hardening UAE", "CIS benchmarks Dubai", "configuration assessment Egypt", "NIST security controls", "secure baseline UAE", "ISO 27001 hardening", "NCA ECC configuration"],
+  alternates: { canonical: "https://www.purpleguard.io/services/purple-x/purpleconfig" },
+  openGraph: {
+    title: "Security Configuration Hardening UAE — PurpleConfig | PurpleGuard",
+    description: "CIS benchmark-aligned configuration hardening and misco detection for UAE, Egypt & KSA.",
+    images: [{ url: OG, width: 1200, height: 630, alt: "PurpleConfig — Configuration Hardening UAE" }],
+  },
 };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 
+const configFaqs = [
+  { question: "What does PurpleConfig do?", answer: "PurpleConfig delivers continuous security configuration management and hardening across servers, cloud environments, network devices, and endpoints. We assess your configuration against CIS Benchmarks, DISA STIGs, and compliance frameworks, then remediate gaps and monitor for configuration drift continuously." },
+  { question: "How does PurpleConfig reduce the risk of a breach?", answer: "Misconfiguration is the leading cause of cloud breaches. PurpleConfig enforces least-privilege access, disables unnecessary services, applies security baseline profiles, and monitors for any deviation — eliminating the configuration drift that attackers exploit." },
+  { question: "Does PurpleConfig support NCA ECC or ISO 27001 hardening requirements?", answer: "Yes. PurpleConfig's hardening standards align with NCA ECC Asset Management and Protection controls, ISO 27001 Annex A controls, and UAE TDRA security baseline requirements. Configuration audit reports are structured as compliance evidence ready for auditors." },
+  { question: "What platforms does PurpleConfig cover?", answer: "PurpleConfig covers Windows and Linux servers, AWS, Azure, and GCP cloud environments, Microsoft 365 tenants, Active Directory and Entra ID, network devices (firewalls, switches, routers), and endpoint operating systems." },
+];
+
 export default function PurpleConfigPage() {
-  return (
-    <div className="min-h-screen bg-slate-50">
+  const serviceSchema = serviceJsonLd({ name: "PurpleConfig — Security Configuration Management & Hardening", description: "Continuous configuration hardening against CIS Benchmarks across servers, cloud, and network devices. Drift detection and compliance-aligned reporting.", url: "/services/purple-x/purpleconfig", category: "Cybersecurity" });
+  const faqSchema = faqJsonLd(configFaqs);
+
+  const breadcrumbSchema = breadcrumbJsonLd([
+      { name: "Home", url: "/" },
+      { name: "Services", url: "/services" },
+      { name: "Purple X", url: "/services/purple-x" },
+      { name: "PurpleConfig", url: "/services/purple-x/purpleconfig" },
+    ]);
+    return (
+      <div className="min-h-screen bg-slate-50">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative bg-gradient-to-br from-emerald-900 via-teal-800 to-emerald-900 overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
@@ -130,6 +160,21 @@ export default function PurpleConfigPage() {
             <Link href="/pricing">
               <Button size="lg" variant="outline">View Pricing Details <ChevronRight className="h-5 w-5 ml-2" /></Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            {configFaqs.map((faq) => (
+              <div key={faq.question} className="border border-slate-200 rounded-xl p-6">
+                <h3 className="font-bold text-slate-900 mb-3">{faq.question}</h3>
+                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

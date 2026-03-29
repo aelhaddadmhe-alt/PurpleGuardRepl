@@ -4,17 +4,46 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { KeyRound, ChevronRight, Calendar, ArrowLeft, Shield, Lock, Users, Activity, FileText, CheckCircle, TrendingUp, Zap, Eye } from "lucide-react";
+import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
+
+const OG = ogImageUrl({ title: "Managed Identity — MFA, SSO & Zero Trust UAE & Egypt", subtitle: "Centralized IAM with MFA, Conditional Access & Zero Trust Enforcement", category: "Managed X", color: "purple" });
 
 export const metadata: Metadata = {
-  title: "Managed Identity — MFA, SSO & Zero Trust Access Management",
-  description: "Centralized identity and access management with MFA, SSO, conditional access, and zero trust enforcement. Starting at $5/user/month.",
+  title: "Managed Identity & IAM Dubai UAE — MFA, SSO & Zero Trust",
+  description:
+    "PurpleGuard Managed Identity delivers centralised IAM with MFA, SSO, conditional access, and zero trust enforcement for organisations in UAE, Egypt, and KSA.",
+  keywords: ["managed identity UAE", "IAM service Dubai", "MFA managed Egypt", "SSO service UAE", "zero trust identity", "conditional access UAE", "NCA ECC identity management"],
+  alternates: { canonical: "https://www.purpleguard.io/services/managed-x/managed-identity" },
+  openGraph: {
+    title: "Managed Identity & IAM Dubai UAE | PurpleGuard",
+    description: "MFA, SSO & zero trust identity management for UAE, Egypt & KSA.",
+    images: [{ url: OG, width: 1200, height: 630, alt: "Managed Identity UAE" }],
+  },
 };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 
+const identityFaqs = [
+  { question: "What does Managed Identity cover?", answer: "Managed Identity covers the configuration, monitoring, and continuous protection of your identity infrastructure — Active Directory, Azure Entra ID, Okta, or other identity providers. This includes privileged access management (PAM), MFA enforcement, suspicious login monitoring, and identity threat detection to stop credential-based attacks." },
+  { question: "Why is identity security so important?", answer: "Over 80% of breaches involve compromised credentials. Attackers exploit weak passwords, legacy protocols, over-privileged accounts, and lack of MFA. PurpleGuard's Managed Identity service continuously hardens your identity posture, monitors for anomalous access, and detects credential-based attacks before they result in a breach." },
+  { question: "Does Managed Identity help meet NCA ECC identity management requirements?", answer: "Yes. NCA ECC includes detailed controls for identity and access management. PurpleGuard's Managed Identity enforces least-privilege, manages privileged accounts, ensures MFA is deployed, and provides audit-ready reports mapping your identity posture to NCA ECC, ISO 27001, and UAE TDRA requirements." },
+  { question: "Can Managed Identity detect account takeover attempts?", answer: "Yes. PurpleGuard monitors identity logs for impossible travel, password spray attacks, credential stuffing, MFA bypass attempts, and unusual privileged access. Our SOC triage suspicious identity events 24/7 and respond to prevent account takeovers from progressing to full breach." },
+];
+
 export default function ManagedIdentityPage() {
-  return (
-    <div className="min-h-screen bg-slate-50">
+  const serviceSchema = serviceJsonLd({ name: "Managed Identity — IAM, PAM & Identity Threat Detection", description: "Identity security management covering Active Directory, Entra ID, MFA, PAM, and identity threat detection for UAE, Egypt, and KSA.", url: "/services/managed-x/managed-identity", category: "Managed Security" });
+  const faqSchema = faqJsonLd(identityFaqs);
+  const breadcrumbSchema = breadcrumbJsonLd([
+      { name: "Home", url: "/" },
+      { name: "Services", url: "/services" },
+      { name: "Managed X", url: "/services/managed-x" },
+      { name: "Managed Identity", url: "/services/managed-x/managed-identity" },
+    ]);
+    return (
+      <div className="min-h-screen bg-slate-50">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative bg-gradient-to-br from-cyan-900 via-blue-800 to-cyan-900 overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
@@ -130,6 +159,21 @@ export default function ManagedIdentityPage() {
             <a href="mailto:hello@purpleguard.io?subject=Managed Identity Inquiry">
               <Button size="lg" variant="outline">Contact Sales <ChevronRight className="h-5 w-5 ml-2" /></Button>
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            {identityFaqs.map((faq) => (
+              <div key={faq.question} className="border border-slate-200 rounded-xl p-6">
+                <h3 className="font-bold text-slate-900 mb-3">{faq.question}</h3>
+                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

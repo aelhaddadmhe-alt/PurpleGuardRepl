@@ -4,17 +4,44 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Globe, ChevronRight, Calendar, ArrowLeft, Shield, Eye, AlertTriangle, Search, Target, Activity, CheckCircle } from "lucide-react";
+import { faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
+
+const OG = ogImageUrl({ title: "EASM — External Attack Surface Management UAE & Egypt", subtitle: "Discover, Monitor & Reduce Your Internet-Facing Attack Surface", category: "Solutions", color: "orange" });
 
 export const metadata: Metadata = {
-  title: "External Attack Surface Management (EASM) — PurpleGuard",
-  description: "Continuously discover, monitor, and reduce your internet-facing attack surface. Identify unknown assets and close attack paths before they are weaponized.",
+  title: "External Attack Surface Management (EASM) Dubai UAE — PurpleGuard",
+  description:
+    "PurpleGuard continuously discovers, monitors, and reduces your internet-facing attack surface. EASM and digital risk protection for organisations in UAE, Egypt, and KSA.",
+  keywords: ["EASM UAE", "attack surface management Dubai", "digital risk protection Egypt", "external attack surface UAE", "internet-facing assets", "domain monitoring UAE", "NCA ECC EASM"],
+  alternates: { canonical: "https://www.purpleguard.io/solutions/external-attack-surface-management" },
+  openGraph: {
+    title: "EASM Dubai UAE — PurpleGuard",
+    description: "Continuous external attack surface discovery and monitoring for UAE, Egypt & KSA.",
+    images: [{ url: OG, width: 1200, height: 630, alt: "EASM UAE" }],
+  },
 };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 
+const easmFaqs = [
+  { question: "What is External Attack Surface Management (EASM)?", answer: "EASM is the continuous process of discovering, inventorying, and monitoring all internet-facing assets your organisation owns — domains, IPs, cloud services, APIs, and web applications — so you can identify and remediate exposures before attackers exploit them." },
+  { question: "How does EASM differ from a penetration test?", answer: "A penetration test is a point-in-time assessment. EASM is continuous — it monitors your external footprint 24/7 and alerts you when new assets appear, certificates expire, open ports change, or credentials are exposed in data breaches. The two services complement each other." },
+  { question: "Can EASM find assets we don't know we own?", answer: "Yes — this is one of its core strengths. Shadow IT, forgotten subdomains, acquired companies, and cloud infrastructure spin-up by developers often create unknown exposures. EASM discovers all assets associated with your organisation's digital footprint." },
+  { question: "How does EASM support NCA ECC compliance in KSA?", answer: "NCA ECC requires organisations to maintain an updated asset inventory and identify vulnerabilities proactively. EASM automates the external asset inventory requirement and provides continuous vulnerability discovery aligned to NCA ECC domains." },
+  { question: "What does PurpleGuard monitor for in EASM?", answer: "We monitor exposed ports and services, SSL/TLS certificate expiry, subdomain takeover risks, leaked credentials in dark web sources, misconfigured cloud storage, domain reputation, and third-party supply chain exposure for your digital ecosystem." },
+];
+
 export default function EASMPage() {
-  return (
-    <div className="min-h-screen bg-slate-50">
+  const faqSchema = faqJsonLd(easmFaqs);
+  const breadcrumbSchema = breadcrumbJsonLd([
+      { name: "Home", url: "/" },
+      { name: "Solutions", url: "/solutions" },
+      { name: "External Attack Surface Management", url: "/solutions/external-attack-surface-management" },
+    ]);
+    return (
+      <div className="min-h-screen bg-slate-50">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative bg-gradient-to-br from-purple-900 via-indigo-800 to-purple-900 overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
@@ -113,6 +140,21 @@ export default function EASMPage() {
                   </CardContent>
                 </Card>
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            {easmFaqs.map((faq) => (
+              <div key={faq.question} className="border border-slate-200 rounded-xl p-6">
+                <h3 className="font-bold text-slate-900 mb-3">{faq.question}</h3>
+                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+              </div>
             ))}
           </div>
         </div>

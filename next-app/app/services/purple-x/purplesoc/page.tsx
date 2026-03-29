@@ -4,17 +4,47 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Eye, ChevronRight, Calendar, ArrowLeft, Shield, Target, Bell, Activity, FileText, CheckCircle, Clock, Zap, TrendingUp } from "lucide-react";
+import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
+
+const OG = ogImageUrl({ title: "24/7 Managed SOC — UAE & Egypt", subtitle: "PurpleSOC: Always-On Threat Monitoring & Incident Response", category: "Purple X", color: "blue" });
 
 export const metadata: Metadata = {
-  title: "PurpleSOC — 24/7 Managed Security Operations Center",
-  description: "Fully managed 24/7 SOC with threat detection, incident investigation, and compliance-ready reporting. No internal SOC overhead.",
+  title: "Managed SOC Dubai UAE — 24/7 Security Operations Center",
+  description:
+    "PurpleSOC is a fully managed 24/7 Security Operations Centre delivering continuous threat detection, alert triage, and incident response for SMEs in UAE, Egypt, and KSA. No internal SOC overhead.",
+  keywords: ["managed SOC UAE", "SOC as a service Dubai", "24/7 security monitoring Egypt", "SIEM managed service", "incident response UAE", "SOC 2 compliance", "NCA ECC SOC"],
+  alternates: { canonical: "https://www.purpleguard.io/services/purple-x/purplesoc" },
+  openGraph: {
+    title: "Managed SOC Dubai UAE — PurpleSOC | PurpleGuard",
+    description: "24/7 managed SOC with threat detection, incident response & compliance reporting for UAE, Egypt & KSA.",
+    images: [{ url: OG, width: 1200, height: 630, alt: "PurpleSOC — 24/7 Managed SOC UAE" }],
+  },
 };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 
+const socFaqs = [
+  { question: "What is a managed SOC and how does PurpleSOC work?", answer: "A managed SOC (Security Operations Centre) monitors your environment 24/7 for threats, analyses alerts, and responds to incidents on your behalf. PurpleSOC ingests logs and signals from across your infrastructure into a cloud-native SIEM, applies threat intelligence, and provides human-led triage and response — without you needing to build an in-house team." },
+  { question: "How quickly does PurpleSOC respond to incidents?", answer: "PurpleSOC targets a mean time to detect (MTTD) under 15 minutes and a mean time to respond (MTTR) under 30 minutes for critical incidents. All alerts are triaged by certified analysts, and high-severity events receive immediate escalation to your team with a containment recommendation." },
+  { question: "Is PurpleSOC compliant with UAE TDRA and NCA ECC frameworks?", answer: "Yes. PurpleSOC is designed to support compliance with UAE TDRA requirements, Saudi NCA ECC controls, and Egyptian NTRA/EG-CERT guidelines. Monthly and quarterly reports map detected threats and response actions directly to framework controls, ready for audit." },
+  { question: "What log sources and tools does PurpleSOC integrate with?", answer: "PurpleSOC integrates with firewalls, EDR/XDR solutions, cloud providers (AWS, Azure, GCP), Microsoft 365, identity providers (Active Directory, Entra ID), web application firewalls, and custom data sources via Syslog and API." },
+];
+
 export default function PurpleSOCPage() {
-  return (
-    <div className="min-h-screen bg-slate-50">
+  const serviceSchema = serviceJsonLd({ name: "PurpleSOC — 24/7 Managed Security Operations Centre", description: "Continuous threat monitoring, detection, and incident response delivered as a fully managed 24/7 SOC service. Compliance-ready for UAE, Egypt, and KSA.", url: "/services/purple-x/purplesoc", category: "Cybersecurity" });
+  const faqSchema = faqJsonLd(socFaqs);
+
+  const breadcrumbSchema = breadcrumbJsonLd([
+      { name: "Home", url: "/" },
+      { name: "Services", url: "/services" },
+      { name: "Purple X", url: "/services/purple-x" },
+      { name: "PurpleSOC", url: "/services/purple-x/purplesoc" },
+    ]);
+    return (
+      <div className="min-h-screen bg-slate-50">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative bg-gradient-to-br from-blue-900 via-cyan-800 to-blue-900 overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
@@ -171,6 +201,21 @@ export default function PurpleSOCPage() {
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            {socFaqs.map((faq) => (
+              <div key={faq.question} className="border border-slate-200 rounded-xl p-6">
+                <h3 className="font-bold text-slate-900 mb-3">{faq.question}</h3>
+                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

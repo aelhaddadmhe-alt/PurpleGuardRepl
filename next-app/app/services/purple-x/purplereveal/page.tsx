@@ -4,17 +4,47 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Network, ChevronRight, Calendar, ArrowLeft, Shield, Eye, Activity, Globe, Lock, Target, CheckCircle, TrendingUp, Zap } from "lucide-react";
+import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
+
+const OG = ogImageUrl({ title: "NDR — Network Detection & Response UAE & Egypt", subtitle: "PurpleReveal: Deep Network Traffic Inspection & Behavioural Detection", category: "Purple X", color: "cyan" });
 
 export const metadata: Metadata = {
-  title: "PurpleReveal — Network Detection & Response (NDR)",
-  description: "Deep network traffic inspection and behavioral detection for advanced threats. PurpleReveal delivers NDR across on-premises and cloud networks.",
+  title: "Network Detection & Response (NDR) Dubai UAE — PurpleReveal",
+  description:
+    "PurpleReveal delivers deep network traffic inspection and behavioural threat detection across on-premises and cloud networks. NDR managed service for UAE, Egypt, and KSA.",
+  keywords: ["NDR UAE", "network detection response Dubai", "NTA Egypt", "network traffic analysis UAE", "lateral movement detection", "managed NDR", "NCA ECC network monitoring"],
+  alternates: { canonical: "https://www.purpleguard.io/services/purple-x/purplereveal" },
+  openGraph: {
+    title: "NDR Services Dubai UAE — PurpleReveal | PurpleGuard",
+    description: "Deep network detection & response across on-prem and cloud for UAE, Egypt & KSA.",
+    images: [{ url: OG, width: 1200, height: 630, alt: "PurpleReveal — NDR UAE" }],
+  },
 };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 
+const revealFaqs = [
+  { question: "What is NDR and why is it different from a firewall?", answer: "Network Detection and Response (NDR) analyses all network traffic in real time to detect threats that bypass perimeter controls. Firewalls block known bad traffic at the edge. NDR detects anomalies, lateral movement, encrypted command-and-control traffic, and data exfiltration inside your network — threats that are already past the firewall." },
+  { question: "Does PurpleReveal work with encrypted traffic?", answer: "Yes. PurpleReveal uses machine learning and behavioural analysis to detect threats in encrypted traffic without decryption. It identifies anomalous traffic patterns, unusual connection volumes, and known threat actor infrastructure based on metadata and behaviour — not just packet inspection." },
+  { question: "How does NDR support NCA ECC or NTRA network monitoring requirements?", answer: "PurpleReveal's continuous network monitoring supports NCA ECC network security controls, NTRA monitoring requirements (Egypt), and UAE TDRA network security guidelines. All detected events are logged with compliance-grade timestamps and chain-of-custody for incident investigations." },
+  { question: "Can PurpleReveal detect insider threats?", answer: "Yes. PurpleReveal establishes a behavioural baseline for each device and user on the network. Deviations — such as unusual data transfers, access to sensitive shares outside normal hours, or connection to unfamiliar external services — trigger alerts that may indicate insider threats or compromised accounts." },
+];
+
 export default function PurpleRevealPage() {
-  return (
-    <div className="min-h-screen bg-slate-50">
+  const serviceSchema = serviceJsonLd({ name: "PurpleReveal — Network Detection & Response (NDR)", description: "Deep network traffic analysis, behavioural detection, and threat hunting across on-premises and cloud networks. East-west traffic visibility for UAE, Egypt, and KSA.", url: "/services/purple-x/purplereveal", category: "Cybersecurity" });
+  const faqSchema = faqJsonLd(revealFaqs);
+
+  const breadcrumbSchema = breadcrumbJsonLd([
+      { name: "Home", url: "/" },
+      { name: "Services", url: "/services" },
+      { name: "Purple X", url: "/services/purple-x" },
+      { name: "PurpleReveal", url: "/services/purple-x/purplereveal" },
+    ]);
+    return (
+      <div className="min-h-screen bg-slate-50">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <section className="relative bg-gradient-to-br from-cyan-900 via-blue-800 to-cyan-900 overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
@@ -130,6 +160,21 @@ export default function PurpleRevealPage() {
             <Link href="/pricing">
               <Button size="lg" variant="outline">View Pricing Details <ChevronRight className="h-5 w-5 ml-2" /></Button>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <div className="space-y-6">
+            {revealFaqs.map((faq) => (
+              <div key={faq.question} className="border border-slate-200 rounded-xl p-6">
+                <h3 className="font-bold text-slate-900 mb-3">{faq.question}</h3>
+                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

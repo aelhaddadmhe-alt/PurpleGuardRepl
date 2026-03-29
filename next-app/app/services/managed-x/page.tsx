@@ -5,11 +5,21 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, Cpu, Server, Lock, Mail, Database, KeyRound, Globe, ChevronRight, CheckCircle, Calendar, Phone, Target } from "lucide-react";
 import { managedXServices } from "@/lib/services-data";
+import { breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
+
+const OG = ogImageUrl({ title: "Managed X — Security Infrastructure UAE & Egypt", subtitle: "EDR · Firewall · WAF · Email · Backup · Identity · SASE", category: "Managed X", color: "blue" });
 
 export const metadata: Metadata = {
-  title: "Managed X Services — Managed Security Infrastructure",
+  title: "Managed Security Infrastructure Dubai UAE — Managed X Services",
   description:
-    "Fully managed security infrastructure services including EDR, firewall, WAF, identity, email security, backup, and SASE. 24/7 monitoring, compliance-ready operations.",
+    "PurpleGuard Managed X delivers fully managed security infrastructure — EDR, firewall, WAF, identity, email security, backup, and SASE — for SMEs in UAE, Egypt, and KSA. 24/7 monitoring, compliance-ready operations.",
+  keywords: ["managed security infrastructure UAE", "managed EDR Dubai", "managed firewall Egypt", "managed WAF UAE", "managed email security", "SASE managed UAE", "NCA ECC managed services"],
+  alternates: { canonical: "https://www.purpleguard.io/services/managed-x" },
+  openGraph: {
+    title: "Managed Security Infrastructure UAE — Managed X | PurpleGuard",
+    description: "Fully managed EDR, firewall, WAF, identity, email & backup for UAE, Egypt & KSA.",
+    images: [{ url: OG, width: 1200, height: 630, alt: "Managed X Services UAE" }],
+  },
 };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
@@ -26,8 +36,14 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 };
 
 export default function ManagedXPage() {
+  const breadcrumbSchema = breadcrumbJsonLd([
+    { name: "Home", url: "/" },
+    { name: "Services", url: "/services" },
+    { name: "Managed X", url: "/services/managed-x" },
+  ]);
   return (
     <div className="min-h-screen bg-slate-50">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-[#000033] via-blue-800 to-[#000033] overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />

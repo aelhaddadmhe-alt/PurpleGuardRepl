@@ -5,11 +5,21 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, Lock, Cloud, Globe, FileCheck, Calendar, ChevronRight, CheckCircle } from "lucide-react";
 import { solutions } from "@/lib/services-data";
+import { breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
+
+const OG = ogImageUrl({ title: "Security Solutions UAE & Egypt", subtitle: "Compliance · Ransomware Defense · Cloud Security · EASM · Zero Trust", category: "Solutions", color: "orange" });
 
 export const metadata: Metadata = {
-  title: "Security Solutions — Compliance, Ransomware, Cloud, EASM, Zero Trust",
+  title: "Cybersecurity Solutions Dubai UAE — Compliance, Ransomware & Cloud Security",
   description:
-    "Outcome-focused security solutions for compliance readiness, ransomware defense, cloud security, external attack surface management, and zero trust access. Tailored to your challenges.",
+    "Outcome-focused cybersecurity solutions for UAE, Egypt, and KSA: compliance & audit readiness, ransomware defense, cloud & SaaS security, external attack surface management, and zero trust access.",
+  keywords: ["cybersecurity solutions UAE", "compliance readiness Dubai", "ransomware defense Egypt", "cloud security UAE", "EASM service", "zero trust UAE", "NCA ECC solutions"],
+  alternates: { canonical: "https://www.purpleguard.io/solutions" },
+  openGraph: {
+    title: "Cybersecurity Solutions UAE — PurpleGuard",
+    description: "Compliance, ransomware, cloud security & EASM solutions for UAE, Egypt & KSA.",
+    images: [{ url: OG, width: 1200, height: 630, alt: "PurpleGuard Cybersecurity Solutions" }],
+  },
 };
 
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
@@ -23,8 +33,13 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 };
 
 export default function SolutionsPage() {
+  const breadcrumbSchema = breadcrumbJsonLd([
+    { name: "Home", url: "/" },
+    { name: "Solutions", url: "/solutions" },
+  ]);
   return (
     <div className="min-h-screen bg-slate-50">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-[#000033] via-[#6633cc] to-[#000033] overflow-hidden">
         <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />

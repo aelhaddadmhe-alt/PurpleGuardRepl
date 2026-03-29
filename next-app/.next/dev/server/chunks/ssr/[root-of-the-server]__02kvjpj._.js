@@ -701,6 +701,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$right$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronRight$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/chevron-right.js [app-rsc] (ecmascript) <export default as ChevronRight>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2d$big$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle$3e$__ = __turbopack_context__.i("[project]/node_modules/lucide-react/dist/esm/icons/circle-check-big.js [app-rsc] (ecmascript) <export default as CheckCircle>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$lib$2f$services$2d$data$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/next-app/src/lib/services-data.ts [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$lib$2f$json$2d$ld$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/next-app/src/lib/json-ld.ts [app-rsc] (ecmascript)");
 ;
 ;
 ;
@@ -708,9 +709,40 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$lib$2f
 ;
 ;
 ;
+;
+const OG = (0, __TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$lib$2f$json$2d$ld$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["ogImageUrl"])({
+    title: "Security Solutions UAE & Egypt",
+    subtitle: "Compliance · Ransomware Defense · Cloud Security · EASM · Zero Trust",
+    category: "Solutions",
+    color: "orange"
+});
 const metadata = {
-    title: "Security Solutions — Compliance, Ransomware, Cloud, EASM, Zero Trust",
-    description: "Outcome-focused security solutions for compliance readiness, ransomware defense, cloud security, external attack surface management, and zero trust access. Tailored to your challenges."
+    title: "Cybersecurity Solutions Dubai UAE — Compliance, Ransomware & Cloud Security",
+    description: "Outcome-focused cybersecurity solutions for UAE, Egypt, and KSA: compliance & audit readiness, ransomware defense, cloud & SaaS security, external attack surface management, and zero trust access.",
+    keywords: [
+        "cybersecurity solutions UAE",
+        "compliance readiness Dubai",
+        "ransomware defense Egypt",
+        "cloud security UAE",
+        "EASM service",
+        "zero trust UAE",
+        "NCA ECC solutions"
+    ],
+    alternates: {
+        canonical: "https://www.purpleguard.io/solutions"
+    },
+    openGraph: {
+        title: "Cybersecurity Solutions UAE — PurpleGuard",
+        description: "Compliance, ransomware, cloud security & EASM solutions for UAE, Egypt & KSA.",
+        images: [
+            {
+                url: OG,
+                width: 1200,
+                height: 630,
+                alt: "PurpleGuard Cybersecurity Solutions"
+            }
+        ]
+    }
 };
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
 const iconMap = {
@@ -721,9 +753,29 @@ const iconMap = {
     "zero-trust-secure-remote-access": __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$lock$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Lock$3e$__["Lock"]
 };
 function SolutionsPage() {
+    const breadcrumbSchema = (0, __TURBOPACK__imported__module__$5b$project$5d2f$next$2d$app$2f$src$2f$lib$2f$json$2d$ld$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["breadcrumbJsonLd"])([
+        {
+            name: "Home",
+            url: "/"
+        },
+        {
+            name: "Solutions",
+            url: "/solutions"
+        }
+    ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "min-h-screen bg-slate-50",
         children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("script", {
+                type: "application/ld+json",
+                dangerouslySetInnerHTML: {
+                    __html: JSON.stringify(breadcrumbSchema)
+                }
+            }, void 0, false, {
+                fileName: "[project]/next-app/app/solutions/page.tsx",
+                lineNumber: 42,
+                columnNumber: 7
+            }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
                 className: "relative bg-gradient-to-br from-[#000033] via-[#6633cc] to-[#000033] overflow-hidden",
                 children: [
@@ -734,7 +786,7 @@ function SolutionsPage() {
                         }
                     }, void 0, false, {
                         fileName: "[project]/next-app/app/solutions/page.tsx",
-                        lineNumber: 30,
+                        lineNumber: 45,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -747,7 +799,7 @@ function SolutionsPage() {
                                     children: "Outcome-Focused Security"
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/solutions/page.tsx",
-                                    lineNumber: 33,
+                                    lineNumber: 48,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -755,7 +807,7 @@ function SolutionsPage() {
                                     children: "Security Solutions That Solve Real Problems"
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/solutions/page.tsx",
-                                    lineNumber: 34,
+                                    lineNumber: 49,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -763,7 +815,7 @@ function SolutionsPage() {
                                     children: "From compliance readiness to ransomware defense, PurpleGuard delivers tailored security solutions that address your specific challenges and industry requirements."
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/solutions/page.tsx",
-                                    lineNumber: 37,
+                                    lineNumber: 52,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -778,36 +830,36 @@ function SolutionsPage() {
                                                 className: "h-5 w-5 mr-2"
                                             }, void 0, false, {
                                                 fileName: "[project]/next-app/app/solutions/page.tsx",
-                                                lineNumber: 43,
+                                                lineNumber: 58,
                                                 columnNumber: 17
                                             }, this),
                                             " Book a Consultation"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/next-app/app/solutions/page.tsx",
-                                        lineNumber: 42,
+                                        lineNumber: 57,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/solutions/page.tsx",
-                                    lineNumber: 41,
+                                    lineNumber: 56,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/next-app/app/solutions/page.tsx",
-                            lineNumber: 32,
+                            lineNumber: 47,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/next-app/app/solutions/page.tsx",
-                        lineNumber: 31,
+                        lineNumber: 46,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/next-app/app/solutions/page.tsx",
-                lineNumber: 29,
+                lineNumber: 44,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -823,7 +875,7 @@ function SolutionsPage() {
                                     children: "Our Security Solutions"
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/solutions/page.tsx",
-                                    lineNumber: 54,
+                                    lineNumber: 69,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -831,13 +883,13 @@ function SolutionsPage() {
                                     children: "Each solution combines PurpleGuard's Purple-X cybersecurity services and Managed-X infrastructure to deliver comprehensive protection tailored to your specific needs."
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/solutions/page.tsx",
-                                    lineNumber: 55,
+                                    lineNumber: 70,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/next-app/app/solutions/page.tsx",
-                            lineNumber: 53,
+                            lineNumber: 68,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -860,12 +912,12 @@ function SolutionsPage() {
                                                                 className: "h-10 w-10"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/next-app/app/solutions/page.tsx",
-                                                                lineNumber: 69,
+                                                                lineNumber: 84,
                                                                 columnNumber: 27
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/next-app/app/solutions/page.tsx",
-                                                            lineNumber: 68,
+                                                            lineNumber: 83,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -873,7 +925,7 @@ function SolutionsPage() {
                                                             children: solution.name
                                                         }, void 0, false, {
                                                             fileName: "[project]/next-app/app/solutions/page.tsx",
-                                                            lineNumber: 71,
+                                                            lineNumber: 86,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -881,13 +933,13 @@ function SolutionsPage() {
                                                             children: solution.tagline
                                                         }, void 0, false, {
                                                             fileName: "[project]/next-app/app/solutions/page.tsx",
-                                                            lineNumber: 72,
+                                                            lineNumber: 87,
                                                             columnNumber: 25
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/next-app/app/solutions/page.tsx",
-                                                    lineNumber: 67,
+                                                    lineNumber: 82,
                                                     columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -898,7 +950,7 @@ function SolutionsPage() {
                                                             children: solution.description
                                                         }, void 0, false, {
                                                             fileName: "[project]/next-app/app/solutions/page.tsx",
-                                                            lineNumber: 75,
+                                                            lineNumber: 90,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -911,19 +963,19 @@ function SolutionsPage() {
                                                                             className: "h-3 w-3 mr-1"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/next-app/app/solutions/page.tsx",
-                                                                            lineNumber: 79,
+                                                                            lineNumber: 94,
                                                                             columnNumber: 31
                                                                         }, this),
                                                                         fw
                                                                     ]
                                                                 }, fw, true, {
                                                                     fileName: "[project]/next-app/app/solutions/page.tsx",
-                                                                    lineNumber: 78,
+                                                                    lineNumber: 93,
                                                                     columnNumber: 29
                                                                 }, this))
                                                         }, void 0, false, {
                                                             fileName: "[project]/next-app/app/solutions/page.tsx",
-                                                            lineNumber: 76,
+                                                            lineNumber: 91,
                                                             columnNumber: 25
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -936,57 +988,57 @@ function SolutionsPage() {
                                                                         className: "h-4 w-4 ml-2"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/next-app/app/solutions/page.tsx",
-                                                                        lineNumber: 86,
+                                                                        lineNumber: 101,
                                                                         columnNumber: 40
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/next-app/app/solutions/page.tsx",
-                                                                lineNumber: 85,
+                                                                lineNumber: 100,
                                                                 columnNumber: 27
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/next-app/app/solutions/page.tsx",
-                                                            lineNumber: 84,
+                                                            lineNumber: 99,
                                                             columnNumber: 25
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/next-app/app/solutions/page.tsx",
-                                                    lineNumber: 74,
+                                                    lineNumber: 89,
                                                     columnNumber: 23
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/next-app/app/solutions/page.tsx",
-                                            lineNumber: 66,
+                                            lineNumber: 81,
                                             columnNumber: 21
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/next-app/app/solutions/page.tsx",
-                                        lineNumber: 65,
+                                        lineNumber: 80,
                                         columnNumber: 19
                                     }, this)
                                 }, solution.id, false, {
                                     fileName: "[project]/next-app/app/solutions/page.tsx",
-                                    lineNumber: 64,
+                                    lineNumber: 79,
                                     columnNumber: 17
                                 }, this);
                             })
                         }, void 0, false, {
                             fileName: "[project]/next-app/app/solutions/page.tsx",
-                            lineNumber: 60,
+                            lineNumber: 75,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/next-app/app/solutions/page.tsx",
-                    lineNumber: 52,
+                    lineNumber: 67,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/next-app/app/solutions/page.tsx",
-                lineNumber: 51,
+                lineNumber: 66,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -999,7 +1051,7 @@ function SolutionsPage() {
                             children: "Not sure which solution fits your needs?"
                         }, void 0, false, {
                             fileName: "[project]/next-app/app/solutions/page.tsx",
-                            lineNumber: 102,
+                            lineNumber: 117,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1007,7 +1059,7 @@ function SolutionsPage() {
                             children: "Our security experts can help you identify the right combination of services to address your specific challenges and compliance requirements."
                         }, void 0, false, {
                             fileName: "[project]/next-app/app/solutions/page.tsx",
-                            lineNumber: 103,
+                            lineNumber: 118,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1025,19 +1077,19 @@ function SolutionsPage() {
                                                 className: "h-5 w-5 mr-2"
                                             }, void 0, false, {
                                                 fileName: "[project]/next-app/app/solutions/page.tsx",
-                                                lineNumber: 109,
+                                                lineNumber: 124,
                                                 columnNumber: 17
                                             }, this),
                                             " Schedule a Call"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/next-app/app/solutions/page.tsx",
-                                        lineNumber: 108,
+                                        lineNumber: 123,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/solutions/page.tsx",
-                                    lineNumber: 107,
+                                    lineNumber: 122,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -1052,41 +1104,41 @@ function SolutionsPage() {
                                                 className: "h-5 w-5 ml-2"
                                             }, void 0, false, {
                                                 fileName: "[project]/next-app/app/solutions/page.tsx",
-                                                lineNumber: 114,
+                                                lineNumber: 129,
                                                 columnNumber: 35
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/next-app/app/solutions/page.tsx",
-                                        lineNumber: 113,
+                                        lineNumber: 128,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/next-app/app/solutions/page.tsx",
-                                    lineNumber: 112,
+                                    lineNumber: 127,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/next-app/app/solutions/page.tsx",
-                            lineNumber: 106,
+                            lineNumber: 121,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/next-app/app/solutions/page.tsx",
-                    lineNumber: 101,
+                    lineNumber: 116,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/next-app/app/solutions/page.tsx",
-                lineNumber: 100,
+                lineNumber: 115,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/next-app/app/solutions/page.tsx",
-        lineNumber: 27,
+        lineNumber: 41,
         columnNumber: 5
     }, this);
 }
