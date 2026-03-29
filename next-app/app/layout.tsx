@@ -56,7 +56,11 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <head suppressHydrationWarning>
+      <body>
+        <Navigation />
+        {children}
+        <Footer />
+        <WhatsAppButton />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }}
@@ -72,12 +76,6 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(site) }}
         />
-      </head>
-      <body>
-        <Navigation />
-        {children}
-        <Footer />
-        <WhatsAppButton />
       </body>
     </html>
   );
