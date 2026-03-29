@@ -1,1 +1,7 @@
-{}
+{
+  "/page": "app/page.js",
+  "/pricing/page": "app/pricing/page.js",
+  "/services/purple-x/page": "app/services/purple-x/page.js",
+  "/services/purple-x/purplevapt/page": "app/services/purple-x/purplevapt/page.js",
+  "/solutions/page": "app/solutions/page.js"
+}
