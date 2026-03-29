@@ -1,101 +1,98 @@
-# CyberShield Pro - Managed Security Services
+# PurpleGuard — Managed Security Services Platform
 
 ## Overview
 
-CyberShield Pro is a full-stack web application providing managed cybersecurity services for small and medium-sized businesses (SMBs). The platform offers both "Managed" services (traditional managed security) and "Purple" services (specialized security offerings), with integrated subscription management, payment processing via Stripe, and a comprehensive dashboard for users to monitor their security posture.
-
-The application serves as a security services marketplace where businesses can browse services, subscribe to security packages, book consultations, access educational blog content, and manage their security operations through a centralized dashboard.
+PurpleGuard is a managed security services provider (MSSP) website serving SMEs and mid-market organizations in Egypt, UAE, and KSA. The platform offers both "Purple X" services (advanced cybersecurity — VAPT, SOC, MDR, threat intelligence) and "Managed X" services (ongoing managed infrastructure — EDR, firewall, email, backup), plus use-case solution bundles and an AI Security Advisor.
 
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
 
-## System Architecture
+## Project Structure
 
-### Frontend Architecture
+There are two coexisting applications in this repo:
 
-**Framework**: React with TypeScript using Vite as the build tool
+### 1. `next-app/` — **Active (SSR Migration)**
+The Next.js 14 App Router rebuild. This is the active webview (port 5000).
+- **Workflow**: `cd next-app && node ../node_modules/.bin/next dev -p 5000`
+- **Phase**: Phase 1 (Foundation) complete. Phase 2 (content pages) next.
+- **Rendering**: SSR / SSG — every page returns full HTML for Google indexing.
 
-**Routing**: Wouter for client-side routing with conditional rendering based on authentication status
+### 2. Root (`client/` + `server/`) — **Legacy (CSR + Express)**
+The original Vite + React + Express SPA. Not currently running as the webview.
+- Full feature set: auth (Replit OIDC), Stripe payments, dashboard, blog, PDFs
+- Kept intact for reference during migration. Features will be ported to Next.js in later phases.
 
-**State Management**: TanStack Query (React Query) for server state management and caching
+---
 
-**UI Framework**: 
-- Shadcn/ui components built on Radix UI primitives
-- Tailwind CSS for styling with custom design system
-- CSS variables for theming with security-focused color palette
+## Active Architecture (`next-app/`)
 
-**Authentication Flow**: Conditional routing that shows different page sets for authenticated vs unauthenticated users
+### Frontend
 
-### Backend Architecture
+**Framework**: Next.js 14 App Router with TypeScript
 
-**Framework**: Express.js with TypeScript running in ESM mode
+**Rendering Strategy**:
+- Static pages (service/solution content): SSG — pre-rendered at build time
+- Dynamic pages (blog posts): SSR with `generateStaticParams`
+- Interactive UI (AI Advisor chat): Client Components with `"use client"`
 
-**Authentication**: Replit OpenID Connect (OIDC) integration with Passport.js strategy and session management
+**Routing**: Next.js file-based routing (`app/` directory)
 
-**API Design**: RESTful endpoints with comprehensive error handling and request/response logging middleware
+**UI Framework**:
+- Shadcn/ui components (47 components in `next-app/src/components/ui/`)
+- Tailwind CSS with identical design tokens as the legacy app
+- CSS variables for theming — same colour palette
 
-**File Structure**: Clean separation between routes, storage layer, and database connections
+**SEO**: Every page exports `generateMetadata()` with unique title, description, and Open Graph tags. `app/sitemap.ts` and `app/robots.ts` generate `/sitemap.xml` and `/robots.txt` automatically.
 
-### Data Storage Solutions
+### Layout
 
-**Database**: PostgreSQL with Neon serverless connection pooling
+`app/layout.tsx` wraps every page with:
+- `<Navigation />` — sticky top nav with hover dropdowns (Client Component)
+- `<Footer />` — full 5-column footer with all service links (Server Component)
+- `<WhatsAppButton />` — fixed floating CTA
 
-**ORM**: Drizzle ORM with type-safe schema definitions and migrations
+### Assets
 
-**Session Storage**: PostgreSQL-backed sessions using connect-pg-simple
+- Logo: `next-app/public/logo.png` (copied from `attached_assets/`)
+- `next-app/src/lib/utils.ts` — `cn()` utility (clsx + tailwind-merge)
 
-**Schema Design**: Comprehensive data model including:
-- User management with Stripe integration fields
-- Service catalog with categorization (managed/purple)
-- Subscription and booking management
-- Blog content management
-- Security event tracking
+---
 
-### Authentication and Authorization
+## Migration Phases
 
-**Provider**: Replit Auth with OpenID Connect protocol
+| Phase | Scope | Status |
+|---|---|---|
+| 1 | Foundation, layout, styling, components | ✅ Complete |
+| 2 | All 26 content pages (services, solutions, pricing) | ⏳ Next |
+| 3 | SEO infrastructure (sitemap, robots, metadata) | ⏳ Pending |
+| 4 | Supporting pages (booking, blog placeholder, AI Advisor) | ⏳ Pending |
+| 5 | Whitepaper PDF downloads | ⏳ Pending |
+| 6 | Blog from database | ⏳ Pending |
+| 7 | Auth + dashboard + subscriptions | ⏳ Pending |
 
-**Session Management**: Server-side sessions stored in PostgreSQL with configurable TTL
+---
 
-**Security**: HTTP-only secure cookies with session rotation and CSRF protection
+## Legacy Architecture (Reference)
 
-**User Context**: Integrated with frontend state management for seamless authentication checks
+### Frontend (CSR SPA)
+- React + TypeScript + Vite
+- Wouter for client-side routing
+- TanStack Query for data fetching
+- Authentication-conditional routing (authenticated vs public page sets)
 
-### Payment Processing
+### Backend (Express.js)
+- Express with TypeScript (ESM mode)
+- Replit OpenID Connect auth (Passport.js)
+- RESTful `/api/*` endpoints
+- PostgreSQL sessions via connect-pg-simple
 
-**Provider**: Stripe integration for subscription management
+### Database
+- PostgreSQL (Neon serverless)
+- Drizzle ORM with type-safe schema
+- Tables: users, services, subscriptions, bookings, blog_posts, security_events
 
-**Implementation**: React Stripe.js components with server-side payment intent creation
-
-**Features**: Subscription-based billing with customer and subscription ID tracking in user profiles
-
-## External Dependencies
-
-### Payment Services
-- **Stripe**: Payment processing, subscription management, and customer billing
-- Stripe React components for secure payment forms
-- Webhook integration for payment status updates
-
-### Database Services
-- **Neon PostgreSQL**: Serverless PostgreSQL database with connection pooling
-- WebSocket connections for real-time database operations
-
-### Authentication Services
-- **Replit Auth**: OpenID Connect authentication provider
-- Passport.js for authentication middleware integration
-
-### Development Tools
-- **Replit Platform**: Development environment with live reload and error overlay
-- Vite plugins for development tooling and runtime error handling
-
-### UI and Styling
-- **Radix UI**: Accessible component primitives
-- **Tailwind CSS**: Utility-first CSS framework
-- **Lucide React**: Icon library for consistent iconography
-
-### Email and Communication
-- Form submission handling for booking requests and consultations
-- Integration points prepared for email service providers
-
-The architecture emphasizes type safety, developer experience, and scalability while maintaining clean separation of concerns between frontend, backend, and data layers.
+### External Services (Legacy)
+- Stripe: subscription billing
+- PDFKit: whitepaper generation
+- Anthropic Claude: AI Advisor (backend proxy at `/api/assistant`)
