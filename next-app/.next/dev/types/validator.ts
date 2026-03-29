@@ -45,6 +45,231 @@ type LayoutConfig<Route extends LayoutRoutes = LayoutRoutes> = {
   type __Unused = __Check
 }
 
+// Validate ../../../app/pricing/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/pricing">> = Specific
+  const handler = {} as typeof import("../../../app/pricing/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/managed-x/managed-backup-bcdr/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/managed-x/managed-backup-bcdr">> = Specific
+  const handler = {} as typeof import("../../../app/services/managed-x/managed-backup-bcdr/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/managed-x/managed-edr/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/managed-x/managed-edr">> = Specific
+  const handler = {} as typeof import("../../../app/services/managed-x/managed-edr/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/managed-x/managed-email-security/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/managed-x/managed-email-security">> = Specific
+  const handler = {} as typeof import("../../../app/services/managed-x/managed-email-security/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/managed-x/managed-endpoint/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/managed-x/managed-endpoint">> = Specific
+  const handler = {} as typeof import("../../../app/services/managed-x/managed-endpoint/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/managed-x/managed-firewall/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/managed-x/managed-firewall">> = Specific
+  const handler = {} as typeof import("../../../app/services/managed-x/managed-firewall/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/managed-x/managed-identity/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/managed-x/managed-identity">> = Specific
+  const handler = {} as typeof import("../../../app/services/managed-x/managed-identity/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/managed-x/managed-sase-ztna/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/managed-x/managed-sase-ztna">> = Specific
+  const handler = {} as typeof import("../../../app/services/managed-x/managed-sase-ztna/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/managed-x/managed-waf/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/managed-x/managed-waf">> = Specific
+  const handler = {} as typeof import("../../../app/services/managed-x/managed-waf/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/managed-x/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/managed-x">> = Specific
+  const handler = {} as typeof import("../../../app/services/managed-x/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services">> = Specific
+  const handler = {} as typeof import("../../../app/services/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/purple-x/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/purple-x">> = Specific
+  const handler = {} as typeof import("../../../app/services/purple-x/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/purple-x/purpleconfig/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/purple-x/purpleconfig">> = Specific
+  const handler = {} as typeof import("../../../app/services/purple-x/purpleconfig/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/purple-x/purplereveal/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/purple-x/purplereveal">> = Specific
+  const handler = {} as typeof import("../../../app/services/purple-x/purplereveal/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/purple-x/purplesentinel/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/purple-x/purplesentinel">> = Specific
+  const handler = {} as typeof import("../../../app/services/purple-x/purplesentinel/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/purple-x/purplesentry/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/purple-x/purplesentry">> = Specific
+  const handler = {} as typeof import("../../../app/services/purple-x/purplesentry/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/purple-x/purplesoc/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/purple-x/purplesoc">> = Specific
+  const handler = {} as typeof import("../../../app/services/purple-x/purplesoc/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/purple-x/purplestrike/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/purple-x/purplestrike">> = Specific
+  const handler = {} as typeof import("../../../app/services/purple-x/purplestrike/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/services/purple-x/purplevapt/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/services/purple-x/purplevapt">> = Specific
+  const handler = {} as typeof import("../../../app/services/purple-x/purplevapt/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/solutions/cloud-saas-security/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/solutions/cloud-saas-security">> = Specific
+  const handler = {} as typeof import("../../../app/solutions/cloud-saas-security/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/solutions/compliance-audit-readiness/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/solutions/compliance-audit-readiness">> = Specific
+  const handler = {} as typeof import("../../../app/solutions/compliance-audit-readiness/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/solutions/external-attack-surface-management/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/solutions/external-attack-surface-management">> = Specific
+  const handler = {} as typeof import("../../../app/solutions/external-attack-surface-management/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/solutions/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/solutions">> = Specific
+  const handler = {} as typeof import("../../../app/solutions/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/solutions/ransomware-defense/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/solutions/ransomware-defense">> = Specific
+  const handler = {} as typeof import("../../../app/solutions/ransomware-defense/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
+// Validate ../../../app/solutions/zero-trust-secure-remote-access/page.tsx
+{
+  type __IsExpected<Specific extends AppPageConfig<"/solutions/zero-trust-secure-remote-access">> = Specific
+  const handler = {} as typeof import("../../../app/solutions/zero-trust-secure-remote-access/page.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 
 
 
