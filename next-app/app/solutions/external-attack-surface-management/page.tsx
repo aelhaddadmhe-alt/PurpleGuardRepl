@@ -128,7 +128,7 @@ export default function EASMPage() {
                 <Calendar className="h-5 w-5 mr-2" /> Get a Free Exposure Report
               </Button>
             </a>
-            <a href="mailto:mmowafy@purpleguard.io?subject=EASM Solution Inquiry">
+            <a href="mailto:hello@purpleguard.io?subject=EASM Solution Inquiry">
               <Button size="lg" variant="outline" className="border-white bg-white/20 text-white hover:bg-white/30">Contact Sales</Button>
             </a>
           </div>

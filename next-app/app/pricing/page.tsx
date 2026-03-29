@@ -53,7 +53,7 @@ export default function PricingPage() {
               PurpleGuard pricing is subscription-based, risk-aligned, and designed to scale with your business—without hidden costs or tool sprawl.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="mailto:mmowafy@purpleguard.io?subject=Custom Quote Request">
+              <a href="mailto:hello@purpleguard.io?subject=Custom Quote Request">
                 <Button size="lg" className="bg-[#ff6633] hover:bg-[#ff6633]/90 text-white">
                   <Mail className="h-5 w-5 mr-2" /> Get a Custom Quote
                 </Button>
@@ -236,7 +236,7 @@ export default function PricingPage() {
                     <div className="text-sm font-medium text-slate-900 mb-1">Business outcome:</div>
                     <div className="text-sm text-slate-600">{bundle.outcome}</div>
                   </div>
-                  <a href="mailto:mmowafy@purpleguard.io?subject=Bundle Pricing Request">
+                  <a href="mailto:hello@purpleguard.io?subject=Bundle Pricing Request">
                     <Button className="w-full bg-[#6633cc] hover:bg-[#6633cc]/90">
                       Request Bundle Pricing <ChevronRight className="h-4 w-4 ml-2" />
                     </Button>
@@ -288,7 +288,7 @@ export default function PricingPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Know your risk. Pay only for what you need.</h2>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:mmowafy@purpleguard.io?subject=Custom Quote Request">
+            <a href="mailto:hello@purpleguard.io?subject=Custom Quote Request">
               <Button size="lg" className="bg-[#ff6633] hover:bg-[#ff6633]/90 text-white">
                 <Mail className="h-5 w-5 mr-2" /> Get a Custom Quote
               </Button>

@@ -291,7 +291,7 @@ export default function HomePage() {
                 Book a Free Security Consultation
               </Button>
             </a>
-            <a href="mailto:mmowafy@purpleguard.io">
+            <a href="mailto:hello@purpleguard.io">
               <Button size="lg" variant="outline" className="border-white/50 text-white bg-white/20 hover:bg-white/30 px-8">
                 <Mail className="h-5 w-5 mr-2" />
                 Contact Sales

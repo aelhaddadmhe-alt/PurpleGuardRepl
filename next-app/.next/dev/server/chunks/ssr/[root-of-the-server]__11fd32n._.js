@@ -223,7 +223,7 @@ __turbopack_context__.s([
     ()=>solutions
 ]);
 const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
-const CONTACT_EMAIL = "mmowafy@purpleguard.io";
+const CONTACT_EMAIL = "hello@purpleguard.io";
 const purpleXServices = [
     {
         id: "purple-vapt",

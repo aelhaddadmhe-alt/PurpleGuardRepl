@@ -128,7 +128,7 @@ export default function ZeroTrustPage() {
                 <Calendar className="h-5 w-5 mr-2" /> Plan Your Zero Trust Journey
               </Button>
             </a>
-            <a href="mailto:mmowafy@purpleguard.io?subject=Zero Trust &amp; ZTNA Inquiry">
+            <a href="mailto:hello@purpleguard.io?subject=Zero Trust &amp; ZTNA Inquiry">
               <Button size="lg" variant="outline" className="border-white bg-white/20 text-white hover:bg-white/30">Contact Sales</Button>
             </a>
           </div>

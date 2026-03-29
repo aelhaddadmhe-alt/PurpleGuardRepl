@@ -127,7 +127,7 @@ export default function CloudSaaSSecurityPage() {
                 <Calendar className="h-5 w-5 mr-2" /> Book Cloud Security Assessment
               </Button>
             </a>
-            <a href="mailto:mmowafy@purpleguard.io?subject=Cloud &amp; SaaS Security Inquiry">
+            <a href="mailto:hello@purpleguard.io?subject=Cloud &amp; SaaS Security Inquiry">
               <Button size="lg" variant="outline" className="border-white bg-white/20 text-white hover:bg-white/30">Contact Sales</Button>
             </a>
           </div>

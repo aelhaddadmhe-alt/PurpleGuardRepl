@@ -146,7 +146,7 @@ export default function ManagedXPage() {
                             <Phone className="h-4 w-4 mr-2" /> Book Discovery Call
                           </Button>
                         </a>
-                        <a href={`mailto:mmowafy@purpleguard.io?subject=${encodeURIComponent(service.emailSubject)}`}>
+                        <a href={`mailto:hello@purpleguard.io?subject=${encodeURIComponent(service.emailSubject)}`}>
                           <Button variant="outline" className="border-slate-300 text-slate-700">
                             <Mail className="h-4 w-4 mr-2" /> Email Inquiry
                           </Button>
@@ -239,7 +239,7 @@ export default function ManagedXPage() {
                 <Calendar className="h-5 w-5 mr-2" /> Schedule a Consultation
               </Button>
             </a>
-            <a href="mailto:mmowafy@purpleguard.io">
+            <a href="mailto:hello@purpleguard.io">
               <Button size="lg" variant="outline" className="border-slate-300 text-slate-700">
                 Contact Sales <ChevronRight className="h-5 w-5 ml-2" />
               </Button>

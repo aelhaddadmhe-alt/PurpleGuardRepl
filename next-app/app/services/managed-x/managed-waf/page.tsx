@@ -127,7 +127,7 @@ export default function ManagedWAFPage() {
                 <Calendar className="h-5 w-5 mr-2" /> Get a Quote
               </Button>
             </a>
-            <a href="mailto:mmowafy@purpleguard.io?subject=Managed WAF Inquiry">
+            <a href="mailto:hello@purpleguard.io?subject=Managed WAF Inquiry">
               <Button size="lg" variant="outline">Contact Sales <ChevronRight className="h-5 w-5 ml-2" /></Button>
             </a>
           </div>

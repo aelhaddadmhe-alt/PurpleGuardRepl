@@ -36,7 +36,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-2 text-slate-400">
                 <Mail className="h-4 w-4 text-[#6633cc]" />
-                <a href="mailto:mmowafy@purpleguard.io" className="hover:text-white transition-colors">mmowafy@purpleguard.io</a>
+                <a href="mailto:hello@purpleguard.io" className="hover:text-white transition-colors">hello@purpleguard.io</a>
               </div>
             </div>
             <div className="flex space-x-4">

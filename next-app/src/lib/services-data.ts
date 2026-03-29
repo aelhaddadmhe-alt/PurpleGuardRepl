@@ -1,5 +1,5 @@
 export const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
-export const CONTACT_EMAIL = "mmowafy@purpleguard.io";
+export const CONTACT_EMAIL = "hello@purpleguard.io";
 
 export interface PurpleXService {
   id: string;
