@@ -58,7 +58,6 @@ interface CalcResult {
   effortD: number;
   effortPct: number;
   effortItems: { label: string; days: number }[];
-  compNote: string;
   compNotes: { framework: string; text: string }[];
 }
 
@@ -253,7 +252,6 @@ export default function CalculatorPage() {
     if (compliance.includes("iso")) compNotes.push({ framework: "ISO 27001", text: "Annex A.12.6.1 (vulnerability management) and A.18.2 (security review) are covered by annual VA + PT." });
     if (compliance.includes("pci")) compNotes.push({ framework: "PCI-DSS", text: "Req. 11.3 mandates annual internal + external PT. Req. 11.2 requires quarterly vulnerability scans." });
     if (compliance.includes("nca")) compNotes.push({ framework: "NCA ECC", text: "ECC-1-5-3 requires regular vulnerability assessment and penetration testing for critical systems." });
-    const compNote = compNotes.length > 0 ? "HAS_NOTES" : "";
 
     const monthly = isAnnual ? Math.round(total / 10) : null;
 
@@ -270,7 +268,7 @@ export default function CalculatorPage() {
       svcType: serviceType, netType: networkType, intIPs: iIPs, extIPs: eIPs,
       webApps: webCount, webType: webAppType, adChoice, compliance,
       total, monthly, isAnnual, isPT, isVA,
-      lines, scopeData, recTitle, recBody, effortD, effortPct, effortItems, compNote, compNotes,
+      lines, scopeData, recTitle, recBody, effortD, effortPct, effortItems, compNotes,
     });
 
     setTimeout(() => resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 80);
