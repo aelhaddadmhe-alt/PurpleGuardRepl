@@ -364,10 +364,10 @@ export default function CalculatorPage() {
                 className="bg-white/[0.06] border border-white/[0.11] rounded-lg text-white text-[15px] font-medium py-2.5 px-3.5 w-full outline-none focus:border-purple-400 focus:bg-purple-400/[0.07] transition-colors appearance-none cursor-pointer"
                 style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' stroke='%239CA3AF' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E\")", backgroundRepeat: "no-repeat", backgroundPosition: "right 13px center", paddingRight: "34px" }}
               >
-                <option value="va_annual">Vulnerability Assessment — Annual (continuous)</option>
-                <option value="va_onetime">Vulnerability Assessment — One-time</option>
-                <option value="pt_annual">Penetration Testing — Annual (VA included)</option>
-                <option value="pt_onetime">Penetration Testing — One-time (VA included)</option>
+                <option value="va_annual" className="bg-[#1a1a2e] text-white">Vulnerability Assessment — Annual (continuous)</option>
+                <option value="va_onetime" className="bg-[#1a1a2e] text-white">Vulnerability Assessment — One-time</option>
+                <option value="pt_annual" className="bg-[#1a1a2e] text-white">Penetration Testing — Annual (VA included)</option>
+                <option value="pt_onetime" className="bg-[#1a1a2e] text-white">Penetration Testing — One-time (VA included)</option>
               </select>
             </div>
 
@@ -379,9 +379,9 @@ export default function CalculatorPage() {
                 className="bg-white/[0.06] border border-white/[0.11] rounded-lg text-white text-[15px] font-medium py-2.5 px-3.5 w-full outline-none focus:border-purple-400 focus:bg-purple-400/[0.07] transition-colors appearance-none cursor-pointer"
                 style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' stroke='%239CA3AF' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E\")", backgroundRepeat: "no-repeat", backgroundPosition: "right 13px center", paddingRight: "34px" }}
               >
-                <option value="internal">Internal network only</option>
-                <option value="external">External / internet-facing only</option>
-                <option value="both">Both internal + external</option>
+                <option value="internal" className="bg-[#1a1a2e] text-white">Internal network only</option>
+                <option value="external" className="bg-[#1a1a2e] text-white">External / internet-facing only</option>
+                <option value="both" className="bg-[#1a1a2e] text-white">Both internal + external</option>
               </select>
             </div>
 
@@ -433,12 +433,12 @@ export default function CalculatorPage() {
                 className="bg-white/[0.06] border border-white/[0.11] rounded-lg text-white text-[15px] font-medium py-2.5 px-3.5 w-full outline-none focus:border-purple-400 focus:bg-purple-400/[0.07] transition-colors appearance-none cursor-pointer"
                 style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' stroke='%239CA3AF' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E\")", backgroundRepeat: "no-repeat", backgroundPosition: "right 13px center", paddingRight: "34px" }}
               >
-                <option value="0">None</option>
-                <option value="1">1 application</option>
-                <option value="2">2 applications</option>
-                <option value="3">3 applications</option>
-                <option value="5">4–5 applications</option>
-                <option value="8">6–10 applications</option>
+                <option value="0" className="bg-[#1a1a2e] text-white">None</option>
+                <option value="1" className="bg-[#1a1a2e] text-white">1 application</option>
+                <option value="2" className="bg-[#1a1a2e] text-white">2 applications</option>
+                <option value="3" className="bg-[#1a1a2e] text-white">3 applications</option>
+                <option value="5" className="bg-[#1a1a2e] text-white">4–5 applications</option>
+                <option value="8" className="bg-[#1a1a2e] text-white">6–10 applications</option>
               </select>
             </div>
 
@@ -454,8 +454,8 @@ export default function CalculatorPage() {
                   className="bg-white/[0.06] border border-white/[0.11] rounded-lg text-white text-[15px] font-medium py-2.5 px-3.5 w-full outline-none focus:border-purple-400 focus:bg-purple-400/[0.07] transition-colors appearance-none cursor-pointer"
                   style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' stroke='%239CA3AF' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E\")", backgroundRepeat: "no-repeat", backgroundPosition: "right 13px center", paddingRight: "34px" }}
                 >
-                  <option value="automated">Automated</option>
-                  <option value="manual">Manual (compliance-grade)</option>
+                  <option value="automated" className="bg-[#1a1a2e] text-white">Automated</option>
+                  <option value="manual" className="bg-[#1a1a2e] text-white">Manual (compliance-grade)</option>
                 </select>
               </div>
             )}
