@@ -59,6 +59,7 @@ interface CalcResult {
   effortPct: number;
   effortItems: { label: string; days: number }[];
   compNote: string;
+  compNotes: { framework: string; text: string }[];
 }
 
 const COMPLIANCE_OPTIONS = [
@@ -247,11 +248,12 @@ export default function CalculatorPage() {
       adChoice !== "none" ? { label: "AD assessment", days: adChoice === "professional" ? 2 : 1 } : null,
     ].filter(Boolean) as { label: string; days: number }[];
 
-    let compNote = "";
-    if (compliance.includes("fra")) compNote += "FRA Decree 139: Requires annual penetration testing and activity logging. This scope satisfies the pentest requirement. ";
-    if (compliance.includes("iso")) compNote += "ISO 27001: Annex A.12.6.1 (vulnerability management) and A.18.2 (security review) are covered by annual VA + PT. ";
-    if (compliance.includes("pci")) compNote += "PCI-DSS: Req. 11.3 mandates annual internal + external PT. Req. 11.2 requires quarterly vulnerability scans. ";
-    if (compliance.includes("nca")) compNote += "NCA ECC: ECC-1-5-3 requires regular vulnerability assessment and penetration testing for critical systems. ";
+    const compNotes: { framework: string; text: string }[] = [];
+    if (compliance.includes("fra")) compNotes.push({ framework: "FRA Decree 139", text: "Requires annual penetration testing and activity logging. This scope satisfies the pentest requirement." });
+    if (compliance.includes("iso")) compNotes.push({ framework: "ISO 27001", text: "Annex A.12.6.1 (vulnerability management) and A.18.2 (security review) are covered by annual VA + PT." });
+    if (compliance.includes("pci")) compNotes.push({ framework: "PCI-DSS", text: "Req. 11.3 mandates annual internal + external PT. Req. 11.2 requires quarterly vulnerability scans." });
+    if (compliance.includes("nca")) compNotes.push({ framework: "NCA ECC", text: "ECC-1-5-3 requires regular vulnerability assessment and penetration testing for critical systems." });
+    const compNote = compNotes.length > 0 ? "HAS_NOTES" : "";
 
     const monthly = isAnnual ? Math.round(total / 10) : null;
 
@@ -268,7 +270,7 @@ export default function CalculatorPage() {
       svcType: serviceType, netType: networkType, intIPs: iIPs, extIPs: eIPs,
       webApps: webCount, webType: webAppType, adChoice, compliance,
       total, monthly, isAnnual, isPT, isVA,
-      lines, scopeData, recTitle, recBody, effortD, effortPct, effortItems, compNote,
+      lines, scopeData, recTitle, recBody, effortD, effortPct, effortItems, compNote, compNotes,
     });
 
     setTimeout(() => resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 80);
@@ -611,9 +613,13 @@ export default function CalculatorPage() {
                 </div>
               </div>
 
-              {result.compNote && (
+              {result.compNotes.length > 0 && (
                 <div className="mt-4 p-3.5 bg-amber-500/[0.08] border border-amber-500/[0.24] rounded-lg text-[13px] text-amber-200 leading-relaxed">
-                  {result.compNote}
+                  {result.compNotes.map((n, i) => (
+                    <span key={i}>
+                      <strong className="text-amber-400">{n.framework}:</strong> {n.text}{" "}
+                    </span>
+                  ))}
                 </div>
               )}
 
