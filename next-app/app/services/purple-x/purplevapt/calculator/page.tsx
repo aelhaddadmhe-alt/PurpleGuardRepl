@@ -235,7 +235,7 @@ export default function CalculatorPage() {
     }
 
     if (compliance.length > 0 && !isAnnual && !isPT) {
-      recTitle = "Compliance requirement detected — annual contract recommended";
+      recTitle = "\u26A0 Compliance requirement detected — annual contract recommended";
       recBody = `Your compliance framework${compliance.length > 1 ? "s" : ""} (${compliance.map((c) => c.toUpperCase()).join(", ")}) require${compliance.length === 1 ? "s" : ""} continuous or at-minimum quarterly scanning. We strongly recommend switching to an annual contract to maintain audit-ready documentation throughout the year.`;
     }
 
