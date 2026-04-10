@@ -1,0 +1,24 @@
+Prompt for Replit AI:
+
+I have a standalone, fully functional pricing calculator built in HTML/CSS/JS that I need integrated into this existing project.
+
+Your Objective: Port the provided calculator into our codebase. You must meticulously maintain its input structure and calculation logic, but strictly adapt its visual styling to inherit our website's existing global typography, color palette, and design system.
+
+Specific Instructions for Integration:
+
+Maintain Functionality & Logic (CRITICAL):
+
+Retain all the underlying pricing math and logic located in the JavaScript (the annual vs. one-time pricing constants, network conditionals, the effort breakdown calculation, and the 
+
+sendProposal()
+ function).
+Framework adaptation: If this project uses a framework (like React, Next.js, or Vue), carefully refactor the vanilla DOM manipulation (onclick, document.getElementById(), classList.toggle()) into the proper framework state management (e.g., useState, useEffect) without breaking the math.
+Inherit Website Branding & Styling:
+
+Remove Custom Fonts: Strip the imports and CSS rules for 'Barlow' and 'Barlow Condensed'. Allow all headings (<h1>, <h2>), input labels, and text to inherit the website's default font families.
+Strip Hardcoded Colors: Remove all the --pg- root CSS variables (like --pg-purple, --pg-deep). Replace the hardcoded background colors, borders, and text colors with the global CSS variables or Tailwind classes used by our site's existing theme.
+Adaptive UI: The original calculator uses a dark "glassmorphism" aesthetic with semi-transparent backgrounds (rgba(255,255,255,0.04)). Rebuild these cards, inputs, and interactive toggle pills to look native to our site. Ensure they respond perfectly to whether the site is in light mode or dark mode, pulling from the existing UI component standards.
+Retain the UI Interactions:
+
+While changing the colors, ensure the custom interactive elements remain functionally obvious: the multi-select toggle pills for Active Directory, the click-to-select Compliance buttons, and the drop-down select designs.
+Maintain the slide-up animation when the results populate.

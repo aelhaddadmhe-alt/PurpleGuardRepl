@@ -1,0 +1,35 @@
+I have a standalone, fully functional pricing calculator built in HTML/CSS/JS that I need integrated into this existing project.
+
+Your Objective: Port the provided calculator into our codebase. You must meticulously maintain its input structure and calculation logic, but strictly adapt its visual styling to inherit our website's existing global typography, color palette, and design system.
+
+Specific Instructions for Integration:
+
+Maintain Functionality & Logic (CRITICAL):
+
+Retain all the underlying pricing math and logic located in the JavaScript (the annual vs. one-time pricing constants, network conditionals, the effort breakdown calculation, and the 
+
+sendProposal()
+ function).
+
+Framework adaptation: If this project uses a framework (like React, Next.js, or Vue), carefully refactor the vanilla DOM manipulation (onclick, document.getElementById(), classList.toggle()) into the proper framework state management (e.g., useState, useEffect) without breaking the math.
+
+
+Inherit Website Branding & Styling:
+
+Remove Custom Fonts: Strip the imports and CSS rules for 'Barlow' and 'Barlow Condensed'. Allow all headings (<h1>, <h2>), input labels, and text to inherit the website's default font families.
+
+Adaptive UI: The original calculator uses a dark "glassmorphism" aesthetic with semi-transparent backgrounds (rgba(255,255,255,0.04)). 
+
+Retain the UI Interactions:
+
+While changing the colors, ensure the custom interactive elements remain functionally obvious: the multi-select toggle pills for Active Directory, the click-to-select Compliance buttons, and the drop-down select designs.
+Maintain the slide-up animation when the results populate.
+
+Update navigation paths as follows: 
+
+1.Create a subpage for this calculator under services/purple-x/purpleVAPT/calculator. 
+2.Link the calculator with a prominent button on the homepage labelled "PurpleVAPT Calculator". 
+3.On the /services/purple-x/purpleVAPT page, replace the "Request a VAPT assessment" calendly link with a link to the -newly added calculator subpage. 
+4.On the purplevapt page, under "PurpleVAPT vs Basic Vulnerability Scanning" section, add a CTA button labelled "Estimate cost" that links to the calculator subpage. 
+5. on the purplevapt page, under "Delivery options" section, add a CTA button labelled "Indicative Pricing Calculator" that links to the calculator subpage. 
+6. on the purplevapt page, under "Know your weaknesses before attackers do" section, Replace the calendly link for the CTA button labelled "Get a custom quote" with a link to the calculator subpage. 
