@@ -7,7 +7,7 @@ import {
   Shield, ChevronRight, Calendar, Mail, Target, Eye, Zap, Lock, Server,
   Globe, Building2, Stethoscope, Landmark, Code, Briefcase, Factory,
   CheckCircle, ShieldCheck, Cpu, FileCheck, Handshake, AlertTriangle,
-  Cloud, Radar, KeyRound, MapPin
+  Cloud, Radar, KeyRound, MapPin, Calculator
 } from "lucide-react";
 import { faqJsonLd, ogImageUrl, websiteJsonLd } from "@/lib/json-ld";
 
@@ -153,6 +153,12 @@ export default function HomePage() {
                   Request a Security Assessment
                 </Button>
               </a>
+              <Link href="/services/purple-x/purplevapt/calculator">
+                <Button size="lg" className="bg-[#ff6633] hover:bg-[#ff6633]/90 text-white px-8">
+                  <Calculator className="h-5 w-5 mr-2" />
+                  PurpleVAPT Calculator
+                </Button>
+              </Link>
               <Link href="/services">
                 <Button size="lg" variant="outline" className="border-white/50 text-white bg-white/20 hover:bg-white/30 px-8">
                   View Services

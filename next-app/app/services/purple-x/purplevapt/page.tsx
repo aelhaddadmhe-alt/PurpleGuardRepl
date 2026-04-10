@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Search, ChevronRight, Calendar, ArrowLeft, Shield, Target, Globe, Cloud, FileSearch, CheckCircle, Eye, Zap, TrendingUp, X, Check, RefreshCw, Clock, Layers } from "lucide-react";
+import { Search, ChevronRight, Calendar, ArrowLeft, Shield, Target, Globe, Cloud, FileSearch, CheckCircle, Eye, Zap, TrendingUp, X, Check, RefreshCw, Clock, Layers, Calculator } from "lucide-react";
 import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
 
 const OG = ogImageUrl({ title: "VAPT Services UAE & Egypt", subtitle: "Vulnerability Assessment & Penetration Testing — PurpleVAPT", category: "Purple X", color: "purple" });
@@ -77,11 +77,11 @@ export default function PurpleVAPTPage() {
               ))}
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer">
+              <Link href="/services/purple-x/purplevapt/calculator">
                 <Button size="lg" className="bg-[#ff6633] hover:bg-[#ff6633]/90 text-white">
-                  <Calendar className="h-5 w-5 mr-2" /> Request a VAPT Assessment
+                  <Calculator className="h-5 w-5 mr-2" /> Estimate Your VAPT Cost
                 </Button>
-              </a>
+              </Link>
               <Link href="/services/purple-x">
                 <Button size="lg" variant="outline" className="border-white bg-white/20 text-white hover:bg-white/30">
                   View Purple-X Services <ChevronRight className="h-5 w-5 ml-2" />
@@ -262,6 +262,13 @@ export default function PurpleVAPTPage() {
               </CardContent>
             </Card>
           </div>
+          <div className="text-center mt-8">
+            <Link href="/services/purple-x/purplevapt/calculator">
+              <Button size="lg" className="bg-[#6633cc] hover:bg-[#5522bb] text-white">
+                <Calculator className="h-5 w-5 mr-2" /> Estimate Cost
+              </Button>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -288,7 +295,12 @@ export default function PurpleVAPTPage() {
               </Card>
             ))}
           </div>
-          <div className="text-center mt-8">
+          <div className="text-center mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link href="/services/purple-x/purplevapt/calculator">
+              <Button className="bg-[#6633cc] hover:bg-[#5522bb] text-white">
+                <Calculator className="h-4 w-4 mr-2" /> Indicative Pricing Calculator
+              </Button>
+            </Link>
             <Link href="/pricing">
               <Button variant="link" className="text-purple-600 hover:text-purple-700">
                 View Pricing Explained <ChevronRight className="h-4 w-4 ml-1" />
@@ -369,11 +381,11 @@ export default function PurpleVAPTPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Know your weaknesses before attackers do.</h2>
           <p className="text-xl text-slate-300 mb-8">Get proactive about your security posture with continuous vulnerability assessment and penetration testing.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer">
+            <Link href="/services/purple-x/purplevapt/calculator">
               <Button size="lg" className="bg-[#ff6633] hover:bg-[#ff6633]/90 text-white">
-                <Calendar className="h-5 w-5 mr-2" /> Get a Custom Quote
+                <Calculator className="h-5 w-5 mr-2" /> Get a Custom Quote
               </Button>
-            </a>
+            </Link>
             <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="border-white bg-white/20 text-white hover:bg-white/30">
                 Talk to a Security Expert

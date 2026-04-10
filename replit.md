@@ -52,6 +52,10 @@ The original Vite + React + Express SPA. Not currently running as the webview.
 - `<Footer />` — full 5-column footer with all service links (Server Component)
 - `<WhatsAppButton />` — fixed floating CTA
 
+### Interactive Tools
+
+- **PurpleVAPT Sizing Calculator**: `/services/purple-x/purplevapt/calculator` — client-side pricing calculator ported from standalone HTML. All pricing logic (VA/PT annual/one-time lookup tables, IP packs, web app/AD/compliance pricing, effort breakdown, proposal mailto) lives in the page component. Layout file provides metadata + breadcrumb JSON-LD. Linked from homepage hero, PurpleVAPT hero, comparison section, delivery options, and final CTA.
+
 ### Assets
 
 - Logo: `next-app/public/logo.png` (copied from `attached_assets/`)
