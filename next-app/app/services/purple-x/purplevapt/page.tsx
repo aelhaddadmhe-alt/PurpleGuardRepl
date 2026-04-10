@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Search, ChevronRight, Calendar, ArrowLeft, Shield, Target, Globe, Cloud, FileSearch, CheckCircle, Eye, Zap, TrendingUp, X, Check, RefreshCw, Clock, Layers, Calculator } from "lucide-react";
+import { Search, ChevronRight, ArrowLeft, Shield, Target, Globe, Cloud, FileSearch, CheckCircle, Eye, Zap, TrendingUp, X, Check, RefreshCw, Clock, Layers, Calculator } from "lucide-react";
 import { serviceJsonLd, faqJsonLd, breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
 
 const OG = ogImageUrl({ title: "VAPT Services UAE & Egypt", subtitle: "Vulnerability Assessment & Penetration Testing — PurpleVAPT", category: "Purple X", color: "purple" });
