@@ -91,8 +91,10 @@ export default function CalculatorPage() {
   const [checkedCompliance, setCheckedCompliance] = useState<string[]>([]);
   const [result, setResult] = useState<CalcResult | null>(null);
   const [intError, setIntError] = useState(false);
+  const [extError, setExtError] = useState(false);
   const resultsRef = useRef<HTMLDivElement>(null);
   const intRef = useRef<HTMLInputElement>(null);
+  const extRef = useRef<HTMLInputElement>(null);
 
   const showIntField = networkType === "internal" || networkType === "both";
   const showExtField = networkType === "external" || networkType === "both";
@@ -123,9 +125,15 @@ export default function CalculatorPage() {
 
     const hasScope = (iIPs + eIPs + webCount) > 0 || adChoice !== "none";
     if (!hasScope) {
-      setIntError(true);
-      intRef.current?.focus();
-      setTimeout(() => setIntError(false), 1800);
+      if (networkType === "external") {
+        setExtError(true);
+        extRef.current?.focus();
+        setTimeout(() => setExtError(false), 1800);
+      } else {
+        setIntError(true);
+        intRef.current?.focus();
+        setTimeout(() => setIntError(false), 1800);
+      }
       return;
     }
 
@@ -404,13 +412,14 @@ export default function CalculatorPage() {
                   <Tooltip tip="Count public-facing IP addresses only — web servers, mail servers, VPN gateways, firewalls." />
                 </label>
                 <input
+                  ref={extRef}
                   type="number"
                   value={extIPs}
                   onChange={(e) => setExtIPs(e.target.value)}
                   placeholder="e.g. 10"
                   min={1}
                   max={500}
-                  className="bg-white/[0.06] border border-white/[0.11] rounded-lg text-white text-[15px] font-medium py-2.5 px-3.5 w-full outline-none focus:border-purple-400 focus:bg-purple-400/[0.07] transition-colors placeholder:text-slate-600"
+                  className={`bg-white/[0.06] border ${extError ? "border-red-500" : "border-white/[0.11]"} rounded-lg text-white text-[15px] font-medium py-2.5 px-3.5 w-full outline-none focus:border-purple-400 focus:bg-purple-400/[0.07] transition-colors placeholder:text-slate-600`}
                 />
                 <span className="text-[11px] text-slate-600 mt-0.5">Public-facing IPs only</span>
               </div>
