@@ -1,9 +1,9 @@
 "use client";
 
-import { useState, useRef, useCallback, useMemo } from "react";
+import { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Calculator, Mail, RotateCcw, ChevronRight, Info } from "lucide-react";
+import { ArrowLeft, Mail, RotateCcw } from "lucide-react";
 
 const VA_ANNUAL: Record<number, number>  = {10:799, 25:1199, 50:1699, 100:2299, 250:3499, 500:4999, 1000:7499, 2500:13999};
 const VA_ONETIME: Record<number, number> = {10:699, 25:999, 50:1499, 100:1999, 250:2999, 500:4299, 1000:6499, 2500:11999};
@@ -315,7 +315,7 @@ export default function CalculatorPage() {
   }, [result]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0A0C14] via-[#1A1040] to-[#0A0C14] relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-b from-[#000033] via-slate-900 to-[#000033] relative overflow-hidden">
       <div className="fixed inset-0 pointer-events-none z-0" style={{
         background: "radial-gradient(ellipse 55% 45% at 8% 18%, rgba(127,119,221,0.13) 0%, transparent 60%), radial-gradient(ellipse 45% 38% at 92% 82%, rgba(13,148,136,0.07) 0%, transparent 60%)"
       }} />
