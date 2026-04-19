@@ -153,19 +153,6 @@ export default function HomePage() {
                   Request a Security Assessment
                 </Button>
               </a>
-              <Link href="/services/purple-x/purplevapt/calculator">
-                <Button size="lg" className="bg-[#ff6633] hover:bg-[#ff6633]/90 text-white px-8">
-                  <Calculator className="h-5 w-5 mr-2" />
-                  PurpleVAPT Calculator
-                </Button>
-              </Link>
-              <Link href="/services/purple-x/purpleSOC/questionnaire">
-                <Button size="lg" className="bg-[#7c3aed] hover:bg-[#7c3aed]/90 text-white px-8">
-                  <Calculator className="h-5 w-5 mr-2" />
-                  Size my SOC
-                  <ChevronRight className="h-5 w-5 ml-1" />
-                </Button>
-              </Link>
               <Link href="/services">
                 <Button size="lg" variant="outline" className="border-white/50 text-white bg-white/20 hover:bg-white/30 px-8">
                   View Services
@@ -191,6 +178,57 @@ export default function HomePage() {
                 <span className="text-slate-700 font-medium">{item.label}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Calculate Yourself */}
+      <section className="relative bg-gradient-to-br from-black via-[#0a0418] to-[#000033] py-20 overflow-hidden">
+        <div className="absolute inset-0 opacity-20" aria-hidden="true">
+          <div className="absolute -top-24 -left-24 w-96 h-96 bg-[#6633cc] rounded-full blur-3xl" />
+          <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-[#7c3aed] rounded-full blur-3xl" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 max-w-3xl mx-auto">
+            <Badge className="bg-[#6633cc]/20 text-purple-300 border-purple-400/30 mb-4">
+              Self-Service Estimators
+            </Badge>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">Calculate Yourself</h2>
+            <p className="text-lg md:text-xl text-slate-300 leading-relaxed">
+              Don't like to wait for budgetary estimates? Use our calculators to estimate the costs for your required services and deliverables. Fully anonymous, no sales follow-ups if not requested.
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            <Link href="/services/purple-x/purplevapt/calculator" className="group">
+              <div className="h-full rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-[#6633cc]/60 backdrop-blur-sm p-8 transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#6633cc]/20">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#6633cc] to-[#7c3aed] flex items-center justify-center mb-6">
+                  <Calculator className="h-7 w-7 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-3">PurpleVAPT Calculator</h3>
+                <p className="text-slate-300 mb-6 leading-relaxed">
+                  Scope your vulnerability assessment and penetration testing engagement. Price IPs, web apps, AD, and compliance testing in minutes.
+                </p>
+                <span className="inline-flex items-center text-purple-300 font-semibold group-hover:text-white transition-colors">
+                  Estimate VAPT cost
+                  <ChevronRight className="h-5 w-5 ml-1 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </div>
+            </Link>
+            <Link href="/services/purple-x/purpleSOC/questionnaire" className="group">
+              <div className="h-full rounded-2xl border border-white/10 bg-white/[0.03] hover:bg-white/[0.06] hover:border-[#7c3aed]/60 backdrop-blur-sm p-8 transition-all hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#7c3aed]/20">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#7c3aed] to-[#6633cc] flex items-center justify-center mb-6">
+                  <Calculator className="h-7 w-7 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-3">Size my SOC</h3>
+                <p className="text-slate-300 mb-6 leading-relaxed">
+                  Walk through our PurpleSOC discovery questionnaire to size your environment, estimate EPS &amp; LDS, and get an indicative annual quote.
+                </p>
+                <span className="inline-flex items-center text-purple-300 font-semibold group-hover:text-white transition-colors">
+                  Start the questionnaire
+                  <ChevronRight className="h-5 w-5 ml-1 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </div>
+            </Link>
           </div>
         </div>
       </section>

@@ -64,7 +64,6 @@ export default function Footer() {
                 { label: "PurpleStrike", href: "/services/purple-x/purplestrike" },
                 { label: "PurpleConfig", href: "/services/purple-x/purpleconfig" },
                 { label: "PurpleReveal", href: "/services/purple-x/purplereveal" },
-                { label: "SOC Sizing Tool", href: "/services/purple-x/purpleSOC/questionnaire" },
               ].map((item) => (
                 <li key={item.label}>
                   <Link href={item.href} className="text-slate-400 hover:text-white transition-colors">
@@ -108,6 +107,8 @@ export default function Footer() {
                 { label: "Pricing", href: "/pricing" },
                 { label: "Resources", href: "/blog" },
                 { label: "Contact", href: "/booking" },
+                { label: "PurpleVAPT Calculator", href: "/services/purple-x/purplevapt/calculator" },
+                { label: "SOC Sizing Tool", href: "/services/purple-x/purpleSOC/questionnaire" },
               ].map((item) => (
                 <li key={item.label}>
                   <Link href={item.href} className="text-slate-400 hover:text-white transition-colors">

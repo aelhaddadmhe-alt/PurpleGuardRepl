@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     },
   };
 
-const CALENDLY_LINK = "https://calendly.com/mmowafy-purpleguard/30min";
+const QUESTIONNAIRE_LINK = "/services/purple-x/purpleSOC/questionnaire";
 
 const socFaqs = [
   { question: "What is a managed SOC and how does PurpleSOC work?", answer: "A managed SOC (Security Operations Centre) monitors your environment 24/7 for threats, analyses alerts, and responds to incidents on your behalf. PurpleSOC ingests logs and signals from across your infrastructure into a cloud-native SIEM, applies threat intelligence, and provides human-led triage and response — without you needing to build an in-house team." },
@@ -76,11 +76,11 @@ export default function PurpleSOCPage() {
               ))}
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer">
+              <Link href={QUESTIONNAIRE_LINK}>
                 <Button size="lg" className="bg-[#ff6633] hover:bg-[#ff6633]/90 text-white">
-                  <Calendar className="h-5 w-5 mr-2" /> Book a SOC Consultation
+                  <Calendar className="h-5 w-5 mr-2" /> Start the Discovery Questionnaire
                 </Button>
-              </a>
+              </Link>
               <Link href="/services/purple-x">
                 <Button size="lg" variant="outline" className="border-white bg-white/20 text-white hover:bg-white/30">
                   View Purple-X Services <ChevronRight className="h-5 w-5 ml-2" />
@@ -196,11 +196,11 @@ export default function PurpleSOCPage() {
                 <div className="text-4xl font-bold text-blue-600 mb-2">$1,500<span className="text-xl text-slate-500">/month</span></div>
                 <p className="text-slate-600 mb-6">Starting price — final pricing depends on environment size, log volumes, and SLA requirements.</p>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer" className="flex-1">
+                  <Link href={QUESTIONNAIRE_LINK} className="flex-1">
                     <Button size="lg" className="w-full bg-blue-600 hover:bg-blue-700">
-                      <Calendar className="h-5 w-5 mr-2" /> Get a Quote
+                      <Calendar className="h-5 w-5 mr-2" /> Size my SOC & Get a Quote
                     </Button>
-                  </a>
+                  </Link>
                   <Link href="/pricing" className="flex-1">
                     <Button size="lg" variant="outline" className="w-full">View Pricing Details</Button>
                   </Link>
@@ -252,16 +252,11 @@ export default function PurpleSOCPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Your security never sleeps. Neither do we.</h2>
           <p className="text-xl text-slate-300 mb-8">Start your 24/7 managed security operations today.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/services/purple-x/purpleSOC/questionnaire">
+            <Link href={QUESTIONNAIRE_LINK}>
               <Button size="lg" className="bg-[#7c3aed] hover:bg-[#7c3aed]/90 text-white">
-                Start the discovery questionnaire →
+                Start the Discovery Questionnaire →
               </Button>
             </Link>
-            <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer">
-              <Button size="lg" className="bg-[#ff6633] hover:bg-[#ff6633]/90 text-white">
-                <Calendar className="h-5 w-5 mr-2" /> Book a Consultation
-              </Button>
-            </a>
             <a href="mailto:hello@purpleguard.io?subject=PurpleSOC Inquiry">
               <Button size="lg" variant="outline" className="border-white bg-white/20 text-white hover:bg-white/30">
                 Contact Sales

@@ -6,14 +6,6 @@ const BODY_HTML = `
 <div class="shell">
 
   <aside class="sidebar">
-    <div class="sidebar-logo">
-      <img src="/logo.png" alt="PurpleGuard" class="sidebar-logo-img" />
-      <div>
-        <div class="logo-text">PurpleGuard</div>
-        <div class="logo-sub">PurpleSOC Discovery</div>
-      </div>
-    </div>
-
     <div class="nav-group">
       <div class="nav-group-title">General</div>
       <div class="nav-item active" id="nav-general" onclick="showPage('page-general')">
