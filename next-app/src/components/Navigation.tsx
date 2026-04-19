@@ -18,6 +18,8 @@ import {
   FileCheck,
   Cloud,
   Globe,
+  Calculator,
+  BookOpen,
 } from "lucide-react";
 
 const purpleXServices = [
@@ -44,8 +46,13 @@ const solutions = [
 
 const navigationItems = [
   { label: "Pricing", href: "/pricing" },
-  { label: "Resources", href: "/blog" },
   { label: "About", href: "/about" },
+];
+
+const resourcesItems = [
+  { name: "Blog & Insights", tagline: "Security guides, threat briefings & news", href: "/blog", icon: BookOpen, color: "from-slate-500 to-slate-700" },
+  { name: "PurpleVAPT Calculator", tagline: "Estimate VAPT scope and cost instantly", href: "/services/purple-x/purplevapt/calculator", icon: Calculator, color: "from-purple-500 to-indigo-600" },
+  { name: "SOC Sizing Tool", tagline: "Size your SOC environment and get a quote", href: "/services/purple-x/purpleSOC/questionnaire", icon: Calculator, color: "from-blue-500 to-cyan-600" },
 ];
 
 export default function Navigation() {
@@ -190,6 +197,34 @@ export default function Navigation() {
               </div>
             </div>
 
+            {/* Resources dropdown */}
+            <div className="group relative">
+              <button className="inline-flex items-center gap-1 px-4 py-2 h-16 text-sm font-medium text-slate-700 group-hover:text-[#6633cc] transition-colors">
+                Resources
+                <ChevronDown className="h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
+              </button>
+              <div className="absolute left-0 top-full pt-0 z-50 invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-150">
+                <div className="w-[360px] rounded-xl border border-slate-200 bg-white shadow-xl p-4 mt-0">
+                  <div className="space-y-1">
+                    {resourcesItems.map((item) => (
+                      <Link key={item.name} href={item.href}>
+                        <div className="group/item flex items-center gap-3 p-2 rounded-lg hover:bg-slate-50 cursor-pointer transition-colors">
+                          <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${item.color} flex items-center justify-center flex-shrink-0`}>
+                            <item.icon className="h-4 w-4 text-white" />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className="font-medium text-slate-900 group-hover/item:text-[#6633cc] transition-colors text-sm">{item.name}</div>
+                            <div className="text-xs text-slate-500 truncate">{item.tagline}</div>
+                          </div>
+                          <ChevronRight className="h-4 w-4 text-slate-300 group-hover/item:text-[#6633cc] transition-colors flex-shrink-0" />
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {navigationItems.map((item) => (
               <Link key={item.label} href={item.href}>
                 <Button variant="ghost" className="text-slate-700 hover:text-[#6633cc] font-medium">
@@ -235,6 +270,17 @@ export default function Navigation() {
                   <Link href="/services/managed-x" onClick={() => setMobileOpen(false)}>
                     <Button variant="ghost" className="w-full justify-start pl-8 text-slate-700 hover:text-[#6633cc] font-medium">Managed X</Button>
                   </Link>
+
+                  <div className="border-b border-slate-200 my-2" />
+
+                  <div className="font-semibold text-slate-900 px-3 py-2 text-sm">Resources</div>
+                  {resourcesItems.map((item) => (
+                    <Link key={item.name} href={item.href} onClick={() => setMobileOpen(false)}>
+                      <Button variant="ghost" className="w-full justify-start pl-8 text-slate-700 hover:text-[#6633cc] font-medium text-left">
+                        {item.name}
+                      </Button>
+                    </Link>
+                  ))}
 
                   <div className="border-b border-slate-200 my-2" />
 
