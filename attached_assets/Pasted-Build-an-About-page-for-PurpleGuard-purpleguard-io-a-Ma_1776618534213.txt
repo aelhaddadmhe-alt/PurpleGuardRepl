@@ -1,0 +1,63 @@
+Build an "About" page for PurpleGuard (purpleguard.io) — a Managed Security Services Provider (MSSP) operating across UAE, Egypt, and Saudi Arabia.
+Design direction: Dark, professional cybersecurity aesthetic. Use deep navy/dark background (#0a0f1e or similar), purple as the primary accent color (#7c3aed or brand purple), white/light gray text. Clean, modern layout with subtle glow effects on section highlights. Match the tone of the existing site at purpleguard.io.
+Page structure (top to bottom):
+
+Hero Section
+
+Headline: "Who We Are"
+Subheadline: "Smarter Security. Stronger Defense."
+One-paragraph intro: PurpleGuard is a Managed Security Services Provider (MSSP) built for SMEs and mid-market organizations across the UAE, Egypt, and Saudi Arabia. We deliver subscription-based, always-on cybersecurity — combining expert human analysts with automation — so businesses stay protected without the overhead of an in-house security team.
+CTA button: "Book a Free Consultation" → links to https://calendly.com/mmowafy-purpleguard/30min
+
+
+Mission Section
+
+Headline: "Our Mission"
+Body: We exist to close the security gap for growing businesses in the Middle East. Too many SMEs are underserved by enterprise-grade vendors and overcharged by generalist IT providers. PurpleGuard was built to change that — delivering real, compliance-ready protection at a cost and operational model designed for your scale.
+
+
+Differentiators Section — 4-card grid
+
+"Built for SMEs" — No enterprise bloat. Predictable monthly pricing with service tiers designed around how SMEs actually operate.
+"Automation-Driven" — SOAR, continuous telemetry correlation, and automated validation to reduce noise and respond faster.
+"Compliance-Ready" — Structured around CIS, NIST, ISO, MITRE ATT&CK, NCA, SAMA, TDRA, EG-CERT, and CBE. Audit-friendly reporting built in.
+"Single Partner Model" — One MSSP. Full security lifecycle. No tool sprawl, no vendor finger-pointing.
+Each card: icon (shield/lock/check/link), title, description. Subtle purple border or glow on hover.
+
+
+Services Overview Section — two columns
+
+Left column: Purple X — Cybersecurity Services with a bulleted list: PurpleVAPT, PurpleSOC, PurpleSentinel (MDR), PurpleSentry (Threat Intelligence & EASM), PurpleStrike (Red Teaming), PurpleConfig, PurpleReveal (NDR)
+Right column: Managed X — Managed Infrastructure with a bulleted list: Managed Endpoint, Managed EDR, Managed Firewall, Managed WAF, Managed SASE/ZTNA, Managed Email Security, Managed Identity, Managed Backup & BCDR
+Add a "View All Services" link below.
+
+
+Where We Operate Section — 3 regional cards
+
+🇦🇪 UAE — Dubai: TDRA, UAE Cyber Security Council, CBUAE. Industries: Banking, Healthcare, Logistics, Government-adjacent.
+🇪🇬 Egypt — Cairo: EG-CERT, NTRA, CBE. Industries: Fintech, Telecom, Professional Services.
+🇸🇦 Saudi Arabia — Riyadh & Jeddah: NCA ECC, NCA CCC, SAMA. Industries: Critical sectors.
+
+
+Industries Section
+
+Simple horizontal row of tags or icons: Healthcare · Financial Services · SaaS & Technology · Professional Services · Manufacturing
+
+
+CTA / Contact Footer Banner
+
+Headline: "Know your risk. Control your exposure."
+Two buttons: "Book a Free Security Consultation" (primary, purple) → https://calendly.com/mmowafy-purpleguard/30min and "Email Us" (secondary, outlined) → mailto:hello@purpleguard.io
+Phone: +971 58 515 9666
+Locations: Dubai, UAE · Cairo, Egypt
+
+
+
+Technical requirements:
+
+Use Next.js (or plain HTML/Tailwind if simpler)
+Fully responsive (mobile-first)
+Use Lucide icons or similar for card icons
+No external API calls needed — all content is static
+Add smooth scroll and subtle fade-in animations on section entry (Framer Motion or CSS transitions)
+Include a sticky top navbar with the PurpleGuard logo placeholder and a "Book a Call" CTA button
