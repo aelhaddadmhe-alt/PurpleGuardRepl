@@ -1,0 +1,98 @@
+Privacy policy prompt: 
+
+
+Build a "Privacy Policy" page for PurpleGuard (purpleguard.io) — a Managed Security Services Provider (MSSP) operating across UAE, Egypt, and Saudi Arabia.
+Design direction: Match the existing PurpleGuard site aesthetic — dark navy background (#0a0f1e or similar), purple as the primary accent (#7c3aed), white/light gray body text. Clean, document-style layout optimized for readability. Less visual flourish than marketing pages — this is a legal/trust page, so clarity and scannability are the priority.
+Page structure (top to bottom):
+
+Page Header
+
+Title: "Privacy Policy"
+Subtitle: "Your data. Your rights. Our commitment."
+Metadata line: "Effective Date: April 2026 · Last Updated: April 2026"
+Small intro blurb: PurpleGuard is committed to protecting your personal data in accordance with the UAE PDPL, Egyptian Data Protection Law, and the Saudi Arabia PDPL.
+
+
+Sticky Table of Contents sidebar (desktop) / collapsible accordion (mobile)
+Sections: Introduction · Who We Are · What We Collect · How We Collect It · Why We Collect It · Third-Party Services · Cookies · Data Retention · International Transfers · Data Security · Your Rights · Policy Changes · Contact Us
+
+Clicking a section scrolls smoothly to the corresponding anchor.
+Active section highlights in purple as user scrolls.
+
+
+Main Content Area — render the following 13 sections as styled prose with clear H2 headings and anchor IDs:
+Section 1 — Introduction
+PurpleGuard is an MSSP operating across UAE, Egypt, and Saudi Arabia, committed to protecting personal data. This policy explains what data we collect, why, how we protect it, and the rights you hold — in line with UAE Federal Decree-Law No. 45 of 2021, Egyptian Data Protection Law No. 151 of 2020, and Saudi Arabia PDPL. Using purpleguard.io constitutes acknowledgment of this policy.
+
+Section 2 — Who We Are (Data Controller)
+PurpleGuard, offices in Dubai and Cairo. Email: hello@purpleguard.io. Phone: +971 58 515 9666. We act as the data controller for all data collected via this website and associated channels.
+
+Section 3 — What Personal Data We Collect
+Three subsections with subtle dividers:
+
+Contact & Identity: Full name, business email, phone number, job title.
+Company & Organization: Company name, industry, country of operation.
+Technical & Usage: IP address, browser type, OS, pages visited, session duration, referring URL, cookie identifiers.
+
+Note: We do NOT collect payment data. We do NOT collect data from individuals under 18.
+
+Section 4 — How We Collect Your Data
+Five channels, each as a labeled subsection:
+
+Website Contact Forms
+Email Correspondence (hello@purpleguard.io)
+Calendly Booking (third-party; links to Calendly's privacy policy)
+WhatsApp Chat (Meta; links to WhatsApp's privacy policy)
+Automatically via Google Analytics
+
+Section 5 — Why We Collect Your Data
+Render as a clean styled table with columns: Purpose | Data Used | Legal Basis. Rows:
+
+Responding to inquiries | Name, email, phone, company | Legitimate interest / Consent
+Scheduling calls | Name, email | Consent (Calendly)
+Delivering services | All contact & company data | Contractual necessity
+Website improvement | Technical & usage data | Legitimate interest
+Service communications | Email | Consent
+Legal compliance | All applicable data | Legal obligation
+Footer note: "We do not sell, rent, or trade your personal data."
+
+Section 6 — Third-Party Services
+Three subsections: Google Analytics, Calendly, WhatsApp/Meta. Each includes: what data is shared, why, and a link to the third party's privacy policy.
+
+Section 7 — Cookies
+Two cookie types: Strictly Necessary and Analytics (Google Analytics). Include a notice that a cookie consent banner is being implemented. Advise users they can block cookies via browser settings.
+
+Section 8 — Data Retention
+We retain data for less than 12 months from last interaction, unless required by law or an active contract. Data is securely deleted or anonymized when no longer needed.
+
+Section 9 — International Data Transfers
+Data may be accessed across UAE, Egypt, and KSA teams. Third-party services (Google, Calendly) may process data in the US. We apply appropriate safeguards for cross-border transfers.
+Section 10 — Data Security
+As a cybersecurity company, we apply: TLS/HTTPS encryption, access controls, least-privilege principles, regular security assessments, and employee training. Note: no internet method is 100% secure.
+
+Section 11 — Your Rights
+Render as a styled card grid or list:
+
+Right to access · Right to correction · Right to deletion · Right to restrict processing · Right to object · Right to data portability · Right to withdraw consent
+Attribution: Rights granted under UAE PDPL, Egyptian Law No. 151/2020, and Saudi Arabia PDPL depending on jurisdiction.
+Include a callout box: "To exercise your rights, email hello@purpleguard.io. We respond within 30 days."
+
+Section 12 — Changes to This Policy
+We update the "Last Updated" date at the top when the policy changes. Continued use of the site constitutes acceptance.
+
+Section 13 — Contact Us
+Styled contact card: hello@purpleguard.io · +971 58 515 9666 · Dubai, UAE · Cairo, Egypt
+Bottom CTA Banner
+"Questions about your data? We're here to help."
+Button: "Email Us" → mailto:hello@purpleguard.io
+
+Technical requirements:
+
+Next.js or plain HTML/Tailwind
+Fully responsive — sidebar nav collapses to accordion on mobile
+Smooth scroll to anchors
+Active section highlighting in sidebar as user scrolls (Intersection Observer)
+Table in Section 5 must be horizontally scrollable on mobile
+No external API calls — fully static content
+Typography: larger line-height (1.8) and max content width (~720px) for readability
+Subtle purple left border on blockquotes and callout boxes
