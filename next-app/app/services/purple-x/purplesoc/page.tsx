@@ -257,6 +257,11 @@ export default function PurpleSOCPage() {
                 Start the Discovery Questionnaire →
               </Button>
             </Link>
+            <Link href={QUESTIONNAIRE_LINK}>
+              <Button size="lg" className="bg-[#ff6633] hover:bg-[#ff6633]/90 text-white">
+                <Calendar className="h-5 w-5 mr-2" /> Size my SOC
+              </Button>
+            </Link>
             <a href="mailto:hello@purpleguard.io?subject=PurpleSOC Inquiry">
               <Button size="lg" variant="outline" className="border-white bg-white/20 text-white hover:bg-white/30">
                 Contact Sales
