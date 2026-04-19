@@ -159,6 +159,13 @@ export default function HomePage() {
                   PurpleVAPT Calculator
                 </Button>
               </Link>
+              <Link href="/services/purple-x/purpleSOC/questionnaire">
+                <Button size="lg" className="bg-[#7c3aed] hover:bg-[#7c3aed]/90 text-white px-8">
+                  <Calculator className="h-5 w-5 mr-2" />
+                  Size my SOC
+                  <ChevronRight className="h-5 w-5 ml-1" />
+                </Button>
+              </Link>
               <Link href="/services">
                 <Button size="lg" variant="outline" className="border-white/50 text-white bg-white/20 hover:bg-white/30 px-8">
                   View Services

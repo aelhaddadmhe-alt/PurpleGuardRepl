@@ -64,6 +64,7 @@ export default function Footer() {
                 { label: "PurpleStrike", href: "/services/purple-x/purplestrike" },
                 { label: "PurpleConfig", href: "/services/purple-x/purpleconfig" },
                 { label: "PurpleReveal", href: "/services/purple-x/purplereveal" },
+                { label: "SOC Sizing Tool", href: "/services/purple-x/purpleSOC/questionnaire" },
               ].map((item) => (
                 <li key={item.label}>
                   <Link href={item.href} className="text-slate-400 hover:text-white transition-colors">

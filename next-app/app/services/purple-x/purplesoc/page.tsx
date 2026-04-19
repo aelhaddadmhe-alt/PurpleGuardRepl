@@ -252,6 +252,11 @@ export default function PurpleSOCPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Your security never sleeps. Neither do we.</h2>
           <p className="text-xl text-slate-300 mb-8">Start your 24/7 managed security operations today.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Link href="/services/purple-x/purpleSOC/questionnaire">
+              <Button size="lg" className="bg-[#7c3aed] hover:bg-[#7c3aed]/90 text-white">
+                Start the discovery questionnaire →
+              </Button>
+            </Link>
             <a href={CALENDLY_LINK} target="_blank" rel="noopener noreferrer">
               <Button size="lg" className="bg-[#ff6633] hover:bg-[#ff6633]/90 text-white">
                 <Calendar className="h-5 w-5 mr-2" /> Book a Consultation
