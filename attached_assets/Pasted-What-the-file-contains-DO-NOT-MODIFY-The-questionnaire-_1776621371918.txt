@@ -1,0 +1,82 @@
+What the file contains — DO NOT MODIFY
+The questionnaire file contains:
+
+HTML structure and UI — a sidebar nav, multi-page layout (General → Sites → Retention → Results), device inventory tables, compliance pills, SOC model selector, and a results/pricing page.
+All JavaScript logic — LDS calculations, EPS estimates, pricing tiers, site tab generation, form validation helpers, reset functions, email quote builder, and all event handlers.
+No CSS — the file has been intentionally stripped of all styling so you can apply the website's existing design system to it.
+⚠️ Do not change any IDs, class names used in JS, function names, event handlers, or calculation logic. The HTML structure and JavaScript must remain exactly as-is.
+
+Your tasks
+1. Create a new page at /services/purple-x/purpleSOC/questionnaire
+Add this route/page to the existing website's routing structure.
+The page should use the website's existing layout (header, footer, navigation) if applicable — but the calculator's own sidebar nav and shell layout should remain intact inside the page body.
+2. Apply the website's existing design system to the questionnaire
+The questionnaire uses semantic CSS class names that you must style using the website's existing design tokens (colors, fonts, border radii, spacing, etc.). Key classes to style:
+
+Class / Element	Role
+.shell	Two-column grid: 280px sidebar + 1fr main
+.sidebar	Left navigation panel, sticky, full height
+.main	Main content area, max-width ~800px, padded
+.card	Content card with border and background
+.btn-primary	Primary CTA button
+.btn-ghost	Secondary ghost button
+.btn-danger	Destructive action button (red-tinted)
+.pill / .pill.on	Toggle pill — inactive / active state
+.soc-card / .soc-card.on	Selectable card — inactive / selected
+.tog.yes.on / .tog.no.on	Yes/No device toggle buttons
+.lds-chip / .lds-chip.zero	LDS value badge
+.site-tab / .site-tab.active	Site switcher tabs
+.site-tabs	Tab bar — must be position: sticky; top: 0; z-index: 50 with a solid background and shadow so it floats when scrolling
+.hero-card	Results summary card (use a strong brand color background)
+.hero-metric	Metric tile inside the hero card
+.res-card	Results detail card
+.res-row	Key/value row inside a results card
+.badge-p / .badge-g / .badge-a	Inline status badges (brand / green / amber)
+.site-table	Results breakdown table
+.site-panel-btn-row	Bottom button row in each site panel
+.multi-select-trigger	Custom country dropdown button
+.multi-select-panel / .multi-select-option	Country checkbox dropdown
+.lds-widget	Sidebar LDS live counter widget
+.nav-item / .nav-item.active	Sidebar nav items
+.site-nav-item / .site-nav-item.active	Sidebar per-site nav items
+.step-eyebrow / .step-title / .step-desc	Page section headers
+.device-row / .dev-header	Device inventory table rows
+.field / .field label	Form field wrappers
+input, select, textarea	Form inputs — match site input styles
+.btn-cta	Proposal request CTA button
+.cta-card	CTA card at the bottom of results
+.footer	In-page footer (inside the calculator, not the site footer)
+.cat-group	Device category group wrapper
+Use the website's CSS variables / design tokens wherever possible. If the website uses Tailwind, map the classes accordingly — but do not restructure the HTML.
+
+3. Replace the logo in the questionnaire sidebar
+The questionnaire sidebar currently has a placeholder logo mark (a shield SVG) and the text "PurpleGuard / PurpleSOC Discovery".
+
+Replace this with the actual logo image already used on the website.
+The logo is in the .sidebar-logo div. Replace the .logo-mark SVG and .logo-text / .logo-sub text with the correct site logo asset and brand name as it appears elsewhere on the site.
+Keep the overall sidebar-logo layout (flex row, gap, etc.) — just swap the content.
+4. Add three entry points to the questionnaire page
+Entry point 1 — Homepage
+Add a prominent CTA button or card on the homepage that links to /services/purple-x/purpleSOC/questionnaire.
+Suggested label: "Size my SOC →" or "Get a SOC estimate"
+Place it in a logical position — e.g. in the hero section or alongside an existing services CTA.
+Entry point 2 — PurpleSOC service page
+On the PurpleSOC service page, add a CTA block or button linking to the questionnaire.
+Suggested label: "Start the discovery questionnaire →"
+Place it at a natural conversion point — e.g. after the feature/service description or before the contact section.
+Entry point 3 — Site footer
+Add a text link or small button in the footer linking to the questionnaire.
+Suggested label: "SOC Sizing Tool" under a relevant footer column (e.g. Services or Tools).
+Constraints
+Do not rewrite, simplify, or replace any JavaScript. All functions (devLDS, devEPS, siteLDS, siteEPS, totalLDS, totalEPS, generateSites, buildSitePanel, togDev, onCountInput, updateAllLDS, showResults, openQuote, resetAll, resetSite, proceedFromSite, toggleCountryDropdown, updateCountryDisplay, getCountryValue, getIndustryValue, sanitizeText, toggleIndustryOther, selectSOC, updateRecommendation, etc.) must remain exactly as written.
+Do not change any element IDs (f-company, f-sites, f-industry, f-industry-other, f-country, compliance-pills, site-tabs, site-panels, site-nav-list, w-total-lds, w-lds-bar, w-site-breakdown, res-lds, res-eps, res-storage, res-site-table, res-model, res-tier, res-annual, res-monthly, res-setup, res-year1, res-spec-card, res-spec-block, country-dropdown, country-trigger, country-panel, country-display, fra-warning, etc.)
+Keep the Google Fonts imports for Syne, DM Sans, and DM Mono — or ensure these fonts are already loaded by the site globally.
+The questionnaire page must be self-contained — it should work fully in isolation without depending on any page-specific scripts from other pages.
+Do not add any analytics, tracking, or third-party scripts beyond what already exists on the site.
+Deliverables
+The new page live at /services/purple-x/purpleSOC/questionnaire
+The questionnaire fully styled to match the website
+The sidebar logo replaced with the site's logo
+Three working entry point links (homepage, PurpleSOC service page, footer)
+No regressions on any other existing pages
+Strip Inline CSS From Questionnaire
