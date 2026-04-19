@@ -45,6 +45,7 @@ const solutions = [
 const navigationItems = [
   { label: "Pricing", href: "/pricing" },
   { label: "Resources", href: "/blog" },
+  { label: "About", href: "/about" },
 ];
 
 export default function Navigation() {
