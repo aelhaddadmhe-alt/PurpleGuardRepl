@@ -49,3 +49,7 @@ externalPort = 80
 
 [userenv.shared]
 NEXT_PUBLIC_GA_ID = "G-KQ1ERBR9PW"
+
+[postMerge]
+path = "scripts/post-merge.sh"
+timeoutMs = 20000
