@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Cookie, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";
 import {
   CONSENT_OPEN_EVENT,
   ConsentChoice,
@@ -13,6 +14,7 @@ import {
 
 export default function CookieConsent() {
   const [visible, setVisible] = useState(false);
+  const { toast } = useToast();
 
   useEffect(() => {
     if (getConsent() === "unset") {
@@ -26,6 +28,16 @@ export default function CookieConsent() {
   const choose = (choice: ConsentChoice) => {
     setConsent(choice);
     setVisible(false);
+    toast({
+      title:
+        choice === "accepted"
+          ? "Analytics cookies accepted"
+          : "Analytics cookies rejected",
+      description:
+        choice === "accepted"
+          ? "Thanks — analytics will help us improve the site."
+          : "We won't load analytics cookies on your visits.",
+    });
   };
 
   if (!visible) return null;

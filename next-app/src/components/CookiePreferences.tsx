@@ -3,8 +3,10 @@
 import { useEffect, useState } from "react";
 import { Cookie } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";
 import {
   CONSENT_CHANGED_EVENT,
+  ConsentChoice,
   ConsentState,
   getConsent,
   openConsentBanner,
@@ -26,6 +28,21 @@ const STATUS_CLASS: Record<ConsentState, string> = {
 export default function CookiePreferences() {
   const [state, setState] = useState<ConsentState>("unset");
   const [mounted, setMounted] = useState(false);
+  const { toast } = useToast();
+
+  const handleChoice = (choice: ConsentChoice) => {
+    setConsent(choice);
+    toast({
+      title:
+        choice === "accepted"
+          ? "Analytics cookies accepted"
+          : "Analytics cookies rejected",
+      description:
+        choice === "accepted"
+          ? "Thanks — analytics will help us improve the site."
+          : "We won't load analytics cookies on your visits.",
+    });
+  };
 
   useEffect(() => {
     setMounted(true);
@@ -69,7 +86,7 @@ export default function CookiePreferences() {
       <div className="flex flex-wrap gap-2">
         <Button
           size="sm"
-          onClick={() => setConsent("accepted")}
+          onClick={() => handleChoice("accepted")}
           className="bg-purple-500 hover:bg-purple-400 text-white"
         >
           Accept analytics
@@ -77,7 +94,7 @@ export default function CookiePreferences() {
         <Button
           size="sm"
           variant="outline"
-          onClick={() => setConsent("rejected")}
+          onClick={() => handleChoice("rejected")}
           className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white"
         >
           Reject analytics

@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Analytics from "@/components/Analytics";
 import CookieConsent from "@/components/CookieConsent";
+import { Toaster } from "@/components/ui/toaster";
 import { organizationJsonLd, localBusinessJsonLd, websiteJsonLd } from "@/lib/json-ld";
 
 const OG_IMAGE = "/api/og?title=PurpleGuard%20MSSP&subtitle=Managed%20Security%20Services%20%E2%80%94%20UAE%2C%20Egypt%20%26%20KSA&category=MSSP&color=purple";
@@ -65,6 +66,7 @@ export default function RootLayout({
         <Footer />
         <WhatsAppButton />
         <CookieConsent />
+        <Toaster />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }}
