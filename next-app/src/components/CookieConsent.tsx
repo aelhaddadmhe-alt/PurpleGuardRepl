@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { Cookie } from "lucide-react";
+import { Cookie, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const STORAGE_KEY = "pg_consent";
 
@@ -43,46 +44,54 @@ export default function CookieConsent() {
       role="dialog"
       aria-live="polite"
       aria-label="Cookie consent"
-      className="fixed inset-x-0 bottom-0 z-[60] px-4 pb-4 sm:px-6 sm:pb-6"
+      className="fixed inset-x-0 bottom-0 z-[60] p-3 sm:p-4 pointer-events-none"
     >
-      <div className="mx-auto max-w-4xl rounded-2xl border border-white/10 bg-slate-900/95 p-5 shadow-2xl backdrop-blur-xl sm:p-6">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
-          <div className="flex items-start gap-3 sm:flex-1">
-            <div className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-purple-500/15 text-purple-400">
-              <Cookie className="h-5 w-5" aria-hidden="true" />
-            </div>
-            <div className="text-sm leading-relaxed text-slate-200">
-              <p className="font-medium text-white">We use cookies</p>
-              <p className="mt-1 text-slate-300">
-                We use a small number of cookies to understand how visitors use
-                our site (Google Analytics). You can accept or reject this — your
-                choice is saved in your browser. See our{" "}
-                <Link
-                  href="/privacy#cookies"
-                  className="font-medium text-purple-400 underline-offset-2 hover:underline"
-                >
-                  privacy policy
-                </Link>{" "}
-                for details.
-              </p>
+      <div className="pointer-events-auto mx-auto max-w-3xl rounded-xl border border-purple-400/30 bg-slate-950/95 backdrop-blur-md shadow-2xl shadow-purple-900/40 p-4 sm:p-5">
+        <div className="flex flex-col sm:flex-row sm:items-start gap-4">
+          <div className="flex-shrink-0 hidden sm:flex w-10 h-10 rounded-lg bg-purple-500/15 border border-purple-400/30 items-center justify-center">
+            <Cookie className="w-5 h-5 text-purple-300" aria-hidden="true" />
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="text-sm sm:text-base font-semibold text-white mb-1">
+              We value your privacy
+            </p>
+            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              We use cookies for analytics to understand how visitors use our
+              site. You can accept or reject analytics cookies. Read our{" "}
+              <Link
+                href="/privacy#cookies"
+                className="text-purple-300 hover:text-purple-200 underline underline-offset-2"
+              >
+                Privacy Policy
+              </Link>
+              .
+            </p>
+            <div className="mt-4 flex flex-col sm:flex-row gap-2 sm:items-center">
+              <Button
+                size="sm"
+                onClick={() => choose("accepted")}
+                className="bg-purple-500 hover:bg-purple-400 text-white"
+              >
+                Accept
+              </Button>
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={() => choose("rejected")}
+                className="border-white/20 bg-transparent text-white hover:bg-white/10 hover:text-white"
+              >
+                Reject
+              </Button>
             </div>
           </div>
-          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-3">
-            <button
-              type="button"
-              onClick={() => choose("rejected")}
-              className="inline-flex h-10 items-center justify-center rounded-lg border border-white/15 bg-transparent px-4 text-sm font-medium text-slate-200 transition hover:bg-white/5"
-            >
-              Reject
-            </button>
-            <button
-              type="button"
-              onClick={() => choose("accepted")}
-              className="inline-flex h-10 items-center justify-center rounded-lg bg-purple-500 px-4 text-sm font-semibold text-white shadow-sm transition hover:bg-purple-400"
-            >
-              Accept
-            </button>
-          </div>
+          <button
+            type="button"
+            onClick={() => choose("rejected")}
+            aria-label="Reject cookies and dismiss"
+            className="flex-shrink-0 text-slate-400 hover:text-white transition-colors p-1 -m-1"
+          >
+            <X className="w-4 h-4" />
+          </button>
         </div>
       </div>
     </div>

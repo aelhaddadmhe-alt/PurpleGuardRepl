@@ -389,9 +389,18 @@ export default function PrivacyContent() {
                 Google Analytics cookies that help us understand site usage in aggregate.
               </p>
 
+              <h3>Your Choice</h3>
+              <p>
+                On your first visit, a cookie consent banner asks whether you accept
+                analytics cookies. If you reject, Google Analytics is loaded in a
+                consent-denied state and no analytics or advertising cookies are stored.
+                Your choice is remembered in your browser's local storage. To change
+                your choice later, clear your browser's site data for purpleguard.io and
+                reload the page.
+              </p>
               <div className="callout">
-                A cookie consent banner is being implemented. In the meantime, you can
-                block or delete cookies through your browser settings.
+                You can also block or delete cookies at any time through your browser
+                settings.
               </div>
             </section>
 

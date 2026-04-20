@@ -43,6 +43,13 @@ function ConsentBridge() {
         ad_personalization: granted,
         analytics_storage: granted,
       });
+      if (detail?.accepted) {
+        window.gtag("event", "page_view", {
+          page_path: window.location.pathname + window.location.search,
+          page_location: window.location.href,
+          page_title: document.title,
+        });
+      }
     };
     window.addEventListener("pg-consent-changed", handler as EventListener);
     return () =>
@@ -56,35 +63,29 @@ export default function Analytics() {
 
   return (
     <>
-      <Script id="ga-consent-default" strategy="afterInteractive">
+      <Script id="ga-consent-default" strategy="beforeInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           window.gtag = gtag;
           var stored = null;
           try { stored = window.localStorage.getItem('pg_consent'); } catch (e) {}
-          var initial = stored === 'accepted' ? 'granted' : 'denied';
+          var granted = stored === 'accepted';
           gtag('consent', 'default', {
-            ad_storage: initial,
-            ad_user_data: initial,
-            ad_personalization: initial,
-            analytics_storage: initial,
+            ad_storage: granted ? 'granted' : 'denied',
+            ad_user_data: granted ? 'granted' : 'denied',
+            ad_personalization: granted ? 'granted' : 'denied',
+            analytics_storage: granted ? 'granted' : 'denied',
+            wait_for_update: 500,
           });
+          gtag('js', new Date());
+          gtag('config', '${GA_ID}', { send_page_view: false });
         `}
       </Script>
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
         strategy="afterInteractive"
       />
-      <Script id="ga-init" strategy="afterInteractive">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          window.gtag = gtag;
-          gtag('js', new Date());
-          gtag('config', '${GA_ID}', { send_page_view: false });
-        `}
-      </Script>
       <ConsentBridge />
       <Suspense fallback={null}>
         <PageviewTracker />
