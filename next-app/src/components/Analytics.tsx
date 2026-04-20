@@ -13,7 +13,7 @@ declare global {
   }
 }
 
-function PageviewTracker({ gaId }: { gaId: string }) {
+function PageviewTracker() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
@@ -50,7 +50,7 @@ export default function Analytics() {
         `}
       </Script>
       <Suspense fallback={null}>
-        <PageviewTracker gaId={GA_ID} />
+        <PageviewTracker />
       </Suspense>
     </>
   );
