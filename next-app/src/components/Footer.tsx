@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Linkedin, Twitter, Youtube, Phone, MapPin, Mail } from "lucide-react";
+import CookiePreferencesLink from "./CookiePreferencesLink";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -121,6 +122,11 @@ export default function Footer() {
             <ul className="space-y-3">
               <li><Link href="/privacy" className="text-slate-400 hover:text-white transition-colors">Privacy Policy</Link></li>
               <li><a href="#" className="text-slate-400 hover:text-white transition-colors">Terms of Service</a></li>
+              <li>
+                <CookiePreferencesLink className="text-slate-400 hover:text-white transition-colors text-left">
+                  Cookie Preferences
+                </CookiePreferencesLink>
+              </li>
             </ul>
           </div>
         </div>

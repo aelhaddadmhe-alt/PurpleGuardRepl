@@ -69,7 +69,19 @@ export default function Analytics() {
           function gtag(){dataLayer.push(arguments);}
           window.gtag = gtag;
           var stored = null;
-          try { stored = window.localStorage.getItem('pg_consent'); } catch (e) {}
+          try {
+            stored = window.localStorage.getItem('pg_cookie_consent');
+            if (stored !== 'accepted' && stored !== 'rejected') {
+              var legacy = window.localStorage.getItem('pg_consent');
+              if (legacy === 'accepted' || legacy === 'rejected') {
+                stored = legacy;
+                try {
+                  window.localStorage.setItem('pg_cookie_consent', legacy);
+                  window.localStorage.removeItem('pg_consent');
+                } catch (e2) {}
+              }
+            }
+          } catch (e) {}
           var granted = stored === 'accepted';
           gtag('consent', 'default', {
             ad_storage: granted ? 'granted' : 'denied',

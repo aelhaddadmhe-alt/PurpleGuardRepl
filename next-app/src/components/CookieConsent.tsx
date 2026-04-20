@@ -4,36 +4,27 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Cookie, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-const STORAGE_KEY = "pg_consent";
-
-type Choice = "accepted" | "rejected";
-
-function dispatchChange(accepted: boolean) {
-  if (typeof window === "undefined") return;
-  window.dispatchEvent(
-    new CustomEvent("pg-consent-changed", { detail: { accepted } })
-  );
-}
+import {
+  CONSENT_OPEN_EVENT,
+  ConsentChoice,
+  getConsent,
+  setConsent,
+} from "@/lib/consent";
 
 export default function CookieConsent() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    let stored: string | null = null;
-    try {
-      stored = window.localStorage.getItem(STORAGE_KEY);
-    } catch {}
-    if (stored !== "accepted" && stored !== "rejected") {
+    if (getConsent() === "unset") {
       setVisible(true);
     }
+    const openHandler = () => setVisible(true);
+    window.addEventListener(CONSENT_OPEN_EVENT, openHandler);
+    return () => window.removeEventListener(CONSENT_OPEN_EVENT, openHandler);
   }, []);
 
-  const choose = (choice: Choice) => {
-    try {
-      window.localStorage.setItem(STORAGE_KEY, choice);
-    } catch {}
-    dispatchChange(choice === "accepted");
+  const choose = (choice: ConsentChoice) => {
+    setConsent(choice);
     setVisible(false);
   };
 
@@ -86,8 +77,8 @@ export default function CookieConsent() {
           </div>
           <button
             type="button"
-            onClick={() => choose("rejected")}
-            aria-label="Reject cookies and dismiss"
+            onClick={() => setVisible(false)}
+            aria-label="Close"
             className="flex-shrink-0 text-slate-400 hover:text-white transition-colors p-1 -m-1"
           >
             <X className="w-4 h-4" />
