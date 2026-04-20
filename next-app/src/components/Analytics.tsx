@@ -31,11 +31,47 @@ function PageviewTracker() {
   return null;
 }
 
+function ConsentBridge() {
+  useEffect(() => {
+    const handler = (event: Event) => {
+      if (typeof window.gtag !== "function") return;
+      const detail = (event as CustomEvent<{ accepted: boolean }>).detail;
+      const granted = detail?.accepted ? "granted" : "denied";
+      window.gtag("consent", "update", {
+        ad_storage: granted,
+        ad_user_data: granted,
+        ad_personalization: granted,
+        analytics_storage: granted,
+      });
+    };
+    window.addEventListener("pg-consent-changed", handler as EventListener);
+    return () =>
+      window.removeEventListener("pg-consent-changed", handler as EventListener);
+  }, []);
+  return null;
+}
+
 export default function Analytics() {
   if (!GA_ID) return null;
 
   return (
     <>
+      <Script id="ga-consent-default" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          window.gtag = gtag;
+          var stored = null;
+          try { stored = window.localStorage.getItem('pg_consent'); } catch (e) {}
+          var initial = stored === 'accepted' ? 'granted' : 'denied';
+          gtag('consent', 'default', {
+            ad_storage: initial,
+            ad_user_data: initial,
+            ad_personalization: initial,
+            analytics_storage: initial,
+          });
+        `}
+      </Script>
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
         strategy="afterInteractive"
@@ -49,6 +85,7 @@ export default function Analytics() {
           gtag('config', '${GA_ID}', { send_page_view: false });
         `}
       </Script>
+      <ConsentBridge />
       <Suspense fallback={null}>
         <PageviewTracker />
       </Suspense>

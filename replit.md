@@ -65,6 +65,7 @@ The original Vite + React + Express SPA. Not currently running as the webview.
 ### Analytics
 
 - **Google Analytics 4** is wired up site-wide via `next-app/src/components/Analytics.tsx`, mounted in the root layout. The Measurement ID is read from `NEXT_PUBLIC_GA_ID` (currently `G-KQ1ERBR9PW`); if the var is missing, the component renders nothing so dev clones stay clean. `next/script` loads `gtag.js` with `strategy="afterInteractive"`, then a small client tracker uses `usePathname` + `useSearchParams` (wrapped in `<Suspense>`) to fire `gtag('event', 'page_view', ...)` on every App Router navigation, since `send_page_view: false` is set on the initial `gtag('config', ...)`.
+- **Cookie consent (Google Consent Mode v2)**: `next-app/src/components/CookieConsent.tsx` renders a glass banner (purple-400 accent, matches the calculator/questionnaire aesthetic) on first visit with Accept / Reject and a link to `/privacy#cookies`. The choice is persisted in `localStorage` under `pg_consent` (`"accepted"` | `"rejected"`). Before `gtag.js` loads, `Analytics.tsx` runs a `gtag('consent', 'default', ...)` call with `ad_storage`, `ad_user_data`, `ad_personalization`, and `analytics_storage` initialized from the stored choice (denied by default, granted only if previously accepted). The banner dispatches a `pg-consent-changed` CustomEvent on click; a `ConsentBridge` listener inside `Analytics` translates that into `gtag('consent', 'update', ...)` so GA respects the choice without a page reload.
 
 ---
 
