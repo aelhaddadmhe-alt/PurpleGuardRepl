@@ -1,0 +1,123 @@
+Context and instruction
+You are working on the PurpleSOC Discovery Questionnaire JavaScript file. The following are calculation logic corrections only. Do NOT touch HTML structure, CSS, UI labels, routing, compliance pills, navigation, reset buttons, or any other UX feature. Treat the rest of the file as a black box.
+
+Apply every fix below exactly as written. This code has been validated against a reference EPS estimation spreadsheet.
+
+Fix 1 — EDR / XDR LDS billing: 1 LDS per 100 endpoints (step-wise)
+Where: The DEVICES array and devLDS() function.
+
+Step A — Add per100: true flag to the EDR entry in DEVICES
+Find the EDR entry (it currently looks like this):
+
+js
+{ id:'edr', cat:'Security', name:'EDR / XDR (per 100 endpoints)', epsTyp:30 },
+Change it to:
+
+js
+{ id:'edr', cat:'Security', name:'EDR / XDR (per 100 endpoints)', epsTyp:30, per100:true },
+Step B — Update devLDS() to handle per100 devices
+Find the devLDS function. It currently returns:
+
+js
+return d.per50 ? Math.ceil(cnt/50) : cnt;
+Replace that single return line with:
+
+js
+if (d.per50)  return Math.ceil(cnt/50);
+if (d.per100) return Math.ceil(cnt/100);
+return cnt;
+Logic: Each group of 100 EDR endpoints = 1 LDS. 101 endpoints = 2 LDS. 200 = 2 LDS. 201 = 3 LDS. This is the same step-wise ceiling pattern already used for workstations (per 50).
+
+Fix 2 — EDR EPS estimation: use LDS-unit count, not raw endpoint count
+Where: The devEPS() function.
+
+Why: The epsTyp: 30 value for EDR means 30 EPS per 100-endpoint block (i.e., per LDS unit), NOT 30 EPS per individual endpoint. This was confirmed against the reference EPS estimation spreadsheet. Using raw count gives a 100× overestimate for EDR-heavy environments.
+
+Find the devEPS function. It currently ends with:
+
+js
+var cnt = parseInt(document.getElementById('c-'+siteIdx+'-'+d.id).value)||0;
+return cnt * d.epsTyp;
+Change it to:
+
+js
+var cnt = parseInt(document.getElementById('c-'+siteIdx+'-'+d.id).value)||0;
+if (d.per100) return Math.ceil(cnt/100) * d.epsTyp; // epsTyp = EPS per 100-endpoint block
+return cnt * d.epsTyp;
+Do NOT add a similar guard for d.per50 (workstations). Workstations' epsTyp: 3 = 3 EPS per individual workstation — raw count × 3 is already correct for them.
+
+Verification
+With 300 EDR endpoints:
+
+Before fix: 300 × 30 = 9,000 EPS ❌
+After fix: Math.ceil(300/100) × 30 = 90 EPS ✅
+Fix 3 — Remove the LDS fallback from EPS estimation (storage must be purely EPS-driven)
+Where: Two places in the file — showResults() and openQuote() (the email generation function).
+
+Why: The old fallback grand * 40 used total LDS count to estimate EPS when no device data was entered. After the EDR per-100 change, this fallback produces results that are 100× smaller than before for EDR-heavy scenarios. Storage must be driven exclusively by device EPS data or the user's manual EPS override — never by LDS.
+
+In showResults() — find:
+js
+var eps = epsOvr>0?epsOvr:(grandEPS>0?grandEPS:grand*40);
+Replace with:
+
+js
+var eps = epsOvr>0 ? epsOvr : grandEPS;
+In openQuote() — find:
+js
+var eps = parseFloat(epsOvr)>0?parseFloat(epsOvr):(grandEPS>0?grandEPS:grand*40);
+Replace with:
+
+js
+var eps = parseFloat(epsOvr)>0 ? parseFloat(epsOvr) : grandEPS;
+Result: If no devices are configured, storage shows 0 GB (honest) rather than an LDS-derived estimate (incorrect).
+
+Fix 4 — Server specification: select tier by EPS throughput, not LDS count alone
+Where: The SPECS array and the server spec selection block inside showResults().
+
+Why: SPECS tier was previously selected purely by LDS count (getTier(SPECS, grand)). After the EDR per-100 change, a customer with 300 EDR endpoints has only 3 LDS — which maps to the smallest server spec — but still generates 90 EPS worth of indexed data. The server hardware must be sized for actual throughput, which is EPS-driven. The fix selects whichever tier is larger: the one implied by LDS count or the one implied by actual EPS.
+
+Step A — Add epsMax to each entry in the SPECS array
+Find the SPECS array. It currently looks like:
+
+js
+var SPECS = [
+  {max:50,  cpu:'16 Core',ram:'32 GB', baseGB:4000, lbl:'4 TB SSD', eps:'Up to 1,500 EPS'},
+  {max:100, cpu:'32 Core',ram:'64 GB', baseGB:8000, lbl:'8 TB SSD', eps:'Up to 3,000 EPS'},
+  {max:200, cpu:'64 Core',ram:'128 GB',baseGB:15000,lbl:'15 TB SSD',eps:'Up to 6,000 EPS'},
+  {max:500, cpu:'64 Core',ram:'256 GB',baseGB:30000,lbl:'30 TB SSD',eps:'Up to 15,000 EPS'},
+  {max:99999,cpu:'Cluster',ram:'Cluster',baseGB:999999,lbl:'Cluster',eps:'15,000+ EPS'}
+];
+Replace with:
+
+js
+var SPECS = [
+  {max:50,   epsMax:1500,   cpu:'16 Core', ram:'32 GB',  baseGB:4000,   lbl:'4 TB SSD',  eps:'Up to 1,500 EPS'},
+  {max:100,  epsMax:3000,   cpu:'32 Core', ram:'64 GB',  baseGB:8000,   lbl:'8 TB SSD',  eps:'Up to 3,000 EPS'},
+  {max:200,  epsMax:6000,   cpu:'64 Core', ram:'128 GB', baseGB:15000,  lbl:'15 TB SSD', eps:'Up to 6,000 EPS'},
+  {max:500,  epsMax:15000,  cpu:'64 Core', ram:'256 GB', baseGB:30000,  lbl:'30 TB SSD', eps:'Up to 15,000 EPS'},
+  {max:99999,epsMax:999999, cpu:'Cluster', ram:'Cluster',baseGB:999999, lbl:'Cluster',   eps:'15,000+ EPS'}
+];
+Step B — Replace the server spec tier selection inside showResults()
+Find:
+
+js
+var sp = getTier(SPECS, grand);
+Replace with:
+
+js
+var spByLDS = getTier(SPECS, grand);
+var spByEPS = SPECS.filter(function(s){ return eps <= s.epsMax; })[0] || SPECS[SPECS.length-1];
+// Use whichever spec requires the larger server (LDS billing vs EPS throughput)
+var sp = spByEPS.baseGB >= spByLDS.baseGB ? spByEPS : spByLDS;
+Pricing is NOT affected by this change. Pricing (annual, setup, monthly) continues to use getTier(TIERS[selectedSoc], grand) — LDS-based, unchanged.
+
+Summary of all changes
+#	Function / Array	What changed
+1a	DEVICES — EDR entry	Added per100: true
+1b	devLDS()	Added if (d.per100) return Math.ceil(cnt/100)
+2	devEPS()	Added if (d.per100) return Math.ceil(cnt/100) * d.epsTyp
+3	showResults() + openQuote()	Removed grand*40 fallback — eps is now purely EPS-driven
+4a	SPECS array	Added epsMax field to each tier
+4b	showResults() server spec block	Dual-constraint tier selection (max of LDS-based and EPS-based)
+Nothing else should be changed. Pricing rates (TIERS), SETUP fees, storage formula (eps*0.5*86400*days)/(1024^3)*1024, all HTML, all CSS, and all UX logic remain untouched.

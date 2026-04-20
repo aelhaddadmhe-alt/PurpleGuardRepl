@@ -306,11 +306,11 @@ var TIERS = {
 };
 var SETUP = [{max:100,fee:80},{max:250,fee:70},{max:500,fee:60},{max:1000,fee:50},{max:2500,fee:40}];
 var SPECS = [
-  {max:50,  cpu:'16 Core',ram:'32 GB', baseGB:4000, lbl:'4 TB SSD', eps:'Up to 1,500 EPS'},
-  {max:100, cpu:'32 Core',ram:'64 GB', baseGB:8000, lbl:'8 TB SSD', eps:'Up to 3,000 EPS'},
-  {max:200, cpu:'64 Core',ram:'128 GB',baseGB:15000,lbl:'15 TB SSD',eps:'Up to 6,000 EPS'},
-  {max:500, cpu:'64 Core',ram:'256 GB',baseGB:30000,lbl:'30 TB SSD',eps:'Up to 15,000 EPS'},
-  {max:99999,cpu:'Cluster',ram:'Cluster',baseGB:999999,lbl:'Cluster',eps:'15,000+ EPS'}
+  {max:50,   epsMax:1500,   cpu:'16 Core', ram:'32 GB',  baseGB:4000,   lbl:'4 TB SSD',  eps:'Up to 1,500 EPS'},
+  {max:100,  epsMax:3000,   cpu:'32 Core', ram:'64 GB',  baseGB:8000,   lbl:'8 TB SSD',  eps:'Up to 3,000 EPS'},
+  {max:200,  epsMax:6000,   cpu:'64 Core', ram:'128 GB', baseGB:15000,  lbl:'15 TB SSD', eps:'Up to 6,000 EPS'},
+  {max:500,  epsMax:15000,  cpu:'64 Core', ram:'256 GB', baseGB:30000,  lbl:'30 TB SSD', eps:'Up to 15,000 EPS'},
+  {max:99999,epsMax:999999, cpu:'Cluster', ram:'Cluster',baseGB:999999, lbl:'Cluster',   eps:'15,000+ EPS'}
 ];
 
 window.getTier = function(arr, n) { return arr.filter(function(t){return n<=t.max;})[0]||arr[arr.length-1]; }
@@ -329,6 +329,7 @@ window.devEPS = function(siteIdx, d) {
   var yb = document.getElementById('y-'+siteIdx+'-'+d.id);
   if (!yb || !yb.classList.contains('on')) return 0;
   var cnt = parseInt(document.getElementById('c-'+siteIdx+'-'+d.id).value)||0;
+  if (d.per100) return Math.ceil(cnt/100) * d.epsTyp;
   return cnt * d.epsTyp;
 }
 window.siteLDS = function(siteIdx) {
@@ -591,7 +592,7 @@ window.showResults = function() {
   var grand = window.totalLDS();
   var grandEPS = window.totalEPS();
   var epsOvr = parseFloat(document.getElementById('f-eps').value)||0;
-  var eps = epsOvr>0?epsOvr:(grandEPS>0?grandEPS:grand*40);
+  var eps = epsOvr>0 ? epsOvr : grandEPS;
   var hot  = parseInt(document.getElementById('f-hot').value)||30;
   var cold = parseInt(document.getElementById('f-cold').value)||90;
   var hotGB  = (eps*0.5*86400*hot)/(1024*1024*1024)*1024;
@@ -631,7 +632,9 @@ window.showResults = function() {
     specCard.style.display='none';
   } else {
     specCard.style.display='block';
-    var sp=window.getTier(SPECS,grand);
+    var spByLDS = window.getTier(SPECS, grand);
+    var spByEPS = SPECS.filter(function(s){ return eps <= s.epsMax; })[0] || SPECS[SPECS.length-1];
+    var sp = spByEPS.baseGB >= spByLDS.baseGB ? spByEPS : spByLDS;
     var isC=sp.cpu==='Cluster';
     var ok=bufGB<=sp.baseGB;
     var sb=isC?'<span class="badge-p">Cluster — contact PurpleGuard</span>'
@@ -671,7 +674,7 @@ window.openQuote = function() {
 
   var grand    = window.totalLDS();
   var grandEPS = window.totalEPS();
-  var eps      = parseFloat(epsOvr)>0?parseFloat(epsOvr):(grandEPS>0?grandEPS:grand*40);
+  var eps      = parseFloat(epsOvr)>0 ? parseFloat(epsOvr) : grandEPS;
   var hotGB    = (eps*0.5*86400*parseInt(hot))/(1024*1024*1024)*1024;
   var coldGB   = (eps*0.5*86400*parseInt(cold))/(1024*1024*1024)*1024;
   var bufGB    = (hotGB+coldGB)*1.25;
