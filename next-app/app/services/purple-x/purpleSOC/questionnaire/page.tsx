@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
+import { Button } from "@/components/ui/button";
 import { breadcrumbJsonLd, ogImageUrl } from "@/lib/json-ld";
 import QuestionnaireClient from "./QuestionnaireClient";
 import "./questionnaire.css";
@@ -46,18 +49,28 @@ export default function QuestionnairePage() {
   ]);
 
   return (
-    <>
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=DM+Sans:wght@400;500&family=DM+Mono:wght@500&display=swap"
-        rel="stylesheet"
+    <div className="min-h-screen bg-gradient-to-b from-[#000033] via-slate-900 to-[#000033] relative overflow-hidden">
+      <div
+        className="fixed inset-0 pointer-events-none z-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 55% 45% at 8% 18%, rgba(127,119,221,0.13) 0%, transparent 60%), radial-gradient(ellipse 45% 38% at 92% 82%, rgba(13,148,136,0.07) 0%, transparent 60%)",
+        }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
       />
-      <QuestionnaireClient />
-    </>
+      <div className="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-6 py-12 pb-20">
+        <div className="mb-6">
+          <Link href="/services/purple-x/purplesoc">
+            <Button variant="ghost" className="text-slate-400 hover:text-white">
+              <ArrowLeft className="h-4 w-4 mr-2" /> Back to PurpleSOC
+            </Button>
+          </Link>
+        </div>
+        <QuestionnaireClient />
+      </div>
+    </div>
   );
 }

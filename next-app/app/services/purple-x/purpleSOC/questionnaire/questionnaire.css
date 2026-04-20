@@ -1,35 +1,31 @@
 /* ============================================================
    PurpleSOC Discovery Questionnaire — scoped to .pgsoc-root
-   Maps the questionnaire's semantic class names onto the
-   PurpleGuard site design system (dark navy, purple #6633cc,
-   slate text, glass cards, lucide-style spacing).
+   Aesthetic matches the PurpleVAPT Sizing Calculator:
+   glass cards on #000033→slate gradient, purple-400 accents,
+   site default font, rounded-2xl surfaces.
    ============================================================ */
 
 .pgsoc-root {
-  --pg-bg: #0a0f1e;
-  --pg-bg-2: #0f172a;
   --pg-surface: rgba(255, 255, 255, 0.04);
   --pg-surface-2: rgba(255, 255, 255, 0.06);
   --pg-border: rgba(255, 255, 255, 0.08);
-  --pg-border-strong: rgba(255, 255, 255, 0.14);
+  --pg-border-strong: rgba(255, 255, 255, 0.11);
   --pg-text: #e2e8f0;
   --pg-text-soft: #94a3b8;
   --pg-text-mute: #64748b;
-  --pg-purple: #6633cc;
-  --pg-purple-2: #7c3aed;
-  --pg-purple-soft: rgba(124, 58, 237, 0.12);
-  --pg-purple-border: rgba(124, 58, 237, 0.35);
+  --pg-purple: #a855f7;
+  --pg-purple-2: #c084fc;
+  --pg-purple-soft: rgba(192, 132, 252, 0.12);
+  --pg-purple-border: rgba(192, 132, 252, 0.35);
   --pg-green: #10b981;
   --pg-amber: #f59e0b;
   --pg-red: #ef4444;
-  --pg-radius: 12px;
+  --pg-radius: 16px;
   --pg-radius-sm: 8px;
   --pg-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.4);
 
-  background: var(--pg-bg);
   color: var(--pg-text);
-  font-family: 'DM Sans', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  min-height: 100vh;
+  font-family: inherit;
 }
 
 .pgsoc-root *,
@@ -41,66 +37,39 @@
 /* ── Layout shell ─────────────────────────── */
 .pgsoc-root .shell {
   display: grid;
-  grid-template-columns: 280px 1fr;
-  min-height: 100vh;
-  max-width: 1400px;
-  margin: 0 auto;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+  align-items: start;
 }
 @media (max-width: 900px) {
-  .pgsoc-root .shell { grid-template-columns: 1fr; }
+  .pgsoc-root .shell { grid-template-columns: 1fr; gap: 16px; }
 }
 
 /* ── Sidebar ──────────────────────────────── */
 .pgsoc-root .sidebar {
-  background: linear-gradient(180deg, #000033 0%, #0a0f1e 100%);
-  border-right: 1px solid var(--pg-border);
-  padding: 24px 18px;
+  background: var(--pg-surface);
+  border: 1px solid var(--pg-border);
+  border-radius: var(--pg-radius);
+  padding: 20px 16px;
   position: sticky;
-  top: 0;
+  top: 24px;
   align-self: start;
-  height: 100vh;
+  max-height: calc(100vh - 48px);
   overflow-y: auto;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 @media (max-width: 900px) {
-  .pgsoc-root .sidebar { position: relative; height: auto; }
+  .pgsoc-root .sidebar { position: relative; max-height: none; }
 }
 
-.pgsoc-root .sidebar-logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding-bottom: 20px;
-  margin-bottom: 18px;
-  border-bottom: 1px solid var(--pg-border);
-}
-.pgsoc-root .sidebar-logo-img {
-  height: 36px;
-  width: auto;
-  filter: brightness(0) invert(1);
-}
-.pgsoc-root .logo-text {
-  font-family: 'Syne', 'DM Sans', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  color: #fff;
-  line-height: 1.1;
-}
-.pgsoc-root .logo-sub {
-  font-family: 'DM Mono', monospace;
-  font-size: 10px;
-  color: var(--pg-purple-2);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-top: 4px;
-}
-
-.pgsoc-root .nav-group { margin-bottom: 22px; }
+.pgsoc-root .nav-group { margin-bottom: 20px; }
 .pgsoc-root .nav-group-title {
-  font-family: 'DM Mono', monospace;
   font-size: 10px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--pg-text-mute);
+  letter-spacing: 0.12em;
+  color: var(--pg-purple-2);
   padding: 0 8px 8px;
 }
 .pgsoc-root .nav-item,
@@ -137,8 +106,8 @@
 .pgsoc-root .site-nav-item.active .nav-dot { background: var(--pg-purple-2); }
 .pgsoc-root .nav-label { flex: 1; }
 .pgsoc-root .site-nav-lds {
-  font-family: 'DM Mono', monospace;
   font-size: 10px;
+  font-weight: 600;
   color: var(--pg-purple-2);
   background: var(--pg-purple-soft);
   padding: 2px 6px;
@@ -147,25 +116,26 @@
 
 /* ── LDS widget ──────────────────────────── */
 .pgsoc-root .lds-widget {
-  margin-top: 24px;
+  margin-top: 20px;
   padding: 16px;
-  background: linear-gradient(135deg, rgba(102,51,204,0.18), rgba(124,58,237,0.08));
+  background: linear-gradient(135deg, rgba(168,85,247,0.18), rgba(192,132,252,0.06));
   border: 1px solid var(--pg-purple-border);
   border-radius: var(--pg-radius);
 }
 .pgsoc-root .lds-widget-title {
-  font-size: 11px;
+  font-size: 10px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--pg-text-soft);
+  letter-spacing: 0.12em;
+  color: var(--pg-purple-2);
   margin-bottom: 8px;
 }
 .pgsoc-root .lds-total {
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 32px;
   color: #fff;
   line-height: 1;
+  letter-spacing: -0.02em;
 }
 .pgsoc-root .lds-total-sub {
   font-size: 11px;
@@ -193,44 +163,44 @@
   font-size: 11px; color: var(--pg-text-soft);
 }
 .pgsoc-root .lds-site-row span:last-child {
-  font-family: 'DM Mono', monospace;
   color: var(--pg-purple-2);
+  font-weight: 600;
 }
 
 /* ── Main content ────────────────────────── */
 .pgsoc-root .main {
-  padding: 40px 32px 80px;
-  max-width: 900px;
   width: 100%;
-}
-@media (max-width: 640px) {
-  .pgsoc-root .main { padding: 24px 16px 60px; }
+  min-width: 0;
 }
 
 .pgsoc-root .page { display: none; }
 .pgsoc-root .page.active { display: block; }
 
 .pgsoc-root .step-eyebrow {
-  font-family: 'DM Mono', monospace;
-  font-size: 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 10px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.18em;
   color: var(--pg-purple-2);
-  margin-bottom: 8px;
+  margin-bottom: 14px;
 }
 .pgsoc-root .step-title {
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
-  font-size: 32px;
+  font-weight: 800;
+  font-size: clamp(28px, 4vw, 40px);
   color: #fff;
-  margin-bottom: 8px;
-  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 .pgsoc-root .step-desc {
   font-size: 15px;
   color: var(--pg-text-soft);
   margin-bottom: 28px;
   line-height: 1.6;
+  max-width: 640px;
 }
 
 /* ── Cards ───────────────────────────────── */
@@ -238,18 +208,23 @@
   background: var(--pg-surface);
   border: 1px solid var(--pg-border);
   border-radius: var(--pg-radius);
-  padding: 24px;
+  padding: 28px;
   margin-bottom: 20px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   box-shadow: var(--pg-shadow);
 }
+@media (max-width: 640px) {
+  .pgsoc-root .card { padding: 20px; }
+}
 .pgsoc-root .card-title {
-  font-family: 'Syne', sans-serif;
-  font-weight: 600;
-  font-size: 16px;
+  font-weight: 700;
+  font-size: 15px;
   color: #fff;
-  margin-bottom: 16px;
-  padding-bottom: 12px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
   border-bottom: 1px solid var(--pg-border);
+  letter-spacing: -0.01em;
 }
 
 /* ── Form fields ────────────────────────── */
@@ -286,9 +261,10 @@
   background: var(--pg-surface-2);
   border: 1px solid var(--pg-border-strong);
   border-radius: var(--pg-radius-sm);
-  padding: 10px 12px;
+  padding: 10px 14px;
   color: #fff;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 500;
   font-family: inherit;
   outline: none;
   transition: border-color 0.15s, background 0.15s;
@@ -297,11 +273,11 @@
 .pgsoc-root select:focus,
 .pgsoc-root textarea:focus {
   border-color: var(--pg-purple-2);
-  background: rgba(124, 58, 237, 0.08);
+  background: rgba(192, 132, 252, 0.07);
 }
 .pgsoc-root input::placeholder,
 .pgsoc-root textarea::placeholder { color: var(--pg-text-mute); }
-.pgsoc-root select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 36px; }
+.pgsoc-root select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' stroke='%239CA3AF' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 13px center; padding-right: 34px; }
 .pgsoc-root select option { background: #1a1a2e; color: #fff; }
 .pgsoc-root textarea { resize: vertical; min-height: 90px; }
 
@@ -310,7 +286,7 @@
   display: flex; flex-wrap: wrap; gap: 6px;
 }
 .pgsoc-root .pill {
-  padding: 6px 12px;
+  padding: 7px 14px;
   border-radius: 999px;
   background: var(--pg-surface-2);
   border: 1px solid var(--pg-border-strong);
@@ -326,9 +302,9 @@
   color: #fff;
 }
 .pgsoc-root .pill.on {
-  background: var(--pg-purple);
+  background: rgba(192, 132, 252, 0.18);
   border-color: var(--pg-purple-2);
-  color: #fff;
+  color: #e9d5ff;
 }
 
 /* ── SOC selector cards ────────────────── */
@@ -343,30 +319,30 @@
   position: relative;
   padding: 18px;
   border: 1px solid var(--pg-border-strong);
-  border-radius: var(--pg-radius);
+  border-radius: var(--pg-radius-sm);
   background: var(--pg-surface);
   cursor: pointer;
   transition: all 0.15s;
 }
 .pgsoc-root .soc-card:hover {
   border-color: var(--pg-purple-border);
-  background: rgba(124,58,237,0.05);
+  background: rgba(192, 132, 252, 0.05);
 }
 .pgsoc-root .soc-card.on {
   border-color: var(--pg-purple-2);
-  background: linear-gradient(135deg, rgba(124,58,237,0.18), rgba(102,51,204,0.08));
-  box-shadow: 0 0 0 1px var(--pg-purple-2), 0 8px 24px -8px rgba(124,58,237,0.5);
+  background: rgba(192, 132, 252, 0.18);
+  box-shadow: 0 0 0 1px var(--pg-purple-2), 0 8px 24px -8px rgba(192, 132, 252, 0.5);
 }
 .pgsoc-root .soc-icon {
   font-size: 26px;
   margin-bottom: 8px;
 }
 .pgsoc-root .soc-title {
-  font-family: 'Syne', sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   color: #fff;
   font-size: 15px;
   margin-bottom: 6px;
+  letter-spacing: -0.01em;
 }
 .pgsoc-root .soc-desc {
   font-size: 12px;
@@ -392,9 +368,10 @@
   background: var(--pg-surface-2);
   border: 1px solid var(--pg-border-strong);
   border-radius: var(--pg-radius-sm);
-  padding: 10px 12px;
+  padding: 10px 14px;
   color: #fff;
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 500;
   font-family: inherit;
   cursor: pointer;
 }
@@ -431,7 +408,7 @@
 }
 .pgsoc-root .btn {
   display: inline-flex; align-items: center; gap: 8px;
-  padding: 11px 20px;
+  padding: 12px 22px;
   border-radius: var(--pg-radius-sm);
   border: 1px solid transparent;
   font-size: 14px;
@@ -443,7 +420,7 @@
 .pgsoc-root .btn-primary {
   background: linear-gradient(135deg, var(--pg-purple), var(--pg-purple-2));
   color: #fff;
-  box-shadow: 0 6px 18px -6px rgba(124,58,237,0.6);
+  box-shadow: 0 6px 20px -6px rgba(192, 132, 252, 0.55);
 }
 .pgsoc-root .btn-primary:hover {
   filter: brightness(1.1);
@@ -478,8 +455,9 @@
   gap: 4px;
   flex-wrap: wrap;
   padding: 12px;
-  background: rgba(10,15,30,0.92);
-  backdrop-filter: blur(8px);
+  background: rgba(2, 6, 23, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--pg-border);
   border-radius: var(--pg-radius);
   box-shadow: 0 8px 24px -12px rgba(0,0,0,0.5);
@@ -515,6 +493,8 @@
   border: 1px solid var(--pg-border);
   border-radius: var(--pg-radius);
   margin-bottom: 16px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 .pgsoc-root .site-name-row label {
   font-size: 13px; font-weight: 600; color: var(--pg-text-soft); flex-shrink: 0;
@@ -526,8 +506,10 @@
   background: var(--pg-surface);
   border: 1px solid var(--pg-border);
   border-radius: var(--pg-radius);
-  padding: 18px;
+  padding: 20px;
   margin-bottom: 14px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 .pgsoc-root .dev-header {
   display: grid;
@@ -535,11 +517,11 @@
   gap: 10px;
   padding: 0 4px 8px;
   border-bottom: 1px solid var(--pg-border);
-  font-family: 'DM Mono', monospace;
   font-size: 10px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--pg-text-mute);
+  letter-spacing: 0.12em;
+  color: var(--pg-purple-2);
 }
 .pgsoc-root .device-row {
   display: grid;
@@ -591,9 +573,8 @@
   border-radius: 999px;
   background: var(--pg-purple);
   color: #fff;
-  font-family: 'DM Mono', monospace;
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
   text-align: center;
   min-width: 36px;
 }
@@ -604,18 +585,18 @@
 
 /* ── Results ────────────────────────────── */
 .pgsoc-root .hero-card {
-  background: linear-gradient(135deg, #6633cc 0%, #7c3aed 50%, #4c1d95 100%);
+  background: linear-gradient(135deg, #6633cc 0%, #a855f7 50%, #4c1d95 100%);
   border-radius: var(--pg-radius);
-  padding: 32px;
+  padding: 36px;
   margin-bottom: 24px;
-  box-shadow: 0 20px 50px -20px rgba(124,58,237,0.6);
+  box-shadow: 0 20px 50px -20px rgba(168, 85, 247, 0.6);
 }
 .pgsoc-root .hero-card h2 {
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
+  font-weight: 800;
+  font-size: 26px;
   color: #fff;
   margin: 0 0 8px;
+  letter-spacing: -0.02em;
 }
 .pgsoc-root .hero-card p {
   color: rgba(255,255,255,0.85);
@@ -636,18 +617,19 @@
   padding: 16px;
 }
 .pgsoc-root .hero-metric-label {
-  font-size: 11px;
+  font-size: 10px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.12em;
   color: rgba(255,255,255,0.75);
   margin-bottom: 6px;
 }
 .pgsoc-root .hero-metric-value {
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 28px;
   color: #fff;
   line-height: 1;
+  letter-spacing: -0.02em;
 }
 .pgsoc-root .hero-metric-sub {
   font-size: 11px;
@@ -661,15 +643,17 @@
   border-radius: var(--pg-radius);
   padding: 24px;
   margin-bottom: 16px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 .pgsoc-root .res-card-title {
-  font-family: 'Syne', sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 15px;
   color: #fff;
   margin-bottom: 16px;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
   border-bottom: 1px solid var(--pg-border);
+  letter-spacing: -0.01em;
 }
 .pgsoc-root .res-row {
   display: flex;
@@ -691,9 +675,8 @@
   border-radius: 999px;
   font-size: 11px;
   font-weight: 600;
-  font-family: 'DM Mono', monospace;
 }
-.pgsoc-root .badge-p { background: var(--pg-purple-soft); color: #c4b5fd; border: 1px solid var(--pg-purple-border); }
+.pgsoc-root .badge-p { background: var(--pg-purple-soft); color: #e9d5ff; border: 1px solid var(--pg-purple-border); }
 .pgsoc-root .badge-g { background: rgba(16,185,129,0.15); color: #6ee7b7; border: 1px solid rgba(16,185,129,0.4); }
 .pgsoc-root .badge-a { background: rgba(245,158,11,0.15); color: #fcd34d; border: 1px solid rgba(245,158,11,0.4); }
 
@@ -705,11 +688,11 @@
 .pgsoc-root .site-table th {
   text-align: left;
   padding: 10px 12px;
-  font-family: 'DM Mono', monospace;
   font-size: 10px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--pg-text-mute);
+  letter-spacing: 0.12em;
+  color: var(--pg-purple-2);
   border-bottom: 1px solid var(--pg-border);
 }
 .pgsoc-root .site-table td {
@@ -722,7 +705,7 @@
   color: #fff;
   background: var(--pg-purple-soft);
 }
-.pgsoc-root .res-td-num { font-family: 'DM Mono', monospace; text-align: right; }
+.pgsoc-root .res-td-num { text-align: right; font-variant-numeric: tabular-nums; }
 .pgsoc-root .res-td-purple { color: var(--pg-purple-2); }
 
 .pgsoc-root .cta-card {
@@ -731,18 +714,18 @@
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
-  background: linear-gradient(135deg, rgba(102,51,204,0.18), rgba(124,58,237,0.06));
+  background: linear-gradient(135deg, rgba(168,85,247,0.18), rgba(192,132,252,0.06));
   border: 1px solid var(--pg-purple-border);
   border-radius: var(--pg-radius);
-  padding: 20px 24px;
+  padding: 22px 26px;
   margin: 24px 0 16px;
 }
 .pgsoc-root .cta-card h3 {
-  font-family: 'Syne', sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   color: #fff;
   margin: 0 0 4px;
   font-size: 16px;
+  letter-spacing: -0.01em;
 }
 .pgsoc-root .cta-card p { margin: 0; font-size: 13px; color: var(--pg-text-soft); }
 .pgsoc-root .btn-cta {
