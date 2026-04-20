@@ -62,6 +62,10 @@ The original Vite + React + Express SPA. Not currently running as the webview.
 - Logo: `next-app/public/logo.png` (copied from `attached_assets/`)
 - `next-app/src/lib/utils.ts` — `cn()` utility (clsx + tailwind-merge)
 
+### Analytics
+
+- **Google Analytics 4** is wired up site-wide via `next-app/src/components/Analytics.tsx`, mounted in the root layout. The Measurement ID is read from `NEXT_PUBLIC_GA_ID` (currently `G-KQ1ERBR9PW`); if the var is missing, the component renders nothing so dev clones stay clean. `next/script` loads `gtag.js` with `strategy="afterInteractive"`, then a small client tracker uses `usePathname` + `useSearchParams` (wrapped in `<Suspense>`) to fire `gtag('event', 'page_view', ...)` on every App Router navigation, since `send_page_view: false` is set on the initial `gtag('config', ...)`.
+
 ---
 
 ## Migration Phases
