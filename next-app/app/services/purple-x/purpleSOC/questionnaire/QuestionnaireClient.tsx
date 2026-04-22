@@ -804,6 +804,9 @@ export default function QuestionnaireClient() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (!containerRef.current) return;
+    containerRef.current.innerHTML = BODY_HTML;
+
     const script = document.createElement("script");
     script.id = "pgsoc-questionnaire-script";
     script.text = SCRIPT_BODY;
@@ -817,6 +820,7 @@ export default function QuestionnaireClient() {
         document.removeEventListener("click", w.__pgsocDocClick);
         delete w.__pgsocDocClick;
       }
+      if (containerRef.current) containerRef.current.innerHTML = "";
     };
   }, []);
 
@@ -824,7 +828,7 @@ export default function QuestionnaireClient() {
     <div
       ref={containerRef}
       className="pgsoc-root"
-      dangerouslySetInnerHTML={{ __html: BODY_HTML }}
+      suppressHydrationWarning
     />
   );
 }

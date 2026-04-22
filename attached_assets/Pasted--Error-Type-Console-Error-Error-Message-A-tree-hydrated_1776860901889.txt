@@ -1,0 +1,63 @@
+## Error Type
+Console Error
+
+## Error Message
+A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <RenderFromTemplateContext>
+      <ScrollAndMaybeFocusHandler cacheNode={{rsc:{...}, ...}}>
+        <InnerScrollAndFocusHandlerOld focusAndScrollRef={{scrollRef:null, ...}} cacheNode={{rsc:{...}, ...}}>
+          <ErrorBoundary errorComponent={undefined} errorStyles={undefined} errorScripts={undefined}>
+            <LoadingBoundary name="questionna..." loading={null}>
+              <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+                <RedirectBoundary>
+                  <RedirectErrorBoundary router={{...}}>
+                    <InnerLayoutRouter url="/services/..." tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} ...>
+                      <SegmentViewNode type="page" pagePath="services/p...">
+                        <SegmentTrieNode>
+                        <QuestionnairePage>
+                          <div className="min-h-scre...">
+                            <div>
+                            <script>
+                            <div className="relative z...">
+                              <div>
+                              <QuestionnaireClient>
+                                <div
+                                  ref={{current:null}}
+                                  className="pgsoc-root"
+                                  dangerouslySetInnerHTML={{
++                                   __html: "\n<div class=\"shell\">\n\n  <aside class=\"sidebar\">\n    <div class=\"..."
+-                                   __html: "\n<div class=\"shell\">\n\n  <aside class=\"sidebar\">\n    <div class=\"..."
+                                  }}
+                                >
+                      ...
+                    ...
+          ...
+
+
+
+    at div (<anonymous>:null:null)
+    at QuestionnaireClient (app/services/purple-x/purpleSOC/questionnaire/QuestionnaireClient.tsx:824:5)
+    at QuestionnairePage (app/services/purple-x/purpleSOC/questionnaire/page.tsx:72:9)
+
+## Code Frame
+  822 |
+  823 |   return (
+> 824 |     <div
+      |     ^
+  825 |       ref={containerRef}
+  826 |       className="pgsoc-root"
+  827 |       dangerouslySetInnerHTML={{ __html: BODY_HTML }}
+
+Next.js version: 16.2.1 (Turbopack)
