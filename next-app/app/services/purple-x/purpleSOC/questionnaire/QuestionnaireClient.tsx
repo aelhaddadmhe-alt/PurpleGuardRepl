@@ -329,6 +329,7 @@ window.devEPS = function(siteIdx, d) {
   var yb = document.getElementById('y-'+siteIdx+'-'+d.id);
   if (!yb || !yb.classList.contains('on')) return 0;
   var cnt = parseInt(document.getElementById('c-'+siteIdx+'-'+d.id).value)||0;
+  if (d.per100) return Math.ceil(cnt/100) * d.epsTyp;
   return cnt * d.epsTyp;
 }
 window.siteLDS = function(siteIdx) {
