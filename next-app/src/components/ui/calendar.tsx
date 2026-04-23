@@ -51,12 +51,12 @@ function Calendar({
         day_hidden: "invisible",
         ...classNames,
       }}
-      components={{
+     components={{
         IconLeft: ({ className, ...props }) => (
-          <ChevronLeft className={cn("h-4 w-4", className)} {...props} />
+          <ChevronLeft className={cn("h-4 w-4", className)} {...(props as any)} />
         ),
         IconRight: ({ className, ...props }) => (
-          <ChevronRight className={cn("h-4 w-4", className)} {...props} />
+          <ChevronRight className={cn("h-4 w-4", className)} {...(props as any)} />
         ),
       }}
       {...props}
@@ -64,5 +64,4 @@ function Calendar({
   )
 }
 Calendar.displayName = "Calendar"
-
 export { Calendar }

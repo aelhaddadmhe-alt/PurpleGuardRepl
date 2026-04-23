@@ -6,10 +6,9 @@ hidden = [".config", ".git", "generated-icon.png", "node_modules", "dist"]
 channel = "stable-24_05"
 
 [deployment]
-deploymentTarget = "static"
+deploymentTarget = "cloudrun"
 build = ["bash", "-c", "cd next-app && npm install && npm run build"]
 run = ["bash", "-c", "cd next-app && npm start"]
-publicDir = "dist/public"
 [[deployment.rewrites]]
 from = "/*"
 to = "/index.html"
